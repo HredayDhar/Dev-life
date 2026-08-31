@@ -1,5 +1,10 @@
 # Software Engineering Playbook
 
+![GitHub](https://img.shields.io/github/issues/hridoy/Development-Lifecycle)
+![GitHub](https://img.shields.io/github/forks/hridoy/Development-Lifecycle)
+![GitHub](https://img.shields.io/github/stars/hridoy/Development-Lifecycle)
+![GitHub](https://img.shields.io/github/license/hridoy/Development-Lifecycle)
+
 48 Phases • Engineering Process • Developer Learning • Architecture • Testing • Security • DevOps
 
 > From Idea → Production → Engineering Excellence
