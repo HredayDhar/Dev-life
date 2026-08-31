@@ -40,9 +40,6 @@ The playbook is designed to be:
 
 Professional software development is **not** a linear process:
 
-<img width="1408" height="768" alt="Gemini_Generated_Image_jgr4f0jgr4f0jgr4" src="https://github.com/user-attachments/assets/56f67da4-6718-4387-8269-9d82bf3068da" />
-
-
 ```text
 Idea → Code → Done
 ```
