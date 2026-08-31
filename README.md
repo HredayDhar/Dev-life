@@ -423,29 +423,109 @@ Understand how engineering maturity affects decision-making:
 
 ## Engineering Decision Tree
 
-Use this diagram to determine next steps in the development process:
+Use this decision tree to determine where you should go next when starting a new feature, fixing a problem, or making a significant change.
 
 ```mermaid
 flowchart TD
-    A[New Feature or Change] --> B{Problem Clearly Defined?}
-    B -->|No| C[Return to Discovery Phases 00-06]
-    B -->|Yes| D{Requirements Clear & Prioritized?}
-    D -->|No| E[Clarify Requirements (Phases 07-14)]
-    D -->|Yes| F{High Risk or Uncertainty?}
-    F -->|Yes| G[Run Feasibility/Spike (Phases 15-17)]
-    F -->|No| H[Proceed to Design (Phases 18-24)]
+    A["New Feature or Change"] --> B{"Problem Clearly Defined?"}
+
+    B -->|No| C["Return to Discovery<br/>Phases 00-06"]
+    B -->|Yes| D{"Requirements Clear and Prioritized?"}
+
+    D -->|No| E["Clarify Requirements<br/>Phases 07-14"]
+    D -->|Yes| F{"High Risk or Uncertainty?"}
+
+    F -->|Yes| G["Run Feasibility Study or Technical Spike<br/>Phases 15-17"]
+    F -->|No| H["Proceed to Design<br/>Phases 18-24"]
+
     G --> H
-    H --> I[Create Implementation Plan (Phases 25-28)]
-    I --> J[Develop & Test (Phases 27-36)]
-    J --> K[Review & Security Check]
-    K -->|Pass| L[CI/CD Pipeline (Phase 38)]
-    L -->|Success| M[Staging Deployment (Phase 40)]
-    M -->|Validation Pass| N[Production Deployment (Phase 41)]
-    N --> O[Monitor & Observe (Phases 42-43)]
-    O --> P[Collect Feedback (Phase 46)]
-    P --> Q[Retrospective & Improve (Phase 47)]
-    Q --> A
+
+    H --> I["Create Implementation Plan<br/>Phases 25-28"]
+    I --> J["Develop and Test<br/>Phases 27-36"]
+
+    J --> K{"Review and Security Checks Pass?"}
+
+    K -->|No| J
+    K -->|Yes| L["CI/CD Pipeline<br/>Phase 38"]
+
+    L --> M{"Pipeline Successful?"}
+
+    M -->|No| J
+    M -->|Yes| N["Staging Deployment<br/>Phase 40"]
+
+    N --> O{"Staging Validation Passes?"}
+
+    O -->|No| J
+    O -->|Yes| P["Production Deployment<br/>Phase 41"]
+
+    P --> Q["Monitor and Observe<br/>Phases 42-43"]
+    Q --> R["Collect Feedback<br/>Phase 46"]
+    R --> S["Retrospective and Improvement<br/>Phase 47"]
+
+    S --> A
 ```
+
+### How to read it
+
+**Start → Understand → Design → Build → Validate → Ship → Observe → Learn → Improve → Repeat**
+
+The important idea is that a senior engineer doesn't simply follow the phases once.
+
+If something fails, you **go backward** to the phase where the problem actually belongs.
+
+For example:
+
+* Problem unclear → **Discovery**
+* Requirements unclear → **Requirements**
+* Technical uncertainty → **Feasibility**
+* Architecture problem → **Design**
+* Implementation problem → **Development**
+* Test failure → **Development / Testing**
+* Security failure → **Security / Development**
+* CI failure → **Development / CI/CD**
+* Staging failure → **Development / Testing**
+* Production problem → **Operations / Observability**
+* User feedback → **Discovery / Requirements**
+* Technical debt → **Refactoring**
+* Process problem → **Retrospective**
+
+> **Senior engineering principle:** Don't force the project forward when an earlier assumption is wrong. Go back to the phase that needs to be corrected.
+
+### Important Mermaid rule
+
+Do **not** write this:
+
+````markdown
+```mermaid
+flowchart TD
+
+````
+
+A --> B
+
+```
+```
+
+The inner triple backticks break the Mermaid block.
+
+Write only:
+
+````markdown
+```mermaid
+flowchart TD
+    A["Start"] --> B["Next"]
+````
+
+````
+
+Also, wrapping node text in quotes like:
+
+```text
+A["Clarify Requirements - Phases 07-14"]
+````
+
+is safer than putting complex punctuation directly into the node definition.
+
 
 ## Project Size & Engineering Rigor
 
