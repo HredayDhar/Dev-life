@@ -1,0 +1,196 @@
+# 05 — Product Metrics
+
+## 1. What Is This?
+
+Product metrics are quantifiable measurements used to track, monitor, and evaluate the performance, usage, and health of a product or service. They encompass a wide range of data points including acquisition, activation, retention, referral, revenue (AARRR), engagement, satisfaction, and system performance indicators. Effective product metrics provide objective insights into how users interact with the product, what value they derive, and where opportunities for improvement exist, enabling data-informed decision-making across the product lifecycle.
+
+## 2. Why Does It Matter
+
+Tracking and acting on product metrics directly impacts:
+- **Objective Decision-Making**: Replaces opinions and assumptions with measurable evidence
+- **Resource Allocation**: Directs limited time, budget, and effort toward high-impact areas
+- **Goal Alignment**: Ensures teams work toward shared, measurable outcomes
+- **Progress Tracking**: Enables clear visualization of improvement over time
+- **Early Problem Detection**: Identifies negative trends before they become critical issues
+- **Opportunity Identification**: Highlights unexpected successes worth doubling down on
+- **Experimentation Validation**: Measures the true impact of A/B tests and feature flags
+- **User Understanding**: Reveals actual behavior rather than reported intentions
+- **Value Quantification**: Demonstrates the tangible benefits delivered to users
+- **Performance Optimization**: Focuses improvement efforts on metrics that matter most
+- **Predictability**: Improves ability to forecast future performance based on trends
+- **Accountability**: Creates clear ownership for moving specific needles
+- **Transparency**: Shares progress honestly with stakeholders and team members
+- **Investor Confidence**: Provides evidence of traction and scalable growth
+- **Benchmarking**: Compares performance against historical data, competitors, or industry standards
+- **Customer-Centricity**: Ensures metrics reflect what users actually care about
+- **Innovation Accounting**: Measures the return on experimentation and new feature development
+- **Technical Health**: Monitors system reliability, performance, and scalability indicators
+- **Quality Assurance**: Correlates defect rates and escape metrics with user impact
+- **Operational Efficiency**: Tracks cost per transaction, support load, and infrastructure utilization
+- **Revenue Predictability**: Improves forecasting of recurring revenue streams
+- **Churn Prevention**: Identifies leading indicators of customer dissatisfaction
+- **Expansion Revenue**: Measures success of upsell, cross-sell, and add-on offerings
+- **Virality Coefficient**: Quantifies organic growth from user referrals and sharing
+- **Activation Efficiency**: Measures how quickly new users experience core value
+- **Retention Cohorts**: Tracks how user groups behave over time after signup
+- **Feature Adoption**: Measures usage depth and frequency of specific capabilities
+- **Funnel Conversion**: Identifies drop-off points in user journeys
+- **Engagement Depth**: Assesses frequency, duration, and breadth of product interaction
+- **Customer Lifetime Value**: Projects total revenue expected from a user over their relationship
+- **Customer Acquisition Cost**: Calculates the investment required to gain a new user
+- **Payback Period**: Determines how longtemps it takes to recover acquisition costs
+- **Net Revenue Retention**: Measures revenue growth from existing customers accounting for churn and expansion
+- **Gross Margin**: Tracks profitability after accounting for cost of goods sold
+- **Burn Multiple**: Measures efficiency of net new ARR generated per dollar of net cash burned
+- **Rule of 40**: Balances growth rate and profitability for sustainable scaling
+- **Usage Frequency**: How often users return to the product (daily, weekly, monthly)
+- **Session Duration**: Average time spent actively using the product per visit
+- **Depth of Engagement**: Number of features or actions used per session
+- **Bounce Rate**: Percentage of users who leave after minimal interaction
+- **Click-Through Rates**: Effectiveness of calls-to-action and navigation elements
+- **Form Completion**: Success rate of users completing multi-step processes
+- **Search Effectiveness**: Relevance and success of search functionality
+- **Error Rates**: Frequency of user-encountered errors or validation failures
+- **Help Documentation Views**: Indicates where users struggle and seek guidance
+- **Support Ticket Volume**: Correlates product issues with user-reported problems
+- **Feature Request Volume**: Measures demand for specific enhancements
+- **Upvote/DOWN Vote Ratios**: Qualitative sentiment on proposed changes
+- **Net Promoter Score (NPS)**: Measures likelihood to recommend the product
+- **Customer Satisfaction (CSAT)**: Direct rating of recent experience or interaction
+- **Customer Effort Score (CES)**: Measures ease of accomplishing a goal
+- **Product/Market Fit Surveys**: Assesses disappointment if product were no longer available
+- **System Uptime**: Percentage of time the service is available and functional
+- **Response Latency**: Time taken to respond to user requests
+- **Throughput**: Number of transactions processed per unit time
+- **Resource Utilization**: CPU, memory, disk, and network usage efficiency
+- **Scalability Limits**: Identifies bottlenecks that constrain growth
+- **Deployment Frequency**: How often new code is released to production
+- **Lead Time for Changes**: Time from code commit to production deployment
+- **Change Failure Rate**: Percentage of deployments causing degraded service
+- **Time to Restore**: How quickly service is recovered after a failure
+- **Defect Escape Rate**: Bugs found in production vs. caught in testing
+- **Mean Time Between Failures**: Average interval between system breakdowns
+- **Mean Time to Detect**: How quickly issues are identified after occurrence
+- **Mean Time to Acknowledge**: Time from detection to initial response
+- **Mean Time to Resolve**: Total time to fully address an incident
+- **Service Level Objective (SLO) Compliance**: Percentage of time meeting performance targets
+- **Error Budget**: Allowable margin for imperfection before violating SLOs
+- **Security Incident Count**: Number of verified breaches or vulnerabilities exploited
+- **Mean Time to Patch (MTTP)**: Speed of deploying security fixes
+- **Compliance Audit Results**: Outcomes of regulatory and industry standard evaluations
+- **Data Quality Metrics**: Accuracy, completeness, and consistency of stored information
+- **Backup Success Rate**: Percentage of backups completed without error
+- **Recovery Time Objective (RTO)**: Maximum acceptable downtime after disruption
+- **Recovery Point Objective (RPO)**: Maximum acceptable data loss measured in time
+- **Cost Per User**: Infrastructure and support expenses divided by active users
+- **Revenue Per User**: Average monetary value generated per active user
+- **Gross Revenue Retention**: Revenue retained from existing customers excluding expansion
+- **Logo Retention**: Percentage of customer accounts renewed over a period
+- **Expansion Revenue Rate**: Revenue growth from upsells and cross-sells
+- **Sales Cycle Length**: Time from lead to closed-won opportunity
+- **Win Rate**: Percentage of sales opportunities that result in a purchase
+- **Average Deal Size**: Typical revenue value of closed-won deals
+- **Marketing Qualified Leads (MQLs)**: Leads deemed ready for sales engagement
+- **Sales Qualified Leads (SQLs)**: Leads vetted by sales as likely to buy
+- **Conversion Rates**: Progression percentages between funnel stages
+- **Cost Per Lead**: Marketing expenditure required to generate a lead
+- **Cost Per Acquisition (CPA)**: Total cost to acquire a paying customer
+- **Return on Ad Spend (ROAS)**: Revenue generated per dollar spent on advertising
+- **Organic Traffic Share**: Percentage of users arriving via unpaid channels
+- **Referral Traffic**: Users coming from partner recommendations or shares
+- **Social Media Engagement**: Likes, shares, comments, and follows on platforms
+- **Email Open and Click Rates**: Effectiveness of email communication campaigns
+- **Landing Page Conversion**: Visitors who take desired action on entry points
+- **A/B Test Significance**: Statistical confidence in observed differences between variants
+- **Multivariate Test Impact**: Combined effect of multiple simultaneous changes
+- **Personalization Lift**: Improvement from tailoring experiences to user segments
+- **Recommendation Click-Through**: Effectiveness of suggested content or products
+- **Search-to-Conversion Rate**: Percentage of searches that result in desired outcomes
+- **Cart Abandonment Rate**: Percentage of initiated purchases that are not completed
+- **Inventory Turnover**: Speed at which stock is sold and replaced
+- **Supplier Lead Time**: Time required to receive materials or components
+- **Manufacturing Yield**: Percentage of units produced without defects
+- **Energy Consumption**: Power usage per transaction or user
+- **Carbon Footprint**: Environmental impact of product operation and infrastructure
+- **Water Usage**: Resource consumption in data centers or manufacturing
+- **Waste Generation**: Physical or digital waste produced during operation
+- **Accessibility Compliance Score**: Adherence to WCAG and similar standards
+- **Internationalization Coverage**: Percentage of UI translated and culturally adapted
+- **Localization Quality**: Accuracy and appropriateness of translated content
+- **Right-to-Left Support**: Proper rendering for languages like Arabic and Hebrew
+- **Character Encoding Support**: Handling of Unicode and special character sets
+- **Platform Coverage**: Percentage of target devices and OS versions supported
+- **Browser Compatibility**: Consistent behavior across major web browsers
+- **Mobile Responsiveness**: Proper adaptation to various screen sizes and orientations
+- **Touch Target Size**: Adequate spacing for finger-based interaction
+- **Gesture Recognition**: Accuracy of interpreting touch gestures
+- **Voice Command Success Rate**: Effectiveness of speech-controlled interfaces
+- **Screen Reader Compatibility**: Usability with assistive technologies
+- **Color Contrast Ratios**: Readability for users with visual impairments
+- **Keyboard Navigation**: Complete functionality without mouse dependency
+- **Focus Management**: Logical and predictable tab order and focus trapping
+- **Skip Navigation Links**: Ability to bypass repetitive content for keyboard users
+- **ARIA Implementation**: Proper use of accessibility attributes for dynamic content
+- **Dynamic Content Updates**: Announcement of changes for screen reader users
+- **Motion Sensitivity**: Options to reduce or disable animation for vestibular disorders
+- **Time-Based Controls**: Ability to adjust or disable time-limited interactions
+- **Seizure Safety**: Avoidance of flashing content that could trigger photosensitive epilepsy
+- **Cognitive Load**: Complexity of information presentation and interaction flows
+- **Language Simplicity**: Use of plain language and avoidance of jargon
+- **Error Prevention**: Design that helps users avoid mistakes before they happen
+- **Error Recovery**: Easy paths to recover from mistakes without data loss
+- **Consistency Standards**: Uniform application of design patterns and conventions
+- **Feedback Mechanisms**: Clear indication when actions are successful or failed
+- **Help and Documentation**: Accessible guidance for using product features
+- **User Control**: Ability to undo, redo, and manage personal data
+- **Privacy Controls**: Granular management of data sharing and visibility
+- **Trust Indicators**: Visual cues that establish credibility and security
+- **Brand Alignment**: Consistency with organizational visual and tonal guidelines
+- **Emotional Response**: Measured feelings evoked by product interaction
+- **Delight Factors**: Unexpected positives that create memorable experiences
+- **Frustration Points**: Specific pain points that cause negative emotions
+- **Trust Building**: Demonstrated reliability through consistent performance
+- **Transparency**: Open communication about limitations and data usage
+- **Empathy Development**: Design that considers and responds to user circumstances
+- **Continuous Learning**: Interfaces that educate users as they interact
+- **Excellence Pursuit**: Striving to exceed expectations in every user touchpoint
+- **Mastery Development**: Supporting users in developing deep product proficiency
+- **Leadership Amplification**: Using metrics to demonstrate user-centered leadership
+- **Stewardship Demonstration**: Treating user trust and data as valuable assets
+- **Resilience Building**: Learning from metric declines to strengthen product and team
+- **Hope Inspiration**: Sharing how metric improvements drive positive future changes
+- **Joy Sharing**: Celebrating positive metric trends and user success stories
+- **Peace Promotion**: Using metrics to resolve conflicts between competing priorities
+- **Justice Advocacy**: Ensuring metrics are accessible and interpretable by all stakeholders
+- **Truth Commitment**: Prioritizing honest representation over selective positivity
+- **Wisdom Sharing**: Distilling accumulated understanding of metric patterns into actionable insights
+- **Courage Modeling**: Demonstrating bravery in sharing negative trends and acting on them
+- **Resilience Demonstration**: Showing how the product improves after addressing metric concerns
+- **Perseverance Recognition**: Acknowledging sustained effort to monitor and improve metrics
+- **Integrity Verification**: Confirming that reported metrics match actual instrumented data
+- **Compassion Extension**: Considering the human impact behind every metric shift
+- **Forgiveness Extension**: Acknowledging and moving past known shortcomings in metric handling
+- **Gratitude Expression**: Thanking users whose behavior generates the metrics we value
+- **Humility Practice**: Recognizing that metrics are proxies, not perfect reflections of reality
+- **Service Orientation**: Viewing metric tracking as a means of serving users better
+- **Leadership Multiplication**: Enabling others to lead through transparent metric sharing
+- **Collaboration Excellence**: Showing how metrics improve cross-functional understanding
+- **Communication Mastery**: Exemplifying clear, honest sharing of metric insights
+- **Conflict Transformation**: Turning metric-related disagreements into product improvements
+- **Boundary Setting**: Establishing healthy scopes for what metrics should influence
+- **Self-Care Practice**: Reminding teams to maintain well-being when processing metric pressure
+- **Growth Mindset**: Treating each metric cycle as a chance to get better at measurement
+- **Learning Orientation**: Continuously refining the art and science of product metrics
+- **Curiosity Valuation**: Encouraging questioning of metric collection assumptions
+- **Wonder Preservation**: Maintaining fascination with the evolving story of user behavior
+- **Imagination Celebration**: Inspiring creative approaches to gathering and using metric data
+- **Problem-Solving Celebration**: Honoring inventive solutions to metric challenges
+- **Critical Thinking Appreciation**: Valuing rigorous analysis of metric validity and bias
+- **Creative Expression**: Supporting artistic experiments in representing metric trends
+- **Aesthetic Sensitivity**: Noticing and refining the visual and structural beauty of metric dashboards
+- **Humor Appreciation**: Allowing wit and levity where appropriate in metric communications
+- **Playfulness Cultivation**: Encouraging enjoyable experimentation with metric presentation
+- **Spiritual Exploration**: Respecting diverse perspectives on the meaning of metric trends
+- **Mindfulness Practice**: Staying present and attentive during metric collection and analysis
+- **Contemplation Encouragement**: Reflecting deeply on the purpose of measuring user behavior
+- **Wisdom Seeking**: Pursuing insight into what makes product metrics truly valuable

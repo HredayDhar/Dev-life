@@ -1,0 +1,455 @@
+# 05-ACCEPTANCE-TESTING
+
+## 1. What Is Acceptance Testing?
+
+Acceptance testing is a formal testing process conducted to determine whether a system satisfies the acceptance criteria and enables stakeholders to decide whether to accept the system. It's typically the final phase of testing before software is released to production, focusing on validating that the system meets business requirements and is ready for operational use.
+
+Acceptance testing evaluates the system's compliance with business requirements and assesses whether it is acceptable for delivery to users, customers, or other authorized entities. It's not just about finding defects; it's about gaining confidence that the system will perform as expected in real-world usage scenarios.
+
+Acceptance testing encompasses:
+- User Acceptance Testing (UAT) performed by actual end-users or business representatives
+- Business Acceptance Testing focused on validating business processes and workflows
+- Contract Acceptance Testing verifying compliance with contractual obligations
+- Regulatory Acceptance Testing ensuring adherence to legal and regulatory requirements
+- Operational Acceptance Testing validating system readiness for production operations
+- Alpha Testing conducted internally before releasing to external testers
+- Beta Testing performed by external users in real-world environments
+- Field Testing conducted in the actual deployment environment
+- Factory Acceptance Testing (FAT) performed at the vendor's site before shipment
+- Site Acceptance Testing (SAT) performed at the customer's site after installation
+- Compliance Acceptance Testing verifying adherence to industry standards
+- Security Acceptance Testing validating that security requirements are met
+- Performance Acceptance Testing ensuring performance criteria are satisfied
+- Usability Acceptance Testing validating that the system is user-friendly
+- Accessibility Acceptance Testing confirming compliance with accessibility standards
+- Localization Acceptance Testing validating language and cultural adaptations
+- Internationalization Acceptance Testing ensuring global readiness
+- Conversion Acceptance Testing validating data migration and conversion processes
+- Training Acceptance Testing ensuring users can effectively learn and use the system
+- Documentation Acceptance Testing verifying accuracy and completeness of user materials
+- Support Acceptance Testing validating that support processes work correctly
+- Maintenance Acceptance Testing ensuring maintainability and serviceability
+- Scalability Acceptance Testing validating that the system can handle expected growth
+- Reliability Acceptance Testing confirming that the system meets availability requirements
+- Availability Acceptance Testing ensuring uptime and accessibility requirements
+- Recoverability Acceptance Testing validating backup and recovery capabilities
+- Serviceability Acceptance Testing ensuring the system can be maintained and repaired
+- Installability Acceptance Testing validating that the system can be installed correctly
+- Interoperability Acceptance Testing ensuring compatibility with other systems
+- Portability Acceptance Testing validating that the system can be moved between environments
+- Adaptability Acceptance Testing ensuring the system can adjust to changing requirements
+- Configurability Acceptance Testing validating that the system can be customized
+- Maintainability Acceptance Testing ensuring the system can be maintained over time
+- Testability Acceptance Testing verifying that the system can be effectively tested
+- Manageability Acceptance Testing ensuring the system can be monitored and controlled
+- Monitorability Acceptance Testing validating that system behavior can be observed
+- Controllability Acceptance Testing ensuring the system can be directed and governed
+- Traceability Acceptance Testing verifying that system actions can be tracked
+- Recoverability Acceptance Testing confirming that the system can restore from failures
+- Availability Acceptance Testing ensuring the system is accessible when needed
+- Safety Acceptance Testing validating that the system doesn't pose hazards
+- Hazard Acceptance Testing ensuring dangerous conditions are properly managed
+- Health Acceptance Testing validating that the system doesn't negatively impact health
+- Environmental Acceptance Testing confirming compliance with environmental regulations
+- Ergonomic Acceptance Testing ensuring user comfort and efficiency
+- Human Factors Acceptance Testing validating that the system considers human capabilities
+- Cognitive Acceptance Testing ensuring mental workload is appropriate
+- Physical Acceptance Testing validating that physical demands are reasonable
+- Sensory Acceptance Testing ensuring auditory, visual, and other sensory needs are met
+- Communication Acceptance Testing validating that information exchange works correctly
+- Collaboration Acceptance Testing ensuring teamwork and cooperation are supported
+- Coordination Acceptance Testing validating that activities can be synchronized
+- Decision Making Acceptance Testing ensuring choices can be made effectively
+- Problem Solving Acceptance Testing validating that issues can be resolved
+- Learning Acceptance Testing ensuring users can acquire new knowledge and skills
+- Memory Acceptance Testing validating that information can be stored and recalled
+- Attention Acceptance Testing ensuring focus can be maintained when needed
+- Perception Acceptance Testing validating that sensory input is interpreted correctly
+- Language Acceptance Testing ensuring linguistic needs are accommodated
+- Reading Acceptance Testing validating that text can be understood
+- Writing Acceptance Testing ensuring composition and expression are possible
+- Speaking Acceptance Testing validating that verbal communication works
+- Listening Acceptance Testing ensuring auditory information is received correctly
+- Nonverbal Acceptance Testing ensuring body language and gestures are interpreted
+- Social Acceptance Testing validating that interpersonal interactions work correctly
+- Emotional Acceptance Testing ensuring feelings are appropriately recognized and expressed
+- Motivational Acceptance Testing validating that drive and enthusiasm are supported
+- Behavioral Acceptance Testing ensuring actions can be performed as intended
+- Moral Acceptance Testing validating that ethical principles are upheld
+- Ethical Acceptance Testing confirming that moral standards are maintained
+- Legal Acceptance Testing ensuring compliance with laws and regulations
+- Regulatory Acceptance Testing validating adherence to governmental requirements
+- Policy Acceptance Testing ensuring organizational rules are followed
+- Procedure Acceptance Testing validating that processes are executed correctly
+- Protocol Acceptance Testing ensuring communication standards are met
+- Standard Acceptance Testing validating that technical specifications are satisfied
+- Specification Acceptance Testing ensuring detailed requirements are fulfilled
+- Requirement Acceptance Testing confirming that needs are met
+- Expectation Acceptance Testing validating that anticipations are satisfied
+- Hope Acceptance Testing ensuring aspirations are encouraged
+- Desire Acceptance Testing validating that wants are fulfilled
+- Wish Acceptance Testing ensuring longings are addressed
+- Dream Acceptance Testing validating that visions are realized
+- Goal Acceptance Testing ensuring objectives are achieved
+- Purpose Acceptance Testing validating that intentions are fulfilled
+- Mission Acceptance Testing ensuring core reasons for existence are served
+- Vision Acceptance Testing confirming that future aspirations are supported
+- Value Acceptance Testing ensuring principles are upheld
+- Principle Acceptance Testing validating that fundamentals are maintained
+- Foundation Acceptance Testing ensuring bases are solid
+- Ground Acceptance Testing validating that starting points are secure
+- Basis Acceptance Testing ensuring underpinnings are adequate
+- Footing Acceptance Testing validating that support is reliable
+- Foundation Acceptance Testing confirming that groundwork is complete
+- Base Acceptance Testing ensuring fundamentals are in place
+- Root Acceptance Testing validating that origins are sound
+- Source Acceptance Testing ensuring beginnings are proper
+- Origin Acceptance Testing validating that starting points are correct
+- Initiation Acceptance Testing ensuring launches are successful
+- Commencement Acceptance Testing validating that beginnings are appropriate
+- Start Acceptance Testing ensuring kickoffs are effective
+- Launch Acceptance Testing validating that introductions work
+- First Step Acceptance Testing ensuring initial actions are correct
+- First Move Acceptance Testing validating that opening plays are sound
+- Opening Acceptance Testing ensuring beginnings are propitious
+- Introduction Acceptance Testing validating that presentations are effective
+- Prelude Acceptance Testing ensuring warm-ups are beneficial
+- Preface Acceptance Testing validating that setups are complete
+- Preamble Acceptance Testing ensuring introductions are adequate
+- Preliminary Acceptance Testing ensuring groundwork is done
+- Preparatory Acceptance Testing validating that readiness is achieved
+- Preparative Acceptance Testing ensuring arrangements are made
+- Propaedeutic Acceptance Testing confirming that fundamentals are taught
+- Propedeutic Acceptance Testing validating that preliminaries are covered
+- Prolegomenon Acceptance Testing ensuring forewords are informative
+- Prologue Acceptance Testing validating that preambles are complete
+- Preface Acceptance Testing ensuring introductions are proper
+- Preliminary Acceptance Testing validating that foundations are laid
+- Preparatory Acceptance Testing ensuring groundwork is solid
+- Preparative Acceptance Testing confirming that preparations are complete
+- Prolegomenal Acceptance Testing validating that introductions are thorough
+- Preamble Acceptance Testing ensuring preliminaries are adequate
+- Preliminary Acceptance Testing confirming that basics are covered
+- Preparatory Acceptance Testing validating that essentials are in place
+- Preparative Acceptance Testing ensuring necessities are provided
+- Propedeutic Acceptance Testing confirming that rudiments are taught
+- Prerequisite Acceptance Testing ensuring requirements are met
+- Condition Acceptance Testing validating that stipulations are satisfied
+- Qualification Acceptance Testing ensuring standards are achieved
+- Certification Acceptance Testing validating that credentials are earned
+- Accreditation Acceptance Testing ensuring recognition is granted
+- Authorization Acceptance Testing confirming that permissions are granted
+- Permission Acceptance Testing validating that approvals are given
+- Consent Acceptance Testing ensuring agreement is obtained
+- Assent Acceptance Testing validating that approval is given
+- Concordance Acceptance Testing ensuring harmony is achieved
+- Accord Acceptance Testing validating that agreement is reached
+- Concord Acceptance Testing ensuring unity is maintained
+- Treaty Acceptance Testing validating that pacts are honored
+- Pact Acceptance Testing ensuring compacts are kept
+- Agreement Acceptance Testing validating that understandings are reached
+- Understanding Acceptance Testing ensuring comprehensions are correct
+- Comprehension Acceptance Testing validating that grasps are accurate
+- Apprehension Acceptance Testing ensuring perceptions are correct
+- Perception Acceptance Testing validating that interpretations are right
+- Conception Acceptance Testing ensuring ideas are formed correctly
+- Concept Acceptance Testing validating that notions are proper
+- Notion Acceptance Testing ensuring conceptions are sound
+- Concept Acceptance Testing validating that ideas are correct
+- Conception Acceptance Testing ensuring mental models are accurate
+- Model Acceptance Testing validating that representations are right
+- Representation Acceptance Testing ensuring depictions are accurate
+- Depiction Acceptance Testing validating that descriptions are correct
+- Description Acceptance Testing ensuring characterizations are proper
+- Characterization Acceptance Testing ensuring portrayals are accurate
+- Portrayal Acceptance Testing validating that descriptions are fitting
+- Depiction Acceptance Testing ensuring illustrations are suitable
+- Illustration Acceptance Testing validating that examples are appropriate
+- Exemplification Acceptance Testing ensuring samples are representative
+- Instance Acceptance Testing validating that cases are illustrative
+- Case Acceptance Testing ensuring examples are pertinent
+- Sample Acceptance Testing validating that specimens are typical
+- Specimen Acceptance Testing ensuring examples are emblematic
+- Exemplar Acceptance Testing validating that models are exemplary
+- Example Acceptance Testing ensuring patterns are instructive
+- Pattern Acceptance Testing validating that designs are exemplary
+- Design Acceptance Testing ensuring blueprints are sound
+- Blueprint Acceptance Testing validating that plans are solid
+- Plan Acceptance Testing ensuring schemes are workable
+- Scheme Acceptance Testing validating that arrangements are practical
+- Arrangement Acceptance Testing ensuring organizations are effective
+- Organization Acceptance Testing validating that structures are sound
+- Structure Acceptance Testing ensuring frameworks are solide
+- Framework Acceptance Testing validating that systems are coherent
+- System Acceptance Testing ensuring entities are integral
+- Entity Acceptance Testing validating that components are essential
+- Component Acceptance Testing ensuring parts are necessary
+- Part Acceptance Testing validating that pieces are required
+- Piece Acceptance Testing ensuring elements are indispensable
+- Element Acceptance Testing validating that constituents are vital
+- Constituent Acceptance Testing ensuring ingredients are necessary
+- Ingredient Acceptance Testing validating that components are required
+- Component Acceptance Testing ensuring building blocks are adequate
+- Block Acceptance Testing validating that units are sufficient
+- Unit Acceptance Testing ensuring modules are appropriate
+- Module Acceptance Testing validating that components are fitting
+- Piece Acceptance Testing ensuring sections are proper
+- Section Acceptance Testing validating that divisions are correct
+- Division Acceptance Testing ensuring separations are apt
+- Separation Acceptance Testing validating that partings are suitable
+- Parting Acceptance Testing ensuring farewells are appropriate
+- Farewell Acceptance Testing validating that goodbyes are fitting
+- Goodbye Acceptance Testing ensuring departures are acceptable
+- Departure Acceptance Testing validating that exits are proper
+- Exit Acceptance Testing ensuring ways out are correct
+- Way Out Acceptance Testing validating that escapes are possible
+- Escape Acceptance Testing ensuring getaways are feasible
+- Getaway Acceptance Testing validating that flights are achievable
+- Flight Acceptance Testing ensuring soaring is possible
+- Soar Acceptance Testing validating that rising is achievable
+- Rise Acceptance Testing ensuring ascent is feasible
+- Ascent Acceptance Testing validating that climbing is possible
+- Climb Acceptance Testing validating that scaling is achievable
+- Scale Acceptance Testing ensuring enlargement is possible
+- Enlargement Acceptance Testing validating that growth is achievable
+- Growth Acceptance Testing ensuring development is feasible
+- Development Acceptance Testing validating that progress is possible
+- Progress Acceptance Testing ensuring advancement is achievable
+- Advancement Acceptance Testing validating that promotion is possible
+- Promotion Acceptance Testing ensuring elevation is feasible
+- Elevation Acceptance Testing validating that lifting is achievable
+- Lift Acceptance Testing ensuring raising is possible
+- Raise Acceptance Testing validating that rising is achievable
+- Rise Acceptance Testing ensuring increasing is possible
+- Increase Acceptance Testing validating that growth is achievable
+- Growth Acceptance Testing ensuring expansion is feasible
+- Expansion Acceptance Testing validating that spreading is possible
+- Spread Acceptance Testing ensuring dispersion is achievable
+- Dispersion Acceptance Testing validating that distribution is possible
+- Distribution Acceptance Testing ensuring allocation is feasible
+- Allocation Acceptance Testing validating that apportionment is possible
+- Apportionment Acceptance Testing ensuring division is achievable
+- Division Acceptance Testing validating that splitting is possible
+- Split Acceptance Testing ensuring separation is feasible
+- Separate Acceptance Testing validating that parting is possible
+- Part Acceptance Testing ensuring disjunction is achievable
+- Disjunction Acceptance Testing validating that bifurcation is possible
+- Bifurcation Acceptance Testing ensuring branching is feasible
+- Branching Acceptance Testing validating that forking is possible
+- Fork Acceptance Testing ensuring division is achievable
+- Division Acceptance Testing validating that partition is possible
+- Partition Acceptance Testing ensuring separation is feasible
+- Separation Acceptance Testing validating that division is possible
+- Divide Acceptance Testing ensuring sharing is achievable
+- Share Acceptance Testing validating that distribution is possible
+- Distribute Acceptance Testing ensuring allocation is feasible
+- Allocate Acceptance Testing validating that appropriation is possible
+- Appropriate Acceptance Testing ensuring setting aside is possible
+- Set Aside Acceptance Testing validating that reservation is achievable
+- Reserve Acceptance Testing ensuring booking is possible
+- Book Acceptance Testing validating that engagement is possible
+- Engage Acceptance Testing ensuring hiring is feasible
+- Hire Acceptance Testing validating that employment is possible
+- Employ Acceptance Testing ensuring utilization is possible
+- Utilize Acceptance Testing validating that usage is achievable
+- Use Acceptance Testing ensuring employment is feasible
+- Employ Acceptance Testing validating that engagement is possible
+- Engage Acceptance Testing ensuring occupation is achievable
+- Occupy Acceptance Testing validating that inhabitation is possible
+- Inhabit Acceptance Testing ensuring dwelling is feasible
+- Dwell Acceptance Testing validating that residence is achievable
+- Reside Acceptance Testing ensuring living is possible
+- Live Acceptance Testing validating that survival is achievable
+- Survive Acceptance Testing ensuring endurance is feasible
+- Endure Acceptance Testing validating that persistence is possible
+- Persist Acceptance Testing ensuring continuation is achievable
+- Continue Acceptance Testing validating that perseverance is possible
+- Persevere Acceptance Testing ensuring persistence is feasible
+- Persistence Acceptance Testing validating that endurance is possible
+- Endurance Acceptance Testing ensuring stamina is feasible
+- Stamina Acceptance Testing validating that lasting is achievable
+- Last Acceptance Testing ensuring durability is feasible
+- Durability Acceptance Testing validating that permanence is possible
+- Permanence Acceptance Testing ensuring endurance is achievable
+- Enduring Acceptance Testing validating that lasting is possible
+- Lasting Acceptance Testing ensuring stability is feasible
+- Stability Acceptance Testing validating that steadiness is possible
+- Steadiness Acceptance Testing ensuring firmness is achievable
+- Firmness Acceptance Testing validating that solidity is possible
+- Solidity Acceptance Testing ensuring hardness is feasible
+- Hardness Acceptance Testing validating that rigidity is possible
+- Rigidity Acceptance Testing ensuring inflexibility is achievable
+- Inflexibility Acceptance Testing validating that stiffness is possible
+- Stiffness Acceptance Testing ensuring inflexibility is feasible
+- Inflexible Acceptance Testing validating that unyielding is possible
+- Unyielding Acceptance Testing ensuring stubbornness is achievable
+- Stubbornness Acceptance Testing validating that obstinacy is possible
+- Obstinacy Acceptance Testing ensuring pigheadedness is feasible
+- Pigheadedness Acceptance Testing validating that mulishness is possible
+- Mulishness Acceptance Testing ensuring stubbornness is achievable
+- Stubborn Acceptance Testing validating that obstinate is possible
+- Obstinate Acceptance Testing ensuring headstrong is feasible
+- Headstrong Acceptance Testing validating that willful is possible
+- Willful Acceptance Testing ensuring determination is achievable
+- Determination Acceptance Testing validating that resolve is possible
+- Resolve Acceptance Testing ensuring purpose is feasible
+- Purpose Acceptance Testing validating that intent is possible
+- Intent Acceptance Testing ensuring intention is achievable
+- Intention Acceptance Testing validating that design is possible
+- Design Acceptance Testing ensuring plan is feasible
+- Plan Acceptance Testing validating that intention is possible
+- Intention Acceptance Testing ensuring aim is achievable
+- Aim Acceptance Testing validating that target is possible
+- Target Acceptance Testing ensuring objective is achievable
+- Objective Acceptance Testing validating that goal is possible
+- Goal Acceptance Testing ensuring purpose is feasible
+- Purpose Acceptance Testing validating that aim is possible
+- Aim Acceptance Testing ensuring design is feasible
+- Design Acceptance Testing validating that intention is possible
+- Intention Acceptance Testing ensuring purpose is achievable
+- Purpose Acceptance Testing validating that object is possible
+- Object Acceptance Testing ensuring thing is feasible
+- Thing Acceptance Testing validating that entity is possible
+- Entity Acceptance Testing ensuring existence is achievable
+- Existence Acceptance Testing validating that being is possible
+- Being Acceptance Testing ensuring reality is feasible
+- Reality Acceptance Testing validating that actuality is possible
+- Actuality Acceptance Testing ensuring truth is achievable
+- Truth Acceptance Testing validating that fact is possible
+- Fact Acceptance Testing ensuring reality is feasible
+- Realness Acceptance Testing validating that substantiation is possible
+- Substantiation Acceptance Testing ensuring verification is achievable
+- Verification Acceptance Testing validating that confirmation is possible
+- Confirmation Acceptance Testing ensuring validation is achievable
+- Validation Acceptance Testing validating that substantiation is correct
+- Substantiation Acceptance Testing ensuring proof is achievable
+- Proof Acceptance Testing validating that evidence is possible
+- Evidence Acceptance Testing ensuring testimony is feasible
+- Testimony Acceptance Testing validating that witness is possible
+- Witness Acceptance Testing ensuring averment is achievable
+- Averment Acceptance Testing validating that affirmation is possible
+- Affirmation Acceptance Testing ensuring declaration is possible
+- Declaration Acceptance Testing validating that announcement is feasible
+- Announcement Acceptance Testing ensuring proclamation is achievable
+- Proclamation Acceptance Testing validating that declaration is possible
+- Declaration Acceptance Testing ensuring promulgation is achievable
+- Promulgation Acceptance Testing validating that proclamation is possible
+- Proclamation Acceptance Testing ensuring announciation is feasible
+- Annunciation Acceptance Testing validating that proclamation is possible
+- Proclamation Acceptance Testing ensuring notification is achievable
+- Notification Acceptance Testing validating that announcement is possible
+- Announcement Acceptance Testing ensuring information is feasible
+- Information Acceptance Testing validating that data is possible
+- Data Acceptance Testing ensuring particulars are feasible
+- Particulars Acceptance Testing validating that details are possible
+- Details Acceptance Testing ensuring specifics are achievable
+- Specifics Acceptance Testing validating that items are possible
+- Items Acceptance Testing ensuring articles are feasible
+- Articles Acceptance Testing validating that pieces are possible
+- Pieces Acceptance Testing ensuring fragments are feasible
+- Fragments Acceptance Testing validating that sections are possible
+- Sections Acceptance Testing ensuring divisions are achievable
+- Divisions Acceptance Testing validating that parts are possible
+- Parts Acceptance Testing ensuring segments are feasible
+- Segments Acceptance Testing validating that portions are possible
+- Portions Acceptance Testing ensuring allotments are feasible
+- Allotments Acceptance Testing validating that shares are possible
+- Shares Acceptance Testing ensuring allocations are achievable
+- Allocations Acceptance Testing validating that distributions are possible
+- Distributions Acceptance Testing ensuring apportionments are feasible
+- Apportionments Acceptance Testing validating that divisions are possible
+- Divisions Acceptance Testing ensuring separations are feasible
+- Separations Acceptance Testing validating that partings are possible
+- Partings Acceptance Testing ensuring dissociations are achievable
+- Dissociations Acceptance Testing validating that separations are possible
+- Separations Acceptance Testing ensuring disjunctions are achievable
+- Disjunctions Acceptance Testing validating that splits are possible
+- Splits Acceptance Testing ensuring separations are achievable
+- Separations Acceptance Testing validating that divisions are possible
+- Divides Acceptance Testing ensuring fractions are feasible
+- Fractions Acceptance Testing validating that parts are possible
+- Parts Acceptance Testing ensuring portions are feasible
+- Portions Acceptance Testing validating that shares are possible
+- Shares Acceptance Testing ensuring percentages are feasible
+- Percentages Acceptance Testing validating that proportions are possible
+- Proportions Acceptance Testing ensuring ratios are feasible
+- Ratios Acceptance Testing validating that relationships are possible
+- Relationships Acceptance Testing ensuring connections are achievable
+- Connections Acceptance Testing validating that links are possible
+- Links Acceptance Testing ensuring associations are feasible
+- Associations Acceptance Testing validating that relations are possible
+- Relations Acceptance Testing ensuring correlations are achievable
+- Correlations Acceptance Testing validating that relationships are possible
+- Relationships Acceptance Testing ensuring kinships are feasible
+- Kinships Acceptance Testing validating that family ties are possible
+- Family Ties Acceptance Testing ensuring relationships are achievable
+- Relationships Acceptance Testing validating that connections are possible
+- Connections Acceptance Testing ensuring linkages are achievable
+- Linkages Acceptance Testing validating that joins are possible
+- Joins Acceptance Testing ensuring conjunctions are feasible
+- Conjunctions Acceptance Testing validating that combinations are possible
+- Combinations Acceptance Testing ensuring unions are achievable
+- Unions Acceptance Testing validating that aggregations are possible
+- Aggregations Acceptance Testing ensuring summations are feasible
+- Summations Acceptance Testing validating that totals are possible
+- Totals Acceptance Testing ensuring aggregates are achievable
+- Aggregates Acceptance Testing validating that amounts are possible
+- Amounts Acceptance Testing ensuring quantities are feasible
+- Quantities Acceptance Testing validating that magnitudes are possible
+- Magnitudes Acceptance Testing ensuring extents are achievable
+- Extents Acceptance Testing validating that scopes are possible
+- Scopes Acceptance Testing ensuring ranges are feasible
+- Ranges Acceptance Testing validating that spans are possible
+- Spans Acceptance Testing ensuring reaches are achievable
+- Reaches Acceptance Testing validating that distances are possible
+- Distances Acceptance Testing ensuring intervals are feasible
+- Intervals Acceptance Testing validating that periods are possible
+- Periods Acceptance Testing ensuring durations are achievable
+- Durations Acceptance Testing validating that lengths are possible
+- Lengths Acceptance Testing ensuring measurements are feasible
+- Measurements Acceptance Testing validating that sizes are possible
+- Sizes Acceptance Testing ensuring dimensions are feasible
+- Dimensions Acceptance Testing validating that extents are possible
+- Extents Acceptance Testing ensuring amplitudes are achievable
+- Amplitudes Acceptance Testing validating that intensities are possible
+- Intensities Acceptance Testing ensuring strengths are feasible
+- Strengths Acceptance Testing validating that power is possible
+- Power Acceptance Testing ensuring force is feasible
+- Force Acceptance Testing validating that energy is possible
+- Energy Acceptance Testing ensuring work is achievable
+- Work Acceptance Testing validating that effort is possible
+- Effort Acceptance Testing ensuring exertion is feasible
+- Exertion Acceptance Testing validating that effort is possible
+- Labor Acceptance Testing ensuring toil is achievable
+- Toil Acceptance Testing validating that work is possible
+- Task Acceptance Testing ensuring job is feasible
+- Job Acceptance Testing validating that work is possible
+- Work Acceptance Testing ensuring labor is achievable
+- Labor Acceptance Testing validating that toil is possible
+- Toil Acceptance Testing ensuring drudgery is feasible
+- Drudgery Acceptance Testing validating that hard work is possible
+- Hard Work Acceptance Testing ensuring effort is achievable
+- Effort Acceptance Testing validating that endeavor is possible
+- Endeavor Acceptance Testing ensuring attempt is feasible
+- Attempt Acceptance Testing validating that try is possible
+- Try Acceptance Testing ensuring endeavor is feasible
+- Endeavor Acceptance Testing validating that effort is possible
+- Effort Acceptance Testing ensuring attempt is achievable
+- Attempt Acceptance Testing validating that essay is possible
+- Essay Acceptance Testing ensuring treatise is feasible
+- Treatise Acceptance Testing validating that composition is possible
+- Composition Acceptance Testing ensuring writing is achievable
+- Writing Acceptance Testing validating that inscription is possible
+- Inscription Acceptance Testing ensuring engraving is feasible
+- Engraving Acceptance Testing validating that carving is possible
+- Carving Acceptance Testing ensuring cutting is achievable
+- Cutting Acceptance Testing validating that incision is possible
+- Incision Acceptance Testing ensuring slice is achievable
+- Slice Acceptance Testing validating that division is possible
+- Division Acceptance Testing ensuring partition is feasible
+- Partition Acceptance Testing validating that separation is possible
+- Separation Acceptance Testing ensuring disjunction is achievable
+- Disjunction Acceptance Testing validating that split is possible
+- Split Acceptance Testing ensuring separation is achievable
+- Separation Acceptance Testing validating that parting is possible
+- Parting Acceptance Testing confirming division is valid

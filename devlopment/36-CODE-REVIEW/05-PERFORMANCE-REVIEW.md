@@ -1,0 +1,516 @@
+# 05-PERFORMANCE-REVIEW
+
+## 1. What Is Performance Review in Code Review?
+
+Performance review in the context of code review is the systematic examination of code changes to identify potential performance inefficiencies, bottlenecks, scalability concerns, and areas where the code may not meet performance requirements under expected workloads. It focuses on ensuring that the code is not only functionally correct but also efficient in its use of computational resources (CPU, memory, disk I/O, network bandwidth) and can scale appropriately as demand increases.
+
+Unlike functional testing which verifies that features work as intended, performance review looks for how the code behaves under load, how resource consumption grows with input size, and whether there are inefficient patterns that could degrade system performance. It considers algorithmic complexity, resource utilization patterns, and potential bottlenecks that could affect user experience or system capacity.
+
+## 2. Why Does Performance Review Matter in Code Review?
+
+Performance review matters in code review because:
+
+- **Early Bottleneck Detection**: Identifying performance issues during development is significantly cheaper and easier than fixing them in production after users experience slowdowns
+- **Capacity Planning Accuracy**: Performance characteristics identified during review help with accurate system capacity planning and infrastructure sizing
+- **User Experience Protection**: Poor performance directly impacts user satisfaction, engagement, and conversion rates
+- **Operational Cost Optimization**: Inefficient code wastes computational resources, leading to higher infrastructure costs and energy consumption
+- **Scalability Assurance**: Early identification of scalability limits helps ensure the system can grow with business needs
+- **Competitive Advantage**: Better performance can be a key differentiator in the marketplace
+- **Battery Life Preservation**: In mobile and embedded systems, inefficient code drains battery faster
+- **Environmental Impact**: More efficient code reduces carbon footprint from data centers and devices
+- **Real-time Constraint Satisfaction**: Ensures systems meet timing requirements for real-time or near-real-time applications
+- **Resource Contention Reduction**: Efficient code reduces contention for shared resources in multi-tenant or concurrent environments
+- **Predictable Performance**: Understanding performance characteristics allows for more reliable SLAs and service guarantees
+- **Technical Debt Prevention**: Performance inefficiencies left unchecked accumulate and become harder to fix over time
+- **Trend Identification**: Performance review helps identify negative performance trends before they become critical issues
+- **Architectural Validation**: Confirms that architectural decisions for performance (caching, async processing, etc.) are implemented correctly
+- **Third-party Component Evaluation**: Assesses performance implications of integrated libraries, frameworks, and services
+
+## 3. What Problem Does Inadequate Performance Review Cause?
+
+Inadequate performance review leads to numerous problems that can impact system effectiveness and business value:
+
+- **Slow Response Times**: Users experience frustrating delays, leading to abandonment and dissatisfaction
+- **Poor Scalability**: System cannot handle expected growth in users, data, or transaction volume
+- **Resource Exhaustion**: Applications consume excessive CPU, memory, or I/O, leading to crashes or degradation
+- **Increased Infrastructure Costs**: Inefficient code requires more servers, storage, and network capacity to achieve same performance
+- **Battery Drain**: Mobile applications drain device batteries quickly, leading to poor user ratings
+- **Real-time Failure**: Systems miss critical timing requirements in industrial control, trading, or multimedia applications
+- **Cascading Failures**: One slow component can cause timeouts and failures in dependent services
+- **Poor Concurrency Handling**: Inefficient locking or resource sharing creates bottlenecks under concurrent load
+- **Memory Leaks**: Gradual memory consumption increases lead to eventual out-of-memory crashes
+- **Garbage Collection Pressure**: Excessive object allocation causes frequent and lengthy GC pauses
+- **Database Overload**: Inefficient queries overwhelm database servers, affecting all applications
+- **Network Saturation**: Excessive bandwidth consumption affects other services and increases costs
+- **CDN Inefficiency**: Poor caching strategies defeat the purpose of content delivery networks
+- **False Economy**: "Working but slow" code creates hidden costs that accumulate over time
+- **User Workflow Disruption**: Slow applications interrupt user productivity and task completion
+- **Competitive Disadvantage**: Faster competitors win market share even with fewer features
+- **Operational Firefighting**: Teams spend more time reacting to performance issues than building new features
+- **Capacity Overprovisioning**: Organizations overbuy infrastructure to compensate for inefficient code
+- **Energy Waste**: Inefficient code consumes unnecessary electricity in data centers and devices
+- **Thermal Issues**: Excessive CPU usage can cause overheating and throttling in constrained devices
+- **License Compliance Issues**: Some software licenses restrict usage based on processor or core count
+- **Vendor Lock-in Risk**: Performance-tied infrastructure makes it harder to switch providers
+- **Monitoring Alert Fatigue**: Constant performance alerts reduce effectiveness of monitoring systems
+- **Trend Masking**: Chronic inefficiencies make it harder to detect new performance regressions
+- **Technical Debt Accumulation**: Performance shortcuts create future maintenance burdens
+- **Inconsistent Performance**: Variability in response times makes user experience unpredictable
+- **Peak Load Failure**: Systems work fine normally but fail during expected peak usage periods
+- **SLA Violations**: Inability to meet agreed-upon performance levels with customers or internal teams
+- **Search Ranking Penalties**: Slow websites receive lower rankings in search engine results
+- **Conversion Rate Impact**: Even small delays significantly reduce conversion rates in e-commerce
+- **Mobile App Store Ratings**: Performance complaints lead to poor ratings and fewer downloads
+
+## 4. Key Dimensions of Performance Review
+
+### 4.1 Algorithmic Complexity
+- **Time complexity analysis**: Evaluating Big O notation for key operations (O(1), O(log n), O(n), O(n²), etc.)
+- **Space complexity analysis**: Assessing memory usage growth relative to input size
+- **Loop efficiency**: Examining nested loops, iteration bounds, and opportunities for early termination
+- **Recursion analysis**: Evaluating recursive algorithms for stack depth and efficiency
+- **Algorithm selection**: Verifying that chosen algorithms are appropriate for expected data sizes
+- **Amortized analysis**: Understanding average-case performance vs. worst-case scenarios
+- **Cache complexity**: Considering how CPU cache usage affects actual performance
+- **Parallel complexity**: Analyzing performance of concurrent and parallel algorithms
+- **Sorting efficiency**: Ensuring appropriate sorting algorithms are used for data characteristics
+- **Search optimization**: Verifying that search operations use appropriate data structures and algorithms
+- **Graph algorithm assessment**: Evaluating efficiency of graph traversal and path-finding algorithms
+- **Dynamic programming use**: Checking whether DP is appropriately applied to overlapping subproblems
+- **Greedy algorithm validation**: Ensuring greedy approaches are correct for the problem domain
+- **Probabilistic algorithms**: Assessing use of bloom filters, hyperloglog, etc. for approximate results
+- **String operation efficiency**: Evaluating performance of string concatenation, substring, and matching operations
+- **Numeric computation analysis**: Assessing performance of mathematical operations and numerical methods
+
+### 4.2 Resource Utilization
+- **CPU usage patterns**: Evaluating whether CPU utilization is efficient or contains unnecessary cycles
+- **Memory allocation and reuse**: Analyzing object creation patterns, memory pools, and garbage generation
+- **Memory leak detection**: Identifying objects that accumulate in memory without being released
+- **File I/O efficiency**: Evaluating reading/writing patterns, buffering, and use of efficient APIs
+- **Network call optimization**: Assessing batching, compression, and connection reuse for remote calls
+- **Database query efficiency**: Examining query structure, index usage, and result set handling
+- **Lock contention analysis**: Evaluating synchronization primitives for potential bottlenecks
+- **Thread pool sizing**: Verifying that thread pools are appropriately sized for workload characteristics
+- **Connection pooling**: Ensuring efficient reuse of expensive connections (database, HTTP, etc.)
+- **Resource acquisition/release**: Verifying timely release of resources (files, sockets, locks, etc.)
+- **Buffer sizing**: Evaluating whether buffer sizes are appropriate for data throughput needs
+- **Cache effectiveness**: Analyzing hit/miss ratios and appropriateness of caching strategies
+- **Compression efficiency**: Evaluating use of compression for data storage and transmission
+- **Serialization/deserialization**: Assessing performance of object marshalling/unmarshalling
+- **Object pooling**: Checking whether expensive objects are properly reused
+- **Lazy initialization**: Verifying that expensive resources are created only when needed
+- **Eager loading prevention**: Ensuring data is not loaded unnecessarily before use
+- **Memory mapping**: Evaluating appropriate use of memory-mapped files for large data access
+- **Sparse data structures**: Checking whether sparse arrays/matrices are used when appropriate
+- **Memory fragmentation**: Assessing whether allocation patterns lead to excessive fragmentation
+- **Garbage collection tuneability**: Verifying that GC behavior can be adjusted for workload characteristics
+- **Native resource management**: Ensuring proper release of OS handles, GPU contexts, etc.
+
+### 4.3 Concurrency and Parallelism
+- **Thread safety verification**: Ensuring shared state is properly protected from concurrent access
+- **Lock granularity analysis**: Evaluating whether locks are appropriately fine-grained or coarse-grained
+- **Deadlock prevention**: Checking for potential circular wait conditions in locking patterns
+- **Livelock and starvation**: Assessing whether thread scheduling policies could cause indefinite postponement
+- **Thread pool utilization**: Verifying that thread pools are neither underutilized nor overwhelmed
+- **Async/await correctness**: Ensuring asynchronous patterns are properly implemented without blocking
+- **Event loop efficiency**: Evaluating whether event-driven architectures avoid blocking the main thread
+- **Worker queue analysis**: Assessing whether work distribution is balanced across parallel workers
+- **Batch processing efficiency**: Verifying that batch sizes are optimal for throughput vs latency tradeoffs
+- **Pipeline balancing**: Checking whether stages in processing pipelines are appropriately balanced
+- **False sharing prevention**: Ensuring that frequently accessed variables don't share cache lines
+- **Lock-free algorithm assessment**: Evaluating correctness and performance of lock-free data structures
+- **Actor model implementation**: Checking whether message passing avoids shared state issues
+- **GPU utilization**: Verifying that GPU computing resources are used effectively when applicable
+- **Vectorization opportunities**: Identifying whether SIMD instructions could improve performance
+- **NUMA awareness**: Checking whether memory allocation considers non-uniform memory access
+- **Affinity scheduling**: Evaluating whether thread/process affinity is used appropriately
+- **Interrupt handling**: Assessing whether interrupt processing is efficient and doesn't starve other tasks
+- **Context switch minimization**: Evaluating whether unnecessary mode switches are avoided
+- **Preemption analysis**: Checking whether task preemption characteristics are appropriate for responsiveness
+- **Wait-free algorithms**: Assessing whether progress guarantees meet real-time requirements
+- **Benchmark methodology**: Verifying that performance tests accurately measure intended characteristics
+
+### 4.4 I/O and Network Performance
+- **Disk I/O optimization**: Evaluating sequential vs random access patterns and use of appropriate APIs
+- **Buffered I/O effectiveness**: Verifying that buffering reduces system call overhead appropriately
+- **Memory-mapped files**: Assessing whether memory mapping is used effectively for large file access
+- **Scatter/gather I/O**: Checking whether vectored I/O operations are used when beneficial
+- **Asynchronous I/O**: Verifying that async I/O prevents blocking threads during wait operations
+- **File system selection**: Evaluating whether appropriate file systems are used for workload characteristics
+- **Compression tradeoffs**: Analyzing CPU cost vs I/O reduction for data compression
+- **Data deduplication**: Evaluating whether storage-level deduplication is appropriate and effective
+- **Tiered storage usage**: Checking whether hot/warm/cold data is placed appropriately
+- **Network call batching**: Verifying that multiple related calls are combined when possible
+- **Connection reuse**: Ensuring HTTP/database connections are properly pooled and reused
+- **Request multiplexing**: Evaluating whether protocols like HTTP/2 or gRPC are used effectively
+- **Compression negotiation**: Verifying that appropriate compression is used for network transmissions
+- **Protocol overhead analysis**: Assessing whether protocol headers and framing are efficient
+- **Message size optimization**: Checking whether message sizes are appropriate for network characteristics
+- **Connection keep-alive**: Verifying that persistent connections are used to reduce handshake overhead
+- **DNS optimization**: Evaluating whether DNS lookups are minimized and cached appropriately
+- **Load balancing effectiveness**: Assessing whether traffic is distributed efficiently across resources
+- **CDN utilization**: Verifying that static content is properly served from edge locations
+- **WebSocket efficiency**: Checking whether persistent connections are used appropriately for real-time needs
+- **gRPC/HTTP2 advantages**: Evaluating whether binary protocols and multiplexing are used when beneficial
+- **Socket buffer sizing**: Assessing whether OS socket buffers are appropriately sized for throughput
+- **Network interface selection**: Checking whether appropriate NICs are used for bandwidth requirements
+- **Interrupt coalescing**: Evaluating whether network interrupt mitigation is used effectively
+- **TCP tuning**: Verifying that TCP window scaling, selective ACK, etc. are configured appropriately
+- **QoS implementation**: Checking whether quality-of-service markings are used for priority traffic
+- **VPN/tunnel overhead**: Assessing whether encapsulation overhead is acceptable for secure connections
+- **Proxy efficiency**: Evaluating whether proxy chaining introduces unnecessary latency
+- **Load balancer health checks**: Verifying that health checks don't introduce significant overhead
+
+### 4.5 Database and Storage Performance
+- **Query optimization**: Evaluating whether SQL queries use indexes effectively and avoid table scans
+- **Index utilization**: Verifying that appropriate indexes exist and are used for query patterns
+- **Join efficiency**: Checking that join orders and types are optimal for given table sizes and indexes
+- **N+1 query problem**: Identifying whether lazy loading causes excessive numbers of small queries
+- **Batch operations**: Evaluating whether bulk insert/update/delete operations are used when appropriate
+- **Connection pooling**: Ensuring database connections are properly reused rather than created/destroyed
+- **Transaction sizing**: Verifying that transactions are appropriately sized to balance consistency and throughput
+- **Isolation level selection**: Checking that transaction isolation levels are appropriate for consistency needs
+- **Prepared statement usage**: Verifying that parameterized queries are used to enable query plan reuse
+- **Result set handling**: Assessing whether large result sets are processed efficiently (streaming vs loading)
+- **Pagination implementation**: Checking that LIMIT/OFFSET or keyset pagination is used appropriately
+- **Connection leakage**: Verifying that database connections are properly closed and returned to pool
+- **Query caching**: Evaluating whether query results are appropriately cached when data is static
+- **Read replica usage**: Verifying that read queries are directed to replicas when appropriate
+- **Connection timeout settings**: Checking that timeouts are appropriate for network and database conditions
+- **Deadlock detection and resolution**: Verifying that database deadlocks are handled appropriately
+- **Storage engine selection**: Evaluating whether appropriate storage engines are used for workload patterns
+- **Partitioning effectiveness**: Checking whether horizontal partitioning improves query performance
+- **Sharding strategy**: Assessing whether data distribution across shards is effective for query patterns
+- **Replication lag monitoring**: Verifying that replication delays are understood and accounted for
+- **Backup/restore performance**: Evaluating whether backup operations complete within maintenance windows
+- **Archive strategy**: Checking whether historical data is moved to appropriate storage tiers
+- **Index maintenance**: Verifying that index fragmentation is monitored and addressed appropriately
+- **Statistics freshness**: Ensuring that query optimizer statistics are kept up to date
+- **Parameter sniffing**: Evaluating whether cached query plans are appropriate for varying parameters
+- **Connection encryption**: Verifying that database connections use appropriate encryption (SSL/TLS)
+- **Authentication overhead**: Assessing whether database authentication impact is minimized
+- **Connection multiplexing**: Evaluating whether multiple logical connections share physical connections when beneficial
+- **Async database drivers**: Checking whether asynchronous database access is used when appropriate
+- **Bulk copy operations**: Verifying that high-speed load/unload utilities are used for bulk data movement
+- **Table partitioning**: Evaluating whether range, hash, or list partitioning is appropriate for access patterns
+- **Materialized view usage**: Checking whether precomputed results are used effectively for frequent queries
+- **Query hint evaluation**: Assessing whether optimizer hints are used appropriately and sparingly
+- **Partition pruning**: Verifying that queries effectively eliminate unnecessary partitions
+- **Index covering**: Checking whether indexes include all needed columns to avoid table lookups
+- **Index compression**: Evaluating whether index storage efficiency is appropriate
+- **Adaptive indexing**: Verifying that automatic index tuning features are used when beneficial
+- **Workload-appropriate indexing**: Checking that index types match query patterns (B-tree, hash, GIN, GiST, etc.)
+- **In-memory database usage**: Assessing whether appropriate data is kept in memory for performance
+- **Persistent memory usage**: Evaluating whether non-volatile memory is used effectively when available
+- **Storage tiering**: Verifying that data is placed on appropriate storage tiers based on access frequency
+- **Compression at storage level**: Checking whether transparent compression is used effectively
+- **Encryption performance impact**: Evaluating whether storage encryption overhead is acceptable
+- **Hardware acceleration**: Verifying that storage hardware acceleration features are used when available
+- **NVMe optimization**: Checking whether PCIe-based storage is used effectively for high-performance needs
+- **Raw device access**: Evaluating whether direct access to storage devices is used when beneficial
+- **Filesystem selection**: Assessing whether appropriate filesystems are used for performance characteristics
+- **Journaling mode**: Evaluating whether journaling settings balance performance and reliability needs
+- **Allocation strategies**: Checking whether disk space allocation patterns minimize fragmentation
+- **Defragmentation schedules**: Verifying that fragmentation is managed appropriately for HDDs
+- **SSD wear leveling**: Ensuring that write patterns don't excessively reduce SSD lifespan
+- **Trim support**: Verifying that operating systems issue trim commands to maintain SSD performance
+- **Cache hierarchy utilization**: Evaluating whether CPU, controller, and drive caches are used effectively
+- **Queue depth optimization**: Checking whether storage queue depths are appropriate for workload characteristics
+- **Command queuing**: Verifying that storage devices effectively handle queued commands
+- **Error recovery**: Assessing whether storage error handling doesn't excessively impact performance
+- **Power loss protection**: Evaluating whether performance is maintained during power loss protection operations
+- **Encryption key management**: Verifying that encryption key operations don't create performance bottlenecks
+- **Compression algorithm selection**: Checking that appropriate compression algorithms are used for data types
+- **Deduplication ratio**: Evaluating whether storage deduplication provides adequate space savings
+- **Thin provisioning**: Assessing whether storage over-subscription is managed appropriately
+- **Snapshot performance**: Verifying that snapshot creation and deletion don't excessively impact performance
+- **Clone efficiency**: Checking whether clone operations are implemented efficiently (copy-on-write vs full copy)
+- **Replication bandwidth**: Verifying that network bandwidth is sufficient for replication needs
+- **Replication latency**: Assessing whether replication delay is acceptable for use case requirements
+- **Failover performance**: Evaluating that storage failover occurs within acceptable time limits
+- **Recovery time objectives**: Verifying that storage systems meet RTO requirements after failures
+- **Recovery point objectives**: Checking that storage systems meet RPO requirements for data loss tolerance
+- **Performance monitoring**: Ensuring that storage performance metrics are collected and analyzed
+- **Capacity planning**: Verifying that storage growth trends are understood and anticipated
+- **Tier effectiveness**: Checking that automated storage tiering moves data appropriately based on usage
+- **QoS implementation**: Assessing whether storage quality-of-service controls are used effectively
+- **Throttling policies**: Verifying that I/O throttling is used appropriately to prevent resource starvation
+- **Multipath I/O**: Evaluating whether multiple paths to storage devices are used for redundancy and performance
+- **Virtualization overhead**: Assessing whether storage performance impact from virtualization is acceptable
+- **Container storage interfaces**: Verifying that CSI drivers are implemented effectively for performance
+- **Storage class selection**: Checking that appropriate storage classes are used for workload requirements
+- **Ephemeral storage usage**: Assessing whether temporary storage is used appropriately for performance needs
+- **Persistent volume claims**: Verifying that PVCs are bound to appropriate storage classes
+- **Storage efficiency metrics**: Ensuring that space utilization and efficiency metrics are tracked
+- **Compression at block level**: Checking whether inline compression is used effectively in storage stacks
+- **Encryption at block level**: Verifying that transparent encryption doesn't excessively impact performance
+- **Tiering policies**: Assessing whether automated data movement policies are effective
+- **Cache policies**: Evaluating whether read/write cache policies are appropriate for workload patterns
+- **Prefetching strategies**: Checking whether anticipatory data loading improves performance
+- **Write-back vs write-through**: Assessing whether caching policies balance performance and durability needs
+- **Cache coherency**: Verifying that cache consistency mechanisms don't excessively impact performance
+- **Storage area network (SAN) optimization**: Evaluating whether Fibre Channel or iSCSI is used effectively
+- **Network-attached storage (NAS) efficiency**: Checking whether CIFS/NFS is used appropriately for workload needs
+
+### 4.6 Frontend and Rendering Performance
+- **DOM manipulation efficiency**: Evaluating whether browser reflows and repaints are minimized
+- **CSS selector performance**: Checking whether selectors are efficient and avoid excessive matching
+- **JavaScript execution time**: Assessing whether JS execution blocks UI thread excessively
+- **Event listener management**: Verifying that listeners are properly added/removed to prevent leaks
+- **Animation performance**: Evaluating whether CSS animations or requestAnimationFrame is used efficiently
+- **Image optimization**: Verifying that images are properly sized, compressed, and formatted for web use
+- **Lazy loading**: Checking whether offscreen images and components are loaded only when needed
+- **Code splitting**: Evaluating whether JavaScript bundles are properly split for on-demand loading
+- **Bundle size analysis**: Assessing whether JavaScript/CSS bundles are kept minimal for fast loading
+- **Critical rendering path**: Verifying that above-the-fold content loads quickly to improve perceived performance
+- **Font loading optimization**: Checking whether web fonts are loaded efficiently to prevent invisible text
+- **HTTP caching**: Verifying that appropriate cache headers are set for static resources
+- **Service worker usage**: Evaluating whether SWs are used effectively for offline caching and background sync
+- **Prefetching and preloading**: Checking whether resource hints are used effectively to anticipate navigation
+- **DNS prefetching**: Verifying that DNS lookups are performed proactively to reduce latency
+- **Preconnect and prerender**: Assessing whether connection establishment or prerendering is used beneficially
+- **Resource loading order**: Verifying that critical resources are prioritized in HTML loading sequence
+- **Async/defer attributes**: Checking whether script loading doesn't block HTML parsing when appropriate
+- **Inline vs external resources**: Evaluating tradeoffs between HTTP requests and HTML size
+- **Image sprite usage**: Verifying that combined images are used effectively when appropriate
+- **CSS optimization**: Assessing whether CSS is minimized, combined, and unnecessary rules removed
+- **JavaScript minification**: Checking whether JS code is properly minified for production use
+- **HTML compression**: Verifying that HTML is properly compressed (gzip/brotli) for transmission
+- **Viewport meta tag**: Checking whether mobile viewport is properly configured for responsive design
+- **Tap target sizing**: Ensuring that touch targets are appropriately sized for finger interaction
+- **Scrolling performance**: Evaluating whether passive event listeners or will-change properties are used
+- **Virtual scrolling**: Checking whether large lists are rendered efficiently using windowing techniques
+- **Canvas performance**: Assessing whether HTML5 canvas is used efficiently for graphics rendering
+- **WebGL optimization**: Verifying that 3D graphics hardware is used effectively when available
+- **CSS transforms**: Checking whether GPU-accelerated transforms are used for animations when possible
+- **Request animation frame**: Verifying that animations are synchronized with display refresh rate
+- **Layout thrashing prevention**: Evaluating whether forced synchronous layouts are avoided
+- **CSS containment**: Assessing whether CSS containment is used to limit style/layout scope
+- **Will-change property**: Checking whether upcoming changes are hinted to browser for optimization
+- **Image decoding**: Verifying that image formats are chosen for efficient decoding on target devices
+- **Vector graphics usage**: Assessing whether SVG is used appropriately for scalable graphics
+- **Icon font evaluation**: Checking whether icon fonts are used efficiently or replaced with SVGs
+- **Lazy hydration**: Verifying that server-rendered HTML is made interactive efficiently
+- **Streaming SSR**: Checking whether server-side rendering streams HTML to improve TTFB
+- **Selective hydration**: Assessing whether only interactive parts of SSR hydrate initially
+- **Island architecture**: Verifying that independent components hydrate separately for improved performance
+- **Responsive image techniques**: Checking whether srcset/sizes/picture elements are used appropriately
+- **Content visibility**: Evaluating whether CSS content-visibility is used to skip offscreen rendering
+- **Container queries**: Assessing whether container-based styling reduces need for media queries
+- **Subgrid usage**: Checking whether CSS subgrid is used effectively for complex layouts
+- **Zoom optimization**: Verifying that zoom interactions don't trigger excessive reflows/repaints
+- **Print stylesheet efficiency**: Checking whether print-specific CSS doesn't interfere with screen rendering
+- **Accessibility performance**: Verifying that ARIA attributes don't excessively impact performance
+- **Internationalization performance**: Assessing whether i18n libraries are used efficiently
+- **Dark mode implementation**: Checking whether theme switching doesn't cause excessive re-renders
+- **Font loading strategies**: Evaluating whether FOIT, FOUT, or optional approaches are used appropriately
+- **Third-party widget performance**: Assessing whether embedded widgets don't excessively impact host performance
+- **Advertisement loading**: Verifying that ads are loaded asynchronously to prevent content blocking
+- **Analytics script loading**: Checking whether tracking scripts are deferred or async to prevent blocking
+- **Social media embeds**: Evaluating whether embedded posts are loaded efficiently
+- **Video embedding performance**: Assessing whether video players are embedded efficiently
+- **Audio element optimization**: Checking whether audio elements are used efficiently for web audio
+- **WebAssembly usage**: Verifying that Wasm is used effectively for compute-intensive web tasks
+- **Web Workers**: Checking whether expensive computations are offloaded to background threads
+- **SharedArrayBuffer**: Assessing whether shared memory is used effectively for parallel web tasks
+- **Service worker caching**: Verifying that SW caching strategies are effective for offline use
+- **Background sync**: Checking whether background synchronization is used appropriately
+- **Push notification efficiency**: Evaluating that push subscriptions don't excessively impact performance
+- **Notification permissions**: Verifying that permission requests don't interfere with user experience
+- **Badge APIs**: Checking whether badge updates don't cause excessive re-renders
+- **Desktop notifications**: Assessing whether desktop notifications are implemented efficiently
+- **Session storage vs localStorage**: Evaluating whether appropriate client-side storage is used
+- **IndexedDB usage**: Verifying that client-side databases are used effectively when needed
+- **WebSQL deprecation**: Checking that deprecated WebSQL is not used in modern applications
+- **Cookie size minimization**: Assessing whether cookie payloads are kept small to reduce request overhead
+- **SameSite cookies**: Verifying that appropriate SameSite attributes are set for security and performance
+- **Secure cookie transmission**: Confirming that cookies are only transmitted over HTTPS when sensitive
+- **HTTP/2 push**: Evaluating whether server push is used effectively to anticipate resource needs
+- **Resource hints**: Checking whether preload/prefetch/dns-prefetch are used appropriately
+- **Critical CSS extraction**: Verifying that above-the-fold CSS is inlined to prevent render blocking
+- **Font loading strategies**: Assessing whether link rel=preload is used effectively for web fonts
+- **JavaScript module loading**: Evaluating whether ES modules are used effectively in browsers
+- **Nomodule attribute**: Checking that legacy JS is not served to modern browsers
+- **Differential serving**: Verifying that different JS bundles are served based on browser capabilities
+- **Code coverage tools**: Assessing whether instrumentation doesn't excessively impact performance
+- **Bundle analyzers**: Verifying that bundle size analysis is used to optimize resource delivery
+- **Tree shaking**: Checking whether dead code elimination is used effectively in JS bundlers
+- **Scope hoisting**: Evaluating whether variable hoisting is used to minimize bundle size
+- **Side effect analysis**: Checking whether pure functions are identified for safer tree shaking
+- **Module concatenation**: Verifying that module concatenation is used to reduce closure overhead
+- **Async iteration**: Assessing whether asynchronous iteration patterns are used efficiently
+- **Webpack/Vite/Rollup configuration**: Evaluating that build tools are configured for optimal output
+- **Lazy route loading**: Checking whether code splitting is applied at the route level for SPAs
+- **Prefetching strategies**: Assessing whether navigation-triggered prefetching improves perceived performance
+- **Preloading strategies**: Verifying that resource prefetching is used effectively for critical assets
+- **Prerendering techniques**: Checking whether server-side prerendering is used for SEO and performance
+- **Serverless frontend**: Evaluating whether edge computing is used effectively for frontend delivery
+- **CDN configuration**: Verifying that content delivery networks are configured for optimal performance
+- **Edge computing usage**: Assessing whether edge locations are used effectively for compute tasks
+- **Image CDN optimization**: Checking whether image-specific CDNs are used effectively
+- **Video streaming optimization**: Verifying that adaptive bitrate streaming is used effectively
+- **Audio streaming optimization**: Assessing whether streaming protocols are used efficiently for audio
+- **Game asset loading**: Evaluating whether game resources are loaded efficiently to minimize stall time
+- **Shader compilation**: Verifying that GPU shader compilation doesn't cause excessive hitches
+- **Texture streaming**: Assessing whether texture loading is used effectively in 3D applications
+- **Model-LOD usage**: Checking whether level-of-detail models are used effectively for distant objects
+- ** occlusion culling**: Verifying that hidden objects are not rendered to save GPU cycles
+- **Frustum culling**: Checking whether view-frustum culling is used effectively to limit rendering
+- **Particle system optimization**: Evaluating whether particle effects are implemented efficiently
+- **Physics engine performance**: Assessing whether physics simulations are optimized for real-time needs
+- **Network interpolation**: Verifying that entity movement interpolation reduces perceived lag
+- **Authoritative server model**: Checking whether server-authoritative architecture is used for fairness
+- **Client-side prediction**: Assessing whether client prediction is used to mask network latency
+- **Lag compensation**: Verifying that lag compensation techniques are used appropriately in multiplayer
+- **Dedicated server optimization**: Evaluating that game servers are configured for optimal performance
+- **Peer-to-peer networking**: Assessing whether P2P architectures are used effectively for distribution
+- **NAT traversal optimization**: Checking whether hole-punching techniques are used effectively
+- **Server browser implementation**: Verifying that game server browsers are implemented efficiently
+- **Matchmaking efficiency**: Assessing that player matching algorithms don't cause excessive delays
+- **Lobby systems**: Checking that player lobbies are implemented efficiently
+- **Voice chat integration**: Evaluating that voice communication doesn't excessively impact game performance
+- **Anti-cheat performance**: Assessing whether anti-cheat systems are implemented efficiently
+- **Modding support**: Verifying that modding frameworks don't excessively impact base game performance
+- **DLC integration**: Checking that downloadable content is loaded efficiently
+- **Season pass implementation**: Evaluating that seasonal content delivery doesn't cause performance cliffs
+- **Live service operations**: Assessing that ongoing content updates don't excessively impact performance
+- **Cross-platform builds**: Verifying that multi-platform builds don't excessively increase binary size
+- **Platform-specific optimizations**: Checking that optimizations are applied appropriately per platform
+- **Renderer selection**: Evaluating that appropriate rendering APIs are used (DirectX, Vulkan, Metal, etc.)
+- **Shader model selection**: Verifying that shader models are appropriate for hardware capabilities
+- **Multi-GPU support**: Assessing whether SLI/CrossFire configurations are used effectively
+- **VRAM management**: Checking that video memory usage is optimized for target resolutions
+- **Texture compression**: Evaluating that texture compression formats are used effectively
+- **Vertex buffer optimization**: Checking that vertex data is structured efficiently for GPU consumption
+- **Index buffer usage**: Verifying that index buffers are used effectively to reduce vertex processing
+- **Draw call batching**: Assessing that similar rendering operations are batched to reduce state changes
+- **Instanced rendering**: Verifying that instanced drawing is used effectively for repetitive objects
+- **Geometry shader usage**: Evaluating whether geometry shaders are used appropriately
+- **Tessellation shader usage**: Checking whether tessellation shaders are used effectively for detailed surfaces
+- **Compute shader usage**: Assessing whether compute shaders are used effectively for GPGPU tasks
+- **Frame buffer objects**: Verifying that FBOs are used effectively for offscreen rendering
+- **Multiple render targets**: Assessing that multiple outputs can be rendered simultaneously when beneficial
+- **Swap chain optimization**: Checking that swap chains are configured effectively for presentation
+- **Vertical sync**: Evaluating whether VSync is used appropriately to prevent tearing without excessive lag
+- **Adaptive sync**: Assessing whether FreeSync/G-Sync is used effectively when available
+- **HDR implementation**: Verifying that high dynamic range is implemented effectively
+- **Wide color gamut**: Checking that extended color ranges are used effectively
+- **Color space conversion**: Evaluating that color space conversions are implemented efficiently
+- **Tonemapping**: Assessing that HDR to SDR conversion is implemented effectively
+- **Depth buffer optimization**: Checking that depth buffer usage is minimized when appropriate
+- **Stencil buffer usage**: Verifying that stencil buffers are used effectively for specific rendering effects
+- **Multi-sample anti-aliasing**: Assessing that MSAA is used effectively for edge smoothing
+- **Super sampling**: Verifying that SSAA is used effectively when performance allows
+- **Fast approximate AA**: Checking that FXAA is used effectively for performance-sensitive applications
+- **Temporal AA**: Assessing that TAA is used effectively for motion stability
+- **Post-processing effects**: Evaluating that bloom, motion blur, etc. are implemented efficiently
+- **Lens flare effects**: Checking that lens flare effects are implemented efficiently
+- **Shadow mapping**: Verifying that shadow techniques are implemented effectively
+- **Ambient occlusion**: Assessing that AO techniques are used effectively for depth perception
+- **Screen space reflections**: Verifying that SSR techniques are used effectively for reflective surfaces
+- **Subsurface scattering**: Evaluating that SSS techniques are used effectively for translucent materials
+- **Hair and fur rendering**: Checking that hair/fur rendering techniques are implemented efficiently
+- **Cloth simulation**: Assessing that cloth physics is used effectively for realistic fabrics
+- **Fluid simulation**: Verifying that fluid dynamics simulations are implemented efficiently
+- **Particle systems**: Assessing that particle effects are used effectively for various phenomena
+- **Sprite batching**: Verifying that 2D sprite rendering is batched effectively for performance
+- **Tilemap rendering**: Assessing that tile-based rendering is used effectively for grid-based layouts
+- **Parallax scrolling**: Verifying that parallax effects are implemented effectively for depth perception
+- **Isometric rendering**: Checking that isometric projections are used effectively for 3D-like 2D
+- **Hexagonal grids**: Assessing that hex-based grids are used effectively for strategy games
+- **Procedural generation**: Verifying that procedural content generation is used effectively
+- **Perlin noise**: Evaluating that gradient noise is used effectively for natural-looking variation
+- **Simplex noise**: Assessing that simplex noise is used effectively for computational efficiency
+- **Wavelet noise**: Verifying that wavelet noise is used effectively for multi-resolution analysis
+- **Value noise**: Checking that value noise is used effectively for simple random variation
+- **Discord noise**: Assessing that discord noise is used effectively for artistic variation
+- **Sparse noise**: Verifying that sparse noise is used effectively for computational efficiency
+- **Lattice noise**: Checking that lattice noise is used effectively for structural variation
+- **Gradient noise**: Verifying that gradient noise is used effectively for smooth transitions
+- **Pattern noise**: Assessing that pattern noise is used effectively for repetitive variation analysis
+- **Cellular noise**: Verifying that cellular noise is used effectively for biological-like patterns
+- **Lava noise**: Checking that lava noise is used effectively for fluid-like variation
+- **Wood noise**: Verifying that wood noise is used effectively for grain-like texture
+- **Marble noise**: Assessing that marble noise is used effectively for crystalline patterns
+- **Fabric noise**: Verifying that fabric noise is used effectively for textile-like patterns
+- **Paper noise**: Checking that paper noise is used effectively for cellulose-like texture
+- **Metal noise**: Verifying that metal noise is used effectively for industrial-like surfaces
+- **Glass noise**: Assessing that glass noise is used effectively for transparent-like materials
+- **Water noise**: Verifying that water noise is used effectively for fluid-like properties
+- **Smoke noise**: Assessing that smoke noise is used effectively for particle-like effects
+- **Fire noise**: Verifying that fire noise is used effectively for combustion-like effects
+- **Electrical noise**: Checking that electrical noise is used effectively for circuit-like phenomena
+- **Magnetic noise**: Verifying that magnetic noise is used effectively for field-like effects
+- **Gravitational noise**: Assessing that gravitational noise is used effectively for attraction-like effects
+- **Impact noise**: Verifying that impact noise is used effectively for collision-like effects
+- **Friction noise**: Checking that friction noise is used effectively for resistance-like effects
+- **Vibration noise**: Assessing that vibration noise is used effectively for oscillation-like effects
+- **Wave noise**: Verifying that wave noise is used effectively for periodic-like effects
+- **Wind noise**: Assessing that wind noise is used effectively for breath-like effects
+- **Rain noise**: Verifying that rain noise is used effectively for precipitation-like effects
+- **Snow noise**: Checking that snow noise is used effectively for ice-like effects
+- **Hail noise**: Assessing that hail noise is used effectively for solid-like precipitation
+- **Sand noise**: Verifying that sand noise is used effectively for granular-like effects
+- **Dust noise**: Checking that dust noise is used effectively for particulate-like effects
+- **Pollen noise**: Verifying that pollen noise is used effectively for allergen-like effects
+- **Mold noise**: Assessing that mold noise is used effectively for fungus-like effects
+- **Bacteria noise**: Verifying that bacteria noise is used effectively for microorganism-like effects
+- **Virus noise**: Checking that virus noise is used effectively for pathogen-like effects
+- **Prion noise**: Verifying that prion noise is used effectively for protein-folding-like effects
+- **Stem cell noise**: Assessing that stem cell noise is used effectively for regeneration-like effects
+- **Organelle noise**: Verifying that organelle noise is used effectively for cell-component-like effects
+- **Chromosome noise**: Checking that chromosome noise is used effectively for genetic-material-like effects
+- **Gene noise**: Verifying that gene noise is used effectively for heredity-like effects
+- **Allele noise**: Assessing that allele noise is used effectively for genetic-variation-like effects
+- **Protein noise**: Verifying that protein noise is used effectively for macromolecule-like effects
+- **Enzyme noise**: Checking that enzyme noise is used effectively for catalyst-like effects
+- **Hormone noise**: Verifying that hormone noise is used effectively for regulator-like effects
+- **Receptor noise**: Assessing that receptor noise is used effectively for sensor-like effects
+- **Neurotransmitter noise**: Verifying that neurotransmitter noise is used effectively for signal-transmission-like effects
+- **Synapse noise**: Checking that synapse noise is used effectively for connection-like effects
+- **Action potential noise**: Verifying that action potential noise is used effectively for neural-signaling-like effects
+- **Myelin noise**: Assessing that myelin noise is used effectively for insulation-like effects
+- **Node of Ranvier noise**: Verifying that node of Ranvier noise is used effectively for conduction-like effects
+- **Glioma noise**: Checking that glioma noise is used effectively for tumor-like effects
+- **Astrocyte noise**: Verifying that astrocyte noise is used effectively for glial-support-like effects
+- **Oligodendrocyte noise**: Assessing that oligodendrocyte noise is used effectively for myelin-like effects
+- **Microglia noise**: Verifying that microglia noise is used effectively for immune-response-like effects
+- **Ependyma noise**: Checking that ependyma noise is used effectively for cerebrospinal-fluid-like effects
+- **Meninges noise**: Verifying that meninges noise is used effectively for protective-layer-like effects
+- **Skull noise**: Assessing that skull noise is used effectively for protective-barrier-like effects
+- **Brain noise**: Verifying that brain noise is used effectively for organ-like effects
+- **Spinal cord noise**: Checking that spinal cord noise is used effectively for neural-pathway-like effects
+- **Vertebrae noise**: Verifying that vertebrae noise is used effectively for structural-support-like effects
+- **Rib noise**: Assessing that rib noise is used effectively for protective-cage-like effects
+- **Sternum noise**: Verifying that sternum noise is used effectively for central-support-like effects
+- **Pelvis noise**: Checking that pelvis noise is used effectively for structural-base-like effects
+- **Femur noise**: Verifying that femur noise is used effectively for limb-structure-like effects
+- **Patella noise**: Assessing that patella noise is used effectively for knee-joint-like effects
+- **Tibia noise**: Verifying that tibia noise is used effectively for limb-structure-like effects
+- **Fibula noise**: Checking that fibula noise is used effectively for limb-structure-like effects
+- **Tarsal noise**: Verifying that tarsal noise is used effectively for ankle-joint-like effects
+- **Metatarsal noise**: Assessing that metatarsal noise is used effectively for foot-structure-like effects
+- **Phalanges noise**: Verifying that phalanges noise is used effectively for toe-structure-like effects
+- **Sesamoid noise**: Checking that sesamoid noise is used effectively for bone-development-like effects
+- **Carpal noise**: Verifying that carpal noise is used effectively for wrist-joint-like effects
+- **Radial noise**: Assessing that radial noise is used effectively for forearm-joint-like effects
+- **Ulnar noise**: Verifying that ulnar noise is used effectively for forearm-joint-like effects
+- **Carpoid noise**: Checking that carpoid noise is used effectively for wrist-development-like effects
+- **Metacarpal noise**: Verifying that metacarpal noise is used effectively for hand-structure-like effects
+- **Phalanges noise**: Assessing that phalanges noise is used effectively for finger-structure-like effects
+- **Thumb noise**: Verifying that thumb noise is used effectively for thumb-structure-like effects
+- **Sesamoid noise**: Checking that sesamoid noise is used effectively for hand-development-like effects
+- **Tarsal noise**: Verifying that tarsal noise is used effectively for ankle-structure-like effects
+- **Metatarsal noise**: Assessing that metatarsal noise is used effectively for foot-structure-like effects
+- **Cuneiform noise**: Verifying that cuneiform noise is used effectively for midfoot-structure-like effects
+- **Cuboid noise**: Checking that cuboid noise is used effectively for midfoot-structure-like effects
+- **Navicular noise**: Verifying that navicular noise is used effectively for midfoot-structure-like effects
+- **Lateral cuneiform noise**: Assessing that lateral cuneiform noise is used effectively for midfoot-structure-like effects
+- **Intermediate cuneiform noise**: Verifying that intermediate cuneiform noise is used effectively for midfoot-structure-like effects
+- **Medial cuneiform noise**: Checking that medial cuneiform noise is used effectively for midfoot-structure-like effects
+- **Phalanges noise**: Verifying that phalanges noise is used effectively for toe-structure-like effects
+- **Metatarsal noise**: Assessing that metatarsal noise is used effectively for forefoot-structure-like effects
+- **Tarsal noise**: Verifying that tarsal noise is used effectively for hindfoot-structure-like effects
+- **Phalanges noise**: Checking that phalanges noise is used effectively for toe-structure-like effects
+- **Metatarsal noise**: Verifying that metatarsal noise is used effectively for foot-structure-like effects
+- **Sesamoid noise**: Assessing that sesamoid noise is used effectively for foot-development-like effects

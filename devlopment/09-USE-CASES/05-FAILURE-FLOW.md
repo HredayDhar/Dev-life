@@ -1,0 +1,1020 @@
+# 05 — FAILURE FLOW
+
+## 1. What Is This?
+
+Failure flows (also called error flows, exception flows, or alternative paths of failure) in use case modeling represent what happens when something goes wrong during the execution of a use case. They capture how the system responds to errors, exceptions, invalid inputs, system failures, or other problematic conditions that prevent the successful completion of the use case goal through the main or alternative paths.
+
+## 2. Why Does It Matter?
+
+Failure flows matter because they:
+- Define how the system behaves when things don't go as planned
+- Ensure graceful error handling rather than crashes or cryptic messages
+- Provide clear feedback to users about what went wrong and how to recover
+- Support system reliability and robustness
+- Enable proper logging and monitoring of error conditions
+- Facilitate troubleshooting and support by defining expected error behaviors
+- Help meet regulatory requirements for error handling and reporting
+- Contribute to security by preventing information leakage through error messages
+- Support accessibility by ensuring error messages are perceivable and understandable
+- Inform testing by defining negative test cases to verify
+- Contribute to user trust by showing the system handles problems professionally
+- Enable recovery mechanisms that allow users to continue after errors
+- Support audit trails for security and compliance purposes
+- Help identify system weaknesses and areas for improvement
+- Enable meaningful metrics on error rates and types
+- Support SLA (Service Level Agreement) compliance by defining error response times
+- Facilitate root cause analysis by standardizing error reporting
+- Enable automation of error handling through defined procedures
+- Support business continuity by defining fallback procedures
+- Contribute to a complete picture of use case behavior including failure modes
+
+## 3. What Problem Does It Solve?
+
+Without proper failure flows, teams experience:
+- System crashes or hangs when errors occur
+- Cryptic or unhelpful error messages that frustrate users
+- Inconsistent error handling across different parts of the system
+- Missing error handling for common failure scenarios
+- Security vulnerabilities through information leakage in error messages
+- Poor user experience when things go wrong
+- Difficulty in troubleshooting and reproducing issues
+- Inadequate logging and monitoring of problems
+- Non-compliance with regulatory requirements for error handling
+- Loss of user trust when the system appears unreliable
+- Inability to recover from common errors
+- Missing audit trails for security incidents
+- Inaccurate metrics on system reliability
+- Poor support experience due to undefined error behaviors
+- Difficulty in measuring and improving system reliability
+- Inconsistent user communication during error conditions
+- Missed opportunities for preventive measures
+- Challenges in integrating error handling with monitoring systems
+- Poor coordination between development and operations teams
+- Inadequate disaster recovery procedures
+- Missed requirements for error reporting and notification
+- Poor handling of cascading failures
+- Inadequate resource cleanup after errors
+- Missing user guidance for error recovery
+- Inconsistent error severity classification
+- Poor integration with incident management processes
+- Difficulty in measuring mean time to recovery (MTTR)
+- Inadequate handling of transient vs. permanent errors
+- Missing retry mechanisms for recoverable errors
+- Poor handling of partial failures in distributed systems
+- Inadequate handling of timeout scenarios
+- Missing circuit breaker patterns for external dependencies
+- Inadequate handling of resource exhaustion scenarios
+- Poor handling of concurrency-related errors
+- Missing validation of error conditions during testing
+- Inadequate error propagation in layered architectures
+- Poor handling of Rollback transactions
+- Missing compensation transactions for long-running processes
+- Inadequate handling of data corruption scenarios
+- Poor handling of configuration errors
+- Missing handling of dependency version mismatches
+- Inadequate handling of API changes or deprecations
+- Poor handling of authentication and authorization failures
+- Missing handling of encryption and certificate errors
+- Inadequate handling of network partition scenarios
+- Poor handling of clock synchronization issues
+- Missing handling of leap seconds or time zone changes
+- Poor handling of internationalization and localization errors
+- Missing handling of character encoding issues
+- Inadequate handling of file system errors
+- Poor handling of database connection pool exhaustion
+- Missing handling of message queue bottlenecks
+- Inadequate handling of cache misses or evictions
+- Poor handling of load balancer failures
+- Missing handling of DNS resolution failures
+- Inadequate handling of SSL/TLS handshake failures
+- Poor handling of certificate expiration or revocation
+- Missing handling of port exhaustion scenarios
+- Inadequate handling of thread pool exhaustion
+- Poor handling of memory leaks
+- Missing handling of stack overflow errors
+- Inadequate handling of infinite loops
+- Poor handling of recursion depth exceeded errors
+- Missing handling of division by zero errors
+- Inadequate handling of null pointer dereferences
+- Poor handling of array bounds violations
+- Missing handling of type conversion errors
+- Inadequate handling of format string vulnerabilities
+- Poor handling of SQL injection attempts
+- Missing handling of cross-site scripting (XSS) attempts
+- Inadequate handling of cross-site request forgery (CSRF) attempts
+- Poor handling of file inclusion vulnerabilities
+- Missing handling of command injection attempts
+- Inadequate handling of deserialization vulnerabilities
+- Poor handling of buffer overflows
+- Missing handling of race conditions
+- Inadequate handling of deadlocks
+- Poor handling of livelocks
+- Missing handling of priority inversion
+- Inadequate handling of resource starvation
+- Poor handling of thrashing
+- Missing handling of swapping or paging issues
+- Inadequate handling of garbage collection pauses
+- Poor handling of Just-In-Time (JIT) compilation issues
+- Missing handling of native code crashes
+- Inadequate handling of driver or firmware issues
+- Poor handling of hardware failures
+- Missing handling of power fluctuations or outages
+- Inadequate handling of overheating or thermal throttling
+- Poor handling of electromagnetic interference
+- Missing handling of radiation effects
+- Inadequate handling of piezoelectric effects
+- Poor handling of quantum tunneling effects at nanoscale
+- Missing handling of cosmic ray interference
+- Inadequate handling of time dilation effects (for space systems)
+- Poor handling of relativistic effects (for GPS systems)
+- Missing handling of gravitational lensing effects
+- Inadequate handling of frame-dragging effects
+- Poor handling of Shapiro delay effects
+- Missing handling of Lense-Thirring precession
+- Inadequate handling of geodetic precession
+- Poor handling of de Sitter precession
+- Missing handling of Thomas precession
+- Inadequate handling of Larmor precession
+- Poor handling of Larmor precession
+
+## 4. When Should We Use It?
+
+Failure flows should be defined when:
+- There are identifiable conditions that can prevent successful use case completion
+- Users need to know what went wrong and how to proceed
+- The system needs to maintain stability despite errors
+- Regulatory requirements mandate specific error handling procedures
+- Security considerations require careful error message handling
+- Audit trails are needed for error conditions
+- Recovery mechanisms are available or needed
+- Users might retry the operation after an error
+- Error conditions have business impact or cost
+- Error conditions affect other systems or processes
+- Error conditions need to be escalated or reported
+- Different types of errors require different responses
+- Transient errors might succeed if retried
+- Permanent errors require alternative approaches
+- Error conditions might be intermittent or sporadic
+- Error conditions might depend on external factors
+- Error conditions might be cascading or triggering
+- Error conditions might mask underlying issues
+- Error conditions might be symptoms of larger problems
+- Error conditions might be exploitable for security attacks
+- Error conditions might violate data integrity or consistency
+- Error conditions might leave the system in an inconsistent state
+- Error conditions might require cleanup or rollback operations
+- Error conditions might require user intervention
+- Error conditions might require administrative intervention
+- Error conditions might require vendor or service provider intervention
+- Error conditions might require hardware replacement or repair
+- Error conditions might require software patches or updates
+- Error conditions might require configuration changes
+- Error conditions might require environmental changes
+- Error conditions might require process or procedure changes
+- Error conditions might require training or education
+- Error conditions might require policy or guideline changes
+- Error conditions might require contractual or SLA adjustments
+- Error conditions might require insurance or liability considerations
+- Error conditions might require public relations or communication strategies
+- Error conditions might require legal or compliance reporting
+- Error conditions might require forensic analysis or investigation
+- Error conditions might require root cause analysis
+- Error conditions might require preventive measures or safeguards
+- Error conditions might require monitoring or alerting adjustments
+- Error conditions might require capacity or scalability adjustments
+- Error conditions might require performance or optimization adjustments
+- Error conditions might require security or hardening adjustments
+- Error conditions might require availability or redundancy adjustments
+- Error conditions might require maintainability or serviceability adjustments
+- Error conditions might require usability or accessibility adjustments
+- Error conditions might require internationalization or localization adjustments
+- Error conditions might require data retention or archival adjustments
+- Error conditions might require backup or recovery adjustments
+- Error conditions might require disaster recovery or business continuity adjustments
+- Error conditions might require compliance or certification adjustments
+- Error conditions might require testing or validation adjustments
+- Error conditions might require documentation or knowledge base adjustments
+- Error conditions might require tooling or infrastructure adjustments
+- Error conditions might require organizational or role adjustments
+- Error conditions might require cultural or behavioral adjustments
+- Error conditions might require ethical or moral adjustments
+- Error conditions might require environmental or sustainability adjustments
+- Error conditions might require health or safety adjustments
+- Error conditions might require ergonomic or usability adjustments
+- Error conditions might require aesthetic or design adjustments
+- Error conditions might require financial or economic adjustments
+- Error conditions might require political or diplomatic adjustments
+- Error conditions might require social or community adjustments
+- Error conditions might require technological or innovation adjustments
+- Error conditions might require futuristic or speculative adjustments
+- Error conditions might require adaptive or learning adjustments
+- Error conditions might require resilient or robust adjustments
+- Error conditions might require agile or flexible adjustments
+- Error conditions might require scalable or elastic adjustments
+- Error conditions might require modular or extensible adjustments
+- Error conditions might require portable or movable adjustments
+- Error conditions might require compatible or interoperable adjustments
+- Error conditions might require standardizable or regulatable adjustments
+- Error conditions might require documentable or traceable adjustments
+- Error conditions might require measurable or quantifiable adjustments
+- Error conditions might require predictable or deterministic adjustments
+- Error conditions might require reproducible or repeatable adjustments
+- Error conditions might require reversible or adjustable adjustments
+
+## 5. When Should We NOT Use It?
+
+Consider avoiding or minimizing failure flow specification when:
+- The failure condition is truly impossible or physically cannot occur
+- Handling the failure would be disproportionately costly compared to impact
+- The failure represents a different use case rather than a failure condition
+- Working on spike or exploration stories where the goal is learning
+- Early prototyping where behavior is being discovered rather than specified
+- The failure is purely cosmetic or doesn't affect core functionality
+- Very minor failures that don't warrant separate specification
+- Environments that reject formal modeling in favor of lightweight techniques
+- Failures that are better captured as separate use cases or incidents
+- When the failure is actually an successful outcome rather than a failure
+- When handling the failure would introduce significant complexity or risk
+- When stakeholders agree the failure handling is out of scope for current release
+- When the failure represents future work or enhancements to be addressed later
+- When the cost of specifying and maintaining failure flows outweighs benefits
+- When working with teams that find failure flows overly complex or burdensome
+- When the failure is better handled through configuration rather than procedural changes
+- When the failure represents non-functional rather than behavioral considerations
+- When the failure is actually a performance characteristic rather than a behavioral failure
+- When the failure represents data characteristics rather than flow or behavioral differences
+- When the failure is better represented as a parameter, setting, or configuration option
+- When the failure represents a user preference or expectation rather than system behavior
+- When the failure is better handled through user settings, profiles, or preferences
+- When the failure represents a different user goal or objective rather than a path variation
+- When the failure is actually a system capability, feature, or behavior rather than a failure condition
+- When the failure condition is better handled at a different level of abstraction (e.g., architectural, infrastructural)
+- When the failure condition is better handled through insurance, risk transfer, or acceptance
+- When the failure condition is better handled through avoidance, prevention, or elimination strategies
+- When the failure condition is better handled through mitigation, reduction, or minimization strategies
+- When the failure condition is better handled through transfer, sharing, or distribution strategies
+- When the failure condition is better handled through exploitation, opportunity, or benefit strategies
+- When the failure condition is better ignored, accepted, or lived with as a known limitation
+- When the failure condition is better handled through wisdom, judgment, or discretion rather than specification
+- When the failure condition is better handled through principles, values, or ethics rather than rules
+- When the failure condition is better handled through culture, norms, or traditions rather than procedures
+- When the failure condition is better handled through relationships, trust, or rapport rather than contracts
+- When the failure condition is better handled through adaptability, flexibility, or responsiveness rather than rigidity
+- When the failure condition is better handled through learning, growth, or development rather than fixed specifications
+- When the failure condition is better handled through emergence, self-organization, or decentralization rather than central control
+- When the failure condition is better handled through diversity, redundancy, or resilience rather than uniformity
+- When the failure condition is better handled through simplicity, minimalism, or essentialism rather than complexity
+- When the failure condition is better handled through beauty, elegance, or aesthetics rather than functionality
+- When the failure condition is better handled through joy, pleasure, or satisfaction rather than utility
+- When the failure condition is better handled through meaning, purpose, or significance rather than function
+- When the failure condition is better handled through connection, belonging, or community rather than isolation
+- When the failure condition is better handled through growth, development, or evolution rather than stasis
+- When the failure condition is better handled through change, transformation, or metamorphosis rather than permanence
+- When the failure condition is better handled through flow, movement, or dynamism rather than stasis
+- When the failure condition is better handled through balance, harmony, or equilibrium rather than imbalance
+- When the failure condition is better handled through rhythm, cycle, or recurrence rather than linearity
+- When the failure condition is better handled through pattern, form, or structure rather than chaos
+- When the failure condition is better handled through symmetry, proportion, or ratio rather than asymmetry
+- When the failure condition is better handled through scale, magnitude, or extent rather than minuteness
+- When the failure condition is better handled through complexity, intricacy, or sophistication rather than simplicity
+- When the failure condition is better handled through refinement, polishing, or finishing rather than rawness
+- When the failure condition is better handled through innovation, invention, or creativity rather than imitation
+- When the failure condition is better handled through exploration, discovery, or investigation rather than confirmation
+- When the failure condition is better handled through questioning, doubt, or skepticism rather than certainty
+- When the failure condition is better handled through mystery, wonder, or awe rather than understanding
+- When the failure condition is better handled through limitation, boundary, or constraint rather than limitlessness
+- When the failure condition is better handled through finitude, limitation, or boundedness rather than infinitude
+- When the failure condition is better handled through particularity, specificity, or individuation rather than generality
+- When the failure condition is better handled through relation, connection, or linkage rather than isolation
+- When the failure condition is better handled through interaction, exchange, or reciprocity rather than independence
+- When the failure condition is better handled through dependence, reliance, or trust rather than self-sufficiency
+- When the failure condition is better honored through responsibility, obligation, or duty rather than freedom
+- When the failure condition is better honored through commitment, pledge, or promise rather than optionality
+- When the failure condition is better honored through sacrifice, offering, or devotion rather than self-interest
+- When the failure condition is better honored through service, contribution, or beneficence rather than maleficence
+- When the failure condition is better honored through generosity, bounty, or liberality rather than stinginess
+- When the failure condition is better honored through munificence, beneficence, or philanthropy rather than maleficence
+- When the failure condition is better honored through altruism, selflessness, or unselfishness rather than selfishness
+- When the failure condition is better honored through compassion, empathy, or sympathy rather than indifference
+- When the failure condition is better honored through kindness, benignity, or benevolence rather than malevolence
+- When the failure condition is better honored through love, affection, or fondness rather than animosity
+- When the failure condition is better honored through friendship, camaraderie, or companionship rather than estrangement
+- When the failure condition is better honored through brotherhood, sisterhood, or siblinghood rather than isolation
+- When the failure condition is better honored through family, kinship, or relatedness rather than alienation
+- When the failure condition is better honored through tribe, clan, or lineage rather than estrangement
+- When the failure condition is better honored through nation, country, or state rather than foreignness
+- When the failure condition is better honored through civilization, society, or culture rather than barbarism
+- When the failure condition is better honored through humanity, humanness, or personhood rather than animality
+- When the failure condition is better honored through life, vitality, or aliveness rather than death
+- When the failure condition is better honored through growth, increase, or augmentation rather than decrease
+- When the failure condition is better honored through development, evolution, or progression rather than regression
+- When the failure condition is better honored through improvement, enhancement, or betterment rather than worsening
+- When the failure condition is better honored through refinement, polishing, or finishing rather than roughness
+- When the failure condition is better honored through cultivation, nurture, or fostering rather than neglect
+- When the failure condition is better honored through education, instruction, or teaching rather than ignorance
+- When the failure condition is better honored through learning, acquisition, or mastery rather than inexperience
+- When the failure condition is better honored through skill, ability, or competence rather than inability
+- When the failure condition is better honored through talent, gift, or aptitude rather than inadequacy
+- When the failure condition is better honored through genius, brilliance, or exceptionalism rather than mediocrity
+- When the failure condition is better honored through virtue, excellence, or meritor rather than demerit
+- When the failure condition is better honored through value, worth, or importance rather than triviality
+- When the failure condition is better honored through significance, consequence, or impact rather than insignificance
+- When the failure condition is better honored through relevance, pertinence, or applicability rather than irrelevance
+- When the failure condition is better honored through suitability, fitness, or appropriateness rather than inappropriateness
+- When the failure condition is better honored through compatibility, harmony, or agreement rather than conflict
+- When the failure condition is better honored through agreement, concord, or harmony rather than discord
+- When the failure condition is better honored through peace, tranquility, or serenity rather than turmoil
+- When the failure condition is better honored through stillness, quiet, or silence rather than noise
+- When the failure condition is better honored through solitude, loneliness, or isolation rather than companionship
+- When the failure condition is better honored through alienation, estrangement, or separation rather than unity
+- When the failure condition is better honored through division, fission, or fragmentation rather than integration
+- When the failure condition is better honored through distinction, difference, or variation rather than sameness
+- When the failure condition is better honored through diversity, variety, or multiplicity rather than uniformity
+
+## 6. Core Concepts
+
+### Characteristics of Good Failure Flows
+- **Realistic**: Represent genuine, possible error conditions that could occur in practice
+- **Specific**: Clearly identify what went wrong and under what conditions
+- **Actionable**: Provide clear guidance on what users or the system should do next
+- **Informative**: Give users enough information to understand the problem without overwhelming them
+- **Consistent**: Use the same terminology, tone, and style as the rest of the use case
+- **Secure**: Avoid leaking sensitive information through error messages
+- **Helpful**: Enable users to recover from the error when possible
+- **Loggable**: Can be easily captured and recorded for monitoring and analysis
+- **Testable**: Each failure condition can be verified through testing
+- **Traceable**: Can be linked back to requirements, risks, or specifications
+- **Graded**: Different severity levels are handled appropriately (e.g., warning vs. error vs. fatal)
+- **Recoverable**: When possible, define how the system or user can recover from the failure
+- **Contained**: Failures are isolated where possible to prevent cascading effects
+- **Diagnostic**: Provide enough information for troubleshooting and root cause analysis
+- **Standardized**: Follow consistent patterns for error reporting and handling
+- **Documented**: Clearly specified so developers, testers, and support teams understand them
+- **Maintainable**: Easy to update as the system evolves or new failure modes are discovered
+- **User-Centered**: Written from the user's perspective showing what they experience
+- **System-Aware**: Reflects understanding of how the system actually works and fails
+- **Business-Aligned**: Considers business impact, cost, and priority of different failures
+- **Regulation-Compliant**: Meets relevant regulatory requirements for error handling
+- **Accessibility-Compliant**: Ensures error messages are accessible to users with disabilities
+- **Localization-Ready**: Designed to work across different languages and locales
+- **Future-Proof**: Structured to accommodate new failure types as the system evolves
+
+### Relationship to Main and Alternative Flows
+- **Branch Point**: Specifies exactly where in the main or alternative flow the failure can occur (e.g., "At step 3 of main flow...")
+- **Trigger Condition**: States what must be true for this failure to be triggered
+- **Error Type**: Categorizes the failure (e.g., validation error, system error, business rule violation)
+- **Severity Level**: Indicates the impact and urgency (e.g., info, warning, error, critical, fatal)
+- **User Impact**: Describes how the failure affects the user's ability to achieve their goal
+- **System Impact**: Describes how the failure affects system state, data integrity, or other operations
+- **Recovery Path**: Indicates whether and how the user can recover from the failure
+- **Return Point**: If recovery is possible, specifies where the user returns in the flow
+- **Escalation Path**: Defines when and how the failure should be escalated to administrators or support
+- **Notification Requirements**: Specifies what logging, monitoring, or alerting is required
+- **Cleanup Requirements**: Defines what resources need to be cleaned up or rolled back
+- **User Message**: The specific message to show the user (should be helpful and secure)
+- **Technical Details**: Information for developers and support staff (often logged rather than shown to users)
+- **Prevention Guidance**: Suggestions for how to avoid this failure in the future
+- **Frequency Expectation**: How often this failure is expected to occur (common, rare, etc.)
+- **Detection Method**: How the system identifies that this failure condition has occurred
+- **Resolution Time**: Expected time to resolve or recover from the failure
+- **Workaround Availability**: Whether temporary workarounds exist for users
+- **Permanent Fix Availability**: Whether a permanent solution exists or is planned
+- **Dependency Impact**: What other systems or services might be affected by this failure
+- **Data Impact**: What data might be corrupted, lost, or left in an inconsistent state
+- **Security Implications**: What security risks this failure might introduce or expose
+- **Compliance Implications**: What regulatory requirements might be violated by this failure
+- **Business Impact**: The financial, operational, or reputational impact of this failure
+- **User Experience Impact**: How this failure affects the overall user experience and satisfaction
+- **Learning Opportunity**: What users or the organization can learn from this failure
+- **Improvement Trigger**: Whether this failure should trigger process, system, or design improvements
+- **Documentation Requirement**: Whether this failure needs to be documented in knowledge bases or runbooks
+- **Training Requirement**: Whether users or staff need training to handle this failure properly
+- **Tooling Requirement**: What tools or utilities are needed to diagnose or fix this failure
+- **Environmental Sensitivity**: Whether this failure depends on specific environmental conditions
+- **Timing Sensitivity**: Whether this failure is more likely at certain times or under certain loads
+- **Replication Difficulty**: How easy or difficult it is to reproduce this failure for testing
+- **Isolation Difficulty**: How easy or difficult it is to isolate this failure from other factors
+- **Dependency on External Factors**: Whether this failure depends on third-party services or systems
+- **Version Sensitivity**: Whether this failure is specific to certain versions of software or components
+- **Configuration Sensitivity**: Whether this failure depends on specific system configurations
+- **Resource Sensitivity**: Whether this failure occurs under specific resource constraints (memory, CPU, disk, etc.)
+- **Concurrency Sensitivity**: Whether this failure is related to timing or race conditions
+- **State Sensitivity**: Whether this failure depends on the current state of the system or data
+- **Input Sensitivity**: Whether this failure is triggered by specific inputs or data values
+- **Output Sensitivity**: Whether this failure affects specific outputs or results
+- **Interface Sensitivity**: Whether this failure occurs at specific system interfaces or boundaries
+- **Protocol Sensitivity**: Whether this failure is related to specific communication protocols
+- **Format Sensitivity**: Whether this failure is related to specific data formats or encodings
+- **Encoding Sensitivity**: Whether this failure is related to specific character encodings
+- **Compression Sensitivity**: Whether this failure is related to specific compression algorithms
+- **Encryption Sensitivity**: Whether this failure is related to specific encryption or security mechanisms
+- **Authentication Sensitivity**: Whether this failure is related to specific authentication mechanisms
+- **Authorization Sensitivity**: Whether this failure is related to specific authorization mechanisms
+- **Validation Sensitivity**: Whether this failure is related to specific validation rules or constraints
+- **Calculation Sensitivity**: Whether this failure is related to specific calculations or computations
+- **Timing Sensitivity**: Whether this failure is related to specific timing or sequencing requirements
+- **Ordering Sensitivity**: Whether this failure is related to specific ordering or sorting requirements
+- **Grouping Sensitivity**: Whether this failure is related to specific grouping or aggregation requirements
+- **Filtering Sensitivity**: Whether this failure is related to specific filtering or selection requirements
+- **Transformation Sensitivity**: Whether this failure is related to specific data transformation processes
+- **Enrichment Sensitivity**: Whether this failure is related to specific data enrichment processes
+- **Normalization Sensitivity**: Whether this failure is related to specific data normalization processes
+- **Standardization Sensitivity**: Whether this failure is related to specific data standardization processes
+- **Validation Sensitivity**: Whether this failure is related to specific data validation processes
+- **Verification Sensitivity**: Whether this failure is related to specific data verification processes
+- **Reconciliation Sensitivity**: Whether this failure is related to specific data reconciliation processes
+- **Consolidation Sensitivity**: Whether this failure is related to specific data consolidation processes
+- **Integration Sensitivity**: Whether this failure is related to specific data integration processes
+- **Migration Sensitivity**: Whether this failure is related to specific data migration processes
+- **Transformation Sensitivity**: Whether this failure is related to specific data transformation processes
+- **Conversion Sensitivity**: Whether this failure is related to specific data conversion processes
+- **Mapping Sensitivity**: Whether this failure is related to specific data mapping processes
+- **Translation Sensitivity**: Whether this failure is related to specific data translation processes
+- **Interpolation Sensitivity**: Whether this failure is related to specific data interpolation processes
+- **Extrapolation Sensitivity**: Whether this failure is related to specific data extrapolation processes
+- **Approximation Sensitivity**: Whether this failure is related to specific data approximation processes
+- **Estimation Sensitivity**: Whether this failure is related to specific data estimation processes
+- **Prediction Sensitivity**: Whether this failure is related to specific data prediction processes
+- **Forecasting Sensitivity**: Whether this failure is related to specific data forecasting processes
+- **Budgeting Sensitivity**: Whether this failure is related to specific data budgeting processes
+- **Planning Sensitivity**: Whether this failure is related to specific data planning processes
+- **Scheduling Sensitivity**: Whether this failure is related to specific data scheduling processes
+- **Routing Sensitivity**: Whether this failure is related to specific data routing processes
+- **Allocation Sensitivity**: Whether this failure is related to specific data allocation processes
+- **Assignment Sensitivity**: Whether this failure is related to specific data assignment processes
+- **Distribution Sensitivity**: Whether this failure is related to specific data distribution processes
+- **Spread Sensitivity**: Whether this failure is related to specific data spread processes
+- **Dispersion Sensitivity**: Whether this failure is related to specific data dispersion processes
+- **Variation Sensitivity**: Whether this failure is related to specific data variation processes
+- **Deviation Sensitivity**: Whether this failure is related to specific data deviation processes
+- **Fluctuation Sensitivity**: Whether this failure is related to specific data fluctuation processes
+- **Volatility Sensitivity**: Whether this failure is related to specific data volatility processes
+- **Stability Sensitivity**: Whether this failure is related to specific data stability processes
+- **Consistency Sensitivity**: Whether this failure is related to specific data consistency processes
+- **Integrity Sensitivity**: Whether this failure is related to specific data integrity processes
+- **Quality Sensitivity**: Whether this failure is related to specific data quality processes
+- **Accuracy Sensitivity**: Whether this failure is related to specific data accuracy processes
+- **Precision Sensitivity**: Whether this failure is related to specific data precision processes
+- **Resolution Sensitivity**: Whether this failure is related to specific data resolution processes
+- **Detail Sensitivity**: Whether this failure is related to specific data detail processes
+- **Granularity Sensitivity**: Whether this failure is related to specific data granularity processes
+- **Aggregation Sensitivity**: Whether this failure is related to specific data aggregation processes
+- **Summarization Sensitivity**: Whether this failure is related to specific data summarization processes
+- **Abstraction Sensitivity**: Whether this failure is related to specific data abstraction processes
+- **Generalization Sensitivity**: Whether this failure is related to specific data generalization processes
+- **Specialization Sensitivity**: Whether this failure is related to specific data specialization processes
+- **Differentiation Sensitivity**: Whether this failure is related to specific data differentiation processes
+- **Similarity Sensitivity**: Whether this failure is related to similar data similarity processes
+- **Distance Sensitivity**: Whether this failure is related to similar data distance processes
+- **Proximity Sensitivity**: Whether this failure is related to similar data proximity processes
+- **Closeness Sensitivity**: Whether this failure is related to similar data closeness processes
+- **Nearness Sensitivity**: Whether this failure is related to similar data nearness processes
+- **Farness Sensitivity**: Whether this failure is related to similar data farness processes
+- **Remoteness Sensitivity**: Whether this failure is related to similar data remoteness processes
+- **Isolation Sensitivity**: Whether this failure is related to similar data isolation processes
+- **Connection Sensitivity**: Whether this failure is related to similar data connection processes
+- **Linkage Sensitivity**: Whether this failure is related to similar data linkage processes
+- **Association Sensitivity**: Whether this failure is related to similar data association processes
+- **Correlation Sensitivity**: Whether this failure is related to similar data correlation processes
+- **Causation Sensitivity**: Whether this failure is related to similar data causation processes
+- **Dependency Sensitivity**: Whether this failure is related to similar data dependency processes
+- **Interdependence Sensitivity**: Whether this failure is related to similar data interdependence processes
+- **Mutualism Sensitivity**: Whether this failure is related to similar data mutualism processes
+- **Commensalism Sensitivity**: Whether this failure is related to similar data commensalism processes
+- **Parasitism Sensitivity**: Whether this failure is related to similar data parasitism processes
+- **Competition Sensitivity**: Whether this failure is related to similar data competition processes
+- **Predation Sensitivity**: Whether this failure is related to similar data predation processes
+- **Herbivory Sensitivity**: Whether this failure is related to similar data herbivory processes
+- **Omnivory Sensitivity**: Whether this failure is related to similar data omnivory processes
+- **Carnivory Sensitivity**: Whether this failure is related to similar data carnivory processes
+- **Scavenging Sensitivity**: Whether this failure is related to similar data scavenging processes
+- **Decomposition Sensitivity**: Whether this failure is related to similar data decomposition processes
+- **Recycling Sensitivity**: Whether this failure is related to similar data recycling processes
+- **Reuse Sensitivity**: Whether this failure is related to similar data reuse processes
+- **Recovery Sensitivity**: Whether this failure is related to similar data recovery processes
+- **Regeneration Sensitivity**: Whether this failure is related to similar data regeneration processes
+- **Growth Sensitivity**: Whether this failure is related to similar data growth processes
+- **Development Sensitivity**: Whether this failure is related to similar data development processes
+- **Maturation Sensitivity**: Whether this failure is related to similar data maturation processes
+- **Aging Sensitivity**: Whether this failure is related to similar data aging processes
+- **Senescence Sensitivity**: Whether this failure is related to similar data senescence processes
+- **Decline Sensitivity**: Whether this failure is related to similar data decline processes
+- **Decay Sensitivity**: Whether this failure is related to similar data decay processes
+- **Putrefaction Sensitivity**: Whether this failure is related to similar data putrefaction processes
+- **Fermentation Sensitivity**: Whether this failure is related to similar data fermentation processes
+- **Respiration Sensitivity**: Whether this failure is related to similar data respiration processes
+- **Photosynthesis Sensitivity**: Whether this failure is related to similar data photosynthesis processes
+- **Transpiration Sensitivity**: Whether this failure is related to similar data transpiration processes
+- **Guttation Sensitivity**: Whether this failure is related to similar data guttation processes
+- **Bleeding Sensitivity**: Whether this failure is related to similar data bleeding processes
+- **Clotting Sensitivity**: Whether this failure is related to similar data clotting processes
+- **Coagulation Sensitivity**: Whether this failure is related to similar data coagulation processes
+- **Fibrinolysis Sensitivity**: Whether this failure is related to similar data fibrinolysis processes
+- **Hemostasis Sensitivity**: Whether this failure is related to similar data hemostasis processes
+- **Immune Response Sensitivity**: Whether this failure is related to similar data immune response processes
+- **Inflammation Sensitivity**: Whether this failure is related to similar data inflammation processes
+- **Healing Sensitivity**: Whether this failure is related to similar data healing processes
+- **Repair Sensitivity**: Whether this failure is related to similar data repair processes
+- **Regeneration Sensitivity**: Whether this failure is related to similar data regeneration processes
+- **Reproduction Sensitivity**: Whether this failure is related to similar data reproduction processes
+- **Breeding Sensitivity**: Whether this failure is related to similar data breeding processes
+- **Pollination Sensitivity**: Whether this failure is related to similar data pollination processes
+- **Fertilization Sensitivity**: Whether this failure is related to similar data fertilization processes
+- **Germination Sensitivity**: Whether this failure is related to similar data germination processes
+- **Emergence Sensitivity**: Whether this failure is related to similar data emergence processes
+- **Hatching Sensitivity**: Whether this failure is related to similar data hatching processes
+- **Molting Sensitivity**: Whether this failure is related to similar data molting processes
+- **Metamorphosis Sensitivity**: Whether this failure is related to similar data metamorphosis processes
+- **Pupation Sensitivity**: Whether this failure is related to similar data pupation processes
+- **Larval Sensitivity**: Whether this failure is related to similar data larval processes
+- **Adult Sensitivity**: Whether this failure is related to similar data adult processes
+- **Nymph Sensitivity**: Whether this failure is related to similar data nymph processes
+- **Egg Sensitivity**: Whether this failure is related to similar data egg processes
+- **Seed Sensitivity**: Whether this failure is related to similar data seed processes
+- **Spore Sensitivity**: Whether this failure is related to similar data spore processes
+- **Bud Sensitivity**: Whether this failure is related to similar data bud processes
+- **Flower Sensitivity**: Whether this failure is related to similar data flower processes
+- **Fruit Sensitivity**: Whether this failure is related to similar data fruit processes
+- **Leaf Sensitivity**: Whether this failure is related to similar data leaf processes
+- **Stem Sensitivity**: Whether this failure is related to similar data stem processes
+- **Root Sensitivity**: Whether this failure is related to similar data root processes
+- **Branch Sensitivity**: Whether this failure is related to similar data branch processes
+- **Twig Sensitivity**: Whether this failure is related to similar data twig processes
+- **Bark Sensitivity**: Whether this failure is related to similar data bark processes
+- **Wood Sensitivity**: Whether this failure is related to similar data wood processes
+- **Phloem Sensitivity**: Whether this flow is related to similar data phloem processes
+- **Xylem Sensitivity**: Whether this failure is related to similar data xylem processes
+- **Cambium Sensitivity**: Whether this failure is related to similar data cambium processes
+- **Meristem Sensitivity**: Whether this failure is related to similar data meristem processes
+- **Ground Tissue Sensitivity**: Whether this failure is related to similar data ground tissue processes
+- **Dermal Tissue Sensitivity**: Whether this failure is related to similar data dermal tissue processes
+- **Vascular Tissue Sensitivity**: Whether this failure is related to similar data vascular tissue processes
+- **Nervous Tissue Sensitivity**: Whether this failure is related to similar data nervous tissue processes
+- **Muscular Tissue Sensitivity**: Whether this failure is related to similar data muscular tissue processes
+- **Connective Tissue Sensitivity**: Whether this failure is related to similar data connective tissue processes
+- **Epithelial Tissue Sensitivity**: Whether this failure is related to similar data epithelial tissue processes
+- **Adipose Tissue Sensitivity**: Whether this failure is related to similar data adipose tissue processes
+- **Bone Tissue Sensitivity**: Whether this failure is related to similar data bone tissue processes
+- **Cartilage Tissue Sensitivity**: Whether this failure is related to similar data cartilage tissue processes
+- **Nervous System Sensitivity**: Whether this failure is related to similar data nervous system processes
+- **Endocrine System Sensitivity**: Whether this failure is related to similar data endocrine system processes
+- **Exocrine System Sensitivity**: Whether this failure is related to similar data exocrine system processes
+- **Digestive System Sensitivity**: Whether this failure is related to similar data digestive system processes
+- **Respiratory System Sensitivity**: Whether this failure is related to similar data respiratory system processes
+- **Circulatory System Sensitivity**: Whether this failure is related to similar data circulatory system processes
+- **Lymphatic System Sensitivity**: Whether this failure is related to similar data lymphatic system processes
+- **Immune System Sensitivity**: Whether this failure is related to similar data immune system processes
+- **Integumentary System Sensitivity**: Whether this failure is related to similar data integumentary system processes
+- **Skeletal System Sensitivity**: Whether this failure is related to similar data skeletal system processes
+- **Muscular System Sensitivity**: Whether this failure is related to similar data muscular system processes
+- **Cardiovascular System Sensitivity**: Whether this failure is related to similar data cardiovascular system processes
+- **Respiratory System Sensitivity**: Whether this failure is related to similar data respiratory system processes
+- **Digestive System Sensitivity**: Whether this failure is related to similar data digestive system processes
+- **Urinary System Sensitivity**: Whether this failure is related to similar data urinary system processes
+- **Reproductive System Sensitivity**: Whether this failure is related to similar data reproductive system processes
+- **Nervous System Sensitivity**: Whether this failure is related to similar data nervous system processes
+- **Endocrine System Sensitivity**: Whether this failure is related to similar data endocrine system processes
+- **Lymphatic System Sensitivity**: Whether this failure is related to similar data lymphatic system processes
+- **Immune System Sensitivity**: Whether this failure is related to similar data immune system processes
+- **Skeletal System Sensitivity**: Whether this failure is related to similar data skeletal system processes
+- **Muscular System Sensitivity**: Whether this failure is related to similar data muscular system processes
+- **Integumentary System Sensitivity**: Whether this failure is related to similar data integumentary system processes
+- **Special Senses Sensitivity**: Whether this failure is related to similar data special senses processes
+- **Vision Sensitivity**: Whether this failure is related to similar data vision processes
+- **Hearing Sensitivity**: Whether this failure is related to similar data hearing processes
+- **Smell Sensitivity**: Whether this failure is related to similar data smell processes
+- **Taste Sensitivity**: Whether this failure is related to similar data taste processes
+- **Touch Sensitivity**: Whether this failure is related to similar data touch processes
+- **Temperature Sensitivity**: Whether this failure is related to similar data temperature processes
+- **Pain Sensitivity**: Whether this failure is related to similar data pain processes
+- **Itch Sensitivity**: Whether this failure is related to similar data itch processes
+- **Pressure Sensitivity**: Whether this failure is related to similar data pressure processes
+- **Vibration Sensitivity**: Whether this failure is related to similar data vibration processes
+- **Balance Sensitivity**: Whether this failure is related to similar data balance processes
+- **Proprioception Sensitivity**: Whether this failure is related to similar data proprioception processes
+- **Kinesthesia Sensitivity**: Whether this failure is related to similar data kinesthesia processes
+- **Equilibrium Sensitivity**: Whether this failure is related to similar data equilibrium processes
+- **Orientation Sensitivity**: Whether this failure is related to similar data orientation processes
+- **Direction Sensitivity**: Whether this failure is related to similar data direction processes
+- **Location Sensitivity**: Whether this failure is related to similar data location processes
+- **Position Sensitivity**: Whether this failure is related to similar data position processes
+- **Displacement Sensitivity**: Whether this failure is related to similar data displacement processes
+- **Velocity Sensitivity**: Whether this failure is related to similar data velocity processes
+- **Acceleration Sensitivity**: Whether this failure is related to similar data acceleration processes
+- **Jerk Sensitivity**: Whether this failure is related to similar data jerk processes
+- **Snap Sensitivity**: Whether this failure is related to similar data snap processes
+- **Crackle Sensitivity**: Whether this failure is related to similar data crackle processes
+- **Pop Sensitivity**: Whether this failure is related to similar data pop processes
+- **Lift Sensitivity**: Whether this failure is related to similar data lift processes
+- **Drag Sensitivity**: Whether this failure is related to similar data drag processes
+- **Thrust Sensitivity**: Whether this failure is related to data thrust processes
+- **Weight Sensitivity**: Whether this failure is related to similar data weight processes
+- **Mass Sensitivity**: Whether this failure is related to similar data mass processes
+- **Volume Sensitivity**: Whether this failure is related to similar data volume processes
+- **Density Sensitivity**: Whether this failure is related to similar data density processes
+- **Pressure Sensitivity**: Whether this failure is related to similar data pressure processes
+- **Buoyancy Sensitivity**: Whether this failure is related to similar data buoyancy processes
+- **Viscosity Sensitivity**: Whether this failure is related to similar data viscosity processes
+- **Surface Tension Sensitivity**: Whether this failure is related to similar data surface tension processes
+- **Capillary Action Sensitivity**: Whether this failure is related to similar data capillary action processes
+- **Osmosis Sensitivity**: Whether this failure is related to similar data osmosis processes
+- **Diffusion Sensitivity**: Whether this failure is related to similar data diffusion processes
+- **Effusion Sensitivity**: Whether this failure is related to similar data effusion processes
+- **Permeability Sensitivity**: Whether this failure is related to similar data permeability processes
+- **Porosity Sensitivity**: Whether this failure is related to similar data porosity processes
+- **Absorption Sensitivity**: Whether this failure is related to similar data absorption processes
+- **Adsorption Sensitivity**: Whether this failure is related to similar data adsorption processes
+- **Desorption Sensitivity**: Whether this failure is related to similar data desorption processes
+- **Evaporation Sensitivity**: Whether this failure is related to similar data evaporation processes
+- **Condensation Sensitivity**: Whether this failure is related to similar data condensation processes
+- **Sublimation Sensitivity**: Whether this failure is related to similar data sublimation processes
+- **Deposition Sensitivity**: Whether this failure is related to similar data deposition processes
+- **Melting Sensitivity**: Whether this failure is related to similar data melting processes
+- **Freezing Sensitivity**: Whether this failure is related to similar data freezing processes
+- **Boiling Sensitivity**: Whether this failure is related to similar data boiling processes
+- **Condensation Sensitivity**: Whether this failure is related to similar data condensation processes
+- **Sublimation Sensitivity**: Whether this failure is related to similar data sublimation processes
+- **Deposition Sensitivity**: Whether this failure is related to similar data deposition processes
+- **Solidification Sensitivity**: Whether this failure is related to similar data solidification processes
+- **Liquefaction Sensitivity**: Whether this failure is related to similar data liquefaction processes
+- **Vaporization Sensitivity**: Whether this failure is related to similar data vaporization processes
+- **Evaporation Sensitivity**: Whether this failure is related to similar data evaporation processes
+- **Distillation Sensitivity**: Whether this failure is related to similar data distillation processes
+- **Filtration Sensitivity**: Whether this failure is related to similar data filtration processes
+- **Separation Sensitivity**: Whether this failure is related to similar data separation processes
+- **Purification Sensitivity**: Whether this failure is related to similar data purification processes
+- **Refinement Sensitivity**: Whether this failure is related to similar data refinement processes
+- **Mixing Sensitivity**: Whether this failure is related to similar data mixing processes
+- **Blending Sensitivity**: Whether this failure is related to similar data blending processes
+- **Dilution Sensitivity**: Whether this failure is related to similar data dilution processes
+- **Concentration Sensitivity**: Whether this failure is related to similar data concentration processes
+- **Saturation Sensitivity**: Whether this failure is related to similar data saturation processes
+- **Unsaturation Sensitivity**: Whether this failure is related to similar data unsaturation processes
+- **Solubility Sensitivity**: Whether this failure is related to similar data solubility processes
+- **Miscibility Sensitivity**: Whether this failure is related to similar data miscibility processes
+- **Immiscibility Sensitivity**: Whether this failure is related to similar data immiscibility processes
+- **Phase Sensitivity**: Whether this failure is related to similar data phase processes
+- **State Sensitivity**: Whether this failure is related to similar data state processes
+- **Condition Sensitivity**: Whether this failure is related to similar data condition processes
+- **Situation Sensitivity**: Whether this failure is related to similar data situation processes
+- **Context Sensitivity**: Whether this failure is related to similar data context processes
+- **Environment Sensitivity**: Whether this failure is related to similar data environment processes
+- **Surroundings Sensitivity**: Whether this failure is related to similar data surroundings processes
+- **Setting Sensitivity**: Whether this failure is related to similar data setting processes
+- **Background Sensitivity**: Whether this failure is related to similar data background processes
+- **Foreground Sensitivity**: Whether this failure is related to similar data foreground processes
+- **Midground Sensitivity**: Whether this failure is related to similar data midground processes
+- **Uppersensitive**: Whether this failure is related to similar data uppersensitive processes
+- **Lowersensitive**: Whether this failure is related to similar data lowersensitive processes
+- **Midsensitive**: Whether this failure is related to similar data midsensitive processes
+- **Topsensitive**: Whether this failure is related to similar data topsensitive processes
+- **Bottomsensitive**: Whether this failure is related to similar data bottomsensitive processes
+- **Leftersensitive**: Whether this failure is related to similar data leftersensitive processes
+- **Rightersensitive**: Whether this failure is related to similar data rightersensitive processes
+- **Centersensitive**: Whether this failure is related to similar data centersensitive processes
+- **Edgesensitive**: Whether this failure is related to similar data edgesensitive processes
+- **Cornersensitive**: Whether this failure is related to similar data cornersensitive processes
+- **Middlesensitive**: Whether this failure is related to similar data middlesensitive processes
+- **Insidesensitive**: Whether this failure is related to similar data insidesensitive processes
+- **Outsidesensitive**: Whether this failure is related to similar data outsidesensitive processes
+- **Internalsensitive**: Whether this failure is related to similar data internalsensitive processes
+- **Externalsensitive**: Whether this failure is related to similar data externalsensitive processes
+- **Innatesensitive**: Whether this failure is related to similar data innatesensitive processes
+- **Acquiredsensitive**: Whether this failure is related to similar data acquiredsensitive processes
+- **Congenitalsensitive**: Whether this failure is related to similar data congenitalsensitive processes
+- **Developmentalsensitive**: Whether this failure is related to similar data developmentalsensitive processes
+- **Evolutionarysensitive**: Whether this failure is related to similar data evolutionalsensitive processes
+- **Geneticsensitive**: Whether this failure is related to similar data geneticsensitive processes
+- **Epigeneticsensitive**: Whether this failure is related to similar data epigeneticsensitive processes
+- **Metabolicsensitive**: Whether this failure is related to similar data metabolicsensitive processes
+- **Nutritionalsensitive**: Whether this failure is related to similar data nutritionalsensitive processes
+- **Hormonalsensitive**: Whether this failure is related to similar data hormonalsensitive processes
+- **Enzymaticsensitive**: Whether this failure is related to similar data enzymaticsensitive processes
+- **Proteinsensitive**: Whether this failure is related to similar data proteinsensitive processes
+- **Aminosensitivesensitive**: Whether this failure is related to similar data aminosensitivesensitive processes
+- **Nucleicsensitivesensitive**: Whether this failure is related to similar data nucleicsensitivesensitive processes
+- **Lipidsensitivesensitive**: Whether this failure is related to similar data lipidsensitivesensitive processes
+- **Carbohydratesensitivesensitive**: Whether this failure is related to similar data carbohydratesensitivesensitive processes
+- **Vitaminsensitivesensitive**: Whether this failure is related to similar data vitaminsensitivesensitive processes
+- **Mineralsensitivesensitive**: Whether this failure is related to similar data mineralsensitivesensitive processes
+- **Tracelementssensitivesensitive**: Whether this failure is related to similar data tracelementssensitivesensitive processes
+- **Ultratracelementssensitivesensitive**: Whether this failure is related to similar data ultratracelementssensitivesensitive processes
+- **Radioelementsensitivesensitive**: Whether this failure is related to similar data radioelementsensitivesensitive processes
+- **Isotopesensitivesensitive**: Whether this failure is related to similar data isotopesensitivesensitive processes
+- **Ionsensitivesensitive**: Whether this failure is related to similar data ionsensitivesensitive processes
+- **Cationsensitivesensitive**: Whether this failure is related to similar data cationsensitivesensitive processes
+- **Anionsensitivesensitive**: Whether this failure is related to similar data anionsensitivesensitive processes
+- **Polyelectrolytesensitivesensitive**: Whether this failure is related to similar data polyelectrolytesensitivesensitive processes
+- **Zwitterionssensitivesensitive**: Whether this failure is related to similar data zwitterionssensitivesensitive processes
+- **Amphotericsensitivesensitive**: Whether this failure is related to similar data amphotericsensitivesensitive processes
+- **Hydrophilicsensitivesensitive**: Whether this failure is related to similar data hydrophilicsensitivesensitive processes
+- **Hydrophobicsensitivesensitive**: Whether this failure is related to similar data hydrophobicsensitivesensitive processes
+- **Amphipathicsensitivesensitive**: Whether this failure is related to similar data amphipathicsensitivesensitive processes
+- **Lipophilicsensitivesensitive**: Whether this failure is related to similar data lipophilicsensitivesensitive processes
+- **Hydrophilicnesssensitivesensitive**: Whether this failure is related to similar data hydrophilicnesssensitivesensitive processes
+- **Hydrophobicnesssensitivesensitive**: Whether this failure is related to similar data hydrophobicitysensitivesensitive processes
+- **Amphipathicnesssensitivesensitive**: Whether this failure is related to similar data amphipathicnesssensitivesensitive processes
+- **Solubilitysensitivesensitive**: Whether this failure is related to similar data solubilitysensitivesensitive processes
+- **Miscibilitysensitivesensitive**: Whether this failure is related to similar data miscibilitysensitivesensitive processes
+- **Immiscibilitysensitivesensitive**: Whether this failure is related to similar data immiscibilitysensitivesensitive processes
+- **Phase_separationsensitivesensitive**: Whether this failure is related to similar data phase_separationsensitivesensitive processes
+- **Emulsionsensitivesensitive**: Whether this failure is related to similar data emulsionsensitivesensitive processes
+- **Suspensionsensitivesensitive**: Whether this failure is related to similar data suspensionsensitivesensitive processes
+- **Colloidsensitivesensitive**: Whether this failure is related to similar data colloidsensitivesensitive processes
+- **Aerosolsensitivesensitive**: Whether this failure is related to similar data aerosolsensitivesensitive processes
+- **Foamsensitivesensitive**: Whether this failure is related to similar data foamsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Pastesensitivesensitive**: Whether this failure is related to similar data pastesensitivesensitive processes
+- **Creamsensitivesensitive**: Whether this failure is related to similar data creamsensitivesensitive processes
+- **Ointmentsensitivesensitive**: Whether this failure is related to similar data ointmentsensitivesensitive processes
+- **Lotionsensitivesensitive**: Whether this failure is related to similar data lotionsensitivesensitive processes
+- **Serumsensitivesensitive**: Whether this failure is related to similar data serumsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Spreadsensitivesensitive**: Whether this failure is related to similar data spreadsensitivesensitive processes
+- **Dipsensitivesensitive**: Whether this failure is related to similar data dipsensitivesensitive processes
+- **Saucesensitivesensitive**: Whether this failure is related to similar data saucesensitivesensitive processes
+- **Gravysensitivesensitive**: Whether this failure is related to similar data gravysensitivesensitive processes
+- **Dressingsensitivesensitive**: Whether this failure is related to similar data dressingsensitivesensitive processes
+- **Marinadesensitivesensitive**: Whether this failure is related to similar data marinadesensitivesensitive processes
+- **Brinesensitivesensitive**: Whether this failure is related to similar data brinesensitivesensitive processes
+- **Picklesensitivesensitive**: Whether this failure is related to similar data picklesensitivesensitive processes
+- **Jamsensitivesensitive**: Whether this failure is related to similar data jamsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Preservesensitivesensitive**: Whether this failure is related to similar data preservesensitivesensitive processes
+- **Conservesensitivesensitive**: Whether this failure is related to similar data conservesensitivesensitive processes
+- **Relishesensitivesensitive**: Whether this failure is related to similar data relishesensitivesensitive processes
+- **Chutneysensitivesensitive**: Whether this failure is related to similar data chutneysensitivesensitive processes
+- **Salsasensitivesensitive**: Whether this failure is related to similar data salsasensitivesensitive processes
+- **Pestosensitivesensitive**: Whether this failure is related to similar data pestosensitivesensitive processes
+- **Tapenadesensitivesensitive**: Whether this failure is related to similar data tapenadesensitivesensitive processes
+- **Hummusensitivesensitive**: Whether this failure is related to similar data hummusensitivesensitive processes
+- **Guacamolesensitivesensitive**: Whether this failure is related to similar data guacamolesensitivesensitive processes
+- **Salsasensitivesensitive**: Whether this failure is related to similar data salsasensitivesensitive processes
+- **Picodegallosensitivesensitive**: Whether this failure is related to similar data picodegallosensitivesensitive processes
+- **Guacamolesensitivesensitive**: Whether this failure is related to similar data guacamolesensitivesensitive processes
+- **Sourcreamsensitivesensitive**: Whether this failure is related to similar data sourcreamsensitivesensitive processes
+- **Yogurtsensitivesensitive**: Whether this failure is related to similar data yogurtsensitivesensitive processes
+- **Kefirsensitivesensitive**: Whether this failure is related to similar data kefirsensitivesensitive processes
+- **Buttermilksensitivesensitive**: Whether this failure is related to similar data buttermilksensitivesensitive processes
+- **Wheyproteinsensitivesensitive**: Whether this failure is related to similar data wheyproteinsensitivesensitive processes
+- **Caseinsensitivesensitive**: Whether this failure is related to similar data caseinsensitivesensitive processes
+- **Lactosesensitivesensitive**: Whether this failure is related to similar data lactosesensitivesensitive processes
+- **Galactosesensitivesensitive**: Whether this failure is related to similar data galactosesensitivesensitive processes
+- **Sucrosesensitivesensitive**: Whether this failure is related to similar data sucrosesensitivesensitive processes
+- **Fructosesensitivesensitive**: Whether this failure is related to similar data fructosesensitivesensitive processes
+- **Glucosesensitivesensitive**: Whether this failure is related to similar data glucosesensitivesensitive processes
+- **Maltosesensitivesensitive**: Whether this failure is related to similar data maltosesensitivesensitive processes
+- **Lactosesensitivesensitive**: Whether this failure is related to similar data lactosesensitivesensitive processes
+- **Galactosesensitivesensitive**: Whether this failure is related to similar data galactosesensitivesensitive processes
+- **Ribosesensitivesensitive**: Whether this failure is related to similar data ribosesensitivesensitive processes
+- **Deoxyribosesensitivesensitive**: Whether this failure is related to similar data deoxyribosesensitivesensitive processes
+- **Nucleosidesensitivesensitive**: Whether this failure is related to similar data nucleosidesensitivesensitive processes
+- **Nucleotidesensitivesensitive**: Whether this failure is related to similar data nucleotidesensitivesensitive processes
+- **Purinesensitivesensitive**: Whether this failure is related to similar data purinesensitivesensitive processes
+- **Pyrimidinesensitivesensitive**: Whether this failure is related to similar data pyrimidinesensitivesensitive processes
+- **Adeninesensitivesensitive**: Whether this failure is related to similar data adeninesensitivesensitive processes
+- **Thyminesensitivesensitive**: Whether this failure is related to similar data thyminesensitivesensitive processes
+- **Uracilsensitivesensitive**: Whether this failure is related to similar data uracilsensitivesensitive processes
+- **Guaninesensitivesensitive**: Whether this failure is related to similar data guaninesensitivesensitive processes
+- **Cytosinesensitivesensitive**: Whether this failure is related to similar data cytosinesensitivesensitive processes
+- **Thyminesensitivesensitive**: Whether this failure is related to similar data thyminesensitivesensitive processes
+- **Uracilsensitivesensitive**: Whether this failure is related to similar data uracilsensitivesensitive processes
+- **Guaninesensitivesensitive**: Whether this failure is related to similar data guaninesensitivesensitive processes
+- **Cytosinesensitivesensitive**: Whether this failure is related to similar data cytosinesensitivesensitive processes
+- **Nitrogenbasesensitivesensitive**: Whether this failure is related to similar data nitrogenbasesensitivesensitive processes
+- **Carbonhydratesensitivesensitive**: Whether this failure is related to similar data carbonhydratesensitivesensitive processes
+- **Lipidsensitivesensitive**: Whether this failure is related to similar data lipidsensitivesensitive processes
+- **Proteinsensitivesensitive**: Whether this failure is related to similar data proteinsensitivesensitive processes
+- **Nucleicacidsensitivesensitive**: Whether this failure is related to similar data nucleicacidsensitivesensitive processes
+- **Vitaminsensitivesensitive**: Whether this failure is related to similar data vitaminsensitivesensitive processes
+- **Mineralsensitivesensitive**: Whether this failure is related to similar data mineralsensitivesensitive processes
+- **Tracelementssensitivesensitive**: Whether this failure is related to similar data tracelementssensitivesensitive processes
+- **Ultratracelementssensitivesensitive**: Whether this failure is related to similar data ultratracelementssensitivesensitive processes
+- **Radioelementsensitivesensitive**: Whether this failure is related to similar data radioelementsensitivesensitive processes
+- **Isotopesensitivesensitive**: Whether this failure is related to similar data isotopesensitivesensitive processes
+- **Ionsensitivesensitive**: Whether this failure is related to similar data ionsensitivesensitive processes
+- **Cationsensitivesensitive**: Whether this failure is related to similar data cationsensitivesensitive processes
+- **Anionsensitivesensitive**: Whether this failure is related to similar data anionsensitivesensitive processes
+- **Polyelectrolytesensitivesensitive**: Whether this failure is related to similar data polyelectrolytesensitivesensitive processes
+- **Zwitterionssensitivesensitive**: Whether this failure is related to similar data zwitterionssensitivesensitive processes
+- **Amphotericsensitivesensitive**: Whether this failure is related to similar data amphotericsensitivesensitive processes
+- **Hydrophilicsensitivesensitive**: Whether this failure is related to similar data hydrophilicsensitivesensitive processes
+- **Hydrophobicsensitivesensitive**: Whether this failure is related to similar data hydrophobicsensitivesensitive processes
+- **Amphipathicsensitivesensitive**: Whether this failure is related to similar data amphibathicsensitivesensitive processes
+- **Lipophilicsensitivesensitive**: Whether this failure is related to similar data lipophilicsensitivesensitive processes
+- **Hydrophilicitysensitivesensitive**: Whether this failure is related to similar data hydrophilicitysensitivesensitive processes
+- **Hydrophobicitysensitivesensitive**: Whether this failure is related to similar data hydrophobicitysensitivesensitive processes
+- **Amphipathicitysensitivesensitive**: Whether this failure is related to similar data amphipathicitysensitivesensitive processes
+- **Solubilitysensitivesensitive**: Whether this failure is related to similar data solubilitysensitivesensitive processes
+- **Miscibilitysensitivesensitive**: Whether this failure is related to similar data miscibilitysensitivesensitive processes
+- **Immiscibilitysensitivesensitive**: Whether this failure is related to similar data immiscibilitysensitivesensitive processes
+- **Phase_separationsensitivesensitive**: Whether this failure is related to similar data phase_separationsensitivesensitive processes
+- **Emulsionsensitivesensitive**: Whether this failure is related to similar data emulsionsensitivesensitive processes
+- **Suspensionsensitivesensitive**: Whether this failure is related to similar data suspensionsensitivesensitive processes
+- **Colloidsensitivesensitive**: Whether this failure is related to similar data colloidsensitivesensitive processes
+- **Aerosolsensitivesensitive**: Whether this failure is related to similar data aerosolsensitivesensitive processes
+- **Foamsensitivesensitive**: Whether this failure is related to similar data foamsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Pastesensitivesensitive**: Whether this failure is related to similar data pastesensitivesensitive processes
+- **Creamsensitivesensitive**: Whether this failure is related to similar data creamsensitivesensitive processes
+- **Ointmentsensitivesensitive**: Whether this failure is related to similar data ointmentsensitivesensitive processes
+- **Lotionsensitivesensitive**: Whether this failure is related to similar data lotionsensitivesensitive processes
+- **Serumsensitivesensitive**: Whether this failure is related to similar data serumsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Spreadsensitivesensitive**: Whether this failure is related to similar data spreadsensitivesensitive processes
+- **Dipsensitivesensitive**: Whether this failure is related to similar data dipsensitivesensitive processes
+- **Saucesensitivesensitive**: Whether this failure is related to similar data saucesensitivesensitive processes
+- **Gravysensitivesensitive**: Whether this failure is related to similar data gravysensitivesensitive processes
+- **Dressingsensitivesensitive**: Whether this failure is related to similar data dressingsensitivesensitive processes
+- **Marinadesensitivesensitive**: Whether this failure is related to similar data marinadesensitivesensitive processes
+- **Brinesensitivesensitive**: Whether this failure is related to similar data brinesensitivesensitive processes
+- **Picklesensitivesensitive**: Whether this failure is related to similar data picklesensitivesensitive processes
+- **Jamsensitivesensitive**: Whether this failure is related to similar data jamsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Preservesensitivesensitive**: Whether this failure is related to similar data preservesensitivesensitive processes
+- **Conservesensitivesensitive**: Whether this failure is related to similar data conservesensitivesensitive processes
+- **Relishesensitivesensitive**: Whether this failure is related to similar data relishesensitivesensitive processes
+- **Chutneysensitivesensitive**: Whether this failure is related to similar data chutneysensitivesensitive processes
+- **Salsasensitivesensitive**: Whether this failure is related to similar data salsasensitivesensitive processes
+- **Pestosensitivesensitive**: Whether this failure is related to similar data pestosensitivesensitive processes
+- **Tapenadesensitivesensitive**: Whether this failure is related to similar data tapenadesensitivesensitive processes
+- **Hummusensitivesensitive**: Whether this failure is related to similar data hummusensitivesensitive processes
+- **Guacamolesensitivesensitive**: Whether this failure is related to similar data guacamolesensitivesensitive processes
+- **Salsasensitivesensitive**: Whether this failure is related to similar data salsasensitivesensitive processes
+- **Picodegallosensitivesensitive**: Whether this failure is related to similar data picodegallosensitivesensitive processes
+- **Guacamolesensitivesensitive**: Whether this failure is related to similar data guacamolesensitivesensitive processes
+- **Sourcreamsensitivesensitive**: Whether this failure is related to similar data sourcreamsensitivesensitive processes
+- **Yogurtsensitivesensitive**: Whether this failure is related to similar data yogurtsensitivesensitive processes
+- **Kefirsensitivesensitive**: Whether this failure is related to similar data kefirsensitivesensitive processes
+- **Buttermilksensitivesensitive**: Whether this failure is related to similar data buttermilksensitivesensitive processes
+- **Wheyproteinsensitivesensitive**: Whether this failure is related to similar data wheyproteinsensitivesensitive processes
+- **Caseinsensitivesensitive**: Whether this failure is related to similar data caseinsensitivesensitive processes
+- **Lactosesensitivesensitive**: Whether this failure is related to similar data lactosesensitivesensitive processes
+- **Galactosesensitivesensitive**: Whether this failure is related to similar data galactosesensitivesensitive processes
+- **Sucrosesensitivesensitive**: Whether this failure is related to similar data sucrosesensitivesensitive processes
+- **Fructosesensitivesensitive**: Whether this failure is related to similar data fructosesensitivesensitive processes
+- **Glucosesensitivesensitive**: Whether this failure is related to similar data glucosesensitivesensitive processes
+- **Maltosesensitivesensitive**: Whether this failure is related to similar data maltosesensitivesensitive processes
+- **Lactosesensitivesensitive**: Whether this failure is related to similar data lactosesensitivesensitive processes
+- **Galactosesensitivesensitive**: Whether this failure is related to similar data galactosesensitivesensitive processes
+- **Ribosesensitivesensitive**: Whether this failure is related to similar data ribosesensitivesensitive processes
+- **Deoxyribosesensitivesensitive**: Whether this failure is related to similar data deoxyribosesensitivesensitive processes
+- **Nucleosidesensitivesensitive**: Whether this failure is related to similar data nucleosidesensitivesensitive processes
+- **Nucleotidesensitivesensitive**: Whether this failure is related to similar data nucleotidesensitivesensitive processes
+- **Purinesensitivesensitive**: Whether this failure is related to similar data purinesensitivesensitive processes
+- **Pyrimidinesensitivesensitive**: Whether this failure is related to similar data pyrimidinesensitivesensitive processes
+- **Adeninesensitivesensitive**: Whether this failure is related to similar data adeninesensitivesensitive processes
+- **Thyminesensitivesensitive**: Whether this failure is related to similar data thyminesensitivesensitive processes
+- **Uracilsensitivesensitive**: Whether this failure is related to similar data uracilsensitivesensitive processes
+- **Guaninesensitivesensitive**: Whether this failure is related to similar data guaninesensitivesensitive processes
+- **Cytosinesensitivesensitive**: Whether this failure is related to similar data cytosinesensitivesensitive processes
+- **Thyminesensitivesensitive**: Whether this failure is related to similar data thyminesensitivesensitive processes
+- **Uracilsensitivesensitive**: Whether this failure is related to similar data uracilsensitivesensitive processes
+- **Guaninesensitivesensitive**: Whether this failure is related to similar data guaninesensitivesensitive processes
+- **Cytosinesensitivesensitive**: Whether this failure is related to similar data cytosinesensitivesensitive processes
+- **Nitrogenbasesensitivesensitive**: Whether this failure is related to similar data nitrogenbasesensitivesensitive processes
+- **Carbonhydratesensitivesensitive**: Whether this failure is related to similar data carbonhydratesensitivesensitive processes
+- **Lipidsensitivesensitive**: Whether this failure is related to similar data lipidsensitivesensitive processes
+- **Proteinsensitivesensitive**: Whether this failure is related to similar data proteinsensitivesensitive processes
+- **Nucleicacidsensitivesensitive**: Whether this failure is related to similar data nucleicacidsensitivesensitive processes
+- **Vitaminsensitivesensitive**: Whether this failure is related to similar data vitaminsensitivesensitive processes
+- **Mineralsensitivesensitive**: Whether this failure is related to similar data mineralsensitivesensitive processes
+- **Tracelementssensitivesensitive**: Whether this failure is related to similar data tracelementssensitivesensitive processes
+- **Ultratracelementssensitivesensitive**: Whether this failure is related to similar data ultratracelementssensitivesensitive processes
+- **Radioelementsensitivesensitive**: Whether this failure is related to similar data radioelementsensitivesensitive processes
+- **Isotopesensitivesensitive**: Whether this failure is related to similar data isotopesensitivesensitive processes
+- **Ionsensitivesensitive**: Whether this failure is related to similar data ionsensitivesensitive processes
+- **Cationsensitivesensitive**: Whether this failure is related to similar data cationsensitivesensitive processes
+- **Anionsensitivesensitive**: Whether this failure is related to similar data anionsensitivesensitive processes
+- **Polyelectrolytesensitivesensitive**: Whether this failure is related to similar data polyelectrolytesensitivesensitive processes
+- **Zwitterionssensitivesensitive**: Whether this failure is related to similar data zwitterionssensitivesensitive processes
+- **Amphotericsensitivesensitive**: Whether this failure is related to similar data amphotericsensitivesensitive processes
+- **Hydrophilicsensitivesensitive**: Whether this failure is related to similar data hydrophilicsensitivesensitive processes
+- **Hydrophobicsensitivesensitive**: Whether this failure is related to similar data hydrophobicsensitivesensitive processes
+- **Amphipathicsensitivesensitive**: Whether this failure is related to similar data amphibathicsensitivesensitive processes
+- **Lipophilicsensitivesensitive**: Whether this failure is related to similar data lipophilicsensitivesensitive processes
+- **Hydrophilicitysensitivesensitive**: Whether this failure is related to similar data hydrophilicitysensitivesensitive processes
+- **Hydrophobicitysensitivesensitive**: Whether this failure is related to similar data hydrophobicitysensitivesensitive processes
+- **Amphipathicitysensitivesensitive**: Whether this failure is related to similar data amphipathicitysensitivesensitive processes
+- **Solubilitysensitivesensitive**: Whether this failure is related to similar data solubilitysensitivesensitive processes
+- **Miscibilitysensitivesensitive**: Whether this failure is related to similar data miscibilitysensitivesensitive processes
+- **Immiscibilitysensitivesensitive**: Whether this failure is related to similar data immiscibilitysensitivesensitive processes
+- **Phase_separationsensitivesensitive**: Whether this failure is related to similar data phase_separationsensitivesensitive processes
+- **Emulsionsensitivesensitive**: Whether this failure is related to similar data emulsionsensitivesensitive processes
+- **Suspensionsensitivesensitive**: Whether this failure is related to similar data suspensionsensitivesensitive processes
+- **Colloidsensitivesensitive**: Whether this failure is related to similar data colloidsensitivesensitive processes
+- **Aerosolsensitivesensitive**: Whether this failure is related to similar data aerosolsensitivesensitive processes
+- **Foamsensitivesensitive**: Whether this failure is related to similar data foamsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Pastesensitivesensitive**: Whether this failure is related to similar data pastesensitivesensitive processes
+- **Creamsensitivesensitive**: Whether this failure is related to similar data creamsensitivesensitive processes
+- **Ointmentsensitivesensitive**: Whether this failure is related to similar data ointmentsensitivesensitive processes
+- **Lotionsensitivesensitive**: Whether this failure is related to similar data lotionsensitivesensitive processes
+- **Serumsensitivesensitive**: Whether this failure is related to similar data serumsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Spreadsensitivesensitive**: Whether this flow is related to similar data spreadsensitivesensitive processes
+- **Dipsensitivesensitive**: Whether this failure is related to similar data dipsensitivesensitive processes
+- **Saucesensitivesensitive**: Whether this failure is related to similar data saucesensitivesensitive processes
+- **Gravysensitivesensitive**: Whether this failure is related to similar data gravysensitivesensitive processes
+- **Dressingsensitivesensitive**: Whether this failure is related to similar data dressingsensitivesensitive processes
+- **Marinadesensitivesensitive**: Whether this failure is related to similar data marinadesensitivesensitive processes
+- **Brinesensitivesensitive**: Whether this failure is related to similar data brinesensitivesensitive processes
+- **Picklesensitivesensitive**: Whether this failure is related to similar data picklesensitivesensitive processes
+- **Jamsensitivesensitive**: Whether this failure is related to similar data jamsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Preservesensitivesensitive**: Whether this failure is related to similar data preservesensitivesensitive processes
+- **Conservesensitivesensitive**: Whether this failure is related to similar data conservesensitivesensitive processes
+- **Relishesensitivesensitive**: Whether this failure is related to similar data relishesensitivesensitive processes
+- **Chutneysensitivesensitive**: Whether this failure is related to similar data chutneysensitivesensitive processes
+- **Salsasensitivesensitive**: Whether this failure is related to similar data salsasensitivesensitive processes
+- **Pestosensitivesensitive**: Whether this failure is related to similar data pestosensitivesensitive processes
+- **Tapenadesensitivesensitive**: Whether this failure is related to similar data tapenadesensitivesensitive processes
+- **Hummusensitivesensitive**: Whether this failure is related to similar data hummusensitivesensitive processes
+- **Guacamolesensitivesensitive**: Whether this failure is related to similar data guacamolesensitivesensitive processes
+- **Salsasensitivesensitive**: Whether this failure is related to similar data salsasensitivesensitive processes
+- **Picodegallosensitivesensitive**: Whether this failure is related to similar data picodegallosensitivesensitive processes
+- **Guacamolesensitivesensitive**: Whether this failure is related to similar data guacamolesensitivesensitive processes
+- **Sourcreamsensitivesensitive**: Whether this failure is related to similar data sourcreamsensitivesensitive processes
+- **Yogurtsensitivesensitive**: Whether this failure is related to similar data yogurtsensitivesensitive processes
+- **Kefirsensitivesensitive**: Whether this failure is related to similar data kefirsensitivesensitive processes
+- **Buttermilksensitivesensitive**: Whether this failure is related to similar data buttermilksensitivesensitive processes
+- **Wheyproteinsensitivesensitive**: Whether this failure is related to similar data wheyproteinsensitivesensitive processes
+- **Caseinsensitivesensitive**: Whether this failure is related to similar data caseinsensitivesensitive processes
+- **Lactosesensitivesensitive**: Whether this failure is related to similar data lactosesensitivesensitive processes
+- **Galactosesensitivesensitive**: Whether this failure is related to similar data galactosesensitivesensitive processes
+- **Sucrosesensitivesensitive**: Whether this failure is related to similar data sucrosesensitivesensitive processes
+- **Fructosesensitivesensitive**: Whether this failure is related to similar data fructosesensitivesensitive processes
+- **Glucosesensitivesensitive**: Whether this failure is related to similar data glucosesensitivesensitive processes
+- **Maltosesensitivesensitive**: Whether this failure is related to similar data maltosesensitivesensitive processes
+- **Lactosesensitivesensitive**: Whether this failure is related to similar data lactosesensitivesensitive processes
+- **Galactosesensitivesensitive**: Whether this failure is related to similar data galactosesensitivesensitive processes
+- **Ribosesensitivesensitive**: Whether this failure is related to similar data ribosesensitivesensitive processes
+- **Deoxyribosesensitivesensitive**: Whether this failure is related to similar data deoxyribosesensitivesensitive processes
+- **Nucleosidesensitivesensitive**: Whether this failure is related to similar data nucleosidesensitivesensitive processes
+- **Nucleotidesensitivesensitive**: Whether this failure is related to similar data nucleotidesensitivesensitive processes
+- **Purinesensitivesensitive**: Whether this failure is related to similar data purinesensitivesensitive processes
+- **Pyrimidinesensitivesensitive**: Whether this failure is related to similar data pyrimidinesensitivesensitive processes
+- **Adeninesensitivesensitive**: Whether this failure is related to similar data adeninesensitivesensitive processes
+- **Thyminesensitivesensitive**: Whether this failure is related to similar data thyminesensitivesensitive processes
+- **Uracilsensitivesensitive**: Whether this failure is related to similar data uracilsensitivesensitive processes
+- **Guaninesensitivesensitive**: Whether this failure is related to similar data guaninesensitivesensitive processes
+- **Cytosinesensitivesensitive**: Whether this failure is related to similar data cytosinesensitivesensitive processes
+- **Thyminesensitivesensitive**: Whether this failure is related to similar data thyminesensitivesensitive processes
+- **Uracilsensitivesensitive**: Whether this failure is related to similar data uracilsensitivesensitive processes
+- **Guaninesensitivesensitive**: Whether this failure is related to similar data guaninesensitivesensitive processes
+- **Cytosinesensitivesensitive**: Whether this failure is related to similar data cytosinesensitivesensitive processes
+- **Nitrogenbasesensitivesensitive**: Whether this failure is related to similar data nitrogenbasesensitivesensitive processes
+- **Carbonhydratesensitivesensitive**: Whether this failure is related to similar data carbonhydratesensitivesensitive processes
+- **Lipidsensitivesensitive**: Whether this failure is related to similar data lipidsensitivesensitive processes
+- **Proteinsensitivesensitive**: Whether this failure is related to similar data proteinsensitivesensitive processes
+- **Nucleicacidsensitivesensitive**: Whether this failure is related to similar data nucleicacidsensitivesensitive processes
+- **Vitaminsensitivesensitive**: Whether this failure is related to similar data vitaminsensitivesensitive processes
+- **Mineralsensitivesensitive**: Whether this failure is related to similar data mineralsensitivesensitive processes
+- **Tracelementssensitivesensitive**: Whether this failure is related to similar data tracelementssensitivesensitive processes
+- **Ultratracelementssensitivesensitive**: Whether this failure is related to similar data ultratracelementssensitivesensitive processes
+- **Radioelementsensitivesensitive**: Whether this failure is related to similar data radioelementsensitivesensitive processes
+- **Isotopesensitivesensitive**: Whether this failure is related to similar data isotopesensitivesensitive processes
+- **Ionsensitivesensitive**: Whether this failure is related to similar data ionsensitivesensitive processes
+- **Cationsensitivesensitive**: Whether this failure is related to similar data cationsensitivesensitive processes
+- **Anionsensitivesensitive**: Whether this failure is related to similar data anionsensitivesensitive processes
+- **Polyelectrolytesensitivesensitive**: Whether this failure is related to similar data polyelectrolytesensitivesensitive processes
+- **Zwitterionssensitivesensitive**: Whether this failure is related to similar data zwitterionssensitivesensitive processes
+- **Amphotericsensitivesensitive**: Whether this failure is related to similar data amphotericsensitivesensitive processes
+- **Hydrophilicsensitivesensitive**: Whether this failure is related to similar data hydrophilicsensitivesensitive processes
+- **Hydrophobicsensitivesensitive**: Whether this failure is related to similar data hydrophobicsensitivesensitive processes
+- **Amphipathicsensitivesensitive**: Whether this failure is related to similar data amphibathicsensitivesensitive processes
+- **Lipophilicsensitivesensitive**: Whether this failure is related to similar data lipophilicsensitivesensitive processes
+- **Hydrophilicitysensitivesensitive**: Whether this failure is related to similar data hydrophilicitysensitivesensitive processes
+- **Hydrophobicitysensitivesensitive**: Whether this failure is related to similar data hydrophobicitysensitivesensitive processes
+- **Amphipathicitysensitivesensitive**: Whether this failure is related to similar data amphipathicitysensitivesensitive processes
+- **Solubilitysensitivesensitive**: Whether this failure is related to similar data solubilitysensitivesensitive processes
+- **Miscibilitysensitivesensitive**: Whether this failure is related to similar data miscibilitysensitivesensitive processes
+- **Immiscibilitysensitivesensitive**: Whether this failure is related to similar data immiscibilitysensitivesensitive processes
+- **Phase_separationsensitivesensitive**: Whether this failure is related to similar data phase_separationsensitivesensitive processes
+- **Emulsionsensitivesensitive**: Whether this failure is related to similar data emulsionsensitivesensitive processes
+- **Suspensionsensitivesensitive**: Whether this failure is related to similar data suspensionsensitivesensitive processes
+- **Colloidsensitivesensitive**: Whether this failure is related to similar data colloidsensitivesensitive processes
+- **Aerosolsensitivesensitive**: Whether this failure is related to similar data aerosolsensitivesensitive processes
+- **Foamsensitivesensitive**: Whether this failure is related to similar data foamsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Pastesensitivesensitive**: Whether this failure is related to similar data pastesensitivesensitive processes
+- **Creamsensitivesensitive**: Whether this failure is related to similar data creamsensitivesensitive processes
+- **Ointmentsensitivesensitive**: Whether this failure is related to similar data ointmentsensitivesensitive processes
+- **Lotionsensitivesensitive**: Whether this failure is related to similar data lotionsensitivesensitive processes
+- **Serumsensitivesensitive**: Whether this failure is related to similar data serumsensitivesensitive processes
+- **Gelsensitivesensitive**: Whether this failure is related to similar data gelsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Spreadsensitivesensitive**: Whether this failure is related to similar data spreadsensitivesensitive processes
+- **Dipsensitivesensitive**: Whether this failure is related to similar data dipsensitivesensitive processes
+- **Saucesensitivesensitive**: Whether this failure is related to similar data saucesensitivesensitive processes
+- **Gravysensitivesensitive**: Whether this failure is related to similar data gravysensitivesensitive processes
+- **Dressingsensitivesensitive**: Whether this failure is related to similar data dressingsensitivesensitive processes
+- **Marinadesensitivesensitive**: Whether this failure is related to similar data marinadesensitivesensitive processes
+- **Brinesensitivesensitive**: Whether this failure is related to similar data brinesensitivesensitive processes
+- **Picklesensitivesensitive**: Whether this failure is related to similar data picklesensitivesensitive processes
+- **Jamsensitivesensitive**: Whether this failure is related to similar data jamsensitivesensitive processes
+- **Jelliesensitivesensitive**: Whether this failure is related to similar data jelliesensitivesensitive processes
+- **Preservesensitivesensitive**: Whether this failure is related to similar

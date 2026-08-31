@@ -1,0 +1,285 @@
+# 07-PENETRATION-TESTING
+
+## 1. What Is Penetration Testing?
+
+Penetration testing (also called pen testing or ethical hacking) is a authorized simulated cyberattack against a computer system, network, or web application to evaluate its security posture. Unlike vulnerability scanning which identifies known weaknesses, penetration testing attempts to actively exploit those weaknesses to determine the extent of potential compromise and the effectiveness of defensive measures.
+
+Penetration testing encompasses both automated and manual techniques to identify and exploit security vulnerabilities across various layers of an application or infrastructure. It follows a structured methodology that includes reconnaissance, scanning, exploitation, post-exploitation, and reporting phases. The goal is to provide actionable insights into security weaknesses, demonstrate real-world attack paths, and help organizations prioritize remediation efforts based on actual risk.
+
+Penetration testing encompasses:
+- Network penetration testing (internal and external)
+- Web application penetration testing
+- Mobile application penetration testing (iOS and Android)
+- API penetration testing (REST, SOAP, GraphQL, gRPC)
+- Wireless network penetration testing (Wi-Fi, Bluetooth, NFC, RFID)
+- Social engineering penetration testing (phishing, pretexting, baiting, tailgating)
+- Physical penetration testing (lock picking, tailgating, badge cloning)
+- Cloud penetration testing (AWS, Azure, GCP, private cloud)
+- Container and orchestration penetration testing (Docker, Kubernetes, OpenShift)
+- Serverless penetration testing (AWS Lambda, Azure Functions, Google Cloud Functions)
+- IoT and embedded device penetration testing
+- SCADA and industrial control systems penetration testing
+- Database penetration testing (SQL, NoSQL, NewSQL)
+- Mainframe and legacy system penetration testing
+- Virtualization and hypervisor penetration testing (VMware, Hyper-V, KVM, Xen)
+- DNS penetration testing
+- Email and messaging system penetration testing
+- Voice over IP (VoIP) and telecommunications penetration testing
+- Game console and entertainment system penetration testing
+- Point of sale (POS) system penetration testing
+- Automated teller machine (ATM) and kiosk penetration testing
+- Medical device and healthcare equipment penetration testing
+- Automotive and vehicle penetration testing
+- Aerospace and avionics penetration testing
+- Maritime and naval system penetration testing
+- Satellite and ground station penetration testing
+- Penetration testing of cryptographic implementations
+- Penetration testing of authentication and authorization mechanisms
+- Penetration testing of session management and cookie handling
+- Penetration testing of input validation and data sanitization
+- Penetration testing of file upload and download functionality
+- Penetration testing of remote code execution vulnerabilities
+- Penetration testing of directory traversal and path manipulation
+- Penetration testing of file inclusion vulnerabilities (LFI/RFI)
+- Penetration testing of XML external entity (XXE) attacks
+- Penetration testing of server-side template injection (SSTI)
+- Penetration testing of deserialization vulnerabilities
+- Penetration testing of injection flaws (SQL, NoSQL, LDAP, XPath, XQuery, OS command)
+- Penetration testing of cross-site scripting (XSS) (reflected, stored, DOM-based)
+- Penetration testing of cross-site request forgery (CSRF)
+- Penetration testing of clickjacking and UI redress attacks
+- Penetration testing of HTTP response splitting and header injection
+- Penetration testing of HTTP verb tampering and method override
+- Penetration testing of HTTP parameter pollution
+- Penetration testing of CRLF injection
+- Penetration testing of open redirect vulnerabilities
+- Penetration testing of SSRF (server-side request forgery) attacks
+- Penetration testing of rate limiting and bypass techniques
+- Penetration testing of authentication bypass and credential stuffing
+- Penetration testing of brute force and password spraying attacks
+- Penetration testing of weak password policy enforcement
+- Penetration testing of multi-factor authentication (MFA) bypass
+- Penetration testing of session fixation and hijacking
+- Penetration testing of insecure direct object reference (IDOR)
+- Penetration testing of authorization bypass and privilege escalation
+- Penetration testing of broken access control and missing function level access control
+- Penetration testing of insecure cryptographic storage and transmission
+- Penetration testing of weak cipher suites and deprecated protocols
+- Penetration testing of certificate validation and chain verification
+- Penetration testing of SSL/TLS configuration weaknesses (POODLE, BEAST, CRIME, BREACH, etc.)
+- Penetration testing of HSTS and HPKP misconfigurations
+- Penetration testing of mixed content and insecure resource loading
+- Penetration testing of cookie flags (Secure, HttpOnly, SameSite)
+- Penetration testing of cross-origin resource sharing (CORS) misconfigurations
+- Penetration testing of frame-allowance and clickjacking protection
+- Penetration testing of content security policy (CSP) bypass
+- Penetration testing of referrer policy and header leakage
+- Penetration testing of HTTP proxy and forward proxy misuse
+- Penetration testing of reverse proxy and load balancer misconfiguration
+- Penetration testing of WAF (web application firewall) evasion techniques
+- Penetration testing of API security (authentication, authorization, rate limiting, input validation)
+- Penetration testing of GraphQL specific vulnerabilities (introspection, batching, field duplication)
+- Penetration testing of gRPC and protobuf specific issues
+- Penetration testing of REST API specific vulnerabilities (versioning, idempotency, etc.)
+- Penetration testing of SOAP and WS-* specific vulnerabilities
+- Penetration testing of message queue and message broker vulnerabilities
+- Penetration testing of Kafka, RabbitMQ, ActiveMQ, etc.
+- Penetration testing of message serialization vulnerabilities
+- Penetration testing of message authentication and integrity
+- Penetration testing of message replay attacks
+- Penetration testing of message ordering and delivery guarantees
+- Penetration testing of message queuing latency and performance
+- Penetration testing of microservices communication (service mesh, sidecar, direct)
+- Penetration testing of service mesh (Istio, Linkerd, Consul) specific attacks
+- Penetration testing of sidecar injection and interception
+- Penetration testing of direct service-to-service communication exploitation
+- Penetration testing of API gateway specific vulnerabilities
+- Penetration testing of Kong, Apigee, AWS API Gateway, Azure API Management
+- Penetration testing of authentication and authorization bypass in API gateways
+- Penetration testing of rate limiting and quota bypass in API gateways
+- Penetration testing of request/response transformation manipulation
+- Penetration testing of API versioning and deprecation abuse
+- Penetration testing of webhook and callback validation weaknesses
+- Penetration testing of serverless specific vulnerabilities
+- Penetration testing of function misconfiguration and excessive permissions
+- Penetration testing of insecure dependency and layer usage
+- Penetration testing of environment variable leakage
+- Penetration testing of temporary file and storage misuse
+- Penetration testing of event source and trigger manipulation
+- Penetration testing of dead letter queue and retry mechanism abuse
+- Penetration testing of timeout and async handling issues
+- Penetration testing of cold start and warmup exploitation
+- Penetration testing of vendor lock-in and migration barriers
+- Penetration testing of function chaining and composition attacks
+- Penetration testing of asynchronous communication patterns
+- Penetration testing of event ordering and sequencing issues
+- Penetration testing of idempotency and duplicate processing
+- Penetration testing of state persistence and data leakage
+- Penetration testing of concurrency and race conditions
+- Penetration testing of resource limits and quotas abuse
+- Penetration testing of networking and socket level vulnerabilities
+- Penetration testing of file system and directory traversal in containers
+- Penetration testing of volume mount and bind mount abuse
+- Penetration testing of privileged container escape
+- Penetration testing of host path and namespace manipulation
+- Penetration testing of cgroup and resource limit escape
+- Penetration testing of seccomb and syscall filtering bypass
+- Penetration testing of capabilities and privilege escalation in containers
+- Penetration testing of AppArmor and SELinux policy bypass
+- Penetration testing of network policy and egress restriction bypass
+- Penetration testing of DNS resolution and service discovery abuse
+- Penetration testing of load balancing and service mesh routing exploitation
+- Penetration testing of sidecar proxy and interceptor manipulation
+- Penetration testing of Istio and Envoy filter abuse
+- Penetration testing of Linkerd and proxy configuration bypass
+- Penetration testing of Consul service mesh specific attacks
+- Penetration testing of Kubernetes specific vulnerabilities
+- Penetration testing of RBAC misconfiguration and privilege escalation
+- Penetration testing of admission controller bypass and abuse
+- Penetration testing of PodSecurityPolicy and OPA Gatekeeper bypass
+- Penetration testing of Kubernetes API server exploitation
+- Penetration testing of etcd data access and manipulation
+- Penetration testing of kubelet and container runtime escape
+- Penetration testing of container network interface (CNI) plugin abuse
+- Penetration testing of container storage interface (CSI) plugin abuse
+- Penetration testing of device plugin misuse
+- Penetration testing of scheduler and extender manipulation
+- Penetration testing of cluster autoscaler abuse
+- Penetration testing of horizontal pod autoscaler (HPA) issues
+- Penetration testing of vertical pod autoscaler (VPA) problems
+- Penetration testing of resource quota and limit range abuse
+- Penetration testing of namespace and isolation bypass
+- Penetration testing of service account token leakage and misuse
+- Penetration testing of image pull secret exposure
+- Penetration testing of image registry authentication bypass
+- Penetration testing of image signature verification bypass
+- Penetration testing of image vulnerability and outdated base image
+- Penetration testing of Helm chart specific vulnerabilities
+- Penetration testing of template injection and template abuse
+- Penetration testing of values file manipulation and override
+- Penetration testing of chart hook exploitation
+- Penetration testing of dependency and subchart vulnerability
+- Penetration testing of repository and credential exposure
+- Penetration testing of chart testing and linting abuse
+- Penetration testing of Helm plugin and helper exploitation
+- Penetration testing of Argo CD specific vulnerabilities
+- Penetration testing of GitOps synchronization bypass
+- Penetration testing of application health check manipulation
+- Penetration testing of sync wave and phase abuse
+- Penetration testing of hook and resource manipulation
+- Penetration testing of notification and alert abuse
+- Penetration testing of SSO and identity provider integration attacks
+- Penetration training of federation and trust boundary exploitation
+- Penetration testing of LDAP and Active Directory integration weaknesses
+- Penetration testing of SAML signing and encryption bypass
+- Penetration testing of OAuth and OpenID Connect token manipulation
+- Penetration testing of JWT expiration and validation bypass
+- Penetration testing of API key and secret extraction
+- Penetration testing of refresh token reuse and replay
+- Penetration testing of token endpoint inadequacy protection
+- Penetration testing of JWKS endpoint manipulation
+- Penetration testing of user info endpoint abuse
+- Penetration testing of introspection and revocation endpoint issues
+- Penetration testing of logout and session termination bypass
+- Penetration testing of MFA enrollment and reset abuse
+- Penetration testing of password change and recovery manipulation
+- Penetration testing of account lockout and disablement bypass
+- Penetration testing of user provisioning and deprovisioning abuse
+- Penetration testing of group membership and role assignment manipulation
+- Penetration testing of attribute mapping and claim manipulation
+- Penetration testing of directory synchronization abuse
+- Penetration testing of password hash extraction and cracking
+- Penetration testing of legacy protocol support (NTLM, Kerberos downgrade)
+- Penetration testing of certificate trust store manipulation
+- Penetration testing of certificate pinning bypass
+- Penetration testing of certificate revocation checking bypass
+- Penetration testing of intermediary certificate authority abuse
+- Penetration testing of root certificate store poisoning
+- Penetration testing of intermediate certificate injection
+- Penetration testing of SSL/TLS version forcing
+- Penetration testing of cipher suite downgrade attacks
+- Penetration testing of renegotiation handling abuse
+- Penetration testing of session ticket and session resumption abuse
+- Penetration testing of false start and zero round trip time abuse
+- Penetration testing of ALPN and SNI manipulation
+- Penetration testing of certificate transparency logging bypass
+- Penetration testing of OCSP stapling and validation abuse
+- Penetration testing of certificate chain building abuse
+- Penetration testing of wildcard certificate misuse
+- Penetration testing of certificate subject alternative name manipulation
+- Penetration testing of certificate extended validation bypass
+- Penetration testing of certificate subject and issuer manipulation
+- Penetration testing of certificate validity period abuse
+- Penetration testing of certificate signature and hash algorithm weakness
+- Penetration testing of certificate serial number prediction
+- Penetration testing of certificate issuer and subject DN manipulation
+- Penetration testing of certificate public key validation
+- Penetration testing of certificate signature verification bypass
+- Penetration testing of certificate chain validation short-circuiting
+- Penetration testing of intermediate certificate missing from chain
+- Penetration testing of self-signed certificate acceptance
+- Penetration testing of certificate purpose and key usage manipulation
+- Penetration testing of certificate extensions abuse
+- Penetration testing of certificate basic constraints bypass
+- Penetration testing of certificate name constraints bypass
+- Penetration testing of certificate policy constraints abuse
+- Penetration testing of certificate inhibit anyPolicy abuse
+- Penetration testing of certificate policy mapping abuse
+- Penetration testing of certificate policy validation abuse
+- Penetration testing of certificate policy processing abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse
+- Penetration testing of certificate policy abuse

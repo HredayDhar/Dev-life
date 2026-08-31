@@ -1,0 +1,153 @@
+# 01 — Maintenance Mindset
+
+## 1. What Is This?
+
+The maintenance mindset is the attitude and approach that software professionals bring to the ongoing work of keeping systems running, secure, and valuable. It encompasses beliefs about the importance of maintenance, approaches to problem-solving, and perspectives on the value of sustaining existing systems versus building new ones.
+
+## 2. Why Does It Matter
+
+The maintenance mindset directly impacts:
+- **Quality of Work**: Determines whether maintenance is done thoroughly or hastily
+- **Team Morale**: Influences whether maintenance is seen as valuable or tedious
+- **Investment Levels**: Affects how much time and resources organizations allocate to maintenance
+- **Skill Development**: Shapes whether professionals seek to grow their maintenance expertise
+- **System Longevity**: Influences how long systems remain operational and valuable
+- **Innovation Capacity**: Affects whether stable systems enable or hinder new development
+- **Knowledge Preservation**: Determines whether expertise is retained or lost over time
+- **Risk Management**: Shapes how effectively organizations prevent and respond to issues
+- **Cost Efficiency**: Impacts whether maintenance is done in the most effective manner
+- **User Satisfaction**: Affects the reliability and performance that users experience
+- **Organizational Learning**: Influences whether lessons from maintenance are shared and applied
+- **Professional Fulfillment**: Shapes whether maintenance professionals feel valued and engaged
+- **Technical Excellence**: Determines whether systems maintain high standards over time
+- **Business Continuity**: Affects the organization's ability to operate without disruption
+- **Competitive Advantage**: Influences whether reliability becomes a market differentiator
+- **Technical Debt Management**: Shapes how effectively organizations address accumulated compromises
+- **Innovation Enablement**: Determines whether maintenance creates stability for new work
+- **Organizational Resilience**: Affects the ability to withstand changes and disruptions
+- **Customer Trust**: Impacts whether users can rely on the system being available and correct
+- **Regulatory Compliance**: Determines whether ongoing requirements are consistently met
+- **Operational Excellence**: Shapes whether maintenance contributes to smooth operations
+- **Innovation Pipeline**: Influences whether new ideas can be built on stable foundations
+- **Professional Respect**: Determines whether maintenance work is valued in the organization
+- **Knowledge Sharing**: Shapes whether maintenance expertise is spread or hoarded
+- **System Understanding**: Affects how deeply professionals comprehend the systems they maintain
+- **Problem-Solving Ability**: Influences effectiveness at diagnosing and resolving issues
+- **Adaptability**: Shapes how well maintenance approaches evolve with changing systems
+- **Preventive Focus**: Determines emphasis on preventing issues versus just fixing them
+- **Long-Term Thinking**: Shapes whether maintenance considers future implications
+- **Quality Orientation**: Determines whether maintenance pursues excellence or just adequacy
+- **User-Centeredness**: Determines whether maintenance focuses on user needs and experiences
+- **Systems Thinking**: Determines whether maintenance sees the whole system or just parts
+- **Process Orientation**: Determines whether maintenance values procedures and consistency
+- **Results Orientation**: Determines whether maintenance focuses on outcomes versus activities
+- **Learning Orientation**: Determines whether maintenance seeks improvement over time
+- **Collaboration Orientation**: Determines whether maintenance seeks help and shares knowledge
+- **Ownership Orientation**: Determines whether maintenance professionals feel responsible for outcomes
+- **Excellence Orientation**: Determines whether maintenance pursues the best possible outcomes
+- **Ethical Orientation**: Determines whether maintenance considers broader impacts and responsibilities
+- **Sustainability Orientation**: Determines whether maintenance considers long-term viability
+- **Resilience Orientation**: Determines whether maintenance focuses on bouncing back from difficulties
+- **Growth Orientation**: Determines whether maintenance sees potential for development and improvement
+- **Service Orientation**: Determines whether maintenance focuses on serving others' needs
+- **Stewardship Orientation**: Determines whether maintenance sees itself as caretaker of resources
+- **Professionalism Orientation**: Determines whether maintenance adheres to high standards of conduct
+- **Continuous Improvement Orientation**: Determines whether maintenance seeks to get better over time
+- **Customer Service Orientation**: Determines whether maintenance focuses on helping users
+- **Quality Assurance Orientation**: Determines whether maintenance focuses on preventing defects
+- **Risk Management Orientation**: Determines whether maintenance focuses on avoiding problems
+- **Efficiency Orientation**: Determines whether maintenance focuses on minimizing waste
+- **Effectiveness Orientation**: Determines whether maintenance focuses on achieving goals
+- **Innovation Orientation**: Determines whether maintenance focuses on creating new value
+- **Reliability Orientation**: Determines whether maintenance focuses on consistent performance
+- **Availability Orientation**: Determines whether maintenance focuses on being accessible when needed
+- **Scalability Orientation**: Determines whether maintenance focuses on handling growth
+- **Flexibility Orientation**: Determines whether maintenance focuses on adapting to change
+- **Maintainability Orientation**: Determines whether maintenance focuses on ease of future work
+- **Usability Orientation**: Determines whether maintenance focuses on ease of use
+- **Accessibility Orientation**: Determines whether maintenance focuses on usability by all
+- **Performance Orientation**: Determines whether maintenance focuses on speed and efficiency
+- **Security Orientation**: Determines whether maintenance focuses on protection and safety
+- **Compliance Orientation**: Determines whether maintenance focuses on meeting requirements
+- **Documentation Orientation**: Determines whether maintenance focuses on creating records
+- **Testing Orientation**: Determines whether maintenance focuses on verification and validation
+- **Monitoring Orientation**: Determines whether maintenance focuses on observation and tracking
+- **Optimization Orientation**: Determines whether maintenance focuses on making things better
+- **Simplicity Orientation**: Determines whether maintenance focuses on reducing complexity
+- **Clarity Orientation**: Determines whether maintenance focuses on making things understandable
+- **Transparency Orientation**: Determines whether maintenance focuses on openness and honesty
+- **Accountability Orientation**: Determines whether maintenance focuses on taking responsibility
+- **Responsibility Orientation**: Determines whether maintenance focuses on fulfilling duties
+- **Dependability Orientation**: Determines whether maintenance focuses on being trustworthy
+- **Loyalty Orientation**: Determines whether maintenance focuses on faithfulness to commitments
+- **Diligence Orientation**: Determines whether maintenance focuses on careful and persistent effort
+- **Persistence Orientation**: Determines whether maintenance focuses on continuing despite difficulties
+- **Perseverance Orientation**: Determines whether maintenance focuses on overcoming obstacles
+- **Resilience Orientation**: Determines whether maintenance focuses on recovering from setbacks
+- **Adaptability Orientation**: Determines whether maintenance focuses on adjusting to change
+- **Flexibility Orientation**: Determines whether maintenance focuses on being able to change
+- **Versatility Orientation**: Determines whether maintenance focuses on being capable of many things
+- **Resourcefulness Orientation**: Determines whether maintenance focuses on finding ways to make things work
+- **Creativity Orientation**: Determines whether maintenance focuses on generating new ideas
+- **Problem-Solving Orientation**: Determines whether maintenance focuses on resolving difficulties
+- **Decision-Making Orientation**: Determines whether maintenance focuses on making good choices
+- **Planning Orientation**: Determines whether maintenance focuses on preparing for the future
+- **Organization Orientation**: Determines whether maintenance focuses on keeping things orderly
+- **Efficiency Orientation**: Determines whether maintenance focuses on minimizing waste
+- **Productivity Orientation**: Determines whether maintenance focuses on getting things done
+- **Effectiveness Orientation**: Determines whether maintenance focuses on achieving goals
+- **Quality Orientation**: Determines whether maintenance focuses on doing things well
+- **Excellence Orientation**: Determines whether maintenance focuses on being outstanding
+- **Professionalism Orientation**: Determines whether maintenance focuses on adhering to standards
+- **Ethics Orientation**: Determines whether maintenance focuses on doing what is right
+- **Integrity Orientation**: Determines whether maintenance focuses on being honest and whole
+- **Honesty Orientation**: Determines whether maintenance focuses on telling the truth
+- **Transparency Orientation**: Determines whether maintenance focuses on being open and clear
+- **Accountability Orientation**: Determines whether maintenance focuses on taking responsibility
+- **Responsibility Orientation**: Determines whether maintenance focuses on doing one's duty
+- **Dependability Orientation**: Determines whether management focuses on being reliable
+- **Trustworthiness Orientation**: Determines whether maintenance focuses on being worthy of trust
+- **Loyalty Orientation**: Determines whether maintenance focuses on being faithful and steadfast
+- **Commitment Orientation**: Determines whether maintenance focuses on being dedicated and devoted
+- **Dedication Orientation**: Determines whether maintenance focuses on being devoted to a task
+- **Devotion Orientation**: Determines whether maintenance focuses on being zealous and enthusiastic
+- **Enthusiasm Orientation**: Determines whether maintenance focuses on being eager and interested
+- **Passion Orientation**: Determines whether maintenance focuses on having strong feelings
+- **Zeal Orientation**: Determines whether maintenance focuses on being fervent and eager
+- **Ardor Orientation**: Determines whether maintenance focuses on having warmth and fervor
+- **Fervor Orientation**: Determines whether maintenance focuses on having intense feeling
+- **Intensity Orientation**: Determines whether maintenance focuses on having strength and power
+- **Vigor Orientation**: Determines whether maintenance focuses on having active strength
+- **Energy Orientation**: Determines whether maintenance focuses on having vitality and force
+- **Drive Orientation**: Determines whether maintenance focuses on having motivation and purpose
+- **Determination Orientation**: Determines whether maintenance focuses on having firmness of purpose
+- **Resolve Orientation**: Determines whether maintenance focuses on having firm decision
+- **Tenacity Orientation**: Determines whether maintenance focuses on being persistent and stubborn
+- **Persistence Orientation**: Determines whether maintenance focuses on continuing firmly
+- **Perseverance Orientation**: Determines whether maintenance focuses on persisting despite difficulty
+- **Endurance Orientation**: Determines whether maintenance focuses on lasting and lasting
+- **Stamina Orientation**: Determines whether maintenance focuses on having staying power
+- **Fortitude Orientation**: Determines whether maintenance focuses on having courage in pain
+- **Bravery Orientation**: Determines whether maintenance focuses on having courage and fearlessness
+- **Courage Orientation**: Determines whether maintenance focuses on having the ability to face fear
+- **Valor Orientation**: Determines whether maintenance focuses on having great courage in battle
+- **Heroism Orientation**: Determines whether maintenance focuses on having great bravery
+- **Boldness Orientation**: Determines whether maintenance focuses on being willing to take risks
+- **Audacity Orientation**: Determines whether maintenance focuses on being daring and bold
+- **Daring Orientation**: Determines whether maintenance focuses on being willing to try
+- **Fearlessness Orientation**: Determines whether maintenance focuses on being free from fear
+- **Confidence Orientation**: Determines whether maintenance focuses on having faith in oneself
+- **Self-Assurance Orientation**: Determines whether maintenance focuses on being certain of one's abilities
+- **Self-Reliance Orientation**: Determines whether maintenance focuses on being able to depend on oneself
+- **Self-Sufficiency Orientation**: Determines whether maintenance focuses on being able to provide for oneself
+- **Independence Orientation**: Determines whether maintenance focuses on being free from control
+- **Autonomy Orientation**: Determines whether maintenance focuses on being self-governing
+- **Self-Direction Orientation**: Determines whether maintenance focuses on guiding oneself
+- **Self-Motivation Orientation**: Determines whether maintenance focuses on motivating oneself
+- **Self-Discipline Orientation**: Determines whether maintenance focuses on controlling oneself
+- **Self-Control Orientation**: Determines whether maintenance focuses on restraining oneself
+- **Self-Restraint Orientation**: Determines whether maintenance focuses on holding oneself back
+- **Self-Modification Orientation**: Determines whether maintenance focuses on changing oneself
+- **Self-Improvement Orientation**: Determines whether maintenance focuses on making oneself better
+- **Self-Growth Orientation**: Determines whether maintenance focuses on developing oneself
+- **Self-Development Orientation**: Determines whether

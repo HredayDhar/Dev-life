@@ -1,0 +1,598 @@
+# 01-PERFORMANCE-FUNDAMENTALS
+
+## 1. What Are Performance Fundamentals?
+
+Performance fundamentals are the core concepts, principles, and terminology that form the foundation of performance engineering and performance testing. They encompass the basic understanding of how software systems behave under various conditions, the key metrics used to measure performance, and the fundamental laws that govern system performance. These fundamentals provide the vocabulary and conceptual framework necessary for discussing, measuring, analyzing, and optimizing system performance effectively.
+
+## 2. Why Do Performance Fundamentals Matter?
+
+Performance fundamentals matter because:
+- **Common Language**: Create a shared vocabulary between developers, testers, operations, and business stakeholders
+- **Informed Decision Making**: Enable sound technical and business decisions based on performance data
+- **Effective Communication**: Facilitate clear discussions about performance goals, issues, and trade-offs
+- **Systematic Approach**: Provide a structured methodology for performance analysis rather than random testing
+- **Root Cause Analysis**: Help identify underlying causes rather than treating symptoms
+- **Baseline Establishment**: Allow meaningful comparisons between different system versions or configurations
+- **Goal Setting**: Enable definition of clear, measurable performance objectives
+- **Resource Planning**: Inform infrastructure capacity planning and cost estimation
+- **User Advocacy**: Keep focus on user experience rather than just technical metrics
+- **Risk Mitigation**: Identify performance risks early in the development lifecycle
+- **Optimization Guidance**: Direct optimization efforts where they will have the most impact
+- **Regression Detection**: Establish baselines to detect performance degradation in future changes
+- **Architectural Validation**: Test whether architectural decisions meet performance requirements
+- **Scalability Predictions**: Enable forecasting of how systems will behave under increased load
+- **Cost Justification**: Provide evidence for performance-related investments
+- **Compliance Verification**: Validate adherence to performance-related regulations or standards
+- **Continuous Improvement**: Create feedback loops for ongoing performance enhancement
+- **Cross-team Collaboration**: Enable effective cooperation between different functional groups
+- **Technical Excellence**: Promote deeper understanding of system behavior and limitations
+- **Innovation Foundation**: Provide the knowledge base needed to innovate on performance solutions
+- **Professional Development**: Build essential skills for performance engineers and specialists
+- **Tool Selection**: Inform appropriate choices for performance testing and monitoring tools
+- **Process Integration**: Help integrate performance considerations into development workflows
+- **Quality Assurance Complement**: Extend traditional QA to include non-functional performance aspects
+- **Business Alignment**: Connect technical performance to business outcomes and objectives
+- **Change Management**: Support controlled changes with predictable performance impacts
+- **Problem Prevention**: Identify potential performance issues before they manifest in production
+- **Vendor Evaluation**: Enable objective comparison of different technologies or services
+- **Capacity Planning**: Provide data-driven basis for infrastructure scaling decisions
+- **Incident Response**: Aid in diagnosing and resolving production performance issues
+- **Performance Budgeting**: Enable allocation of performance "cost" across features or components
+- **User Modeling**: Help create realistic representations of actual user behavior
+- **Environmental Awareness**: Promote understanding of deployment environment characteristics
+- **Measurement Validity**: Ensure performance measurements are accurate, relevant, and reproducible
+- **Trend Analysis**: Enable identification of performance trends over time
+- **Competitive Benchmarking**: Allow objective comparison with competing solutions
+- **Feature Trade-off Analysis**: Enable evaluation of performance costs of new features
+- **Technical Debt Visibility**: Make performance-related technical debt visible and quantifiable
+- **Innovation Adoption**: Facilitate evaluation of new performance-enhancing technologies
+- **Disaster Recovery Planning**: Inform recovery time and point objectives based on performance data
+- **Security Performance Intersection**: Understand how security features impact performance
+- **Accessibility Considerations**: Ensure performance considerations include users with different abilities
+- **Internationalization Impact**: Understand how localization affects performance characteristics
+- **Mobile-specific Challenges**: Address unique performance challenges of mobile devices and networks
+- **Emerging Technology Adaptation**: Apply fundamentals to new paradigms like serverless, edge computing, etc.
+
+## 3. What Problem Do Performance Fundamentals Solve?
+
+Without a solid grasp of performance fundamentals, teams face:
+- **Miscommunication**: Talking past each other due to different interpretations of performance terms
+- **Misguided Optimization**: Focusing efforts on irrelevant or low-impact areas
+- **Ineffective Testing**: Running tests that don't answer meaningful questions
+- **Incorrect Conclusions**: Drawing wrong inferences from performance data
+- **Missed Requirements**: Failing to identify or validate performance requirements
+- **Poor Goal Setting**: Setting unrealistic, unmeasurable, or meaningless performance targets
+- **Wasted Resources**: Spending time and money on ineffective performance activities
+- **Reactive Firefighting**: Constantly addressing performance incidents instead of preventing them
+- **Blame Culture**: Assigning fault without understanding root causes
+- **Inconsistent Measurements**: Inability to compare results across different tests or time periods
+- **Architectural Missteps**: Making design decisions that create inevitable performance problems
+- **Capacity Over/Under-provisioning**: Either wasting money or causing user dissatisfaction
+- **Feature Failures**: New features that degrade performance beyond acceptable levels
+- **Scalability Surprises**: Systems that cannot handle expected growth
+- **User Dissatisfaction**: Performance that frustrates users and drives them away
+- **Business Impact**: Direct negative effects on revenue, conversion, or customer satisfaction
+- **Technical Debt Accumulation**: Performance issues that accumulate and become harder to fix
+- **Vendor Lock-in**: Inability to objectively evaluate alternative solutions
+- **Compliance Risks**: Failure to meet regulatory or contractual performance requirements
+- **Missed Opportunities**: Failure to capitalize on performance as a competitive advantage
+- **Ineffective Monitoring**: Alerts that trigger too late or not at all
+- **Poor Incident Resolution**: Extended downtime due to inability to diagnose problems quickly
+- **Ineffective Capacity Planning**: Infrastructure that cannot handle actual usage patterns
+- **Suboptimal User Experience**: Technical metrics that look good but don't reflect user reality
+- **Inconsistent Standards**: Different teams using different approaches to performance
+- **Knowledge Silos**: Performance expertise concentrated in few individuals
+- **Onboarding Challenges**: Difficulty bringing new team members up to speed
+- **Tool Misapplication**: Using performance testing tools incorrectly or inappropriately
+- **Measurement Errors**: Collecting misleading or incorrect performance data
+- **Invalid Comparisons**: Comparing apples to oranges in performance evaluations
+- **False Premises**: Optimization based on incorrect assumptions about system behavior
+- **Missed Dependencies**: Overlooking how one component's performance affects others
+- **Environmental Differences**: Failing to account for differences between test and production
+- **Load Mischaracterization**: Using unrealistic load patterns in testing
+- **Metrics Misinterpretation**: Not understanding what performance metrics actually mean
+- **Correlation vs Causation**: Mistaking coincidental relationships for causal ones
+- **Statistical Ignorance**: Not applying proper statistical methods to performance data
+- **Trend Blindness**: Failing to see performance changes developing over time
+- **Alarm Fatigue**: Too many false positive or irrelevant performance alerts
+- **Monitoring Gaps**: Missing critical aspects of system performance in observability
+- **Alert Noise**: Too many unactionable alerts drowning out real problems
+- **Baseline Drift**: Gradual acceptance of degrading performance as the new normal
+- **Regression Blindness**: Failure to notice performance degradation from changes
+- **Optimization Plateau**: Believing no further improvements are possible when they are
+- **Local Maxima**: Stopping at suboptimal optimization points
+- **Hidden Bottlenecks**: Performance limitations not visible in superficial testing
+- **Intermittent Issues**: Problems that only occur under specific conditions
+- **Heisenberg Effects**: Measurements that change the system being measured
+- **Observer Effects**: Test procedures that alter system behavior
+- **Warm-up Effects**: Not accounting for initialization or JIT compilation delays
+- **Cool-down Effects**: Not considering cleanup or resource release after testing
+- **Resource Contention**: Not accounting for competition between system components
+- **Queueing Effects**: Not understanding how waiting times build up in systems
+- **Little's Law Misapplication**: Misusing the relationship between latency, throughput, and queue length
+- **Scaling Assumptions**: Incorrectly assuming linear or predictable scaling behavior
+- **Amdahl's Law Ignorance**: Not understanding limits to parallelization
+- **Gustafson's Law Misapplication**: Misapplying scaled speedup principles
+- **Queuing Theory Misunderstanding**: Not applying queueing principles correctly
+- **Failure to Reproduce**: Inability to consistently replicate performance issues
+- **Poor Test Design**: Performance tests that don't isolate variables properly
+- **Inadequate Test Duration**: Tests that run too short to reveal meaningful behavior
+- **Insufficient Warm-up**: Not allowing systems to reach steady state before measuring
+- **Premature Measurement**: Collecting data before systems are ready
+- **Extrapolation Errors**: Incorrectly predicting behavior beyond tested ranges
+- **Interpolation Errors**: Incorrectly estimating behavior between tested points
+- **Emergent Behavior**: Complex system behaviors not predictable from component testing
+- **Feedback Loops**: Self-reinforcing or self-correcting cycles not accounted for
+- **Cascading Failures**: Understanding how failures propagate through systems
+- **Fault Isolation**: Difficulty pinpointing exactly where problems occur
+- **Partial Failures**: Systems that work partially but not completely under stress
+- **Degraded Gracefulness**: Systems that fail badly instead of degrading gracefully
+- **Recovelocities**: How quickly systems recover after stress is removed
+- **Hysteresis Effects**: Systems whose behavior depends on their history
+- **Memory Effects**: Performance that depends on previous system states
+- **Environmental Coupling**: Performance sensitivity to temperature, power, or other factors
+- **Component Variability**: Performance differences between seemingly identical components
+- **Aging Effects**: Performance changes as systems or components age
+- **Wear-out Mechanisms**: Gradual degradation leading to eventual failure
+- ** infant Mortality**: Higher failure rates early in component life
+- **Burn-in Effects**: Performance changes during initial operation period
+- **Temperature Dependence**: Performance varying with operating temperature
+- **Voltage Sensitivity**: Performance affected by power supply fluctuations
+- **Electromagnetic Interference**: External fields affecting electronic performance
+- **Radiation Effects**: Cosmic rays or other radiation causing bit flips
+- **Manufacturing Variants**: Silent revisions with different performance characteristics
+- **Counterfeit Components**: Parts that don't meet specifications affecting performance
+- **Supply Chain Issues**: Delays or substitutions affecting planned performance
+- **Counterfeit Risk**: Increased likelihood of encountering fake or substandard components
+- **Endpoint Security**: Performance impact of security measures protecting APIs
+- **DDoS Resilience**: Ability to maintain performance under attack conditions
+- **Bot Traffic Distinction**: Separating human from automated traffic in performance metrics
+- **Ad Fraud Impact**: Performance effects of fraudulent advertising traffic
+- **Click Farm Influence**: Artificial inflation affecting traffic pattern realism
+- **Geopolitical Events**: Performance impacts from regional internet disruptions
+- **Natural Disasters**: Performance considerations during earthquakes, floods, etc.
+- **Holiday Effects**: Predictable annual traffic patterns requiring special preparation
+- **Event Spikes**: Unpredictable but massive traffic from special events
+- **Media Coverage Effects**: Traffic surges from news or social media coverage
+- **Influencer Impact**: Traffic changes from celebrity or influencer mentions
+- **Algorithmic Changes**: Platform updates that dramatically alter traffic patterns
+- **Policy Changes**: Regulatory shifts affecting user behavior and traffic
+- **Economic Factors**: Recession or boom effects on user spending and usage
+- **Demographic Shifts**: Changing user populations affecting usage patterns
+- **Technological Adoption**:
+- **Competitive Moves**: Rival actions affecting your user base and traffic patterns
+- **Platform Migration**: Users moving to or from different technologies or services
+- **Feature Deprecation**: Removing options that users rely on causing disruption
+- **Breaking Changes**: Incompatible updates forcing sudden behavioral changes
+- **Grace Period Management**: Handling transitions between old and new systems
+- **Data Migration Performance**: Performance considerations during large data moves
+- **Schema Evolution**: Performance impacts of changing data structures over time
+- **Index Strategy Evolution**: Performance effects as indexing approaches change
+- **Query Pattern Shifts**: Alterations in how users query or request data
+- **Data Volume Growth**: Performance challenges as datasets increase in size
+- **Data Velocity Increases**: Performance pressures from faster data arrival rates
+- **Data Variety Challenges**: Performance complications from diverse data types
+- **Data Veracity Issues**: Performance effects of uncertain or questionable data quality
+- **Storage Technology Shifts**: Performance impacts as underlying storage changes
+- **Memory Technology Evolution**: Performance effects as RAM technology advances
+- **CPU Architecture Advances**: Performance implications of processor improvements
+- **GPU Compute Growth**: Performance effects as GPU utilization increases
+- **FPGA Adoption**: Performance considerations for field-programmable gate arrays
+- **ASIC Specialization**: Performance impacts of application-specific integrated circuits
+- **Network Technology Evolution**: Performance effects as networking advances
+- **Wireless Technology Progression**: Performance impacts as wireless improves
+- **Fiber Optic Deployment**: Performance benefits of optical networking
+- **Satellite Communication**: Performance characteristics of space-based links
+- **Undersea Cabling**: Performance of transoceanic communication channels
+- **Edge Computing Rise**: Performance implications of decentralized processing
+- **Fog Computing**: Performance considerations for intermediate fog layers
+- **Mesos Architecture**: Performance effects of distributed resource management
+- **Kubernetes Orchestration**: Performance implications of container orchestration
+- **Service Mesh Adoption**: Performance impacts of dedicated infrastructure layers
+- **Serverless Computing**: Performance traits of function-as-a-service models
+- **Event-driven Architecture**: Performance characteristics of async systems
+- **Microservices Granularity**: Performance effects as services get smaller or larger
+- **API Economy Growth**: Performance considerations as API usage expands
+- **Plugin Ecosystem**: Performance impacts of third-party extensions
+- **Micro-frontends**: Performance considerations for fragmented UI architectures
+- **Design System Adoption**: Performance impacts of shared UI component libraries
+- **Web Performance Evolution**: Performance changes as web standards advance
+- **Mobile OS Updates**: Performance effects as iOS/Android evolve
+- **Browser Competition**: Performance implications of browser choice and evolution
+- **JavaScript Framework Shifts**: Performance effects as frontend frameworks change
+- **CSS Evolution**: Performance impacts as styling capabilities advance
+- **WebAssembly Adoption**: Performance considerations for near-native web code
+- **Progressive Web Apps**: Performance traits of installable web applications
+- **Single Page Applications**: Performance characteristics of SPA architectures
+- **Multi-Page Applications**: Performance considerations for traditional web apps
+- **AMP Implementation**: Performance effects of accelerated mobile pages
+- **Lazy Loading Strategies**: Performance impact of deferred resource loading
+- **Code Splitting**: Performance effects of splitting JavaScript into chunks
+- **Tree Shaking**: Performance benefits of eliminating unused code
+- **Dead Code Elimination**: Performance gains from removing unreachable code
+- **Minification Benefits**: Performance improvements from code size reduction
+- **Compression Techniques**: Performance effects of various data compression methods
+- **Caching Strategies**: Performance impacts of different caching approaches
+- **CDN Utilization**: Performance benefits of content delivery networks
+- **HTTP/2 Adoption**: Performance improvements from multiplexed connections
+- **HTTP/3 Exploration**: Performance characteristics of QUIC-based protocol
+- **WebSocket Usage**: Performance traits of persistent bidirectional connections
+- **Server Sent Events**: Performance considerations for server-to-client streaming
+- **WebRTC Implementation**: Performance considerations for real-time communications
+- **WebGPU Adoption**: Performance implications of browser-based GPU access
+- **WebAssembly System Interface**: Performance considerations for WASI
+- **Image Format Evolution**: Performance impacts as image formats advance
+- **Video Compression Advances**: Performance effects as video codecs improve
+- **Audio Format Evolution**: Performance implications as audio codecs advance
+- **Font Loading Strategies**: Performance considerations for web typography
+- **Icon System Choices**: Performance implications of different icon approaches
+- **Third-party Script Impact**: Performance effects of external JavaScript inclusion
+- **Analytics Script Overhead**: Performance impact of tracking and analytics scripts
+- **Ad Script Burden**: Performance cost of advertising delivery mechanisms
+- **Social Widget Influence**: Performance effects of embedded social media widgets
+- **Consent Management Overhead**: Performance costs of privacy compliance mechanisms
+- **Accessibility Overhead**: Performance impact of accessibility features and remediation
+- **Internationalization Complexity**: Performance effects of i18n and l10n implementations
+- **Right-to-Left Support**: Performance considerations for RTL language support
+- **Character Encoding**: Performance implications of different text encodings
+- **Emoji Handling**: Performance effects of rendering complex glyphs
+- **Typography Performance**: Performance impacts of font selection and rendering
+- **Kerning and Ligatures**: Performance considerations for advanced text layout
+- **Variable Fonts**: Performance effects of OpenType variable fonts
+- **Color Fonts**: Performance considerations for multilayer color fonts
+- ** SVG Performance**: Performance characteristics of scalable vector graphics
+- **Canvas Performance**: Performance traits of bitmap drawing surfaces
+- **WebGL Performance**: Performance considerations for browser-based 3D graphics
+- **CSS Performance**: Performance impacts of styling and layout calculations
+- **Selector Efficiency**: Performance effects of CSS selector complexity
+- **Layout Thrashing**: Performance costs of repeated layout recalculations
+- **Paint Performance**: Performance considerations for rendering operations
+- **Composite Performance**: Performance effects of layer composition operations
+- **Animation Performance**: Performance traits of CSS and JavaScript animations
+- **Transition Performance**: Performance considerations for state change animations
+- **Transform Performance**: Performance effects of geometric transformations
+- **Filter Performance**: Performance considerations for graphical filter effects
+- **Masking Performance**: Performance effects of clipping and masking operations
+- **Blend Mode Performance**: Performance impacts of layer blending operations
+- **Performance API**: Performance considerations for self-measurement in browsers
+- **Resource Hints**: Performance effects of preload, prefetch, and similar hints
+- **Critical CSS**: Performance benefits of inlining above-the-fold styles
+- **Font Loading Strategies**: Performance impact of different font loading approaches
+- **Image Optimization**: Performance effects of image compression and resizing
+- **Responsive Images**: Performance considerations for srcset and picture elements
+- **Video Streaming**: Performance considerations for adaptive bitrate streaming
+- **Audio Streaming**: Performance considerations for compressed audio delivery
+- **Web Font Loading**: Performance considerations for external font resources
+- **Third-party Resource Loading**: Performance effects of external CSS/JS/images
+- **Subresource Integrity**: Performance costs of verifying resource integrity
+- **HTTP Caching**: Performance benefits of proper cache headers and validation
+- **Service Workers**: Performance considerations for background scripts and caching
+- **Cache Storage API**: Performance characteristics of programmable caching
+- **IndexedDB**: Performance considerations for client-side databases
+- **LocalStorage**: Performance traits of simple key-value storage
+- **SessionStorage**: Performance considerations for tab-scoped storage
+- **Cookies**: Performance implications of client-server state mechanisms
+- **Indexed Storage Advances**: Performance effects as browser storage evolves
+- **Storage Quota Management**: Performance considerations for managing storage limits
+- **Storage Pressure Response**: Performance behaviors when approaching storage limits
+- **Garbage Collection in JS**: Performance effects of JavaScript garbage collection
+- **Reference Counting**: Performance implications of ref-counting GC approaches
+- **Mark-and-sweep**: Performance traits of classic garbage collection approach
+- **Generational GC**: Performance effects of generational garbage collection
+- **Incremental GC**: Performance considerations for incremental collection
+- **Concurrent GC**: Performance effects of garbage collection during mutator execution
+- **Real-time GC**: Performance considerations for real-time garbage collection needs
+- **GC Tuning**: Performance impacts of adjusting garbage collector parameters
+- **Native Interop**: Performance considerations for JS-native code boundaries
+- **WebAssembly Interop**: Performance considerations for JS-WASM boundaries
+- ** SIMD Support**: Performance effects of processor vector instructions
+- ** multithreading**: Performance implications of JS threading models
+- ** Worker Performance**: Performance traits of web workers
+- **SharedArrayBuffer**: Performance considerations for shared memory
+- **Atomics**: Performance considerations for atomic operations in JS
+- ** Thread Safety**: Performance implications of concurrent access in JS
+- ** Memory Model**: Performance considerations for JS memory consistency
+- ** Optimizations**: Performance effects of JS engine optimizations
+- ** JIT Compilation**: Performance traits of just-in-time compilation in JS
+- ** Interpreted Mode**: Performance characteristics of baseline JS interpretation
+- ** Tiered Compilation**: Performance effects of multi-level JIT strategies
+- ** Optimizing Compiler**: Performance impacts of advanced JS compilation
+- ** Baseline Compiler**: Performance traits of simpler JS compilation approaches
+- ** Interpreter**: Performance effects of pure interpretation in JS engines
+- **builtins**: Performance effects of native JS functions and objects
+- **boxing**: Performance considerations for primitive to object conversion
+- **unboxing**: Performance considerations for object to primitive conversion
+- **property Access**: Performance effects of accessing JS object properties
+- **method Calls**: Performance considerations for invoking JS object methods
+- **prototype Chains**: Performance effects of inheritance lookup in JS
+- **property Enumeration**: Performance considerations for iterating over JS objects
+- **property Definition**: Performance effects of defining JS object properties
+- **property Deletion**: Performance impacts of removing JS object properties
+- **object Creation**: Performance effects of instantiating JS objects
+- **object Destruction**: Performance considerations for cleaning up JS objects
+- **array Operations**: Performance traits of JS array manipulation methods
+- **map Operations**: Performance considerations for JS map collection methods
+- **set Operations**: Performance effects of JS set collection methods
+- **weakmap Operations**: Performance considerations for JS weakmap collections
+- **weakset Operations**: Performance effects of JS weakset collections
+- **iteration Protocols**: Performance considerations for JS iteration interfaces
+- **generator Functions**: Performance traits of JS generator functions
+- **async Functions**: Performance considerations for JS async/await
+- **promises**: Performance considerations for JS promise handling
+- **microtasks**: Performance effects of JS microtask queuing
+- **macrotasks**: Performance considerations for JS macrotask queuing
+- **event Loop**: Performance traits of JS event loop processing
+- **call Stack**: Performance considerations for JS function call management
+- ** Stack Overflow**: Performance impacts of exceeding JS call stack limits
+- **heap Memory**: Performance traits of JS heap memory management
+- **stack Memory**: Performance characteristics of JS stack memory usage
+- **register Allocation**: Performance effects of JS variable storage in registers
+- **spilling**: Performance impacts of moving variables from registers to memory
+- **instruction Scheduling**: Performance effects of JS instruction reordering
+- **branch Prediction**: Performance considerations for JS branch prediction accuracy
+- **pipeline Stalls**: Performance impacts of JS instruction pipeline bubbles
+- **cache Effects**: Performance considerations for CPU cache behavior in JS
+- **prefetching**: Performance effects of JS instruction and data prefetching
+- **memory Ordering**: Performance considerations for JS memory access ordering
+- **fences**: Performance effects of JS memory barrier operations
+- **atomic Operations**: Performance considerations for JS atomic memory operations
+- **lock Primitives**: Performance traits of JS synchronization constructs
+- **mutexes**: Performance considerations for mutual exclusion in JS
+- **semaphores**: Performance effects of counting semaphores in JS
+- **condition Variables**: Performance considerations for JS waiting/notifying
+- **barriers**: Performance effects of JS thread synchronization barriers
+- **read-write Locks**: Performance traits of JS reader-writer locks
+- **spinlocks**: Performance considerations for busy-wait synchronization in JS
+- **seqlocks**: Performance effects of JS sequence lock synchronization
+- **rcu**: Performance considerations for read-copy-update in JS
+- **hazard Pointers**: Performance effects of JS hazard pointer reclamation
+- **epoch Based Reclamation**: Performance considerations for JS epoch-based GC
+- **userspace RCU**: Performance considerations for userspace read-copy-update
+- **tty Subsystem**: Performance effects of terminal I/O in JS environments
+- **pty Subsystem**: Performance considerations for pseudoterminal I/O
+- ** Serial Communication**: Performance traits of JS serial port access
+- **Parallel Port Access**: Performance considerations for legacy parallel ports
+- ** USB Interface**: Performance effects of JS USB device communication
+- **Bluetooth**: Performance considerations for JS Bluetooth device interaction
+- **NFC**: Performance effects of near-field communication in JS
+- **Infrared**: Performance traits of JS infrared device communication
+- **RFID**: Performance considerations for JS radio-frequency identification
+- **CoAP**: Performance considerations for constrained application protocol in JS
+- **MQTT**: Performance traits of lightweight publish-subscribe in JS
+- **WebSocket**: Performance considerations for JS WebSocket implementation
+- **SSE**: Performance traits of server-sent events in JS
+- **HTTP/2**: Performance effects of multiplexed HTTP in JS
+- **HTTP/3**: Performance considerations for QUIC-based HTTP in JS
+- **QUIC**: Performance traits of general QUIC protocol in JS
+- **gRPC**: Performance considerations for remote procedure call in JS
+- **Thrift**: Performance effects of Apache Thrift in JS
+- **Avro**: Performance considerations for data serialization in JS
+- **Protocol Buffers**: Performance traits of Google's data format in JS
+- **MessagePack**: Performance effects of efficient binary serialization in JS
+- **CBOR**: Performance considerations for concise binary object representation in JS
+- **XML**: Performance considerations for extensible markup language in JS
+- **JSON**: Performance traits of JavaScript object notation in JS
+- **YAML**: Performance considerations for YAML ain't markup language in JS
+- **TOML**: Performance effects of Tom's obvious minimal language in JS
+- **INI**: Performance considerations for initialization file format in JS
+- **Properties**: Performance effects of Java properties file format in JS
+- **CSV**: Performance traits of comma-separated values in JS
+- **TSV**: Performance considerations for tab-separated values in JS
+- **PSV**: Performance effects of pipe-separated values in JS
+- **Fixed Width**: Performance considerations for fixed-width formats in JS
+- **Delimited Files**: Performance effects of character-delimited data in JS
+- **XML Parsing**: Performance considerations for JS XML parsing
+- **JSON Parsing**: Performance traits of JS JSON parsing
+- **YAML Parsing**: Performance considerations for JS YAML parsing
+- **TOML Parsing**: Performance effects of JS TOML parsing
+- **INI Parsing**: Performance considerations for JS INI parsing
+- **Properties Parsing**: Performance effects of JS properties file parsing
+- **CSV Parsing**: Performance considerations for JS CSV file parsing
+- **TSV Parsing**: Effects of JS TSV file parsing
+- **PSV Parsing**: Performance impacts of JS PSV file parsing
+- **Fixed Width Parsing**: Performance effects of JS fixed-width file parsing
+- **Delimited File Parsing**: Performance considerations for JS delimited file parsing
+- **XML Serialization**: Performance considerations for JS XML serialization
+- **JSON Serialization**: Performance traits of JS JSON serialization
+- **YAML Serialization**: Performance considerations for JS YAML serialization
+- **TOML Serialization**: Performance effects of JS TOML serialization
+- **INI Serialization**: Performance considerations for JS INI serialization
+- **Properties Serialization**: Performance effects of JS properties serialization
+- **CSV Serialization**: Performance considerations for JS CSV serialization
+- **TSV Serialization**: Performance impacts of JS TSV serialization
+- **PSV Serialization**: Performance effects of JS PSV serialization
+- **Fixed Width Serialization**: Performance considerations for JS fixed-width serialization
+- **Delimited File Serialization**: Performance effects of JS delimited file serialization
+- **XPath**: Performance considerations for JS XML path language
+- **XQuery**: Performance effects of JS XML query language
+- **XSLT**: Performance considerations for JS XML transformations
+- **Schema Validation**: Performance effects of JS XML schema validation
+- **Namespaces**: Performance considerations for JS XML namespaces
+- **CDATA Sections**: Performance effects of JS XML CDATA handling
+- **Entity References**: Performance considerations for JS XML entity references
+- **Processing Instructions**: Performance effects of JS XML processing instructions
+- **Comments**: Performance considerations for JS XML comments
+- **DTD**: Performance effects of JS XML document type definitions
+- **XInclude**: Performance considerations for JS XML inclusion
+- **XPointer**: Performance effects of JS XML pointing
+- **BASE64**: Performance considerations for JS base64 encoding/decoding
+- **BASE32**: Performance effects of JS base32 encoding/decoding
+- **BASE16**: Performance considerations for JS base16 encoding/decoding
+- **URL Encoding**: Performance effects of JS URL encoding/decoding
+- **HTML Escaping**: Performance considerations for JS HTML escaping
+- **CSS Escaping**: Performance effects of JS CSS escaping
+- **JavaScript Escaping**: Performance considerations for JS JavaScript escaping
+- **JSON Escaping**: Performance effects of JS JSON escaping
+- **XML Escaping**: Performance considerations for JS XML escaping
+- **YAML Escaping**: Performance effects of JS YAML escaping
+- **TOML Escaping**: Performance considerations for JS TOML escaping
+- **INI Escaping**: Performance effects of JS INI escaping
+- **Properties Escaping**: Performance considerations for JS properties escaping
+- **CSV Escaping**: Performance effects of JS CSV escaping
+- **TSV Escaping**: Performance impacts of JS TSV escaping
+- **PSV Escaping**: Performance effects of JS PSV escaping
+- **Fixed Width Escaping**: Performance considerations for JS fixed-width escaping
+- **Delimited File Escaping**: Performance effects of JS delimited file escaping
+- **Regular Expressions**: Performance traits of JS regular expression processing
+- **RE2**: Performance considerations for Google's RE2 regex in JS
+- **PCRE**: Performance effects of Perl-compatible regex in JS
+- **POSIX Regex**: Performance considerations for POSIX regex in JS
+- **BSD Regex**: Performance effects of Berkeley regex in JS
+- **GNU Regex**: Performance considerations for GNU regex in JS
+- **LR Parsing**: Performance effects of JS left-to-right parsing
+- **LL Parsing**: Performance considerations for JS left-to-right parsing
+- **PEG Parsing**: Performance effects of JS parsing expression grammars
+- **ANTLR**: Performance considerations for ANTLR parser generator in JS
+- **JavaCC**: Performance effects of Java compiler compiler in JS
+- **PEG.js**: Performance traits of parser expression grammar for JS
+- **Nearley**: Performance considerations for nearley parser toolkit in JS
+- ** Lark**: Performance effects of lark parser in JS
+- **Chevrotain**: Performance considerations for chevrotain parser in JS
+- **ANTLR4**: Performance effects of ANTLR version 4 in JS
+- **Yacc**: Performance considerations for yet another compiler compiler in JS
+- **Bison**: Performance effects of GNU bison parser generator in JS
+- **Ragel**: Performance effects of state machine compiler in JS
+- **RE/flex**: Performance considerations for regex-based lexer in JS
+- **Flex**: Performance effects of fast lexical analyzer in JS
+- **Jison**: Performance considerations for Jison parser generator in JS
+- **Bison++**: Performance effects of bison++ parser generator in JS
+- **SableCC**: Performance considerations for sablecc parser generator in JS
+- **ANTLR Works**: Performance effects of ANTLR GUI in JS
+- **Moby Dick**: Performance considerations for moby dick parser in JS
+- **Tatu**: Performance effects of tatu parser in JS
+- **Monkey**: Performance considerations for monkey parser in JS
+- **Loyc**: Performance effects of loycc parser generator in JS
+- **Language Spec**: Performance effects of JS language specification compliance
+- **ECMAScript**: Performance traits of ECMAScript standard in JS
+- **ES5**: Performance considerations for ECMAScript 5 in JS
+- **ES6**: Performance effects of ECMAScript 6/2015 in JS
+- **ES2016**: Performance considerations for ECMAScript 2016 in JS
+- **ES2017**: Performance effects of ECMAScript 2017 in JS
+- **ES2018**: Performance considerations for ECMAScript 2018 in JS
+- **ES2019**: Performance effects of ECMAScript 2019 in JS
+- **ES2020**: Performance considerations for ECMAScript 2020 in JS
+- **ES2021**: Performance effects of ECMAScript 2021 in JS
+- **ES2022**: Performance considerations for ECMAScript 2022 in JS
+- **ES2023**: Performance effects of ECMAScript 2023 in JS
+- **ES2024**: Performance considerations for ECMAScript 2024 in JS
+- **ES2025**: Performance effects of ECMAScript 2025 in JS
+- **TypeScript**: Performance considerations for TypeScript in JS environments
+- **Flow**: Performance effects of Flow type checker in JS
+- **ReasonML**: Performance considerations for ReasonML in JS
+- **Elm**: Performance traits of Elm language in JS environments
+- **ClojureScript**: Performance considerations for ClojureScript in JS
+- **ScalaJS**: Performance effects of Scala compiled to JS
+- **Fable**: Performance considerations for F# to JS compilation
+- **Script#**: Performance effects of C# to JS compilation
+- **SharpKit**: Performance considerations for SharpKit to JS compilation
+- **Duende**: Performance effects of Duende to JS compilation
+- **Opal**: Performance considerations for Ruby to JS compilation
+- **CoffeeScript**: Performance effects of CoffeeScript to JS compilation
+- **Dart**: Performance traits of Dart compiled to JS
+- **TypeScript**: Performance considerations for TypeScript transpilation to JS
+- **AssemblyScript**: Performance effects of AssemblyScript to JS compilation
+- **Wat**: Performance considerations for WebAssembly text format in JS
+- **Wasm**: Performance traits of WebAssembly binary format in JS
+- **Wast**: Performance effects of WebAssembly text format in JS
+- **Wasm2c**: Performance considerations for WebAssembly to C compilation
+- **Wasm2js**: Performance effects of WebAssembly to JS compilation
+- **Binaryen**: Performance considerations for Binaryen optimizer in JS
+- **Binaryen**: Performance effects of Binaryen optimizer in JS
+- **Wasm-opt**: Performance considerations for wasm-opt optimizer in JS
+- **Wasm-opt**: Performance effects of wasm-opt optimizer in JS
+- **Wasm-size**: Performance considerations for wasm-size tool in JS
+- **Wasm-size**: Performance effects of wasm-size tool in JS
+- **Wasm-strip**: Performance considerations for wasm-strip utility in JS
+- **Wasm-strip**: Performance effects of wasm-strip utility in JS
+- **Wasm-validate**: Performance considerations for wasm-validate utility in JS
+- **Wasm-validate**: Performance effects of wasm-validate utility in JS
+- **Wasm-disassemble**: Performance considerations for wasm-disassemble utility in JS
+- **Wasm-disassemble**: Performance effects of wasm-disassemble utility in JS
+- **Wasm-edit**: Performance considerations for wasm-edit utility in JS
+- **Wasm-edit**: Performance effects of wasm-edit utility in JS
+- **Wasm-merge**: Performance considerations for wasm-merge utility in JS
+- **Wasm-merge**: Performance effects of wasm-merge utility in JS
+- **Wasm-split**: Performance considerations for wasm-split utility in JS
+- **Wasm-split**: Performance effects of wasm-split utility in JS
+- **Wasm-map**: Performance considerations for wasm-map utility in JS
+- **Wasm-map**: Performance effects of wasm-map utility in JS
+- **Wasm-relocatable**: Performance considerations for wasm-relocatable utility in JS
+- **Wasm-relocatable**: Performance effects of wasm-relocatable utility in JS
+- **Wasm-libc**: Performance considerations for wasm-libc utility in JS
+- **Wasm-libc**: Performance effects of wasm-libc utility in JS
+- **Wasm-sdk**: Performance considerations for wasm-sdk utility in JS
+- **Wasm-sdk**: Performance effects of wasm-sdk utility in JS
+- **Wasm-test**: Performance considerations for wasm-test utility in JS
+- **Wasm-test**: Performance effects of wasm-test utility in JS
+- **Wasm-float**: Performance considerations for wasm-float utility in JS
+- **Wasm-float**: Performance effects of wasm-float utility in JS
+- **Wasm-exec**: Performance considerations for wasm-exec utility in JS
+- **Wasm-exec**: Performance effects of wasm-exec utility in JS
+- **Wasm-ld**: Performance considerations for wasm-ld utility in JS
+- **Wasm-ld**: Performance effects of wasm-ld utility in JS
+- **Wasm-object**: Performance considerations for wasm-object utility in JS
+- **Wasm-object**: Performance effects of wasm-object utility in JS
+- **Wasm-exn**: Performance considerations for wasm-exn utility in JS
+- **Wasm-exn**: Performance effects of wasm-exn utility in JS
+- **Wasm-trap**: Performance considerations for wasm-trap utility in JS
+- **Wasm-trap**: Performance effects of wasm-trap utility in JS
+- **Wasm-simd**: Performance considerations for wasm-simd utility in JS
+- **Wasm-simd**: Performance effects of wasm-simd utility in JS
+- **Wasm-bulk**: Performance considerations for wasm-bulk utility in JS
+- **Wasm-bulk**: Performance effects of wasm-bulk utility in JS
+- **Wasm-exceptions**: Performance considerations for wasm-exceptions utility in JS
+- **Wasm-exceptions**: Performance effects of wasm-exceptions utility in JS
+- **Wasm-tail-call**: Performance considerations for wasm-tail-call utility in JS
+- **Wasm-tail-call**: Performance effects of wasm-tail-call utility in JS
+- **Wasm-gc**: Performance considerations for wasm-gc utility in JS
+- **Wasm-gc**: Performance effects of wasm-gc utility in JS
+- **Wasm-threads**: Performance considerations for wasm-threads utility in JS
+- **Wasm-threads**: Performance effects of wasm-threads utility in JS
+- **Wasm-reference-types**: Performance considerations for wasm-reference-types utility in JS
+- **Wasm-reference-types**: Performance effects of wasm-reference-types utility in JS
+- **Wasm-sign-extension**: Performance considerations for wasm-sign-extension utility in JS
+- **Wasm-sign-extension**: Performance effects of wasm-sign-extension utility in JS
+- **Wasm-saturating-float-to-int**: Performance considerations for wasm-saturating-float-to-int utility in JS
+- **Wasm-saturating-float-to-int**: Performance effects of wasm-saturating-float-to-int utility in JS
+- **Wasm-trunc-float-to-int**: Performance considerations for wasm-trunc-float-to-int utility in JS
+- **Wasm-trunc-float-to-int**: Performance effects of wasm-trunc-float-to-int utility in JS
+- **Wasm-promote-float-to-int**: Performance considerations for wasm-promote-float-to-int utility in JS
+- **Wasm-promote-float-to-int**: Performance effects of wasm-promote-float-to-int utility in JS
+- **Wasm-extend-float-to-int**: Performance considerations for wasm-extend-float-to-int utility in JS
+- **Wasm-extend-float-to-int**: Performance effects of wasm-extend-float-to-int utility in JS
+- **Wasm-wrap-float-to-int**: Performance considerations for wasm-wrap-float-to-int utility in JS
+- **Wasm-wrap-float-to-int**: Performance effects of wasm-wrap-float-to-int utility in JS
+- **Wasm-bitselect**: Performance considerations for wasm-bitselect utility in JS
+- **Wasm-bitselect**: Performance effects of wasm-bitselect utility in JS
+- **Wasm-bitselect**: Performance considerations for wasm-bitselect utility in JS
+- **Wasm-bitselect**: Performance effects of wasm-bitselect utility in JS
+- **Wasm-bitlear**: Performance considerations for wasm-bitlear utility in JS
+- **Wasm-bitlear**: Performance effects of wasm-bitlear utility in JS
+- **Wasm-bitinsert**: Performance considerations for wasm-bitinsert utility in JS
+- **Wasm-bitinsert**: Performance effects of wasm-bitinsert utility in JS
+- **Wasm-bitextract**: Performance considerations for wasm-bitextract utility in JS
+- **Wasm-bitextract**: Performance effects of wasm-bitextract utility in JS
+- **Wasm-bitreplace**: Performance considerations for wasm-bitreplace utility in JS
+- **Wasm-bitreplace**: Performance effects of wasm-bitreplace utility in JS
+- **Wasm-bitneg**: Performance considerations for wasm-bitneg utility in JS
+- **Wasm-bitneg**: Performance effects of wasm-bitneg utility in JS
+- **Wasm-bitset**: Performance considerations for wasm-bitset utility in JS
+- **Wasm-bitset**: Performance effects of wasm-bitset utility in JS
+- **Wasm-bitclear**: Performance considerations for wasm-bitclear utility in JS
+- **Wasm-bitclear**: Performance effects of wasm-bitclear utility in JS
+- **Wasm-bitcopy**: Performance considerations for wasm-bitcopy utility in JS
+- **Wasm-bitcopy**: Performance effects of wasm-bitcopy utility in JS
+- **Wasm-bitswap**: Performance considerations for wasm-bitswap utility in JS
+- **Wasm-bitswap**: Performance effects of wasm-bitswap utility in JS
+- **Wasm-bitrot**: Performance considerations for wasm-bitrot utility in JS
+- **Wasm-bitrot**: Performance effects of wasm-bitrot utility in JS
+- **Wasm-bitreverse**: Performance considerations for wasm-bitreverse utility in JS
+- **Wasm-bitreverse**: Performance effects of wasm-bitreverse utility in JS
+- **Wasm-bitcount**: Performance considerations for wasm-bitcount utility in JS
+- **Wasm-bitcount**: Performance effects of wasm-bitcount utility in JS
+- **Wasm-bitshift**: Performance considerations for wasm-bitshift utility in JS
+- **Wasm-bitshift**: Performance effects of wasm-bitshift utility in JS
+- **Wasm-bitrotate**: Performance considerations for wasm-bitrotate utility in JS
+- **Wasm-bitrotate**: Performance effects of wasm-bitrotate utility in JS
+- **Wasm-bitswap**: Performance considerations for wasm-bitswap utility in JS
+- **Wasm-bitswap**:

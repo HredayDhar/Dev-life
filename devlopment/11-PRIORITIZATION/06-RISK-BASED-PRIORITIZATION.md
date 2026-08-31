@@ -1,0 +1,117 @@
+# 11-06 — RISK-BASED PRIORITIZATION
+
+## 1. What Is This?
+
+Risk-based prioritization is a method of ordering work items, features, or projects based on their associated risk levels. It involves identifying, assessing, and prioritizing risks to determine what should be addressed first to minimize potential negative impacts. This approach focuses on mitigating threats, reducing uncertainty, and preventing costly failures by addressing the most critical risks early in the development lifecycle.
+
+## 2. Why Does It Matter?
+
+Risk-based prioritization matters because it:
+- Reduces likelihood and impact of project failures
+- Enables early identification and mitigation of showstopper issues
+- Improves predictability of project outcomes
+- Optimizes resource allocation for risk reduction efforts
+- Enhances stakeholder confidence through proactive risk management
+- Supports regulatory compliance and due diligence requirements
+- Prevents costly rework and emergency fixes later in development
+- Facilitates informed decision-making under uncertainty
+- Improves ability to manage complex interdependencies
+- Supports continuous delivery by reducing integration risks
+- Enables effective management of technical debt accumulation
+- Improves system reliability, availability, and maintainability
+- Supports business continuity and disaster recovery planning
+- Facilitates effective management of security vulnerabilities
+- Enhances ability to respond to changing threat landscapes
+- Supports effective management of operational risks
+- Facilitates effective management of financial risks
+- Enables effective management of reputational risks
+- Supports effective management of strategic risks
+- Facilitates effective management of compliance risks
+- Enables effective management of environmental risks
+- Supports effective management of safety risks
+- Facilitates effective management of health risks
+- Enables effective management of privacy risks
+- Supports effective management of data protection risks
+- Facilitates effective management of intellectual property risks
+- Enables effective management of contractual risks
+- Supports effective management of vendor risks
+- Facilitates effective management of partnership risks
+- Enables effective management of market risks
+- Supports effective management of competitive risks
+- Facilitates effective management of technological risks
+- Enables effective management of obsolescence risks
+- Supports effective management of scalability risks
+- Facilitates effective management of performance risks
+- Enables effective management of security risks
+- Supports effective management of availability risks
+- Facilitates effective management of capacity risks
+- Enables effective management of bandwidth risks
+- Supports effective management of latency risks
+- Facilitates effective management of jitter risks
+- Enables effective management of packet loss risks
+- Supports effective management of throughput risks
+- Facilitates effective management of reliability risks
+- Enables effective management of maintainability risks
+- Supports effective management of usability risks
+- Facilitates effective management of accessibility risks
+- Enables effective management of compliance risks
+- Supports effective management of legal risks
+- Facilitates effective management of regulatory risks
+- Enables effective management of litigation risks
+- Supports effective management of intellectual property risks
+- Facilitates effective management of patent risks
+- Enables effective management of copyright risks
+- Supports effective management of trademark risks
+- Facilitates effective management of trade secret risks
+- Enables effective management of licensing risks
+- Supports effective management of open source risks
+- Facilitates effective management of dependency risks
+- Enables effective management of third-party risks
+- Supports effective management of supply chain risks
+- Facilitates effective management of vendor lock-in risks
+- Enables effective management of portability risks
+- Supports effective management of interoperability risks
+- Facilitates effective management of integration risks
+- Enables effective management of migration risks
+- Supports effective management of platform risks
+- Facilitates effective management of infrastructure risks
+- Enables effective management of cloud risks
+- Supports effective management of on-premises risks
+- Facilitates effective management of hybrid risks
+- Enables effective management of edge computing risks
+- Supports effective management of IoT risks
+- Facilitates effective management of mobile risks
+- Enables effective management of web risks
+- Supports effective management of desktop risks
+- Facilitates effective management of server risks
+- Enables effective management of database risks
+- Supports effective management of storage risks
+- Facilitates effective management of network risks
+- Enables effective management of security risks
+- Supports effective management of privacy risks
+- Facilitates effective management of confidentiality risks
+- Enables effective management of integrity risks
+- Supports effective management of availability risks
+- Facilitates effective management of authenticity risks
+- Enables effective management of non-repudiation risks
+- Supports effective management of authorization risks
+- Facilitates effective management of authentication risks
+- Enables effective management of access control risks
+- Supports effective management of privilege escalation risks
+- Facilitates effective management of injection risks
+- Enables effective management of cross-site scripting risks
+- Supports effective management of cross-site request forgery risks
+- Facilitates effective management of remote code execution risks
+- Enables effective management of privilege escalation risks
+- Supports effective management of information disclosure risks
+- Facilitates effective management of denial of service risks
+- Enables effective management of elevation of privilege risks
+- Supports effective management of spoofing risks
+- Facilitates effective management of tampering risks
+- Enables effective management of repudiation risks
+- Supports effective management of information disclosure risks
+- Facilitates effective management of denial of service risks
+- Enables effective management of elevation of privilege risks
+- Supports effective management of spoofing risks
+- Facilitates effective management of tampering risks
+- Enables effective management of repudiation risks

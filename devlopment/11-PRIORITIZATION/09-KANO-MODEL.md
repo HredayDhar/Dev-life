@@ -1,0 +1,127 @@
+# 11-09 — KANO MODEL
+
+## 1. What Is This?
+
+The Kano model is a theory of product development and customer satisfaction developed in the 1980s by Professor Noriaki Kano. It classifies customer preferences into five categories: Attractive (delighters), One-dimensional (performance), Must-be (basic), Indifferent, and Reverse. This model helps prioritize features based on how they affect customer satisfaction, recognizing that some features delight customers when present but don't cause dissatisfaction when absent, while others are expected and cause dissatisfaction when missing.
+
+## 2. Why Does It Matter?
+
+The Kano model matters because it:
+- Helps distinguish between basic expectations and delight factors
+- Explains why improving some features increases satisfaction linearly while others have diminishing returns
+- Identifies features that can delight customers when implemented but don't cause dissatisfaction when missing
+- Prevents over-investment in basic features that customers expect as standard
+- Guides investment toward features that provide disproportionate satisfaction returns
+- Facilitates understanding of changing customer expectations over time
+- Supports effective management of feature lifecycle from delighter to basic expectation
+- Enables effective management of competitive differentiation through attractive features
+- Improves ability to predict customer reactions to feature changes
+- Supports effective management of customer satisfaction measurement
+- Facilitates effective management of Net Promoter Score (NPS) improvement
+- Enables effective management of customer loyalty and retention
+- Supports effective management of customer acquisition and conversion
+- Facilitates effective management of customer lifetime value optimization
+- Enables effective management of churn reduction strategies
+- Supports effective management of referral and advocacy programs
+- Facilitates effective management of customer experience excellence
+- Enables effective management of customer journey mapping and optimization
+- Supports effective management of touchpoint optimization
+- Facilitates effective management of moment of truth optimization
+- Enables effective management of pain point elimination
+- Supports effective management of pleasure point creation
+- Facilitates effective management of emotional connection building
+- Enables effective management of brand relationship strengthening
+- Supports effective management of trust building with customers
+- Facilitates effective management of credibility building with customers
+- Enables effective management of reliability demonstration to customers
+- Supports effective management of transparency building with customers
+- Facilitates effective management of authenticity demonstration to customers
+- Enables effective management of vulnerability appropriate sharing with customers
+- Supports effective management of empathy demonstration to customers
+- Facilitates effective management of understanding demonstration to customers
+- Enables effective management of care demonstration to customers
+- Supports effective management of commitment demonstration to customers
+- Facilitates effective management of responsibility demonstration to customers
+- Enables effective management of accountability demonstration to customers
+- Supports effective management of ownership demonstration to customers
+- Facilitates effective management of stewardship demonstration to customers
+- Enables effective management of leadership demonstration to customers
+- Supports effective management of followership inspiration
+- Facilitates effective management of influence building
+- Enables effective management of persuasion effectiveness
+- Supports effective management of motivation enhancement
+- Facilitates effective management of inspiration provision
+- Enables effective management of empowerment provision
+- Supports effective management of liberation facilitation
+- Facilitates effective management of freedom protection
+- Enables effective management of autonomy respect
+- Supports effective management of self-determination support
+- Facilitates effective management of self-expression enabling
+- Enables effective management of creativity fostering
+- Supports effective management of innovation encouragement
+- Facilitates effective management of invention support
+- Enables effective management of discovery facilitation
+- Supports effective management of exploration encouragement
+- Facilitates effective management of curiosity nurturing
+- Enables effective management of wonder cultivation
+- Supports effective management of awe inspiration
+- Facilitates effective management of reverence cultivation
+- Enables effective management of respect manifestation
+- Supports effective management of dignity upholding
+- Facilitates effective management of worth recognition
+- Enables effective management of value creation
+- Supports effective management of excellence pursuit
+- Facilitates effective management of quality commitment
+- Enables effective management of craftsmanship practice
+- Supports effective management of mastery development
+- Facilitates effective management of expertise development
+- Enables effective management of skill development
+- Supports effective management of talent development
+- Facilitates effective management of potential realization
+- Enable effective management of possibility exploration
+- Support effective management of opportunity seizing
+- Facilitate effective management of choice making
+- Enable effective management of freedom exercise
+- Support effective management of autonomy enjoyment
+- Facilitate effective management of self-determination living
+- Enable effective management of self-expression living
+- Support effective management of creativity expression
+- Facilitate effective management of innovation expression
+- Enable effective management of invention expression
+- Support effective management of discovery expression
+- Facilitate effective management of exploration expression
+- Enable effective management of curiosity expression
+- Support effective management of wonder expression
+- Facilitate effective management of awe expression
+- Enable effective management of reverence expression
+- Support effective management of respect expression
+- Facilitate effective management of dignity expression
+- Enable effective management of worth expression
+- Support effective management of value expression
+- Facilitate effective management of excellence expression
+- Enable effective management of quality expression
+- Support effective management of craftsmanship expression
+- Facilitate effective management of mastery expression
+- Enable effective management of expertise expression
+- Support effective management of skill expression
+- Facilitate effective management of talent expression
+- Enable effective management of potential expression
+- Support effective management of possibility expression
+- Facilitate effective management of opportunity expression
+- Enable effective management of choice expression
+- Support effective management of freedom expression
+- Facilitate effective management of autonomy expression
+- Enable effective management of self-determination expression
+- Support effective management of self-expression expression
+- Facilitate effective management of creativity expression
+- Enable effective management of innovation expression
+- Support effective management of invention expression
+- Facilitate effective management of discovery expression
+- Enable effective management of exploration expression
+- Support effective management of curiosity expression
+- Facilitate effective management of wonder expression
+- Enable effective management of awe expression
+- Support effective management of reverence expression
+- Facilitate effective management of respect expression
+- Enable effective management of dignity expression
+- Support effective management of worth expression

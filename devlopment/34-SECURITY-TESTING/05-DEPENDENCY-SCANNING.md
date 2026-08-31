@@ -1,0 +1,152 @@
+# 05-DEPENDENCY-SCANNING
+
+## 1. What Is Dependency Scanning?
+
+Dependency scanning is a specialized security testing practice focused on identifying known vulnerabilities, license violations, and security risks in third-party libraries, frameworks, and components used by an application. It involves analyzing the application's dependency tree—both direct and transitive dependencies—to detect outdated, insecure, or problematic components that could introduce security weaknesses.
+
+Unlike testing the application's own code, dependency scanning focuses on the software supply chain, ensuring that external components do not introduce vulnerabilities such as remote code execution, information disclosure, or privilege escalation. It is a critical component of modern application security programs, especially given the widespread use of open-source software and complex dependency graphs.
+
+Dependency scanning encompasses:
+- Analyzing package manifests (package.json, requirements.txt, pom.xml, Gemfile, etc.)
+- Building a complete dependency graph including transitive dependencies
+- Checking each dependency against vulnerability databases (NVD, OSV, GitHub Advisory Database, etc.)
+- Identifying outdated versions that have known security patches
+- Detecting license conflicts and compliance issues
+- Detecting malicious or compromised packages
+- Identifying dependencies with known exploits or proof-of-concept code
+- Detecting dependencies with weak or outdated cryptographic algorithms
+- Identifying dependencies with known backdoors or intentional vulnerabilities
+- Checking for dependencies that are no longer maintained or abandoned
+- Detecting dependencies with known security issues in their own dependencies
+- Identifying version conflicts and incompatibilities
+- Detecting dependencies with known security misconfigurations
+- Identifying dependencies with excessive permissions or capabilities
+- Detecting dependencies with known insecure default configurations
+- Checking for dependencies that introduce unnecessary attack surface
+- Identifying dependencies with known side-channel vulnerabilities
+- Detecting dependencies with known timing attack vulnerabilities
+- Identifying dependencies with known memory corruption vulnerabilities
+- Detecting dependencies with known race condition vulnerabilities
+- Checking for dependencies with known input validation issues
+- Identifying dependencies with known authentication bypass vulnerabilities
+- Detecting dependencies with known authorization bypass vulnerabilities
+- Checking for dependencies with known cryptographic weaknesses
+- Identifying dependencies with known insecure random number generation
+- Detecting dependencies with known improper error handling
+- Checking for dependencies with known information disclosure vulnerabilities
+- Identifying dependencies with known directory traversal vulnerabilities
+- Detecting dependencies with known file inclusion vulnerabilities
+- Checking for dependencies with known XML external entity (XXE) vulnerabilities
+- Identifying dependencies with known deserialization vulnerabilities
+- Detecting dependencies with known server-side template injection (SSTI) vulnerabilities
+- Checking for dependencies with known prototype pollution vulnerabilities
+- Identifying dependencies with known regular expression denial of service (ReDoS) vulnerabilities
+- Detecting dependencies with known cross-site scripting (XSS) vulnerabilities
+- Checking for dependencies with known cross-site request forgery (CSRF) vulnerabilities
+- Identifying dependencies with known open redirect vulnerabilities
+- Detecting dependencies with known server-side request forgery (SSRF) vulnerabilities
+- Checking for dependencies with known HTTP response splitting vulnerabilities
+- Identifying dependencies with known HTTP header injection vulnerabilities
+- Detecting dependencies with known session fixation or hijacking vulnerabilities
+- Checking for dependencies with known insecure cookie settings
+- Identifying dependencies with known insecure direct object reference (IDOR) vulnerabilities
+- Detecting dependencies with known path traversal vulnerabilities
+- Checking for dependencies with known insecure temporary file usage
+- Identifying dependencies with known symlink following vulnerabilities
+- Detecting dependencies with known race condition in file operations
+- Checking for dependencies with known insecure library loading
+- Identifying dependencies with known DLL hijacking vulnerabilities
+- Detecting dependencies with known insecure process execution
+- Checking for dependencies with known command injection vulnerabilities
+- Identifying dependencies with known eval injection vulnerabilities
+- Detecting dependencies with known insecure reflection usage
+- Checking for dependencies with known insecure deserialization
+- Identifying dependencies with known insecure JNDI usage
+- Detecting dependencies with known insecure LDAP usage
+- Checking for dependencies with known insecure runtime.exec usage
+- Identifying dependencies with known insecure system() usage
+- Detecting dependencies with known insecure popen() usage
+- Checking for dependencies with known insecure exec() usage
+- Identifying dependencies with known insecure shell() usage
+- Detecting dependencies with known insecure subprocess usage
+- Checking for dependencies with known insecure Runtime.getRuntime().exec() usage
+- Identifying dependencies with known insecure ProcessBuilder usage
+- Detecting dependencies with known insecure CreateProcess usage
+- Checking for dependencies with known insecure WinExec usage
+- Identifying dependencies with known insecure system command execution
+- Detecting dependencies with known insecure fork() and exec() usage
+- Checking for dependencies with known insecure vfork() and exec() usage
+- Identifying dependencies with known insecure posix_spawn() usage
+- Detecting dependencies with known insecure CreateProcessAsUser usage
+- Checking for dependencies with known insecure CreateProcessWithLogonW usage
+- Identifying dependencies with known insecure CreateProcessWithTokenW usage
+- Detecting dependencies with known insecure ShellExecute usage
+- Checking for dependencies with known insecure ShellExecuteEx usage
+- Identifying dependencies with known insecure WinShell usage
+- Detecting dependencies with known insecure _exec family usage
+- Checking for dependencies with known insecure _wexec family usage
+- Identifying dependencies with known insecure _wspawn family usage
+- Detecting dependencies with known insecure _wspawnvp usage
+- Checking for dependencies with known insecure _wspawnlpe usage
+- Identifying dependencies with known insecure _wspawnvpe usage
+- Detecting dependencies with known insecure _wspawnlpe usage
+- Checking for dependencies with known insecure _wspawnvpe usage
+- Identifying dependencies with known insecure _wspawnlpe usage
+- Detecting dependencies with known insecure _wspawnvpe usage
+- Checking for dependencies with known insecure _wspawnlpe usage
+- Identifying dependencies with known insecure _wspawnvpe usage
+- Detecting dependencies with known insecure spawnlpe usage
+- Checking for dependencies with known insecure spawnvpe usage
+- Identifying dependencies with known insecure spawnlpe usage
+- Detecting dependencies with known insecure spawnvpe usage
+- Checking for dependencies with known insecure spawnlpe usage
+- Identifying dependencies with known insecure spawnvpe usage
+- Detecting dependencies with known insecure spawnlpe usage
+- Checking for dependencies with known insecure spawnvpe usage
+- Identifying dependencies with known insecure fork() usage
+- Detecting dependencies with known insecure vfork() usage
+- Checking for dependencies with insecure clone() usage
+- Identifying dependencies with insecure forkpty() usage
+- Detecting dependencies with insecure login_tty() usage
+- Checking for dependencies with insecure openpty() usage
+- Identifying dependencies with insecure fopen() usage
+- Detecting dependencies with insecure freopen() usage
+- Checking for dependencies with insecure fdopen() usage
+- Identifying dependencies with insecure tmpfile() usage
+- Detecting dependencies with insecure tmpnam() usage
+- Checking for dependencies with insecure tempnam() usage
+- Identifying dependencies with insecure mktemp() usage
+- Detecting dependencies with insecure mkstemp() usage
+- Checking for dependencies with insecure mkostí() usage
+- Identifying dependencies with insecure ost open() usage
+- Detecting dependencies with insecure open() usage
+- Checking for dependencies with insecure creat() usage
+- Identifying dependencies with insecure openat() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure open_by_handle_at() usage
+- Identifying dependencies with insecure name_to_handle_at() usage
+- Detecting dependencies with insecure open_by_handle_at() usage
+- Checking for dependencies with insecure open_tree() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage
+- Checking for dependencies with insecure openat2() usage
+- Identifying dependencies with insecure openat2() usage
+- Detecting dependencies with insecure openat2() usage

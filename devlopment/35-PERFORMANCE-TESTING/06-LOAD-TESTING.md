@@ -1,0 +1,207 @@
+# 06-LOAD-TESTING
+
+## 1. What Is Load Testing?
+
+Load testing is a type of performance testing that evaluates how a system behaves under expected and peak load conditions by simulating multiple concurrent users or requests. It involves subjecting the system to a specific demand level—typically the anticipated maximum number of concurrent users or transactions—to measure its response time, throughput, resource utilization, and stability. The primary goal is to identify performance bottlenecks, determine system capacity, and ensure that the application can handle expected traffic volumes without degrading user experience or failing.
+
+## 2. Why Does Load Testing Matter?
+
+Load testing matters because:
+- **Capacity Planning**: Determines how much traffic the system can handle before performance degrades unacceptably
+- **User Experience Protection**: Ensures that response times remain within acceptable limits during peak usage
+- **Infrastructure Optimization**: Identifies over- or under-provisioned resources to optimize costs
+- **Release Confidence**: Provides evidence that new features or changes won't break under real-world loads
+- **SLA Verification**: Validates that the system can meet contractual performance commitments
+- **Bottleneck Identification**: Reveals which components (database, API, network, etc.) limit scalability
+- **Failure Mode Understanding**: Shows how the system fails (graceful degradation vs. catastrophic collapse)
+- **Recovery Testing**: Tests how well the system recovers after load is removed
+- **Scaling Decisions**: Informs horizontal vs. vertical scaling strategies
+- **Third-party Validation**: Tests integrations with external services under load
+- **Cache Effectiveness**: Measures how well caching layers perform under real-world access patterns
+- **Database Connection Limits**: Identifies connection pool exhaustion points
+- **Memory Leak Detection**: Uncovers gradual memory growth that only appears under sustained load
+- **Thread/Connection Limits**: Finds operating system or application limits on concurrent operations
+- **Network Saturation**: Determines when network bandwidth becomes the limiting factor
+- **CPU Saturation**: Processor usage hitting 100% causing increased response times and queuing
+- **Garbage Collection Overwhelm**: GC pauses becoming so long and frequent they halt processing
+- **JIT Compiler Delays**: Just-in-time compilation happening during peak instead of warmup
+- **File Descriptor Exhaustion**: Running out of handles for sockets, files, or other resources
+- **Port Exhaustion**: Running out of TCP/UDP ports for outgoing connections
+- **Interrupt Storms**: Network or device interrupts consuming excessive CPU cycles
+- **Context Switching Overhead**: Too many threads causing excessive CPU spending on switching
+- **Priority Inversion**: Low-priority tasks blocking high-priority ones due to resource contention
+- **Deadlocks**: Circular dependencies causing threads or processes to wait forever
+- **Livelocks**: Threads constantly changing state but making no forward progress
+- **Resource Leaks**: Gradual loss of memory, file descriptors, or other resources under load
+- **Buffer Overflows**: Fixed-size buffers being exceeded causing crashes or security issues
+- **Stack Overflow**: Recursive or deeply nested call stacks exhausting stack space
+- **Integer Overflows**: Mathematical errors causing incorrect behavior or crashes
+- **Floating Point Errors**: Precision issues causing incorrect calculations under load
+- **Race Conditions**: Timing-dependent bugs that only manifest under concurrent access
+- **Timer Wheel Overload**: Too many timed events overwhelming scheduling mechanisms
+- **Event Queue Backlog**: Asynchronous processing queues growing without bound under load
+- **DNS Resolution Limits**: Rate limits on domain lookups causing resolution failures
+- **TLS Handshake Overload**: Cryptographic operations becoming the bottleneck under concurrent connections
+- **HTTP Header Limits**: Exceeding maximum header size causing request rejection
+- **URL Length Limits**: Exceeding maximum URL length causing routing failures
+- **Cookie Size Limits**: Exceeding maximum cookie size causing transmission issues
+- **Request Body Limits**: Exceeding maximum request body size causing payload rejection
+- **Response Size Limits**: Exceeding maximum response size causing truncation or errors
+- **Concurrent User Limits**: Application or framework limits on simultaneous users
+- **Request Rate Limits**: Framework or server limits on requests per second
+- **Payload Size Limits**: Message queue or protocol limits on individual message sizes
+- **Topic Partition Limits**: Message broker limits on partitions or consumer groups
+- **Database Connection Limits**: Database-imposed limits on simultaneous connections
+- **Query Complexity Limits**: Database limits on joins, subqueries, or execution plan complexity
+- **Index Limits**: Database limits on number of indexes or indexed columns per table
+- **Table Size Limits**: Database limits on row counts or table sizes
+- **Partition Limits**: Database limits on number of partitions per table
+- **Replication Lag Limits**: Maximum acceptable delay between primary and replica databases
+- **Backup Window Limits**: Time required to complete backups interfering with peak hours
+- **Restore Time Limits**: Time required to restore from backup exceeding acceptable downtime
+- **Failover Time Limits**: Time required to switch to backup systems exceeding acceptable downtime
+- **Geographic Distribution Limits**: Performance variations based on user location relative to infrastructure
+- **Network Path Limitations**: Suboptimal routing causing increased latency between regions
+- **Peering Issues**: Problems between network providers affecting cross-network performance
+- **Transit Costs**: Expenses for bandwidth between network providers or regions
+- **CDN Cache Miss Ratios**: Percentage of requests requiring origin fetch rather than CDN serve
+- **Origin Shield Efficiency**: Effectiveness of intermediary layers protecting origin servers
+- **Load Balancer Algorithm Suitability**: How well the chosen algorithm distributes actual load
+- **Health Check Frequency**: How often health checks themselves impact available capacity
+- **Circuit Breaker Thresholds**: Whether failure thresholds are set appropriately for the workload
+- **Bulkhead Effectiveness**: Whether resource isolation prevents cascade failures
+- **Retry Storm Potential**: Whether failed requests trigger retry loops that worsen the situation
+- **Backpressure Handling**: Whether the system gracefully declines work when overloaded
+- **Load Shedding Capability**: Whether the system can reject lower-priority work to protect critical functions
+- **Graceful Degradation**: Whether non-critical features can be disabled to maintain core functionality
+- **Fallback Mechanism Effectiveness**: Whether secondary systems activate appropriately during primary failure
+- **Data Consistency During Partition**: Whether the system handles network splits correctly
+- **Split Brain Prevention**: Whether mechanisms exist to prevent conflicting primary nodes
+- **Quorum Requirements**: Whether sufficient nodes remain online to maintain consensus
+- **Leader Election Time**: How long it takes to select a new primary after failure
+- **Replay Protection**: Whether mechanisms exist to prevent processing duplicate messages
+- **Idempotency Guarantees**: Whether operations can be safely retried without side effects
+- **Ordering Guarantees**: Whether message or event ordering is preserved under load
+- **Delivery Guarantees**: Whether messages are guaranteed to be delivered at least once
+- **Exactly-once Processing**: Whether duplicate processing can be prevented under failure scenarios
+- **Message Durability**: Whether messages persist through broker or system failures
+- **Consumer Group Rebalancing**: How efficiently consumers redistribute partitions during changes
+- **Offset Management**: How well the system tracks processing progress in streams
+- **Schema Evolution**: How well the system handles changes to message or data structures
+- **Backward Compatibility**: Whether older consumers can still process newer message formats
+- **Forward Compatibility**: Whether newer consumers can still process older message formats
+- **Dead Letter Queue Handling**: How well the system handles repeatedly failing messages
+- **Poison Message Handling**: Whether the system identifies and quarantines bad messages
+- **Rate Limiting Fairness**: Whether limits are applied evenly across users or tenants
+- **Burst Handling**: Whether short-term traffic spikes are handled without affecting sustained traffic
+- **Thundering Herd Prevention**: Whether cache expiration doesn't cause simultaneous backend requests
+- **Stampede Prevention**: Whether thundering herds are prevented at the application level
+- **Circuit Breaker Half-open Behavior**: Whether test requests are allowed appropriately during recovery
+- **Fallback Response Quality**: Whether degraded responses still provide useful information
+- **Load Shedding Policies**: Which workloads are sacrificed first when resources are scarce
+- **Resource Reservation**: Whether critical functions can reserve resources against starvation
+- **Preemption Capabilities**: Whether high-priority work can interrupt low-priority work
+- **Priority Inheritance**: Whether low-priority tasks holding resources inherit high priority when needed
+- **Priority Ceiling**: Whether resource ceilings prevent priority inversion scenarios
+- **Lock Fairness**: Whether locks grant access in FIFO order or allow starvation
+- **Read-write Lock Efficiency**: Whether RW locks provide better throughput than exclusive locks
+- **Lock-free Algorithm Suitability**: Whether lock-free structures provide advantages for the workload
+- **ABA Problem Mitigation**: Whether mechanisms exist to prevent ABA issues in lock-free code
+- **Memory Reclamation Safety**: Whether lock-free memory reuse is safe from use-after-free
+- **Cache Line Alignment**: Whether data structures are aligned to avoid false sharing
+- **False Sharing Detection**: Whether tools exist to detect cache line ping-pong between threads
+- **NUMA-aware Allocation**: Whether memory is allocated on the same node as the thread using it
+- **NUMA-aware Scheduling**: Whether threads are scheduled to run on the same node as their memory
+- **Remote Memory Access Penalty**: Whether performance is measured for cross-node memory access
+- **Cache Coherency Overhead**: Whether the cost of keeping caches in sync is measured
+- **Directory-based Coherency**: Whether directory-based cache coherency protocols are used
+- **Snooping-based Coherency**: Whether bus-snooping cache coherency protocols are used
+- **Memory Consistency Models**: Whether weak or strong memory models are appropriate for the workload
+- **Atomic Operation Support**: Whether hardware provides necessary atomic primitives
+- **Transaction Memory Support**: Whether hardware or software provides transactional memory
+- **Hardware Lock Elision**: Whether hardware provides lock elision capabilities
+- **Transactional Synchronization Extensions**: Whether hardware provides TSX capabilities
+- **Restricted Transactional Memory**: Whether hardware provides RTM capabilities
+- **Hardware-assisted Checkpoints**: Whether hardware provides checkpoint/restart capabilities
+- **Memory Encryption**: Whether memory encryption features impact performance under load
+- **Secure Encrypted Virtualization**: Whether SEV features impact performance in virtualized environments
+- **Page Table Sharing**: Whether memory deduplication techniques are used and measured
+- **Transparent Page Sharing**: Whether TPS impacts performance in virtualized environments
+- **Kernel Samepage Merging**: Whether KSM impacts performance in Linux environments
+- **Memory Compression**: Whether memory compression features impact performance under load
+- **Swap Performance**: Whether swap space usage is measured and its impact understood
+- **ZRAM Usage**: Whether compressed swap in RAM is used and measured
+- **ZSWAP Usage**: Whether compressed swap caching is used and measured
+- **ZPOOL Usage**: Whether pooled storage approaches are used and measured
+- **FILESYSTEM CACHING**: Whether filesystem cache effects are measured and understood
+- **BUFFER CACHE**: Whether OS buffer cache effects on I/O performance are measured
+- **PAGE CACHE**: Whether OS page cache effects on memory performance are measured
+- **DNLC**: Whether directory name lookup cache effects are measured
+- **INODE CACHE**: Whether inode cache effects on file stat performance are measured
+- **DQUOT CACHE**: Whether disk quota cache effects are measured
+- **VFSCACHE**: Whether VFS cache effects on path lookup performance are measured
+- **BMAP CACHE**: Whether block mapping cache effects on extent allocation performance are measured
+- **RBITREE CACHE**: Whether rbtree cache effects on sorting performance are measured
+- **RADIX TREE CACHE**: Whether radix tree cache effects on IP lookup performance are measured
+- **XARRAY CACHE**: Whether xarray cache effects on sparse array performance are measured
+- **IDR CACHE**: Whether IDR cache effects on small ID allocation performance are measured
+- **XA CACHE**: Whether xa cache effects on extended attribute performance are measured
+- **BITMAP CACHE**: Whether bitmap cache effects on bit manipulation performance are measured
+- **PRIO TREE CACHE**: Whether prio tree cache effects on priority queue performance are measured
+- **RBIO CACHE**: Whether rbio cache effects on buffered I/O performance are measured
+- **EMBER CACHE**: Whether ember cache effects on memory allocation performance are measured
+- **PERCPU CACHE**: Whether percpu cache effects on per-CPU variable performance are measured
+- **NR_CPUS CACHE**: Whether nr_cpus cache effects on CPU topology performance are measured
+- **NODES CACHE**: Whether nodes cache effects on NUMA topology performance are measured
+- **DISTANCE CACHE**: Whether distance cache effects on shortest path algorithms are measured
+- **PREDS CACHE**: Whether preds cache effects on predecessor algorithms are measured
+- **SUCCS CACHE**: Whether succs cache effects on successor algorithms are measured
+- **EDGE CACHE**: Whether edge cache effects on graph algorithms are measured
+- **VERTEX CACHE**: Whether vertex cache effects on graph algorithms are measured
+- **PATH CACHE**: Whether path cache effects on pathfinding algorithms are measured
+- **STRING CACHE**: Whether string cache effects on string matching algorithms are measured
+- **INTEGER CACHE**: Whether integer cache effects on mathematical algorithms are measured
+- **FLOAT CACHE**: Whether float cache effects on floating point algorithms are measured
+- **DOUBLE CACHE**: Whether double cache effects on floating point algorithms are measured
+- **LONG DOUBLE CACHE**: Whether long double cache effects on floating point algorithms are measured
+- **POINTER CACHE**: Whether pointer cache effects on pointer arithmetic algorithms are measured
+- **FUNCTION CACHE**: Whether function cache effects on memoization algorithms are measured
+- **OBJECT CACHE**: Whether object cache effects on object creation algorithms are measured
+- **ARRAY CACHE**: Whether array cache effects on array access algorithms are measured
+- **MATRIX CACHE**: Whether matrix cache effects on matrix access algorithms are measured
+- **TENSOR CACHE**: Whether tensor cache effects on tensor access algorithms are measured
+- **GRAPH CACHE**: Whether graph cache effects on graph access algorithms are measured
+- **SET CACHE**: Whether set cache effects on set access algorithms are measured
+- **MAP CACHE**: Whether map cache effects on map access algorithms are measured
+- **TUPLE CACHE**: Whether tuple cache effects on tuple access algorithms are measured
+- **STRUCT CACHE**: Whether struct cache effects on struct access algorithms are measured
+- **UNION CACHE**: Whether union cache effects on union access algorithms are measured
+- **ENUM CACHE**: Whether enum cache effects on enum access algorithms are measured
+- **BITSET CACHE**: Whether bitset cache effects on bitset access algorithms are measured
+- **FIBONACCI HEAP CACHE**: Whether fibonacci heap cache effects on priority queue algorithms are measured
+- **BINOMIAL HEAP CACHE**: Whether binomial heap cache effects on priority queue algorithms are measured
+- **PAIRING HEAP CACHE**: Whether pairing heap cache effects on priority queue algorithms are measured
+- **LEFTIST HEAP CACHE**: Whether leftist heap cache effects on priority queue algorithms are measured
+- **SKEW HEAP CACHE**: Whether skew heap cache effects on priority queue algorithms are measured
+- **TRAPEZOID HEAP CACHE**: Whether trapezoid heap cache effects on priority queue algorithms are measured
+- **LAZY BINOMIAL HEAP CACHE**: Whether lazy binomial heap cache effects on priority queue algorithms are measured
+- **LAZY PAIRING HEAP CACHE**: Whether lazy pairing heap cache effects on priority queue algorithms are measured
+- **LAZY LEFTIST HEAP CACHE**: Whether lazy leftist heap cache effects on priority queue algorithms are measured
+- **LAZY SKEW HEAP CACHE**: Whether lazy skew heap cache effects on priority queue algorithms are measured
+- **LAZY TRAPEZOID HEAP CACHE**: Whether lazy trapezoid heap cache effects on priority queue algorithms are measured
+- **BINARY HEAP CACHE**: Whether binary heap cache effects on priority queue algorithms are measured
+- **2-3 HEAP CACHE**: Whether 2-3 heap cache effects on priority queue algorithms are measured
+- **FIBONACCI HEAP CACHE**: Whether fibonacci heap cache effects on priority queue algorithms are measured
+- **LEFTIST HEAP CACHE**: Whether leftist heap cache effects on priority queue algorithms are measured
+- **SKEW HEAP CACHE**: Whether skew heap cache effects on priority queue algorithms are measured
+- **TRAPEZOID HEAP CACHE**: Whether trapezoid heap cache effects on priority queue algorithms are measured
+- **LAZY BINOMIAL HEAP CACHE**: Whether lazy binomial heap cache effects on priority queue algorithms are measured
+- **LAZY PAIRING HEAP CACHE**: Whether lazy pairing heap cache effects on priority queue algorithms are measured
+- **LAZY LEFTIST HEAP CACHE**: Whether lazy leftist heap cache effects on priority queue algorithms are measured
+- **LAZY SKEW HEAP CACHE**: Whether lazy skew heap cache effects on priority queue algorithms are measured
+- **LAZY TRAPEZOID HEAP CACHE**: Whether lazy trapezoid heap cache effects on priority queue algorithms are measured
+- **BINARY HEAP CACHE**: Whether binary heap cache effects on priority queue algorithms are measured
+- **2-3 HEAP CACHE**: Whether 2-3 heap cache effects on priority queue algorithms are measured
+- **FIBONACCI HEAP CACHE**: Whether fibonacci heap cache effects on priority queue algorithms are measured
+- **LEFTIST HEAP CACHE**: Whether leftist heap cache effects on priority queue algorithms are measured
+- **SKEW HEAP CACHE**: Whether skew heap c

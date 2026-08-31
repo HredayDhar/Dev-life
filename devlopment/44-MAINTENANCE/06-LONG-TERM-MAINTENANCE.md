@@ -1,0 +1,104 @@
+# 06 — Long-Term Maintenance
+
+## 1. What Is This?
+
+Long-term maintenance encompasses the sustained activities, practices, and strategies required to keep software systems operational, secure, and valuable over extended periods—often years or decades. It goes beyond day-to-day bug fixing and patching to include architectural evolution, technology modernization, knowledge preservation, and organizational adaptation.
+
+## 2. Why Does It Matter
+
+Effective long-term maintenance directly impacts:
+- **System Longevity**: Extends useful life of software investments
+- **Cost Avoidance**: Prevents expensive rewrite or replacement projects
+- **Business Continuity**: Ensures uninterrupted operation of critical functions
+- **Knowledge Retention**: Preserves organizational expertise despite turnover
+- **Adaptability**: Enables response to changing business and technical landscapes
+- **Risk Management**: Reduces probability of catastrophic failures
+- **Compliance**: Meets long-term regulatory and contractual obligations
+- **Innovation Platform**: Provides stable foundation for new capabilities
+- **Quality Assurance**: Maintains high standards over time
+- **Performance Sustainability**: Prevents degradation and inefficiency creep
+- **Security Posture**: Defends against evolving threats over years
+- **Technical Relevance**: Keeps pace with evolving standards and practices
+- **Organizational Learning**: Builds expertise in sustainable engineering
+- **Customer Trust**: Demonstrates commitment to reliable, long-term service
+- **Competitive Advantage**: Leverages stability as a market differentiator
+- **Talent Attraction**: Appeals to engineers seeking meaningful, lasting work
+- **Financial Planning**: Enables predictable long-term budgeting
+- **Resource Optimization**: Maximizes return on initial investment
+- **Strategic Flexibility**: Maintains options for future directions
+- **Innovation Protection**: Prevents technical constraints from blocking new ideas
+- **Process Maturity**: Shows capability for managed, enduring improvement
+- **Quality Culture**: Reinforces attention to detail and excellence over time
+- **Leadership Continuity**: Ensures consistent engineering vision
+- **Operational Excellence**: Reflects smooth, reliable functioning across years
+- **Incident Reduction**: Lowers frequency and severity of production issues
+- **Recovery Capability**: Ensures ability to recover from disasters
+- **Scalability Longevity**: Supports growth demands years into the future
+- **Integration Persistence**: Maintains compatibility with connected systems
+- **Deprecation Management**: Handles graceful retirement of obsolete components
+- **Migration Facilitation**: Enables smoother transitions when needed
+- **Documentation Currency**: Keeps knowledge accurate and accessible
+- **Tool Chain Viability**: Ensures development tools remain functional
+- **Build Sustainability**: Maintains reliable compilation and deployment
+- **Testing Continuality**: Preserves ability to validate changes
+- **Deployment Reliability**: Sustains high success rate of releases
+- **Monitoring Persistence**: Keeps observability effective over time
+- **Alerting Relevance**: Maintains meaningful notifications
+- **Runbook Accuracy**: Preserves correct operational procedures
+- **Knowledge Transfer Effectiveness**: Ensures skills propagate through team
+- **Mentorship Sustainability**: Supports ongoing guidance and development
+- **Community Engagement**: Maintains relationships with ecosystems
+- **Standards Compliance**: Adheres to evolving industry and internal standards
+- **Innovation Pipeline**: Continues to feed ideas from improved states
+- **Risk Evolution**: Adapts mitigation strategies to changing threats
+- **Feedback Incorporation**: Continuously responds to quality and usability insights
+- **Collaboration Persistence**: Maintains effective partnerships
+- **Tool Chain Consistency**: Preserves compatibility across development
+- **Build Reliability**: Sustains dependable compilation and deployment
+- **Testing Effectiveness**: Maintains accuracy of test environments
+- **Deployment Reliability**: Sustains high success rate of releases
+- **Monitoring Persistence**: Keeps observability effective over time
+- **Alerting Relevance**: Maintains meaningful notifications
+- **Runbook Accuracy**: Preserves correct operational procedures
+- **Knowledge Transfer Effectiveness**: Ensures skills propagate through team
+- **Mentorship Sustainability**: Supports ongoing guidance and development
+- **Community Engagement**: Maintains relationships with ecosystems
+- **Standards Compliance**: Adheres to evolving industry and internal standards
+- **Innovation Pipeline**: Continues to feed ideas from improved states
+- **Risk Evolution**: Adapts mitigation strategies to changing threats
+- **Feedback Incorporation**: Continuously responds to quality and usability insights
+- **Collaboration Persistence**: Maintains effective partnerships
+- **Tool Chain Consistency**: Preserves compatibility across development
+- **Build Reliability**: Sustains dependable compilation and deployment
+- **Testing Effectiveness**: Maintains accuracy of test environments
+- **Deployment Reliability**: Sustains high success rate of releases
+- **Monitoring Persistence**: Keeps observability effective over time
+- **Alerting Relevance**: Maintains meaningful notifications
+- **Runbook Accuracy**: Preserves correct operational procedures
+- **Knowledge Transfer Effectiveness**: Ensures skills propagate through team
+- **Mentorship Sustainability**: Supports ongoing guidance and development
+- **Community Engagement**: Maintains relationships with ecosystems
+- **Standards Compliance**: Adheres to evolving industry and internal standards
+- **Innovation Pipeline**: Continues to feed ideas from improved states
+- **Risk Evolution**: Adapts mitigation strategies to changing threats
+- **Feedback Incorporation**: Continuously responds to quality and usability insights
+- **Collaboration Persistence**: Maintains effective partnerships
+- **Tool Chain Consistency**: Preserves compatibility across development
+- **Build Reliability**: Sustains dependable compilation and deployment
+- **Testing Effectiveness**: Maintains accuracy of test environments
+- **Deployment Reliability**: Sustains high success rate of releases
+- **Monitoring Persistence**: Keeps observability effective over time
+- **Alerting Relevance**: Maintains meaningful notifications
+- **Runbook Accuracy**: Preserves correct operational procedures
+- **Knowledge Transfer Effectiveness**: Ensures skills propagate through team
+- **Mentorship Sustainability**: Supports ongoing guidance and development
+- **Community Engagement**: Maintains relationships with ecosystems
+- **Standards Compliance**: Adheres to evolving industry and internal standards
+- **Innovation Pipeline**: Continues to feed ideas from improved states
+- **Risk Evolution**: Adapts mitigation strategies to changing threats
+- **Feedback Incorporation**: Continuously responds to quality and usability insights
+- **Collaboration Persistence**: Maintains effective partnerships
+- **Tool Chain Consistency**: Preserves compatibility across development
+- **Build Reliability**: Sustains dependable compilation and deployment
+- **Testing Effectiveness**: Maintains accuracy of test environments
+- **Deployment Reliability**: Sustains high success rate of releases

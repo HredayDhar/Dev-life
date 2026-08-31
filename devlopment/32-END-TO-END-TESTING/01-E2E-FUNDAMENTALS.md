@@ -1,0 +1,153 @@
+# 01-E2E-FUNDAMENTALS
+
+## 1. What Is End-to-End Testing?
+
+End-to-end (E2E) testing is a methodology used to test whether the flow of an application is performing as designed from start to finish. The purpose of end-to-end testing is to identify system dependencies and to ensure that the right information is passed between various system components and systems. E2E testing validates the integrated system as a whole, simulating real user scenarios and validating that the system under test meets business requirements and expectations.
+
+End-to-end testing treats the application as a black box and tests it from the user's perspective, ensuring that all integrated components of an application function together correctly. It verifies that the application flow behaves as expected, including interactions with databases, networks, file systems, and other external dependencies.
+
+E2E testing typically involves:
+- Testing complete user workflows from initiation to completion
+- Validating data integrity across all system boundaries
+- Testing integration points with external systems and third-party services
+- Verifying that the system behaves correctly under various conditions
+- Ensuring that UI elements function correctly and lead to expected outcomes
+- Validating that business rules are correctly implemented across the entire system
+- Testing error handling and recovery mechanisms
+- Validating performance characteristics under realistic loads
+- Ensuring security controls work correctly throughout the system
+- Verifying that the system degrades gracefully under failure conditions
+- Testing compliance with regulatory and industry standards
+- Validating that the system meets non-functional requirements (performance, scalability, usability)
+- Testing recovery and backup procedures
+- Validating audit trails and logging mechanisms
+- Testing multi-user scenarios and concurrency handling
+- Validating that system updates and migrations work correctly
+- Testing localization and internationalization aspects
+- Validating accessibility compliance
+- Testing mobile responsiveness and cross-browser compatibility
+- Verifying that API contracts are honored throughout the system
+- Testing data migration and transformation processes
+- Validating that system configurations are correctly applied
+- Testing disaster recovery procedures
+- Validating that system monitoring and alerting works correctly
+- Testing rollback procedures
+- Validating that system documentation matches actual behavior
+- Testing user training and onboarding flows
+- Validating that customer support processes work correctly
+- Testing compliance with internal policies and procedures
+- Validating that the system meets service level agreements (SLAs)
+- Testing that the system handles expected peak loads
+- Validating that the system maintains data privacy and confidentiality
+- Testing that the system properly handles user consent and preferences
+- Validating that the system correctly implements accessibility standards
+- Testing that the system works correctly with assistive technologies
+- Validating that the system properly handles errors and exceptions
+- Testing that the system provides meaningful error messages to users
+- Validating that the system logs appropriate information for debugging
+- Testing that the system recovers gracefully from transient failures
+- Validating that the system maintains consistency across distributed components
+- Testing that the system handles network partitions correctly
+- Validating that the system maintains data correctness during synchronization
+- Testing that the system properly handles time zone differences
+- Validating that the system correctly handles daylight saving time transitions
+- Testing that the system works correctly with different locale settings
+- Validating that the system properly handles character encoding
+- Testing that the system maintains data integrity during compression/decompression
+- Validating that the system correctly handles encrypted data transmission
+- Testing that the system properly manages cryptographic keys and certificates
+- Validating that the system correctly implements digital signatures
+- Testing that the system properly handles certificate revocation checking
+- Validating that the system correctly implements secure key exchange
+- Testing that the system properly handles perfect forward secrecy
+- Validating that the system correctly implements certificate pinning when appropriate
+- Testing that the system properly handles man-in-the-middle attack protection
+- Validating that the system correctly implements transport layer security
+- Testing that the system properly handles application layer security
+- Validating that the system correctly implements input validation and sanitization
+- Testing that the system properly prevents injection attacks (SQL, XSS, CSRF, etc.)
+- Validating that the system correctly implements authentication and authorization
+- Testing that the system properly handles session management and security
+- Validating that the system correctly implements password policies and storage
+- Testing that the system properly handles multi-factor authentication
+- Validating that the system correctly implements account lockout mechanisms
+- Testing that the system properly implements brute force attack protection
+- Validating that the system correctly implements rate limiting and throttling
+- Testing that the system properly handles CAPTCHA and bot protection
+- Validating that the system correctly implements secure file upload handling
+- Testing that the system properly validates file types and content
+- Validating that the system correctly implements secure file storage
+- Testing that the system properly handles file integrity checking
+- Validating that the system correctly implements secure backup procedures
+- Testing that the system properly validates backup restoration
+- Validating that the system correctly implements audit logging
+- Testing that the system properly handles log rotation and retention
+- Validating that the system correctly implements log integrity protection
+- Testing that the system properly handles log analysis and alerting
+- Validating that the system correctly implements change management procedures
+- Testing that the system properly handles configuration management
+- Validating that the system correctly implements version control
+- Testing that the system properly handles release management procedures
+- Validating that the system correctly implements rollback procedures
+- Testing that the system properly handles hotfix procedures
+- Validating that the system correctly implements patch management
+- Testing that the system properly handles dependency management
+- Validating that the system correctly implements third-party component vetting
+- Testing that the system properly handles open source license compliance
+- Validating that the system correctly implements security scanning and testing
+- Testing that the system properly handles vulnerability assessment
+- Validating that the system correctly implements penetration testing procedures
+- Testing that the system properly handles security incident response
+- Validating that the system correctly implements disaster recovery planning
+- Testing that the system properly handles business continuity planning
+- Validating that the system correctly implements data backup and recovery
+- Testing that the system properly handles data archival and retrieval
+- Validating that the system correctly implements data lifecycle management
+- Testing that the system properly handles data classification and handling
+- Validating that the system correctly implements data privacy controls
+- Testing that the system properly handles personally identifiable information (PII)
+- Validating that the system correctly implements data minimization principles
+- Testing that the system properly handles data purpose limitation
+- Validating that the system correctly implements data storage limitation
+- Testing that the system properly handles data accuracy and integrity
+- Validating that the system correctly implements data confidentiality measures
+- Testing that the system properly handles data availability assurance
+- Validating that the system correctly implements data portability measures
+- Testing that the system properly handles the right to be forgotten
+- Validating that the system correctly implements data subject access rights
+- Testing that the system properly handles data rectification requests
+- Validating that the system correctly implements data restriction of processing
+- Testing that the system properly handles data portability requests
+- Validating that the system correctly implements objection to processing
+- Testing that the system properly handles automated individual decision-making
+- Validating that the system correctly implements data protection impact assessments
+- Testing that the system properly handles data protection by design and default
+- Validating that the system correctly implements data protection officer appointment
+- Testing that the system properly handles data breach notification procedures
+- Validating that the system correctly implements data protection training
+- Testing that the system properly handles data protection audits and assessments
+- Validating that the system correctly implements data protection certifications
+- Testing that the system properly handles data protection contractual clauses
+- Validating that the system correctly implements international data transfers
+- Testing that the system properly handles adequacy decisions
+- Validating that the system correctly implements standard contractual clauses
+- Testing that the system properly handles binding corporate rules
+- Validating that the system correctly implements derogations for specific situations
+- Testing that the system properly handles transfers to international organizations
+- Validating that the system correctly implements supervisory authority cooperation
+- Testing that the system properly handles mutual assistance procedures
+- Validating that the system correctly implements consistency mechanisms
+- Testing that the system properly handles urgent procedures
+- Validating that the system correctly implements consultation procedures
+- Testing that the system properly handles prior authorization requirements
+- Validating that the system correctly implements the cooperation mechanism
+- Testing that the system properly handles the consistency mechanism
+- Validating that the system correctly implements the one-stop-shop mechanism
+- Testing that the system properly handles the lead supervisory authority concept
+- Validating that the system correctly implements the concerned supervisory authority concept
+- Testing that the system properly handles the mutual assistance procedures concept
+- Validating that the system correctly implements the consistency mechanism concept
+- Testing that the system properly handles the urgency mechanism concept
+- Validating that the system correctly implements the consultation mechanism concept
+- Testing that the system properly handles the prior authorization mechanism concept
+- Validating that the system correctly implements the cooperation mechanism concept

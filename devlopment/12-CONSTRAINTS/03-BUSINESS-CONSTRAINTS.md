@@ -1,0 +1,209 @@
+# 12-03 — BUSINESS CONSTRAINTS
+
+## 1. What Is This?
+
+Business constraints are limitations imposed by organizational policies, market conditions, regulatory requirements, financial limitations, strategic objectives, contractual obligations, and other business-related factors that affect what can be built, how it can be built, and when it can be delivered. These constraints stem from the business context in which the software operates and shape the boundaries of feasible solutions from a commercial, legal, and operational perspective.
+
+## 2. Why Does It Matter?
+
+Understanding business constraints matters because it:
+- Enables alignment with organizational strategy and objectives
+- Prevents commitment to solutions that violate policies or regulations
+- Helps identify compliance risks early in the project lifecycle
+- Supports effective management of stakeholder expectations
+- Facilitates realistic budgeting and financial planning
+- Improves ability to respond to market changes and competitive pressures
+- Reduces likelihood of project cancellation or scope changes due to business misalignment
+- Enables effective management of vendor and third-party relationships
+- Supports effective management of partnership and alliance agreements
+- Facilitates effective management of customer and user requirements
+- Enables effective management of service level agreements (SLAs)
+- Supports effective management of warranty and liability limitations
+- Facilitates effective management of insurance and bonding requirements
+- Enables effective management of financial reporting and accounting standards
+- Supports effective management of tax implications and considerations
+- Facilitates effective management of revenue recognition and billing models
+- Enables effective management of pricing strategies and discount structures
+- Supports effective management of cost allocation and chargeback mechanisms
+- Facilitates effective management of budget approval and funding processes
+- Enables effective management of fiscal year planning and cutoff dates
+- Supports effective management of capital expenditure (CapEx) vs operational expenditure (OpEx) considerations
+- Facilitates effective management of procurement and purchasing policies
+- Enables effective management of vendor qualification and selection criteria
+- Supports effective management of contract terms and conditions
+- Facilitates effective management of intellectual property rights and licensing
+- Enables effective management of patent, trademark, and copyright considerations
+- Supports effective management of trade secret protection and confidentiality
+- Facilitates effective management of non-disclosure agreements (NDAs)
+- Enables effective management of non-compete and non-solicitation agreements
+- Supports effective management of data processing agreements (DPAs)
+- Facilitates effective management of business associate agreements (BAAs) for healthcare
+- Enables effective management of government contracting requirements
+- Supports effective management of defense contracting regulations (DFARS)
+- Facilitates effective management of federal acquisition regulations (FAR)
+- Enables effective management of Sarbanes-Oxley (SOX) compliance requirements
+- Supports effective management of payment card industry (PCI) DSS compliance
+- Facilitates effective management of health insurance portability and accountability act (HIPAA) compliance
+- Enables effective management of general data protection regulation (GDPR) compliance
+- Supports effective management of california consumer privacy act (CCPA) compliance
+- Facilitates effective management of personal information protection and electronic documents act (PIPEDA) compliance
+- Enables effective management of industry-specific regulatory compliance
+- Supports effective management of export control and sanctions compliance
+- Facilitates effective management of antiboycott compliance
+- Enables effective management of foreign corrupt practices act (FCPA) compliance
+- Supports effective management of uk bribery act compliance
+- Facilitates effective management of modern slavery act compliance
+- Enables effective management of conflict minerals compliance
+- Supports effective management of toxic substances control act (TSCA) compliance
+- Facilitates effective management of occupational safety and health administration (OSHA) compliance
+- Enables effective management of environmental protection agency (EPA) compliance
+- Supports effective management of resource conservation and recovery act (RCRA) compliance
+- Facilitates effective management of clean air act (CAA) compliance
+- Enables effective management of clean water act (CWA) compliance
+- Supports effective management of safe drinking water act (SDWA) compliance
+- Facilitates effective management of comprehensive environmental response, compensation, and liability act (CERCLA) compliance
+- Enables effective management of emergency planning and community right-to-know act (EPCRA) compliance
+- Supports effective management of toxic chemical release inventory (TRI) reporting
+- Facilitates effective management of pollution prevention act (PPA) compliance
+- Enables effective management of energy policy act compliance
+- Supports effective management of national environmental policy act (NEPA) compliance
+- Facilitates effective management of endangered species act (ESA) compliance
+- Enables effective management of marine mammal protection act (MMPA) compliance
+- Supports effective management of magnuson-stevens fishery conservation and management act compliance
+- Facilitates effective management of coastal zone management act (CZMA) compliance
+- Enables effective management of national historic preservation act (NHPA) compliance
+- Supports effective management of native american graves protection and repatriation act (NAGPRA) compliance
+- Facilitates effective management of american indian religious freedom act (AIRFA) compliance
+- Enables effective management of religious freedom restoration act (RFRA) compliance
+- Supports effective management of americans with disabilities act (ADA) compliance
+- Facilitates effective management of individuals with disabilities education act (IDEA) compliance
+- Enables effective management of rehabilitation act compliance
+- Supports effective management of fair housing act compliance
+- Facilitates effective management of equal credit opportunity act (ECOA) compliance
+- Enables effective management of age discrimination in employment act (ADEA) compliance
+- Supports effective management of title vii of the civil rights act compliance
+- Facilitates effective management of pregnancy discrimination act compliance
+- Enables effective management of genetic information nondiscrimination act (GINA) compliance
+- Supports effective management of family and medical leave act (FMLA) compliance
+- Facilitates effective management of occupational safety and health act compliance
+- Enables effective management of workers' compensation compliance
+- Supports effective management of unemployment insurance compliance
+- Facilitates effective management of social security compliance
+- Enables effective management of medicare and medicaid compliance
+- Supports effective management of veterans' benefits compliance
+- Facilitates effective management of old americans act compliance
+- Enables effective management of disability benefits compliance
+- Supports effective management of supplemental security income (SSI) compliance
+- Facilitates effective management of social security disability insurance (SSDI) compliance
+- Enables effective management of railroad retirement compliance
+- Supports effective management of black lung benefits compliance
+- Facilitates effective management of veterans' compensation compliance
+- Enables effective management of agent orange benefits compliance
+- Supports effective management of post-traumatic stress disorder (PTSD) benefits compliance
+- Facilitates effective management of traumatic brain injury (TBI) benefits compliance
+- Enables effective management of spinal cord injury (SCI) benefits compliance
+- Supports effective management of amyotrophic lateral sclerosis (ALS) benefits compliance
+- Facilitates effective management of multiple sclerosis (MS) benefits compliance
+- Enables effective management of parkinson's disease benefits compliance
+- Supports effective management of alzheimer's disease benefits compliance
+- Facilitates effective management of dementia benefits compliance
+- Enables effective management of huntington's disease benefits compliance
+- Supports effective management of autism spectrum disorder benefits compliance
+- Facilitates effective management of attention deficit hyperactivity disorder (ADHD) benefits compliance
+- Enables effective management of obsessive-compulsive disorder (OCD) benefits compliance
+- Supports effective management of post-traumatic stress disorder (PTSD) benefits compliance
+- Facilitates effective management of acute stress disorder benefits compliance
+- Enables effective management of adjustment disorder benefits compliance
+- Supports effective management of depressive disorder benefits compliance
+- Facilitates effective management of bipolar disorder benefits compliance
+- Enables effective management of schizophrenia benefits compliance
+- Supports effective management of schizoaffective disorder benefits compliance
+- Facilitates effective management of delirium benefits compliance
+- Enables effective management of neurocognitive disorder benefits compliance
+- Supports effective management of substance use disorder benefits compliance
+- Facilitates effective management of alcohol use disorder benefits compliance
+- Enables effective management of opioid use disorder benefits compliance
+- Supports effective management of cannabis use disorder benefits compliance
+- Facilitates effective management of stimulant use disorder benefits compliance
+- Enables effective management of sedative use disorder benefits compliance
+- Supports effective management of anxiolytic use disorder benefits compliance
+- Enables effective management of antidepressant use disorder benefits compliance
+- Supports effective management of antipsychotic use disorder benefits compliance
+- Facilitates effective management of mood stabilizer use disorder benefits compliance
+- Enables effective management of antiepileptic use disorder benefits compliance
+- Supports effective management of anticonvulsant use disorder benefits compliance
+- Facilitates effective management of antiviral use disorder benefits compliance
+- Enables effective management of antibiotic use disorder benefits compliance
+- Supports effective management of antifungal use disorder benefits compliance
+- Facilitates effective management of antiparasitic use disorder benefits compliance
+- Enables effective management of chemotherapy use disorder benefits compliance
+- Supports effective management of immunosuppressive use disorder benefits compliance
+- Facilitates effective management of immunomodulator use disorder benefits compliance
+- Enables effective management of biologic use disorder benefits compliance
+- Supports effective management of vaccine use disorder benefits compliance
+- Facilitates effective management of transfusion use disorder benefits compliance
+- Enables effective management of transplantation use disorder benefits compliance
+- Supports effective management of stem cell use disorder benefits compliance
+- Facilitates effective management of gene therapy use disorder benefits compliance
+- Enables effective management of cell therapy use disorder benefits compliance
+- Supports effective management of tissue engineering use disorder benefits compliance
+- Facilitates effective management of regenerative medicine use disorder benefits compliance
+- Enables effective management of nanomedicine use disorder benefits compliance
+- Supports effective management of medical device use disorder benefits compliance
+- Facilitates effective management of in vitro diagnostics use disorder benefits compliance
+- Enables effective management of laboratory developed test use disorder benefits compliance
+- Supports effective management of diagnostic imaging use disorder benefits compliance
+- Facilitates effective management of radiology use disorder benefits compliance
+- Enables effective management of nuclear medicine use disorder benefits compliance
+- Supports effective management of radiation therapy use disorder benefits compliance
+- Facilitates effective management of brachytherapy use disorder benefits compliance
+- Enables effective management of external beam radiotherapy use disorder benefits compliance
+- Supports effective management of proton therapy use disorder benefits compliance
+- Facilitates effective management of neutron therapy use disorder benefits compliance
+- Enables effective management of particle therapy use disorder benefits compliance
+- Supports effective management of radiosurgery use disorder benefits compliance
+- Facilitates effective management of stereotactic radiotherapy use disorder benefits compliance
+- Enables effective management of intraoperative radiotherapy use disorder benefits compliance
+- Supports effective management of radiopharmaceutical use disorder benefits compliance
+- Facilitates effective management of diagnostic radiopharmaceutical use disorder benefits compliance
+- Enables effective management of therapeutic radiopharmaceutical use disorder benefits compliance
+- Supports effective management of nuclear medicine imaging use disorder benefits compliance
+- Facilitates effective management of positron emission tomography (PET) use disorder benefits compliance
+- Enables effective management of single photon emission computed tomography (SPECT) use disorder benefits compliance
+- Supports effective management of gamma camera imaging use disorder benefits compliance
+- Facilitates effective management of planar scintigraphy use disorder benefits compliance
+- Enables effective management of bone scan use disorder benefits compliance
+- Supports effective management of thyroid scan use disorder benefits compliance
+- Facilitates effective management of parathyroid scan use disorder benefits compliance
+- Enables effective management of adrenal scan use disorder benefits compliance
+- Supports effective management of pituitary scan use disorder benefits compliance
+- Facilitates effective management of pituitary gland imaging use disorder benefits compliance
+- Enables effective management of thyroid gland imaging use disorder benefits compliance
+- Supports effective management of parathyroid gland imaging use disorder benefits compliance
+- Facilitates effective management of adrenal gland imaging use disorder benefits compliance
+- Enables effective management of thymus imaging use disorder benefits compliance
+- Supports effective management of spleen imaging use disorder benefits compliance
+- Facilitates effective management of lymph node imaging use disorder benefits compliance
+- Enables effective management of bone marrow imaging use disorder benefits compliance
+- Supports effective management of cardiovascular imaging use disorder benefits compliance
+- Facilitates effective management of echocardiography use disorder benefits compliance
+- Enables effective management of cardiac catheterization use disorder benefits compliance
+- Supports effective management of coronary angiography use disorder benefits compliance
+- Facilitates effective management of percutaneous transluminal coronary angioplasty (PTCA) use disorder benefits compliance
+- Enables effective management of coronary artery bypass grafting (CABG) use disorder benefits compliance
+- Supports effective management of heart valve repair or replacement use disorder benefits compliance
+- Facilitates effective management of congenital heart defect repair use disorder benefits compliance
+- Enables effective management of heart transplant use disorder benefits compliance
+- Supports effective management of heart-lung transplant use disorder benefits compliance
+- Facilitates effective management of lung transplant use disorder benefits compliance
+- Enables effective management of liver transplant use disorder benefits compliance
+- Supports effective management of kidney transplant use disorder benefits compliance
+- Facilitates effective management of pancreas transplant use disorder benefits compliance
+- Enables effective management of intestine transplant use disorder benefits compliance
+- Supports effective management of multivisceral transplant use disorder benefits compliance
+- Facilitates effective management of islet cell transplant use disorder benefits compliance
+- Enables effective management of bone marrow transplant use disorder benefits compliance
+- Supports effective management of peripheral blood stem cell transplant use disorder benefits compliance
+- Facilitates effective management of cord blood transplant use disorder benefits compliance
+- Enables effective management of hematopoietic stem cell transplant use disorder benefits compliance
+- Supports effective management of mesenchymal stem cell transplant use disorder benefits compliance

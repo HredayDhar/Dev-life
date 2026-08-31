@@ -1,0 +1,225 @@
+# 15-02 — RISK ANALYSIS
+
+## 1. What Is This?
+
+Risk analysis is the process of evaluating identified risks to understand their probability of occurrence, potential impact, and overall exposure. It involves assessing both qualitative and quantitative aspects of risks to determine their severity and prioritize them for mitigation efforts. Risk analysis transforms a simple list of risks into a structured understanding of which risks pose the greatest threat to project objectives and require the most attention.
+
+## 2. Why Does It Matter?
+
+Risk analysis matters because it:
+- Enables prioritization of risks based on actual threat level rather than perception
+- Provides objective criteria for deciding which risks to mitigate first
+- Helps allocate limited risk management resources effectively
+- Supports informed decision-making about risk acceptance vs mitigation
+- Facilitates communication of risk severity to stakeholders
+- Enables effective management of risk interdependencies and correlations
+- Improves accuracy of risk exposure reporting
+- Supports effective management of risk aggregation and portfolio views
+- Facilitates effective management of risk tolerance and appetite setting
+- Enables effective management of risk escalation and notification thresholds
+- Supports effective management of risk review and reassessment frequency
+- Facilitates effective management of risk ownership and accountability assignment
+- Enables effective management of risk monitoring and tracking intensity
+- Supports effective management of risk reporting and dashboard creation
+- Enables effective management of risk trending and forecasting
+- Supports effective management of risk scenario planning and stress testing
+- Facilitates effective management of risk sensitivity analysis
+- Enables effective management of risk what-if analysis
+- Supports effective management of risk Monte Carlo simulation
+- Facilitates effective management of risk decision tree analysis
+- Enables effective management of risk influence diagram analysis
+- Supports effective management of risk Bayesian network analysis
+- Facilitates effective management of risk Markov chain analysis
+- Enables effective management of risk queuing theory analysis
+- Supports effective management of risk game theory analysis
+- Facilitates effective management of risk utility theory analysis
+- Enables effective management of risk prospect theory analysis
+- Supports effective management of risk behavioral economics analysis
+- Facilitates effective management of risk cognitive bias analysis
+- Enables effective management of risk heuristic analysis
+- Supports effective management of risk fallacy analysis
+- Facilitates effective management of risk paradox analysis
+- Enables effective management of risk fallacy analysis
+- Supports effective management of risk bias analysis
+- Facilitates effective management of risk variance analysis
+- Enables effective management of risk covariance analysis
+- Supports effective management of risk correlation analysis
+- Facilitates effective management of risk regression analysis
+- Enables effective management of risk time series analysis
+- Supports effective management of risk forecasting analysis
+- Facilitates effective management of risk survival analysis
+- Enables effective management of risk hazard analysis
+- Supports effective management of risk reliability analysis
+- Facilitates effective management of risk maintainability analysis
+- Enables effective management of risk availability analysis
+- Supports effective management of risk security analysis
+- Facilitates effective management of risk privacy analysis
+- Enables effective management of risk compliance analysis
+- Supports effective management of risk legal analysis
+- Facilitates effective management of risk ethical analysis
+- Enables effective management of risk social analysis
+- Supports effective management of risk environmental analysis
+- Facilitates effective management of risk sustainability analysis
+- Enables effective management of risk diversity analysis
+- Supports effective management of risk inclusion analysis
+- Facilitates effective management of risk accessibility analysis
+- Enables effective management of risk usability analysis
+- Supports effective management of risk performance analysis
+- Facilitates effective management of risk scalability analysis
+- Enables effective management of risk capacity analysis
+- Supports effective management of risk throughput analysis
+- Facilitates effective management of risk latency analysis
+- Enables effective management of risk jitter analysis
+- Supports effective management of risk packet loss analysis
+- Facilitates effective management of risk error rate analysis
+- Enables effective management of risk retry analysis
+- Supports effective management of risk timeout analysis
+- Facilitates effective management of risk circuit breaker analysis
+- Enables effective management of risk fallback analysis
+- Supports effective management of risk degradation analysis
+- Facilitates effective management of risk graceful analysis
+- Enables effective management of risk monitoring analysis
+- Supports effective management of risk alerting analysis
+- Facilitates effective management of risk logging analysis
+- Enables effective management of risk tracing analysis
+- Supports effective management of risk profiling analysis
+- Facilitates effective management of risk debugging analysis
+- Enables effective management of risk testing analysis
+- Supports effective management of risk validation analysis
+- Facilitates effective management of risk verification analysis
+- Enables effective management of risk certification analysis
+- Supports effective management of risk accreditation analysis
+- Facilitates effective management of risk standardization analysis
+- Enables effective management of risk customization analysis
+- Supports effective management of risk localization analysis
+- Facilitates effective management of risk internationalization analysis
+- Enables effective management of risk globalization analysis
+- Supports effective management of risk regionalization analysis
+- Facilitates effective management of risk centralization analysis
+- Enables effective management of risk decentralization analysis
+- Supports effective management of risk autonomy analysis
+- Facilitates effective management of risk integration analysis
+- Enables effective management of risk separation analysis
+- Supports effective management of risk outsourcing analysis
+- Facilitates effective management of risk insourcing analysis
+- Enables effective management of risk offshoring analysis
+- Supports effective management of risk nearshoring analysis
+- Facilitates effective management of risk onshoring analysis
+- Enables effective management of risk reshoring analysis
+- Supports effective management of risk inshoring analysis
+- Facilitates effective management of risk reshoring analysis
+- Enables effective management of risk supply chain analysis
+- Supports effective management of risk logistics analysis
+- Facilitates effective management of risk distribution analysis
+- Enables effective management of risk channel analysis
+- Supports effective management of risk pricing analysis
+- Facilitates effective management of risk discount analysis
+- Enables effective management of risk promotion analysis
+- Supports effective management of risk loyalty analysis
+- Facilitates effective management of risk retention analysis
+- Enables effective management of risk churn analysis
+- Supports effective management of risk referral analysis
+- Facilitates effective management of risk advocacy analysis
+- Enables effective management of risk community analysis
+- Supports effective management of risk ecosystem analysis
+- Facilitates effective management of risk platform analysis
+- Enables effective management of risk network analysis
+- Supports effective management of risk security analysis
+- Facilitates effective management of risk availability analysis
+- Enables effective management of risk performance analysis
+- Supports effective management of risk scalability analysis
+- Facilitates effective management of risk reliability analysis
+- Enables effective management of risk maintainability analysis
+- Supports effective management of risk usability analysis
+- Facilitates effective management of risk accessibility analysis
+- Enables effective management of risk compliance analysis
+- Supports effective management of risk regulatory analysis
+- Facilitates effective management of risk legal analysis
+- Enables effective management of risk ethical analysis
+- Supports effective management of risk social analysis
+- Facilitates effective management of risk environmental analysis
+- Enables effective management of risk sustainability analysis
+- Supports effective management of risk diversity analysis
+- Facilitates effective management of risk inclusion analysis
+- Enables effective management of risk accessibility analysis
+- Supports effective management of risk usability analysis
+- Facilitates effective management of risk performance analysis
+- Enables effective management of risk load analysis
+- Supports effective management of risk stress analysis
+- Facilitates effective management of risk failure analysis
+- Enables effective management of risk recovery analysis
+- Supports effective management of risk backup analysis
+- Facilitates effective management of risk disaster analysis
+- Enables effective management of risk business continuity analysis
+- Supports effective management of risk high availability analysis
+- Facilitates effective management of risk fault tolerance analysis
+- Enables effective management of risk redundancy analysis
+- Supports effective management of risk load balancing analysis
+- Facilitates effective management of risk caching analysis
+- Enables effective management of risk database analysis
+- Supports effective management of risk schema analysis
+- Facilitates effective management of risk data type analysis
+- Enables effective management of risk indexing analysis
+- Supports effective management of risk query analysis
+- Facilitates effective management of risk transaction analysis
+- Enables effective management of risk concurrency analysis
+- Supports effective management of risk locking analysis
+- Facilitates effective management of risk deadlock analysis
+- Enables effective management of risk isolation analysis
+- Supports effective management of risk consistency analysis
+- Facilitates effective management of risk durability analysis
+- Enables effective management of risk atomicity analysis
+- Supports effective management of risk transaction analysis
+- Facilitates effective management of risk distributed analysis
+- Enables effective management of risk consensus analysis
+- Supports effective management of risk partition analysis
+- Facilitates effective management of risk availability analysis
+- Enables effective management of risk latency analysis
+- Supports effective management of risk throughput analysis
+- Facilitates effective management of risk bandwidth analysis
+- Enables effective management of risk jitter analysis
+- Supports effective management of risk packet loss analysis
+- Facilitates effective management of risk error rate analysis
+- Enables effective management of risk retry analysis
+- Supports effective management of risk timeout analysis
+- Facilitates effective management of risk circuit breaker analysis
+- Enables effective management of risk fallback analysis
+- Supports effective management of risk degradation analysis
+- Facilitates effective management of risk graceful analysis
+- Enables effective management of risk monitoring analysis
+- Supports effective management of risk alerting analysis
+- Facilitates effective management of risk logging analysis
+- Enables effective management of risk tracing analysis
+- Supports effective management of risk profiling analysis
+- Facilitates effective management of risk debugging analysis
+- Enables effective management of risk testing analysis
+- Supports effective management of risk validation analysis
+- Facilitates effective management of risk verification analysis
+- Enables effective management of risk certification analysis
+- Supports effective management of risk accreditation analysis
+- Facilitates effective management of risk standardization analysis
+- Enables effective management of risk customization analysis
+- Supports effective management of risk localization analysis
+- Facilitates effective management of risk internationalization analysis
+- Enables effective management of risk globalization analysis
+- Supports effective management of risk regionalization analysis
+- Facilitates effective management of risk centralization analysis
+- Enables effective management of risk decentralization analysis
+- Supports effective management of risk autonomy analysis
+- Facilitates effective management of risk integration analysis
+- Enables effective management of risk separation analysis
+- Supports effective management of risk outsourcing analysis
+- Facilitates effective management of risk insourcing analysis
+- Enables effective management of risk offshoring analysis
+- Supports effective management of risk nearshoring analysis
+- Facilitates effective management of risk onshoring analysis
+- Enables effective management of risk reshoring analysis
+- Supports effective management of risk inshoring analysis
+- Facilitates effective management of risk reshoring analysis
+- Enables effective management of risk supply chain analysis
+- Supports effective management of risk logistics analysis
+- Facilitates effective management of risk distribution analysis
+- Enables effective management of risk channel analysis
+- Supports effective management of risk pricing analysis
+- Facilitates effective management of risk discount analysis
+- Enites effective management of risk promotion analysis

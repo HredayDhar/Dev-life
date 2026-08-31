@@ -1,0 +1,156 @@
+# 01 — Engineering Judgment
+
+## 1. What Is This?
+
+Engineering judgment is the ability to make sound technical decisions based on experience, knowledge, and critical thinking, especially when faced with incomplete information, competing priorities, or ambiguous requirements. It involves weighing trade-offs, anticipating consequences, and choosing solutions that balance technical excellence with business needs, rather than simply following rules or patterns blindly.
+
+## 2. Why Does It Matter
+
+Strong engineering judgment directly impacts:
+- **Decision Quality**: Leads to better technical choices that serve both immediate and long-term needs
+- **Resource Efficiency**: Prevents over-engineering or under-engineering solutions
+- **Risk Management**: Helps identify and mitigate potential problems before they materialize
+- **Team Trust**: Builds confidence in technical leadership and decision-making
+- **Adaptability**: Enables effective responses to unique situations that don't fit standard patterns
+- **Innovation Balance**: Strikes the right chord between trying new things and relying on proven approaches
+- **Technical Debt Control**: Knows when to take on debt strategically and when to pay it down
+- **Stakeholder Communication**: Explains technical decisions in business terms that non-engineers can understand
+- **Mentoring Value**: Provides a framework for teaching junior engineers how to think critically
+- **Crisis Response**: Guides effective action during incidents when standard procedures may not apply
+- **Prioritization Skills**: Helps determine what truly matters in a sea of competing requests
+- **Quality Focus**: Maintains standards while being pragmatic about what's "good enough"
+- **Learning Orientation**: Treats every decision as an opportunity to refine judgment
+- **Context Awareness**: Considers organizational, team, and project-specific factors
+- **Future-Proofing**: Thinks beyond immediate solutions to long-term maintainability
+- **Simplicity Preference**: Favors simpler solutions when they adequately meet requirements
+- **Change Anticipation**: Considers how decisions might need to evolve over time
+- **Dependency Understanding**: Grasps the full implications of technical choices
+- **Error Tolerance**: Builds systems that can handle failures gracefully
+- **Performance Awareness**: Balances speed, resource usage, and user experience
+- **Security Mindset**: Integrates protection considerations into all technical decisions
+- **Compliance Sensitivity**: Recognizes when regulatory requirements constrain options
+- **Scalability Foresight**: Plans for growth without overbuilding for hypothetical future needs
+- **Maintainability Focus**: Chooses solutions that will be easy to understand and modify
+- **Team Capability Matching**: Aligns decisions with the skills and experience available
+- **Urgency Assessment**: Distinguishes between true emergencies and things that can wait
+- **Measurement Importance**: Knows what to measure to evaluate decisions after the fact
+- **Feedback Integration**: Uses outcomes to improve future judgment
+- **Bias Recognition**: Identifies personal preferences that might cloud objective analysis
+- **Stakeholder Balancing**: Weighs needs of users, business, support, and other engineering teams
+- **Innovation Timing**: Knows when to adopt new technologies and when to wait
+- **Refactoring Judgment**: Decides when code改善 is worth the effort and risk
+- **Technical Specification**: Determines the right level of detail for architectural guidance
+- **Prototype Decisions**: Chooses when to build throwaway explorations vs. production foundations
+- **Testing Strategy**: Selects appropriate testing approaches based on risk and value
+- **Monitoring Level**: Decides what needs to be observed and alerted on
+- **Documentation Need**: Judges what explanations will be valuable for future maintainers
+- **Tool Selection**: Picks technologies that fit the team, problem, and organizational context
+- **Process Adaptation**: Modifies standard practices to fit unique situations effectively
+- **Performance vs. Features**: Balances delivering capabilities with ensuring they work well
+- **UI/UX Trade-offs**: Weighs visual appeal against usability and development effort
+- **API Design Judgment**: Creates interfaces that are both useful and maintainable
+- **Data Modeling Choices**: Selects representations that fit access patterns and evolution needs
+- **Algorithm Selection**: Chooses solutions based on actual data characteristics, not worst-case theory
+- **Infrastructure Decisions**: Choices**: Picks deployment targets that match operational capabilities
+- **Vendor Evaluation**: Assesses third-party solutions beyond feature checklists
+- **Open Source Judgment**: Determines when community software is a safe bet
+- **Build vs. Buy**: Weighs custom development against acquiring existing solutions
+- **Technical Presentation**: Explains complex ideas appropriately for different audiences
+- **Meeting Facilitation**: Guides technical discussions toward productive outcomes
+- **Conflict Resolution**: Helps teams navigate disagreements about technical approaches
+- **Estimation Calibration**: Improves prediction accuracy through experience and reflection
+- **Learning from Mistakes**: Uses poor decisions as data to refine future judgment
+- **Success Analysis**: Understands why good choices worked to replicate the reasoning
+- **Pattern Recognition**: Sees familiar structures in seemingly unique problems
+- **First Principles Thinking**: Reasoning from fundamentals when analogies fail
+- **Analogy Application**: Applies lessons from similar domains when appropriate
+- **Extreme Case Testing**: Considers how decisions hold up under unusual conditions
+- **Reversibility Preference**: Favors choices that can be changed if needed
+- **Pilot Approach**: Tests decisions on a small scale before full commitment
+- **Continuous Validation**: Checks assumptions throughout implementation, not just upfront
+- **Exit Strategy Planning**: Considers how to unwind decisions if they prove problematic
+- **Opportunity Cost Awareness**: Recognizes what is forgone by choosing one option
+- **Incremental Improvement**: Favors small, safe steps over large, risky changes
+- **Defensive Skepticism**: Questions assumptions and claims that seem too good to be true
+- **Optimistic Realism**: Believes in improvement while acknowledging constraints
+- **Historical Learning**: Applies lessons from past similar decisions
+- **Cross-Domain Insight**: Applies knowledge from unrelated areas when relevant
+- **Interdisciplinary Communication**: Translates between technical and non-technical perspectives
+- **Ethical Consideration**: Weighs moral implications of technical choices
+- **Environmental Impact**: Considers resource efficiency and sustainability
+- **Social Responsibility**: Reflects on how technology affects people and communities
+- **Long-Term Vision**: Aligns decisions with where the organization aims to go
+- **Legacy System Respect**: Works effectively within existing constraints while improving them
+- **Greenfield Prudence**: Applies restraint even when starting from scratch
+- **Crisis Judgment**: Maintains clarity and sound reasoning during high-pressure situations
+- **Celebration Restraint**: Avoids claiming victory before verifying results
+- **Humility in Uncertainty**: Acknowledges when more information is needed
+- **Decisiveness**: Makes timely choices when sufficient information exists
+- **Consent Building**: Brings stakeholders along with the reasoning behind choices
+- **Implementation Follow-Through**: Ensures decisions are carried out as intended
+- **Result Verification**: Checks that outcomes match expectations
+- **Lesson Documentation**: Records what was learned for future reference
+- **Judgment Sharing**: Teaches others how to approach similar decisions
+- **Mentoring Opportunity**: Uses decision processes to develop junior engineers
+- **Team Judgment Growth**: Helps others improve their decision-making abilities
+- **Organizational Wisdom**: Contributes to collective institutional knowledge
+- **Leadership Multiplication**: Enables others to make sound technical judgments
+- **Continuous Refinement**: Treats judgment as a skill to be constantly improved
+- **Self-Awareness**: Knows personal strengths, weaknesses, and blind spots
+- **Feedback Seeking**: Actively seeks input on decision quality from others
+- **Mistake Ownership**: Takes responsibility for poor choices and their consequences
+- **Success Sharing**: Credits others and circumstances that contributed to good outcomes
+- **Bias Mitigation**: Actively works to reduce the influence of personal preferences
+- **Perspective Taking**: Actively considers viewpoints different from one's own
+- **Decision Journaling**: Records reasoning processes for later review
+- **Pre-Mortem Analysis**: Imagines how decisions might fail before committing
+- **Post-Mortem Learning**: Extracts wisdom from both successes and failures
+- **Peer Consultation**: Seeks advice from others with relevant experience
+- **Expertise Recognition**: Knows when to defer to those with deeper knowledge
+- **Novice Mindset**: Remembers what it was like to lack current understanding
+- **Teaching Ability**: Explains judgment processes in ways others can learn from
+- **Patience Development**: Allows time for complex decisions to mature
+- **Urgent Action Balance**: Knows when to decide quickly vs. when to wait
+- **Energy Management**: Judges decision importance relative to effort required
+- **Focus Maintenance**: Prevents distraction from core decision factors
+- **Detail Orientation**: Knows when to dive into specifics vs. stay at high level
+- **Systems Thinking**: Considers how changes affect the whole, not just parts
+- **Emergence Awareness**: Anticipates unintended consequences from interactions
+- **Adaptation Readiness**: Prepares to change course when conditions shift
+- **Resilience Building**: Learns from decisions that didn't work out as expected
+- **Hopeful Realism**: Maintains optimism while preparing for challenges
+- **Joy in Problem-Solving**: Finds satisfaction in working through difficult choices
+- **Peaceful Discourse**: Maintains collegiality during technical disagreements
+- **Justice in Allocation**: Strives for fair distribution of technical burdens and recognition
+- **Truth-Seeking**: Prioritizes understanding what's actually happening over what's wished
+- **Wisdom Accumulation**: Treats experience as raw material for better judgment
+- **Courage in Uncertainty**: Makes decisions despite incomplete information
+- **Resilience in Adversity**: Recovers well from decisions that had negative outcomes
+- **Perseverance in Complexity**: Sticks with challenging problems until clarity emerges
+- **Integrity in Reasoning**: Applies consistent principles across similar situations
+- **Compassionate Leadership**: Considers the human impact of technical choices
+- **Forgiveness of Past Errors**: Learns from mistakes without dwelling on blame
+- **Gratitude for Experience**: Values the lessons learned through both success and failure
+- **Humility in Expertise**: Recognizes that judgment is always improvable
+- **Service Mindset**: Uses judgment to help others and the organization succeed
+- **Leadership Example**: Models how to approach difficult technical choices
+- **Collaborative Judgment**: Seeks the best outcome rather than individual victory
+- **Communication Clarity**: Explains reasoning transparently to build trust
+- **Conflict Transformation**: Turns technical disagreements into better solutions
+- **Boundary Setting**: Knows what decisions truly require judgment vs. can be standardized
+- **Self-Care in Judgment**: Maintains mental clarity for effective decision-making
+- **Growth Mindset in Judgment**: Treats each decision as a chance to get better at deciding
+- **Learning Orientation in Judgment**: Continuously refines how to make good choices
+- **Curiosity in Judgment**: Questions assumptions and explores alternative approaches
+- **Wonder Preservation**: Maintains fascination with the complexity of technical decisions
+- **Imagination in Judgment**: Envisions multiple ways to approach problems
+- **Problem-Solving in Judgment**: Applies creativity to decision challenges
+- **Critical Thinking in Judgment**: Applies rigorous analysis to choice evaluation
+- **Creative Judgment**: Values novel approaches that still meet requirements
+- **Aesthetic Judgment**: Appreciates elegance and simplicity in technical solutions
+- **Humor in Judgment**: Uses wit appropriately to ease decision-making tension
+- **Playfulness in Judgment**: Approaches some decisions with experimental spirit
+- **Spirituality in Judgment**: Considers deeper purpose and meaning in technical work
+- **Mindfulness in Judgment**: Stays present and focused during decision processes
+- **Contemplation in Judgment**: Reflects deeply on choice implications and values
+- **Wisdom Seeking in Judgment**: Pursues insight into what makes judgment truly valuable

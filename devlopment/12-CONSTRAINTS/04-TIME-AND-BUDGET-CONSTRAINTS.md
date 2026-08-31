@@ -1,0 +1,107 @@
+# 12-04 — TIME AND BUDGET CONSTRAINTS
+
+## 1. What Is This?
+
+Time and budget constraints are the limitations imposed by project schedules, deadlines, funding availability, resource allocation, and financial boundaries that affect when work can be completed and how much can be invested in software development efforts. These interconnected constraints represent the iron triangle of project management where scope, time, and cost must be balanced to achieve project success.
+
+## 2. Why Does It Matter?
+
+Understanding time and budget constraints matters because it:
+- Enables realistic project planning and estimation
+- Prevents commitment to infeasible schedules or budgets
+- Helps identify scheduling risks and resource conflicts early
+- Supports effective management of project milestones and deliverables
+- Facilitates critical path identification and management
+- Improves ability to respond to schedule changes and delays
+- Reduces likelihood of project failure due to unrealistic timelines
+- Enables effective management of resource leveling and allocation
+- Supports effective management of overtime and burnout prevention
+- Facilitates effective management of vacation and time-off planning
+- Enables effective management of holiday and observance scheduling
+- Supports effective management of seasonal work patterns
+- Facilitates effective management of fiscal year budget cycles
+- Enables effective management of quarterly budget planning and review
+- Supports effective management of monthly cash flow management
+- Facilitates effective management of weekly resource allocation
+- Enables effective management of daily task planning and tracking
+- Supports effective management of time boxing and iteration planning
+- Facilitates effective management of sprint planning and execution
+- Enables effective management of Kanban flow and WIP limits
+- Supports effective management of Scrum ceremonies and events
+- Facilitates effective management of retrospective and improvement cycles
+- Enables effective management of technical debt allocation within sprints
+- Supports effective management of spike and research time allocation
+- Facilitates effective management of refactoring and improvement time
+- Enables effective management of testing and quality assurance time
+- Supports effective management of documentation and knowledge transfer time
+- Facilitates effective management of training and onboarding time
+- Enables effective management of meetings and communication overhead
+- Supports effective management of administrative overhead and bureaucracy
+- Facilitates effective management of travel and conference time
+- Enables effective management of holidays and company-wide shutdowns
+- Supports effective management of emergency response and incident resolution time
+- Facilitates effective management of change control and approval processes
+- Enables effective management of release planning and deployment windows
+- Supports effective management of maintenance and support scheduling
+- Facilitates effective management of upgrade and migration planning
+- Enables effective management of end-of-life and retirement planning
+- Supports effective management of contract renewal and extension timing
+- Facilitates effective management of vendor and service level agreement timing
+- Enables effective management of software license renewal and compliance
+- Supports effective management of patent filing and prosecution timing
+- Facilitates effective management of trademark registration and maintenance
+- Enables effective management of regulatory submission and approval timelines
+- Supports effective management of clinical trial and study timelines
+- Facilitates effective management of product launch and market timing
+- Enables effective management of seasonal demand and capacity planning
+- Supports effective management of holiday shopping and peak period preparation
+- Facilitates effective management of back-to-school and educational purchasing cycles
+- Enables effective management of tax season and financial reporting deadlines
+- Supports effective management of end-of-year financial close and audits
+- Facilitates effective management of grant application and funding cycles
+- Enables effective management of investment round timing and expectations
+- Supports effective management of IPO and public offering preparation
+- Facilitates effective management of acquisition and divestiture timing
+- Enables effective management of merger and integration planning
+- Supports effective management of joint venture and partnership establishment
+- Facilitates effective management of strategic initiative timing and sequencing
+- Enables effective management of research and development tax credit timing
+- Supports effective management of innovation pipeline and portfolio management
+- Facilitates effective management of technology roadmap execution
+- Enables effective management of product lifecycle management (PLM)
+- Supports effective management of end-of-life (EOL) and end-of-service (EOS) planning
+- Facilitates effective management of legacy system sunset and migration
+- Enables effective management of data migration and conversion timing
+- Supports effective management of database upgrade and patching schedules
+- Facilitates effective management of operating system update cycles
+- Enables effective management of firmware and BIOS update timing
+- Supports effective management of hardware refresh and replacement schedules
+- Facilitates effective management of network equipment upgrade planning
+- Enables effective management of server and data center maintenance windows
+- Supports effective management of storage array and SAN maintenance
+- Facilitates effective management of backup and verification testing schedules
+- Enables effective management of disaster recovery testing and drills
+- Supports effective management of business continuity plan testing
+- Facilitates effective management of high availability clustering and failover
+- Enables effective management of load balancing and traffic distribution
+- Supports effective management of content delivery network (CDN) configuration
+- Facilitates effective management of SSL/TLS certificate renewal and management
+- Enables effective management of domain name registration and renewal
+- Supports effective management of DNS management and propagation delays
+- Facilitates effective management of IP address allocation and subnet planning
+- Enables effective management of VLAN and network segmentation timing
+- Supports effective management of firewall rule updates and policy changes
+- Facilitates effective management of intrusion detection and prevention signature updates
+- Enables effective management of antivirus and malware definition updates
+- Supports effective management of patch management and vulnerability remediation
+- Facilitates effective management of zero-day exploit response timing
+- Enables effective management of security incident response and containment
+- Supports effective management of forensic investigation and evidence preservation
+- Facilitates effective management of regulatory audit and examination preparation
+- Enables effective management of financial audit and statement preparation
+- Supports effective management of tax preparation and filing deadlines
+- Facilitates effective management of SEC reporting and public company compliance
+- Enables effective management of GAAP and IFRS accounting standard changes
+- Supports effective management of internal control testing and documentation
+- Facilitates effective management of SOX 404 control testing and assessment
+- Enables effective management of control self-assessment (CSA) programs

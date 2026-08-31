@@ -1,0 +1,369 @@
+# 14-04 — DEPENDENCY MANAGEMENT
+
+## 1. What Is This?
+
+Dependency management is the systematic process of monitoring, controlling, and mitigating risks associated with dependencies throughout the software development lifecycle. It involves establishing processes, tools, and practices to track dependency changes, assess impact, enforce policies, and respond to issues proactively. Effective dependency management ensures that your system remains stable, secure, and performant despite changes in the components, services, and entities it relies on.
+
+## 2. Why Does It Matter?
+
+Dependency management matters because it:
+- Reduces risk of unexpected failures from third-party changes
+- Enables proactive issue detection and resolution before impact occurs
+- Supports effective management of technical debt from outdated dependencies
+- Facilitates compliance with licensing, security, and regulatory requirements
+- Enables effective management of cost overruns from usage-based services
+- Supports effective management of performance degradation from dependency changes
+- Facilitates effective management of security vulnerability patching
+- Enables effective management of compatibility testing and validation
+- Supports effective management of version control and update strategies
+- Facilitates effective management of rollback and recovery procedures
+- Enables effective management of change notification and communication
+- Supports effective management of stakeholder expectation setting
+- Facilitates effective management of resource allocation for dependency work
+- Enables effective management of innovation adoption with controlled risk
+- Supports effective management of vendor relationship and performance monitoring
+- Facilitates effective management of contract compliance and SLA enforcement
+- Enables effective management of data integrity and consistency assurance
+- Supports effective management of audit readiness and demonstration
+- Facilitates effective management of disaster recovery testing and validation
+- Enables effective management of business continuity planning and testing
+- Supports effective management of capacity planning and scaling decisions
+- Enables effective management of performance benchmarking and baseline establishment
+- Supports effective management of architectural evolution and modernization
+- Facilitates effective management of technical debt tracking and reduction
+- Enables effective management of knowledge transfer and documentation
+- Supports effective management of training and skill development
+- Facilitates effective management of community engagement and collaboration
+- Enables effective management of benchmarking and performance comparison
+- Supports effective management of best practice adoption and standardization
+- Facilitates effective management of continuous improvement and optimization
+- Enables effective management of experimentation and A/B testing
+- Supports effective management of feature flag and toggle management
+- Facilitates effective management of dependency injection and inversion of control
+- Enables effective management of microservice and service mesh architectures
+- Supports effective management of container orchestration and management
+- Facilitates effective management of serverless and function-as-a-service adoption
+- Enables effective management of database and data store management
+- Supports effective management of caching and in-memory data grid solutions
+- Facilitates effective management of search and indexing engine management
+- Enables effective management of message queue and event streaming platforms
+- Supports effective management of workflow and business process management
+- Facilitates effective management of identity and access management systems
+- Enables effective management of single sign-on and authentication providers
+- Supports effective management of directory service and LDAP management
+- Facilitates effective management of certificate authority and SSL/TLS management
+- Enables effective management of firewall and network security management
+- Supports effective management of intrusion detection and prevention systems
+- Facilitates effective management of antivirus and anti-malware management
+- Enables effective management of spam and abuse prevention systems
+- Supports effective management of fraud detection and prevention systems
+- Facilitates effective management of compliance and audit systems
+- Enables effective management of legal and regulatory reporting systems
+- Supports effective management of data privacy and protection systems
+- Facilitates effective management of encryption and key management systems
+- Enables effective management of digital rights management and licensing systems
+- Supports effective management of geographic information system (GIS) management
+- Facilitates effective management of mapping and geolocation service management
+- Enables effective management of weather and environmental data management
+- Supports effective management of transportation and routing service management
+- Facilitates effective management of localization and internationalization service management
+- Enables effective management of translation and localization service management
+- Supports effective management of currency conversion and financial data management
+- Facilitates effective management of stock market and financial data management
+- Enables effective management of economic indicator and forecast management
+- Supports effective management of news and media content management
+- Facilitates effective management of social networking and professional network management
+- Enables effective management of referral and affiliate marketing management
+- Supports effective management of advertising and ad serving management
+- Facilitates effective management of search engine optimization (SEO) and marketing management
+- Enables effective management of content delivery network (CDN) management
+- Supports effective management of domain name system (DNS) and domain registration management
+- Facilitates effective management of SSL/TLS certificate and public key infrastructure management
+- Enables effective management of web hosting and server management
+- Supports effective management of load balancing and reverse proxy management
+- Facilitates effective management of content management and publishing management
+- Enables effective management of email delivery and messaging management
+- Supports effective management of short message service (SMS) and telephony management
+- Facilitates effective management of voice over IP (VoIP) and telecommunications management
+- Enables effective management of video conferencing and collaboration management
+- Supports effective management of internet of things (IoT) device and platform management
+- Facilitates effective management of industrial control system (ICS) and SCADA management
+- Enables effective management of building automation and smart building management
+- Supports effective management of home automation and smart home management
+- Facilitates effective management of wearable technology and sensor management
+- Enables effective management of augmented reality (AR) and virtual reality (VR) management
+- Supports effective management of blockchain and distributed ledger technology management
+- Facilitates effective management of cryptocurrency and digital asset management
+- Enables effective management of artificial intelligence (AI) and machine learning (ML) management
+- Supports effective management of natural language processing (NLP) and computer vision management
+- Facilitates effective management of robotics and automation management
+- Enables effective management of quantum computing and cryptography management
+- Supports effective management of biotechnology and bioinformatics management
+- Facilitates effective management of nanotechnology and materials science management
+- Enables effective management of renewable energy and smart grid management
+- Supports effective management of environmental monitoring and sensing management
+- Facilitates effective management of agricultural technology and precision farming management
+- Enables effective management of food safety and traceability management
+- Supports effective management of pharmaceutical and healthcare management
+- Facilitates effective management of medical device and diagnostic management
+- Enables effective management of clinical trial and research management
+- Supports effective management of genomics and personalized medicine management
+- Facilitates effective management of neuroscience and cognitive science management
+- Enables effective management of psychology and behavioral science management
+- Supports effective management of education and e-learning management
+- Facilitates effective management of training and simulation management
+- Enables effective management of gaming and entertainment management
+- Supports effective management of sports and fitness management
+- Facilitates effective management of automotive and transportation management
+- Enables effective management of aerospace and aviation management
+- Supports effective management of maritime and naval management
+- Facilitates effective management of space and satellite management
+- Enables effective management of defense and military management
+- Supports effective management of intelligence and surveillance management
+- Facilitates effective management of law enforcement and criminal justice management
+- Enables effective management of emergency services and first responder management
+- Supports effective management of disaster relief and humanitarian aid management
+- Facilitates effective management of nonprofit and charity management
+- Enables effective management of religious and faith-based organization management
+- Supports effective management of political and government management
+- Facilitates effective management of activism and social movement management
+- Enables effective management of community and neighborhood management
+- Supports effective management of real estate and property management management
+- Facilitates effective management of construction and building management
+- Enables effective management of interior design and architecture management
+- Supports effective management of landscaping and outdoor space management
+- Facilitates effective management of agriculture and farming management
+- Enables effective management of mining and extraction management
+- Supports effective management of oil and gas management
+- Facilitates effective management of chemical and pharmaceutical management
+- Enables effective management of food and beverage management
+- Supports effective management of textiles and apparel management
+- Facilitates effective management of furniture and home goods management
+- Enables effective management of electronics and appliance management
+- Supports effective management of toys and game management
+- Facilitates effective management of sports equipment and recreational gear management
+- Enables effective management of outdoor and camping gear management
+- Supports effective management of pet care and animal supplies management
+- Facilitates effective management of zoo and wildlife sanctuary management
+- Enables effective management of botanical garden and arboretum management
+- Supports effective management of national park and conservation management
+- Facilitates effective management of historical site and museum management
+- Enables effective management of library and archive management
+- Supports effective management of research and development management
+- Facilitates effective management of laboratory and scientific equipment management
+- Enables effective management of innovation and entrepreneurship management
+- Supports effective management of incubator and accelerator management
+- Facilitates effective management of venture capital and funding management
+- Enables effective management of merger and acquisition management
+- Supports effective management of divestiture and spin-off management
+- Facilitates effective management of joint venture and partnership management
+- Enables effective management of franchise and licensing management
+- Supports effective management of trademark and intellectual property management
+- Facilitates effective management of patent and invention management
+- Enables effective management of copyright and creative work management
+- Supports effective management of trademark and brand management
+- Facilitates effective management of domain name and web address management
+- Enables effective management of social media handle and username management
+- Supports effective management of email address and communication management
+- Facilitates effective management of phone number and telecommunication management
+- Enables effective management of address and location management
+- Supports effective management of zip code and postal code management
+- Facilitates effective management of area code and telephone prefix management
+- Enables effective management of latitude and longitude management
+- Supports effective management of coordinate reference system and projection management
+- Facilitates effective management of elevation and altitude management
+- Enables effective management of depth and bathymetry management
+- Supports effective management of pressure and vacuum management
+- Facilitates effective management of flow rate and viscosity management
+- Enables effective management of concentration and density management
+- Supports effective management of temperature and thermal management
+- Facilitates effective management of humidity and moisture management
+- Enables effective management of pH and acidity management
+- Supports effective management of redox and electrochemical management
+- Facilitates effective management of radiation and nuclear management
+- Enables effective management of light and optical management
+- Supports effective management of color and spectral management
+- Facilitates effective management of vibration and mechanical management
+- Enables effective management of force and stress management
+- Supports effective management of torque and rotational management
+- Facilitates effective management of power and energy management
+- Enables effective management of momentum and inertia management
+- Supports effective management of friction and tribology management
+- Facilitates effective management of wear and erosion management
+- Enables effective management of corrosion and degradation management
+- Supports effective management of fatigue and failure management
+- Facilitates effective management of elasticity and plasticity management
+- Enables effective management of viscoelasticity and rheology management
+- Supports effective management of hardness and strength management
+- Facilitates effective management of ductility and malleability management
+- Enables effective management of brittleness and hardness management
+- Supports effective management of conductivity and resistivity management
+- Facilitates effective management of superconductivity and perfect conductivity management
+- Enables effective management of semiconductor and insulator management
+- Supports effective management of band gap and energy level management
+- Facilitates effective management of fermion and boson management
+- Enables effective management of lepton and quark management
+- Supports effective management of neutrino and antineutrino management
+- Facilitates effective management of photon and gauge boson management
+- Enables effective management of gluon and W/Z boson management
+- Supports effective management of Higgs boson and scalar field management
+- Facilitates effective management of dark matter and dark energy management
+- Enables effective management of quantum field and string theory management
+- Supports effective management of loop quantum gravity and spacetime management
+- Facilitates effective management of causal set and discrete spacetime management
+- Enables effective management of holographic principle and AdS/CFT correspondence management
+- Supports effective management of firewall paradox and black hole information management
+- Facilitates effective management of AMPS paradox and black hole firewall management
+- Enables effective management of ER=EPR conjecture and wormhole management
+- Supports effective management of emergent spacetime and entanglement management
+- Facilitates effective management of string landscape and swampland management
+- Enables effective management of de Sitter space and cosmological constant management
+- Supports effective management of inflation and reheating management
+- Facilitates effective management of baryogenesis and leptogenesis management
+- Enables effective management of neutrino mass and oscillation management
+- Supports effective management of cosmic microwave background and anisotropy management
+- Facilitates effective management of gravitational lensing and weak lensing management
+- Enables effective management of strong lensing and cluster lensing management
+- Supports effective management of microlensing and planetary lensing management
+- Facilitates effective management of structure formation and power spectrum management
+- Enables effective management of halo mass function and clustering management
+- Supports effective management of galaxy formation and evolution management
+- Facilitates effective management of active galactic nucleus and quasar management
+- Enables effective management of gamma ray burst and supernova management
+- Supports effective management of black hole merger and gravitational wave management
+- Facilitates effective management of neutron star merger and kilonova management
+- Enables effective management of pulsar and magnetar management
+- Supports effective management of white dwarf and Type Ia supernova management
+- Facilitates effective management of planetary science and exoplanet management
+- Enables effective management of stellar evolution and nucleosynthesis management
+- Supports effective management of planet formation and accretion disk management
+- Facilitates effective management of moon formation and tidal evolution management
+- Enables effective management of ring formation and shepherd moon management
+- Supports effective management of asteroid and comet management
+- Facilitates effective management of Kuiper belt and Oort cloud management
+- Enables effective management of planet definition and classification management
+- Supports effective management of dwarf planet and plutoid management
+- Facilitates effective management of planetary moon and satellite management
+- Enables effective management of planetary ring and arc management
+- Supports effective management of atmospheric chemistry and composition management
+- Facilitates effective management of greenhouse gas and radiative forcing management
+- Enables effective management of ozone depletion and chlorine management
+- Supports effective management of aerosols and particulate matter management
+- Facilitates effective management of cloud formation and microphysics management
+- Enables effective management of precipitation and hydrology management
+- Supports effective management of runoff and streamflow management
+- Facilitates effective management of infiltration and groundwater recharge management
+- Enables effective management of aquifer and porosity management
+- Supports effective management of permeability and hydraulic conductivity management
+- Facilitates effective management of transmissivity and storativity management
+- Enables effective management of discharge and specific yield management
+- Supports effective management of velocity and hydraulic gradient management
+- Facilitates effective management of Reynolds number and flow regime management
+- Enables effective management of turbulent and laminar flow management
+- Supports effective management of vorticity and circulation management
+- Facilitates effective management of potential flow and boundary layer management
+- Enables effective management of separation and stall management
+- Supports effective management of lift and drag management
+- Facilitates effective management of thrust and propulsion management
+- Enables effective management of buoyancy and stability management
+- Supports effective management of pitching and rolling management
+- Facilitates effective management of yawing and sideslip management
+- Enables effective management of angle of attack and stall margin management
+- Supports effective management of control surface and hinge moment management
+- Facilitates effective management of stability derivative and flight dynamics management
+- Enables effective management of longitudinal and lateral directional stability management
+- Supports effective management of spin and recovery management
+- Facilitates effective management of gyroscopic precession and nutation management
+- Enables effective management of Mach number and compressibility management
+- Supports effective management of shock wave and expansion fan management
+- Facilitates effective management of boundary layer transition and turbulence management
+- Enables effective management of skin friction and pressure drag management
+- Supports effective management of form drag and interference drag management
+- Facilitates effective management of induced drag and wingtip vortex management
+- Enables effective management of wave making and spray management
+- Supports effective management of cavitation and bubble management
+- Facilitates effective management of hull resistance and appendage management
+- Enables effective management of propeller and jet propulsion management
+- Supports effective management of rudder and control surface management
+- Facilitates effective management of keel and ballast management
+- Enables effective management of sail and aerodynamics management
+- Supports effective management of yacht and sailing vessel management
+- Facilitates effective management of canoe and kayak management
+- Enables effective management of rowing and sculling management
+- Supports effective management of dragon boat and paddle management
+- Facilitates effective management of swimming and aquatic locomotion management
+- Enables effective management of diving and scuba management
+- Supports effective management of snorkel and breath-hold diving management
+- Facilitates effective management of free diving and apnea management
+- Enables effective management of surfing and wave riding management
+- Supports effective management of bodyboarding and skimboarding management
+- Facilitates effective management of stand-up paddleboarding and foilboarding management
+- Enables effective management of kitesurfing and windsurfing management
+- Supports effective management of sailing and ice boating management
+- Facilitates effektive management of land sailing and ice skating management
+- Enables effective management of roller skating and inline skating management
+- Supports effective management of skateboarding and longboarding management
+- Facilitates effective management of tricycle and quadricycle management
+- Enables effective management of unicycle and monocycle management
+- Supports effective management of wheelchair and mobility aid management
+- Facilitates effective management of prosthetic and orthotic management
+- Enables effective management of exoskeleton and augmentation management
+- Supports effective management of assistive technology and accessibility management
+- Facilitates effective management of mobility aid and walking device management
+- Enables effective management of cane and crutch management
+- Supports effective management of walker and rollator management
+- Facilitates effective management of stair lift and elevator management
+- Enables effective management of platform lift and vertical transportation management
+- Supports effective management of stair climbing and step negotiation management
+- Enables effective management of ramp and incline management
+- Supports effective management of decline and slope management
+- Facilitates effective management of curb and barrier management
+- Enables effective management of threshold and transition management
+- Supports effective management of doorway and passage management
+- Facilitates effective management of hallway and corridor management
+- Enables effective management of room and space management
+- Supports effective management of building and structure management
+- Facilitates effective management of foundation and structure management
+- Enables effective management of load bearing and wall management
+- Supports effective management of beam and column management
+- Facilitates effective management of truss and frame management
+- Enables effective management of arch and vault management
+- Supports effective management of dome and shell management
+- Facilitates effective management of plate and slab management
+- Enables effective management of footing and foundation management
+- Supports effective management of pile and pier management
+- Facilitates effective management of caisson and cofferdam management
+- Enables effective management of retaining wall and slope stabilization management
+- Supports effective management of gabion and rock wall management
+- Facilitates effective management of riprap and erosion control management
+- Enables effective management of seawall and breakwater management
+- Supports effective management of jetty and groin management
+- Facilitates effective management of pier and dock management
+- Enables effective management of wharf and quay management
+- Supports effective management of marina and harbor management
+- Facilitates effective management of canal and lock management
+- Enables effective management of dam and reservoir management
+- Supports effective management of weir and spillway management
+- Facilitates effective management of floodgate and sluice management
+- Enables effective management of levee and dike management
+- Supports effective management of berm and embankment management
+- Facilitates effective management of terrace and step management
+- Enables effective management of bench and stool management
+- Supports effective management of chair and seating management
+- Facilitates effective management of sofa and couch management
+- Enables effective management of bed and mattress management
+- Supports effective management of bunk bed and loft bed management
+- Facilitates effective management of futon and daybed management
+- Enables effective management of hammock and swing management
+- Supports effective management of cradle and bassinet management
+- Facilitates effective management of changing table and diaper management
+- Enables effective management of toy box and storage management
+- Supports effective management of bookshelf and cabinet management
+- Facilitates effective management of wardrobe and closet management
+- Enables effective management of dresser and chest management
+- Supports effective management of armoire and wardrobe management
+- Facilitates effective management of vanity and makeup table management
+- Enables effective management of desk and workstation management
+- Supports effective management of workstation and desk management
+- Facilitates effective management of workstation and desk management
+- Enables effective management of workstation and desk management

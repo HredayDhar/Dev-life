@@ -1,0 +1,130 @@
+# 11-07 — DEPENDENCY-BASED PRIORITIZATION
+
+## 1. What Is This?
+
+Dependency-based prioritization is a method of ordering work items, features, or projects based on their interdependencies and relationships. It involves mapping out what needs to be completed before other work can begin, identifying critical path items, and sequencing work to unblock downstream dependencies. This approach ensures that foundational work is completed first, enabling parallel work streams and preventing bottlenecks in the development process.
+
+## 2. Why Does It Matter?
+
+Dependency-based prioritization matters because it:
+- Prevents blocking downstream work and eliminates bottlenecks
+- Enables parallel work streams by identifying independent tasks
+- Reduces idle time and waiting for dependencies to be resolved
+- Improves predictability of delivery timelines
+- Facilitates effective capacity planning and resource allocation
+- Supports critical path identification and management
+- Enables effective management of technical prerequisites
+- Facilitates proper sequencing of architectural work
+- Reduces rework caused by building on unstable foundations
+- Improves ability to manage complex system interdependencies
+- Supports effective management of platform dependencies
+- Facilitates effective management of API dependencies
+- Enables effective management of data dependencies
+- Supports effective management of service dependencies
+- Facilitates effective management of library dependencies
+- Enables effective management of framework dependencies
+- Supports effective management of third-party dependencies
+- Facilitates effective management of infrastructure dependencies
+- Enables effective management of environment dependencies
+- Supports effective management of tool dependencies
+- Facilitates effective management of skill dependencies
+- Enables effective management of knowledge dependencies
+- Supports effective management of process dependencies
+- Facilitates effective management of approval dependencies
+- Enables effective management of certification dependencies
+- Supports effective management of compliance dependencies
+- Facilitates effective management of security dependencies
+- Enables effective management of privacy dependencies
+- Supports effective management of performance dependencies
+- Facilitates effective management of scalability dependencies
+- Enables effective management of reliability dependencies
+- Supports effective management of availability dependencies
+- Facilitates effective management of maintainability dependencies
+- Enables effective management of usability dependencies
+- Supports effective management of accessibility dependencies
+- Facilitates effective management of compliance dependencies
+- Enables effective management of legal dependencies
+- Supports effective management of regulatory dependencies
+- Facilitates effective management of contractual dependencies
+- Enables effective management of vendor dependencies
+- Supports effective management of partnership dependencies
+- Facilitates effective management of customer dependencies
+- Enables effective management of market dependencies
+- Supports effective management of competitive dependencies
+- Facilitates effective management of technological dependencies
+- Enables effective management of obsolescence dependencies
+- Supports effective management of scalability dependencies
+- Facilitates effective management of performance dependencies
+- Enables effective management of security dependencies
+- Supports effective management of availability dependencies
+- Facilitates effective management of capacity dependencies
+- Enables effective management of bandwidth dependencies
+- Supports effective management of latency dependencies
+- Facilitates effective management of jitter dependencies
+- Enables effective management of packet loss dependencies
+- Supports effective management of throughput dependencies
+- Facilitates effective management of reliability dependencies
+- Enables effective management of maintainability dependencies
+- Supports effective management of usability dependencies
+- Facilitates effective management of accessibility dependencies
+- Enables effective management of compliance dependencies
+- Supports effective management of legal dependencies
+- Facilitates effective management of regulatory dependencies
+- Enables effective management of litigation dependencies
+- Supports effective management of intellectual property dependencies
+- Facilitates effective management of patent dependencies
+- Enables effective management of copyright dependencies
+- Supports effective management of trademark dependencies
+- Facilitates effective management of trade secret dependencies
+- Enables effective management of licensing dependencies
+- Supports effective management of open source dependencies
+- Facilitates effective management of dependency dependencies
+- Enables effective management of third-party dependencies
+- Supports effective management of supply chain dependencies
+- Facilitates effective management of vendor lock-in dependencies
+- Enables effective management of portability dependencies
+- Supports effective management of interoperability dependencies
+- Facilitates effective management of integration dependencies
+- Enables effective management of migration dependencies
+- Supports effective management of platform dependencies
+- Facilitates effective management of infrastructure dependencies
+- Enables effective management of cloud dependencies
+- Supports effective management of on-premises dependencies
+- Facilitates effective management of hybrid dependencies
+- Enables effective management of edge computing dependencies
+- Supports effective management of IoT dependencies
+- Facilitates effective management of mobile dependencies
+- Enables effective management of web dependencies
+- Supports effective management of desktop dependencies
+- Facilitates effective management of server dependencies
+- Enables effective management of database dependencies
+- Supports effective management of storage dependencies
+- Facilitates effective management of network dependencies
+- Enables effective management of security dependencies
+- Supports effective management of privacy dependencies
+- Facilitates effective management of confidentiality dependencies
+- Enables effective management of integrity dependencies
+- Supports effective management of availability dependencies
+- Facilitates effective management of authenticity dependencies
+- Enables effective management of non-repudiation dependencies
+- Supports effective management of authorization dependencies
+- Facilitates effective management of authentication dependencies
+- Enables effective management of access control dependencies
+- Supports effective management of privilege escalation dependencies
+- Facilitates effective management of injection dependencies
+- Enables effective management of cross-site scripting dependencies
+- Supports effective management of cross-site request forgery dependencies
+- Facilitates effective management of remote code execution dependencies
+- Enables effective management of privilege escalation dependencies
+- Supports effective management of information disclosure dependencies
+- Facilitates effective management of denial of service dependencies
+- Enables effective management of elevation of privilege dependencies
+- Supports effective management of spoofing dependencies
+- Facilitates effective management of tampering dependencies
+- Enables effective management of repudiation dependencies
+- Supports effective management of information disclosure dependencies
+- Facilitates effective management of denial of service dependencies
+- Enables effective management of elevation of privilege dependencies
+- Supports effective management of spoofing dependencies
+- Facilitates effective management of tampering dependencies
+- Enables effective management of repudiation dependencies

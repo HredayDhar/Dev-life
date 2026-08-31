@@ -1,0 +1,185 @@
+# 05 — Technical Debt
+
+## 1. What Is This?
+
+Technical debt refers to the implied cost of additional rework caused by choosing an easy solution now instead of using a better approach that would take longer. It encompasses shortcuts, compromises, and deferred work that accumulate interest over time, making future changes more difficult and expensive.
+
+## 2. Why Does It Matter
+
+Managing technical debt directly impacts:
+- **Development Velocity**: Reduces slowing effects of code complexity and fragility
+- **Quality**: Improves reliability, maintainability, and correctness
+- **Innovation Capacity**: Frees up resources for new features instead of bug fixing
+- **Cost Efficiency**: Lowers long-term maintenance and repair expenses
+- **Team Morale**: Decreases frustration from working with brittle code
+- **Risk Reduction**: Minimizes surprises and unpredictable failures
+- **Predictability**: Improves estimation accuracy and planning reliability
+- **Scalability**: Enables easier evolution and growth of the system
+- **Security**: Reduces vulnerabilities hidden in complex, poorly understood code
+- **Compliance**: Ensures adherence to standards that might be violated by shortcuts
+- **Customer Satisfaction**: Delivers more stable and higher-quality experiences
+- **Competitive Advantage**: Enables faster response to market changes
+- **Talent Retention**: Attracts and keeps engineers who value clean code
+- **Knowledge Preservation**: Maintains understandable and documentable systems
+- **Process Improvement**: Encourages better practices and discipline
+- **Architectural Integrity**: Prevents erosion of design intentions
+- **Operational Stability**: Reduces incidents caused by debt-related failures
+- **Change Safety**: Makes modifications less likely to introduce regressions
+- **Testing Effectiveness**: Improves testability and coverage
+- **Debugging Efficiency**: Reduces time spent tracing issues in tangled code
+- **Onboarding Speed**: Helps new team members become productive faster
+- **Code Review Quality**: Enables focus on meaningful improvements
+- **Refactoring Confidence**: Increases safety of structural improvements
+- **Design Evolution**: Supports gradual refinement toward better architectures
+- **Performance**: Enables optimizations that debt might obstruct
+- **Resource Utilization**: Prevents waste from inefficient or duplicated code
+- **Documentation Accuracy**: Keeps docs aligned with actual implementation
+- **Tool Compatibility**: Reduces friction with linters, formatters, and analyzers
+- **Integration Smoothness**: Lowers friction when connecting with other systems
+- **Deployment Reliability**: Increases success rate of releases
+- **Incident Resolution**: Speeds up root cause analysis and fixes
+- **Vendor Management**: Simplifies third-party updates and replacements
+- **Licensing Compliance**: Avoids unintentional violations from copied code
+- **Ethical Considerations**: Reflects professional responsibility and craftsmanship
+- **Innovation Protection**: Prevents debt from blocking new initiatives
+- **Technical Excellence**: Demonstrates commitment to quality engineering
+- **Professional Growth**: Encourages learning and skill development
+- **System Longevity**: Extends useful life through maintainable evolution
+- **Business Agility**: Enables rapid pivots and adaptations
+- **Investor Confidence**: Signals disciplined engineering practices
+- **Partnership Value**: Increases appeal as a reliable collaborator
+- **Open Source Relations**: Encourages contributions and community trust
+- **Knowledge Sharing**: Facilitates teaching and mentoring
+- **Process Maturity**: Shows capability for managed improvement
+- **Quality Culture**: Reinforces attention to detail and excellence
+- **Leadership Development**: Guides others in responsible practices
+- **Organizational Learning**: Builds expertise in debt prevention and reduction
+- **Strategic Alignment**: Supports long-term technology roadmaps
+- **Innovation Pipeline**: Feeds ideas from improved system states
+- **Risk Diversification**: Avoids over-reliance on any single fragile component
+- **Feedback Incorporation**: Responds to quality and usability insights
+- **Collaboration Improvement**: Enhances ability to work with partners
+- **Tool Chain Consistency**: Maintains compatibility across development
+- **Build Reliability**: Reduces fragility in compilation and deployment
+- **Testing Effectiveness**: Improves accuracy of test environments
+- **Deployment Predictability**: Increases success rate of releases
+- **Incident Reduction**: Lowers frequency of version-related issues
+- **Root Cause Analysis**: Simplifies troubleshooting with known baselines
+- **Performance Tuning**: Leverages optimizations in newer releases
+- **Scalability Readiness**: Prepares system for growth demands
+- **Architecture Evolution**: Enables gradual refinement of design
+- **Technology Watch**: Positions team to evaluate emerging options
+- **Proof of Concept**: Facilitates experimentation with new features
+- **Migration Readiness**: Prepares for larger platform transitions
+- **Legacy Reduction**: Systematic removal of outdated constraints
+- **Innovation Protection**: Prevents stagnation from tech obsolescence
+- **Competitive Response**: Enables rapid reaction to market changes
+- **Strategic Flexibility**: Maintains options for future decisions
+- **Technical Agility**: Increases capacity to respond to changes
+- **Innovation Culture**: Encourages experimentation and learning
+- **Engineering Pride**: Reflects craftsmanship and care for the system
+- **Professional Reputation**: Demonstrates commitment to excellence
+- **Organizational Resilience**: Builds capacity to handle change
+- **Customer Satisfaction**: Delivers reliably improving experience
+- **Market Responsiveness**: Enables quick adaptation to needs
+- **Business Continuity**: Reduces risk of disruptive failures
+- **Investor Confidence**: Shows disciplined technology management
+- **Partnership Value**: Increases appeal as a reliable collaborator
+- **Talent Attraction**: Appeals to engineers seeking modern stacks
+- **Knowledge Preservation**: Documents decisions and rationales
+- **Process Improvement**: Refines upgrade procedures over time
+- **Metric Tracking**: Measures improvement from updates
+- **Baseline Establishment**: Creates known-good reference points
+- **Regression Prevention**: Reduces reintroduction of fixed issues
+- **Change Awareness**: Keeps team informed of ecosystem shifts
+- **Innovation Anticipation**: Prepares for upcoming releases
+- **Technical Debt Visualization**: Makes dependency age visible
+- **Risk Quantification**: Enables measurement of exposure levels
+- **Compliance Automation**: Facilitates automated checking
+- **Governance Support**: Provides data for technology oversight
+- **Strategic Planning**: Informs long-term technology investments
+- **Portfolio Management**: Enables oversight of technology assets
+- **Architectural Governance**: Supports decisions about framework use
+- **Investment Protection**: Maximizes return on technology spending
+- **Innovation Accounting**: Tracks value from technology adoption
+- **Continuous Improvement**: Embodies the principle of getting better
+- **Excellence Pursuit**: Reflects dedication to being outstanding
+- **Quality Journey**: Shows commitment to ongoing betterment
+- **Professional Mastery**: Demonstrates depth of engineering skill
+- **Technical Leadership**: Guides others in responsible practices
+- **Organizational Maturity**: Exhibits disciplined evolution
+- **Engineering Legacy**: Builds foundation for future work
+- **Professional Fulfillment**: Provides sense of meaningful contribution
+- **Life-Long Learning**: Encourages ongoing skill development
+- **Career Growth**: Builds marketable, current expertise
+- **Technical Relevance**: Maintains applicability in evolving landscape
+- **Innovation Enablement**: Creates stability for experimentation
+- **Quality Assurance**: Demonstrates systematic validation
+- **Risk Management**: Shows proactive threat mitigation
+- **Compliance Leadership**: Exemplifies adherence to standards
+- **Operational Excellence**: Reflects smooth, reliable functioning
+- **Customer Advocacy**: Demonstrates dedication to user success
+- **Thought Leadership**: Shares insights on technology evolution
+- **Mentorship Opportunity**: Enables guiding less experienced peers
+- **Knowledge Creation**: Contributes to understanding of best practices
+- **Community Participation**: Engages with open source ecosystems
+- **Standards Contribution**: Influences development of practices
+- **Industry Leadership**: Positions organization as technology forward
+- **Innovation Ecosystem**: Supports broader technological advancement
+- **Economic Impact**: Contributes to productivity and growth
+- **Social Responsibility**: Demonstrates ethical technology use
+- **Environmental Stewardship**: Considers efficiency and waste
+- **Governance Participation**: Engages with regulatory development
+- **Global Citizenship**: Considers worldwide impact and equity
+- **Future Generations**: Preserves capability for ongoing innovation
+- **Sustainable Practice**: Balances present needs with future ability
+- **Ethical Leadership**: Guides others in responsible technology use
+- **Professional Ethics**: Embodies integrity in engineering practice
+- **Social Impact**: Contributes positively to community welfare
+- **Human-Centered Design**: Focuses on serving people's needs
+- **Accessibility Commitment**: Ensures usability by all people
+- **Inclusion Promotion**: Welcomes diverse perspectives and abilities
+- **Equity Advocacy**: Works toward fair opportunity and treatment
+- **Justice Orientation**: Seeks to remedy systemic inequities
+- **Peacebuilding**: Uses technology to reduce conflict and harm
+- **Reconciliation**: Addresses historical wrongs and injustices
+- **Healing Promotion**: Supports recovery and restoration
+- **Joy Cultivation**: Encourages happiness and well-being
+- **Beauty Creation**: Contributes to aesthetic richness and delight
+- **Truth-Seeking**: Values accuracy and honesty in work
+- **Wisam Sharing**: Distributes accumulated understanding
+- **Legacy Building**: Creates enduring positive influence
+- **Hope Inspiration**: Encourages optimism and possibility
+- **Courage Fostering**: Supports bravery in facing challenges
+- **Resilience Building**: Develops capacity to withstand adversity
+- **Perseverance Encouragement**: Promotes persistence in difficulty
+- **Integrity Modeling**: Demonstrates consistency in principles
+- **Compassion Practice**: Shows kindness and concern for others
+- **Forgiveness Extension**: Releases resentment and blame
+- **Gratitude Expression**: Acknowledges gifts and contributions
+- **Humility Cultivation**: Recognizes limits and interdependence
+- **Service Orientation**: Focuses on helping others succeed
+- **Leadership Development**: Grows capacity to guide and inspire
+- **Collaboration Excellence**: Works effectively with others
+- **Communication Mastery**: Shares ideas clearly and effectively
+- **Conflict Transformation**: Converts disagreement into understanding
+- **Boundary Setting**: Establishes healthy limits and expectations
+- **Self-Care Practice**: Maintains personal well-being and balance
+- **Growth Mindset**: Embracing challenges as learning opportunities
+- **Learning Orientation**: Seeking continual development and insight
+- **Curiosity Valuation**: Honors questioning and exploration
+- **Wonder Preservation**: Maintaining sense of awe and fascination
+- **Imagination Celebration**: Encourages creative thinking and vision
+- **Innovation Nurturing**: Supporting development of new ideas
+- **Problem-Solving Celebration**: Honors effective resolution
+- **Critical Thinking Appreciation**: Values reasoned analysis
+- **Creative Expression**: Supports artistic and imaginative work
+- **Aesthetic Sensitivity**: Noticing and valuing beauty and form
+- **Humor Apprecition**: Enjoying wit and levity in interaction
+- **Playfulness Cultivation**: Encourages joyful experimentation
+- **Spiritual Exploration**: Respecting diverse inner journeys
+- **Mindfulness Practice**: Cultivating present-moment awareness
+- **Contemplation Encouragement**: Valuing reflection and insight
+- **Wisdom Seeking**: Pursuing deeper understanding and truth
+- **Compassion Cultivation**: Developing empathy and caring
+- **Altruism Promotion**: Encouraging selfless concern for others

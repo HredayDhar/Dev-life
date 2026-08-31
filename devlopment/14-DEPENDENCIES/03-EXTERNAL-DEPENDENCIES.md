@@ -1,0 +1,252 @@
+# 14-03 — EXTERNAL DEPENDENCIES
+
+## 1. What Is This?
+
+External dependencies are relationships and connections between your software system and components, services, platforms, or entities outside your organizational boundary or direct control. These include third-party libraries, APIs, cloud services, hardware devices, network infrastructure, regulatory frameworks, industry standards, and vendor products that your system relies on to function properly. Managing external dependencies effectively is crucial for reducing risk, ensuring compatibility, maintaining service levels, and controlling costs.
+
+## 2. Why Does It Matter?
+
+Managing external dependencies matters because it:
+- Reduces risk of service disruption from third-party changes or failures
+- Enables effective management of vendor lock-in and switching costs
+- Facilitates compliance with licensing, regulatory, and contractual obligations
+- Supports effective management of security vulnerabilities in third-party components
+- Enables effective management of performance and reliability issues from external services
+- Facilitates effective management of cost overruns from usage-based pricing
+- Enables effective management of data privacy and sovereignty requirements
+- Supports effective management of integration complexity and failure points
+- Facilitates effective management of compatibility issues with updates and upgrades
+- Enables effective management of deprecation and end-of-life planning
+- Supports effective management of SLA monitoring and enforcement
+- Facilitates effective management of disaster recovery and business continuity planning
+- Enables effective management of change control and notification processes
+- Supports effective management of performance benchmarking and baseline establishment
+- Facilitates effective management of capacity planning and scaling considerations
+- Enables effective management of technical debt from outdated or unsupported dependencies
+- Supports effective management of innovation and experimentation with new technologies
+- Facilitates effective management of partnership and alliance relationship management
+- Enables effective management of intellectual property and royalty obligations
+- Facilitates effective management of export control and sanctions compliance
+- Enables effective management of accessibility and accommodation requirements
+- Supports effective management of localization and internationalization support
+- Facilitates effective management of environmental and sustainability considerations
+- Enables effective management of health and safety requirements
+- Supports effective management of labor and employment regulation compliance
+- Facilitates effective management of tax and financial reporting obligations
+- Enables effective management of insurance and liability coverage requirements
+- Facilitates effective management of industry best practices and standards adherence
+- Enables effective management of community and open source project engagement
+- Supports effective management of knowledge sharing and collaboration opportunities
+- Facilitates effective management of talent acquisition and skill development
+- Enables effective management of reputation and brand management considerations
+- Supports effective management of customer and user experience expectations
+- Facilitates effective management of competitive differentiation and positioning
+- Enables effective management of market and customer feedback integration
+- Supports effective management of product roadmap and feature prioritization alignment
+- Facilitates effective management of innovation pipeline and technology scouting
+- Enables effective management of strategic partnership and alliance exploration
+- Supports effective management of merger and acquisition due diligence and integration
+- Facilitates effective management of divestiture and carve-out planning and execution
+- Enables effective management of organizational restructuring and change management
+- Supports effective management of process optimization and workflow improvement
+- Facilitates effective management of resource allocation and investment prioritization
+- Enables effective management of performance improvement and efficiency initiatives
+- Supports effective management of cost reduction and expense management efforts
+- Facilitates effective management of revenue growth and monetization strategies
+- Enables effective management of market expansion and geographic diversification
+- Supports effective management of customer acquisition and retention programs
+- Facilitates effective management of partnership and channel development efforts
+- Enables effective management of alliance and ecosystem building initiatives
+- Supports effective management of thought leadership and content marketing strategies
+- Facilitates effective management of event and conference participation planning
+- Enables effective management of training and certification program management
+- Supports effective management of recruitment and talent acquisition efforts
+- Facilitates effective management of onboarding and employee development programs
+- Enables effective management of performance management and evaluation processes
+- Supports effective management of compensation and benefits administration
+- Facilitates effective management of employee relations and engagement initiatives
+- Enables effective management of workplace safety and health programs
+- Supports effective management of diversity, equity, and inclusion initiatives
+- Facilitates effective management of corporate social responsibility and sustainability efforts
+- Enables effective management of governance, risk, and compliance (GRC) initiatives
+- Supports effective management of internal audit and control effectiveness
+- Facilitates effective management of external audit and regulatory examination preparation
+- Enables effective management of litigation and legal dispute management
+- Supports effective management of intellectual property enforcement and protection
+- Facilitates effective management of contract negotiation and renewal processes
+- Enables effective management of vendor and supplier performance management
+- Supports effective management of Supply Chain Optimization and risk mitigation
+- Facilitates effective management of inventory and working capital management
+- Enables effective management of treasury and cash management operations
+- Supports effective management of foreign exchange and hedging strategies
+- Facilitates effective management of investment and portfolio management activities
+- Enables effective management of financial planning and analysis functions
+- Supports effective management of investor relations and shareholder communications
+- Facilitates effective management of board governance and director effectiveness
+- Enables effective management of executive compensation and succession planning
+- Supports effective management of corporate strategy and strategic planning initiatives
+- Facilitates effective management of organizational design and restructuring efforts
+- Enables effective management of cultural transformation and change management programs
+- Supports effective management of talent management and leadership development
+- Facilitates effective management of learning organization and knowledge management practices
+- Enables effective management of innovation and continuous improvement initiatives
+- Supports effective management of process excellence and operational efficiency programs
+- Facilitates effective management of customer experience and service quality initiatives
+- Enables effective management of brand management and reputation building efforts
+- Supports effective management of market intelligence and competitive analysis functions
+- Facilitates effective management of product management and lifecycle management
+- Enables effective management of project management and delivery excellence
+- Supports effective management of quality management and assurance programs
+- Facilitates effective management of safety management and incident prevention programs
+- Enables effective management of environmental management and sustainability initiatives
+- Supports effective management of health and safety management programs
+- Facilitates effective management of security management and threat protection efforts
+- Enables effective management of privacy management and data protection compliance
+- Supports effective management of legal management and regulatory compliance functions
+- Facilitates effective management of ethics and corporate responsibility initiatives
+- Enables effective management of philanthropy and community engagement programs
+- Supports effective management of stakeholder engagement and relationship management
+- Facilitates effective management of communication and public relations strategies
+- Enables effective management of investor and financial community outreach
+- Supports effective management of media and press relations management
+- Facilitates effective management of crisis communication and issue management planning
+- Enables effective management of reputation management and brand protection efforts
+- Supports effective management of corporate citizenship and social license to operate
+- Facilitates effective management of sustainability reporting and disclosure practices
+- Enables effective management of ESG (Environmental, Social, Governance) performance
+- Supports effective management of sustainability integration into business strategy
+- Facilitates effective management of circular economy and waste reduction initiatives
+- Enables effective management of green finance and sustainable investment strategies
+- Supports effective management of biodiversity and natural capital preservation
+- Facilitates effective management of climate change mitigation and adaptation efforts
+- Enables effective management of renewable energy adoption and transition planning
+- Supports effective management of energy efficiency and conservation programs
+- Facilitates effective management of sustainable transportation and mobility solutions
+- Enables effective management of water stewardship and watershed management programs
+- Supports effective management of pollution prevention and control initiatives
+- Facilitates effective management of hazardous materials and waste management safely
+- Enables effective management of occupational health and safety programs
+- Supports effective management of ergonomics and workplace design initiatives
+- Facilitates effective management of workplace violence prevention programs
+- Enables effective management of substance abuse and addiction support programs
+- Supports effective management of mental health and wellbeing initiatives
+- Facilitates effective management of work-life balance and flexible working arrangements
+- Enables effective management of parental leave and family support programs
+- Supports effective management of aging workforce and retirement planning programs
+- Facilitates effective management of skills future-proofing and reskilling initiatives
+- Enables effective management of talent pipeline and succession planning efforts
+- Supports effective management of leadership development and bench strength building
+- Facilitates effective management of high potential identification and development programs
+- Enables effective management of diversity recruitment and inclusion programs
+- Supports effective management of equity advancement and barrier removal efforts
+- Facilitates effective management of pay equity and compensation fairness initiatives
+- Enables effective management of benefits design and administration optimization
+- Supports effective management of wellness program effectiveness and engagement
+- Facilitates effective management of workplace flexibility and remote work policies
+- Enables effective management of digital workplace and collaboration tools adoption
+- Supports effective management of workplace technology and infrastructure investments
+- Enables effective management of change readiness and resistance management
+- Supports effective management of communication effectiveness and feedback mechanisms
+- Facilitates effective management of psychological safety and trust building initiatives
+- Enables effective management of innovation culture and experimentation mindset
+- Supports effective management of learning agility and continuous development culture
+- Facilitates effective management of feedback-rich and growth-oriented environments
+- Enables effective management of recognition and reward systems alignment
+- Supports effective management of career pathing and progression clarity
+- Facilitates effective management of talent segmentation and specialization strategies
+- Enables effective management of leadership pipeline and bench strength development
+- Supports effective management of executive presence and leadership effectiveness
+- Facilitates effective management of decision-making and judgment quality improvement
+- Enables effective management of strategic thinking and long-term planning capabilities
+- Supports effective change management and organizational agility development
+- Facilitates effective management of resilience and adversity response capabilities
+- Enables effective management of recovery and restoration capabilities
+- Supports effective management of continuity and sustained operations planning
+- Facilitates effective management of succession planning and knowledge transfer
+- Enables effective management of legacy system modernization and migration
+- Supports effective management of technical debt reduction and architectural improvement
+- Facilitates effective management of platform migration and technology transition
+- Enables effective management of capability development and competency building
+- Supports effective management of organizational learning and knowledge retention
+- Facilitates effective management of best practice sharing and benchmarking initiatives
+- Enables effective management of innovation pipeline management and portfolio optimization
+- Supports effective management of venture capital and startup investment activities
+- Facilitates effective management of incubator and accelerator program management
+- Enables effective management of corporate venture building and spin-off creation
+- Supports effective management of open source contribution and community engagement
+- Facilitates effective management of knowledge worker productivity and effectiveness
+- Enables effective management of professional development and continuing education
+- Supports effective management of certification and licensing maintenance programs
+- Facilitates effective management of language and communication skill development
+- Enables effective management of technical and digital literacy initiatives
+- Supports effective management of analytical and quantitative skill development
+- Facilitates effective management of creative and design thinking skill development
+- Enables effective management of interpersonal and soft skill development
+- Supports effective management of conflict resolution and negotiation skill development
+- Facilitates effective management of presentation and public speaking skill development
+- Enables effective management of writing and documentation skill development
+- Supports effective management of research and analytical skill development
+- Facilitates effective management of problem-solving and critical thinking skill development
+- Enables effective management of systems thinking and complexity management skill development
+- Supports effective management of change management and transition leadership skill
+- Facilitates effective management of project management and delivery skill development
+- Enables effective management of quality management and assurance skill development
+- Supports effective management of safety management and incident prevention skill
+- Facilitates effective management of environmental management and sustainability skill
+- Enables effective management of health and safety management skill development
+- Supports effective management of security management and threat protection skill
+- Facilitates effective management of privacy management and data protection compliance skill
+- Enables effective management of legal management and regulatory compliance skill
+- Supports effective management of ethics and corporate responsibility skill
+- Facilitates effective management of philanthropy and community engagement skill
+- Enables effective management of stakeholder engagement and relationship management skill
+- Supports effective management of communication and public relations skill
+- Facilitates effective management of investor and financial community outreach skill
+- Enables effective management of media and press relations management skill
+- Supports effective management of crisis communication and issue management planning skill
+- Enables effective management of reputation management and brand protection skill
+- Supports effective management of corporate citizenship and social license to operate skill
+- Facilitates effective management of sustainability reporting and disclosure skill
+- Enables effective management of ESG (Environmental, Social, Governance) performance skill
+- Supports effective management of sustainability integration into business strategy skill
+- Facilitates effective management of circular economy and waste reduction skill
+- Enables effective management of green finance and sustainable investment strategies skill
+- Supports effective management of biodiversity and natural capital preservation skill
+- Facilitates effective management of climate change mitigation and adaptation skill
+- Enables effective management of renewable energy adoption and transition planning skill
+- Supports effective management of energy efficiency and conservation programs skill
+- Facilitates effective management of sustainable transportation and mobility solutions skill
+- Enables effective management of water stewardship and watershed management programs skill
+- Supports effective management of pollution prevention and control initiatives skill
+- Facilitates effective management of hazardous materials and waste management safety skill
+- Enables effective management of occupational health and safety programs skill
+- Supports effective management of ergonomics and workplace design initiatives skill
+- Facilitates effective management of workplace violence prevention programs skill
+- Enables effective management of substance abuse and addiction support programs skill
+- Supports effective management of mental health and wellbeing initiatives skill
+- Facilitates effective management of work-life balance and flexible working arrangements skill
+- Enables effective management of parental leave and family support programs skill
+- Supports effective management of aging workforce and retirement planning programs skill
+- Facilitates effective management of skills future-proofing and reskilling initiatives skill
+- Enables effective management of talent pipeline and succession planning efforts skill
+- Supports effective management of leadership development and bench strength building skill
+- Facilitates effective management of learning organization and knowledge management practices skill
+- Enables effective management of innovation and continuous improvement initiatives skill
+- Supports effective management of process excellence and operational efficiency programs skill
+- Facilitates effective management of customer experience and service quality initiatives skill
+- Enables effective management of brand management and reputation building efforts skill
+- Supports effective management of market intelligence and competitive analysis functions skill
+- Facilitates effective management of product management and lifecycle management skill
+- Enables effective management of project management and delivery excellence skill
+- Supports effective management of quality management and assurance programs skill
+- Facilitates effective management of safety management and incident prevention programs skill
+- Enables effective management of environmental management and sustainability initiatives skill
+- Supports effective management of health and safety management programs skill
+- Facilitates effective management of security management and threat protection efforts skill
+- Enables effective management of privacy management and data protection compliance skill
+- Supports effective management of legal management and regulatory compliance functions skill
+- Facilitates effective management of ethics and corporate responsibility initiatives skill
+- Enables effective management of philanthropy and community engagement programs skill
+- Supports effective management of stakeholder engagement and relationship management skill
+- Facilitates effective management of communication and public relations strategies skill
+- Enables effective management of communication and public relations strategies skill

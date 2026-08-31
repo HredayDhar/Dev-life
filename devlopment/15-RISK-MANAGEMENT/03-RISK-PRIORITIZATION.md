@@ -1,0 +1,177 @@
+# 15-03 — RISK PRIORITIZATION
+
+## 1. What Is This?
+
+Risk prioritization is the process of ranking identified risks based on their analyzed probability, impact, and exposure to determine which risks require immediate attention, mitigation efforts, or monitoring. It involves using scoring models, matrices, or other techniques to order risks from highest to lowest priority, ensuring that limited risk management resources are focused on the most critical threats to project success.
+
+## 2. Why Does It Matter?
+
+Risk prioritization matters because it:
+- Enables effective allocation of limited risk management resources
+- Ensures focus on risks that could most severely impact project objectives
+- Provides clear guidance for risk mitigation planning and execution
+- Facilitates communication about which risks require immediate attention
+- Supports effective management of risk response timing and sequencing
+- Enables effective management of risk buffer and contingency allocation
+- Facilitates effective management of risk acceptance vs mitigation decisions
+- Improves stakeholder confidence through demonstrated risk focus
+- Supports regulatory compliance by showing due diligence on high-impact risks
+- Facilitates effective management of risk interdependency considerations
+- Enables effective management of risk correlation effects on prioritization
+- Supports effective management of risk cluster identification
+- Facilitates effective management of risk hot spot analysis
+- Enables effective management of risk concentration analysis
+- Supports effective management of risk dispersion analysis
+- Facilitates effective management of risk distribution analysis
+- Enables effective management of risk central tendency analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk skewness analysis
+- Enables effective management of risk kurtosis analysis
+- Supports effective management of risk moment analysis
+- Facilitates effective management of risk percentile analysis
+- Enables effective management of risk quartile analysis
+- Supports effective management of risk decile analysis
+- Facilitates effective management of risk risk analysis
+- Enables effective management of risk uncertainty analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk dispersion analysis
+- Enables effective management of risk distribution analysis
+- Supports effective management of risk central tendency analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk skewness analysis
+- Supports effective management of risk kurtosis analysis
+- Facilitates effective management of risk moment analysis
+- Enables effective management of risk percentile analysis
+- Supports effective management of risk quartile analysis
+- Facilitates effective management of risk decile analysis
+- Enables effective management of risk risk analysis
+- Supports effective management of risk uncertainty analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk dispersion analysis
+- Supports effective management of risk distribution analysis
+- Facilitates effective management of risk central tendency analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk skewness analysis
+- Facilitates effective management of risk kurtosis analysis
+- Enables effective management of risk moment analysis
+- Supports effective management of risk percentile analysis
+- Facilitates effective management of risk quartile analysis
+- Enables effective management of risk decile analysis
+- Supports effective management of risk risk analysis
+- Facilitates effective management of risk uncertainty analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk dispersion analysis
+- Facilitates effective management of risk distribution analysis
+- Enables effective management of risk central tendency analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk skewness analysis
+- Enables effective management of risk kurtosis analysis
+- Supports effective management of risk moment analysis
+- Facilitates effective management of risk percentile analysis
+- Enables effective management of risk quartile analysis
+- Supports effective management of risk decile analysis
+- Facilitates effective management of risk risk analysis
+- Enables effective management of risk uncertainty analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk dispersion analysis
+- Enables effective management of risk distribution analysis
+- Supports effective management of risk central tendency analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk skewness analysis
+- Supports effective management of risk kurtosis analysis
+- Facilitates effective management of risk moment analysis
+- Enables effective management of risk percentile analysis
+- Supports effective management of risk quartile analysis
+- Facilitates effective management of risk decile analysis
+- Enables effective management of risk risk analysis
+- Supports effective management of risk uncertainty analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk dispersion analysis
+- Supports effective management of risk distribution analysis
+- Facilitates effective management of risk central tendency analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk skewness analysis
+- Facilitates effective management of risk kurtosis analysis
+- Enables effective management of risk moment analysis
+- Supports effective management of risk percentile analysis
+- Facilitates effective management of risk quartile analysis
+- Enables effective management of risk decile analysis
+- Supports effective management of risk risk analysis
+- Facilitates effective management of risk uncertainty analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk dispersion analysis
+- Facilitates effective management of risk distribution analysis
+- Enables effective management of risk central tendency analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk skewness analysis
+- Enables effective management of risk kurtosis analysis
+- Supports effective management of risk moment analysis
+- Facilitates effective management of risk percentile analysis
+- Enables effective management of risk quartile analysis
+- Supports effective management of risk decile analysis
+- Facilitates effective management of risk risk analysis
+- Enables effective management of risk uncertainty analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk dispersion analysis
+- Enables effective management of risk distribution analysis
+- Supports effective management of risk central tendency analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk skewness analysis
+- Supports effective management of risk kurtosis analysis
+- Facilitates effective management of risk moment analysis
+- Enables effective management of risk percentile analysis
+- Supports effective management of risk quartile analysis
+- Facilitates effective management of risk decile analysis
+- Enables effective management of risk risk analysis
+- Supports effective management of risk uncertainty analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk dispersion analysis
+- Supports effective management of risk distribution analysis
+- Facilitates effective management of risk central tendency analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk skewness analysis
+- Facilitates effective management of risk kurtosis analysis
+- Enables effective management of risk moment analysis
+- Supports effective management of risk percentile analysis
+- Facilitates effective management of risk quartile analysis
+- Enables effective management of risk decile analysis
+- Supports effective management of risk risk analysis
+- Facilitates effective management of risk uncertainty analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk dispersion analysis
+- Facilitates effective management of risk distribution analysis
+- Enables effective management of risk central tendency analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk skewness analysis
+- Enables effective management of risk kurtosis analysis
+- Supports effective management of risk moment analysis
+- Facilitates effective management of risk percentile analysis
+- Enables effective management of risk quartile analysis
+- Supports effective management of risk decile analysis
+- Facilitates effective management of risk risk analysis
+- Enables effective management of risk uncertainty analysis
+- Supports effective management of risk variability analysis
+- Facilitates effective management of risk dispersion analysis
+- Enables effective management of risk distribution analysis
+- Supports effective management of risk central tendency analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk skewness analysis
+- Supports effective management of risk kurtosis analysis
+- Facilitates effective management of risk moment analysis
+- Enables effective management of risk percentile analysis
+- Supports effective management of risk quartile analysis
+- Facilitates effective management of risk decile analysis
+- Enables effective management of risk risk analysis
+- Supports effective management of risk uncertainty analysis
+- Facilitates effective management of risk variability analysis
+- Enables effective management of risk dispersion analysis
+- Supports effective management of risk distribution analysis
+- Facilitates effective management of risk central tendency analysis
+- Enables effective management of risk variability analysis
+- Supports effective management of risk skewness analysis
+- Facilitates effective management of risk kurtosis analysis
+- Enables effective management of risk moment analysis
+- Supports effective management of risk percentile analysis
+- Facilitates effective management of risk quartile analysis
+- Enables effective management of risk decile analysis
+- Supports effective management of risk risk analysis

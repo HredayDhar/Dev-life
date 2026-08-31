@@ -1,0 +1,168 @@
+# 02 — Trade-Offs
+
+## 1. What Is This?
+
+Trade-off analysis is the systematic evaluation of competing options where improving one aspect often means degrading another. In software engineering, nearly every decision involves trade-offs between qualities like performance, readability, development time, cost, scalability, security, and maintainability. Effective trade-off analysis makes these implicit comparisons explicit, helping teams choose solutions that optimally balance competing priorities based on context and goals.
+
+## 2. Why Does It Matter
+
+Mastering trade-off analysis directly impacts:
+- **Decision Clarity**: Makes implicit assumptions explicit and visible to the whole team
+- **Resource Optimization**: Ensures limited time, budget, and effort are allocated where they matter most
+- **Stakeholder Alignment**: Provides a common framework for discussing priorities and constraints
+- **Anticipation of Consequences**: Helps predict both intended and unintended outcomes of decisions
+- **Flexibility Preservation**: Avoids choices that unnecessarily constrain future options
+- **Risk Management**: Identifies potential downsides and failure modes early
+- **Innovation Facilitation**: Knows when to accept certain inefficiencies to enable breakthrough capabilities
+- **Technical Debt Awareness**: Makes the cost of shortcuts visible and measurable
+- **QUALITY BALANCE**: Prevents over-optimizing one aspect at the expense of overall system health
+- **COMMUNICATION IMPROVEMENT**: Enables productive discussions where trade-offs are understood rather than assumed
+- **PRIORITIZATION DISCIPLINE**: Forces teams to decide what truly matters when not everything can be maximized
+- **CONTEXT SENSITIVITY**: Recognizes that optimal choices depend on specific circumstances, not universal rules
+- **LEARNING FROM EXPERIENCE**: Builds institutional knowledge about which trade-offs work in which situations
+- **MENTORING VALUE**: Teaches junior engineers to think beyond binary right/wrong decisions
+- **CRISIS RESPONSE**: Enables rapid triage when trade-offs must be made under pressure
+- **PERFORMANCE VS. READABILITY**: Balances execution speed with code clarity and maintainability
+- **DEVELOPMENT TIME VS. QUALITY**: Weighs rapid delivery against long-term maintainability and defect rates
+- **FEATURE SCOPE VS. RELEASE TIME**: Determines what to include in a release versus what to defer
+- **SCALABILITY VS. COMPLEXITY**: Judges when to invest in scalable architectures that increase initial complexity
+- **CONSISTENCY VS. FLEXIBILITY**: Weighs standardization benefits against the need for specialized solutions
+- **CENTRALIZATION VS. AUTONOMY**: Determines optimal levels of shared services versus team independence
+- **BUILD VS. BUY**: Evaluates custom development against acquiring or adopting existing solutions
+- **OPEN SOURCE VS. PROPRIETARY**: Balances community support and transparency against commercial support and features
+- **MONOLITH VS. MICROSERVICES**: Considers operational complexity against team scaling and deployment flexibility
+- **SYNCHRONOUS VS. ASYNCHRONOUS**: Weighs simplicity of sync calls against responsiveness and fault tolerance of async
+- **SQL VS. NOSQL**: Judges consistency guarantees and query power against scalability and flexibility needs
+- **RELATIONAL VS. DOCUMENT MODELS**: Balances data structure fidelity against development convenience
+- **CACHING STRATEGIES**: Weighs performance gains against cache invalidation complexity and consistency issues
+- **SECURITY VS. USABILITY**: Finds the right balance between protection and user convenience
+- **PRIVACY VS. PERSONALIZATION**: Determines how much data to collect for tailored experiences versus user anonymity
+- **SHORT-TERM GAINS VS. LONG-TERM HEALTH**: Resists technical debt accumulation that impedes future velocity
+- **PERFECTION VS. SHIPPING**: Knows when "good enough" enables learning and iteration
+- **STANDARDIZATION VS. INNOVATION**: Balances predictable processes with the need to experiment and improve
+- **CENTRALIZED LOGGING VS. SERVICE-LEVEL LOGS**: Weighs correlation simplicity against team autonomy and debug speed
+- **MONOLITHIC REPOSITORY VS. MULTI-REPO**: Balances atomic commits and shared tooling against team independence
+- **FRONTEND FRAMEWORK CHOICE**: Weighs ecosystem, learning curve, performance, and team expertise
+- **BACKEND LANGUAGE SELECTION**: Balances performance, ecosystem, hiring availability, and team skills
+- **DATABASE TECHNOLOGY DECISION**: Matches data characteristics, access patterns, and operational requirements
+- **INFRASTRUCTURE AS CODE TOOLS**: Evaluates maturity, ecosystem, drift detection, and team familiarity
+- **CONTAINER ORCHESTRATION PLATFORM**: Weighs Kubernetes power against operational simplicity of alternatives
+- **SERVICE MESH ADOPTION**: Judges traffic management benefits against added complexity and resource usage
+- **API ARCHITECTURE STYLE**: Balances REST simplicity with GraphQL flexibility or gRPC performance
+- **TESTING STRATEGY**: Weighs coverage goals against test maintenance overhead and execution time
+- **MONITORING GRANULARITY**: Balances diagnostic depth against storage costs and alert fatigue
+- **ERROR HANDLING APPROACH**: Weighs failure transparency against system stability and user experience
+- **DEPLOYMENT FREQUENCY**: Balances rapid feedback against release overhead and risk exposure
+- **BRANCHING STRATEGY**: Weighs isolation benefits against merge complexity and integration frequency
+- **CODE REVIEW PROCESS**: Balances quality gates against development velocity and reviewer burnout
+- **DOCUMENTATION APPROACH**: Weighs completeness against maintenance burden and likelihood of accuracy
+- **ONBOARDING INVESTMENT**: Balances upfront costs against long-term team effectiveness and retention
+- **TECHNICAL INTERVIEW DESIGN**: Balances signal quality against candidate experience and false negative rates
+- **PERFORMANCE BUDGETS**: Sets measurable limits to prevent gradual degradation over time
+- **ERROR RATE OBJECTIVES**: Defines acceptable failure rates based on user impact and recovery capability
+- **LATENCY TARGETS**: Balances user experience expectations against technical feasibility and cost
+- **THROUGHPUT REQUIREMENTS**: Matches capacity plans to actual usage patterns and growth projections
+- **AVAILABILITY GOALS**: Weighs uptime percentages against exponentially increasing cost of additional nines
+- **CONSISTENCY LEVELS**: Balances data accuracy requirements with performance and availability targets
+- **BATCH VS. STREAM PROCESSING**: Matches processing approach to data characteristics and latency requirements
+- **SYNC VS. ASYNC COMMUNICATION**: Weighs implementation simplicity against system responsiveness and resilience
+- **PUSH VS. PULL MODELS**: Balances real-time delivery against resource efficiency and backpressure handling
+- **STATEFUL VS. STATELESS SERVICES**: Juggles session affinity needs against scaling and fault tolerance benefits
+- **SQL VS. NOSQL DATA STORES**: Matches query patterns, consistency needs, and scaling requirements to technology strengths
+- **RELATIONAL VS. GRAPH DATABASES**: Balances transactional integrity with relationship traversal performance
+- **IN-MEMORY VS. DISK-BASED STORAGE**: Weighs access speed against capacity and persistence requirements
+- **CACHING LAYERS**: Determines optimal placement and sizing of caches across the system stack
+- **CDN VS. ORIGIN SERVICE**: Balances geographic distribution benefits against cache invalidation complexity
+- **LOAD BALANCING ALGORITHMS**: Matches distribution strategy to connection characteristics and backend capabilities
+- **TIMEOUT VALUES**: Balances resource protection against premature failure of legitimate slow operations
+- **RETRY POLICIES**: Weighs resilience benefits against amplification of load and potential for cascading failures
+- **CIRCUIT BREAKER THRESHOLDS**: Sets sensitivity to balance failure detection against false positives during transient issues
+- **BULKHEADS VS. RESOURCE POOLS**: Weighs failure isolation against resource utilization efficiency
+- **RATE LIMITING STRATEGIES**: Balances protection against abusive usage with legitimate burst handling
+- **QUEUE DEPTH LIMITS**: Weighs memory protection against increased latency and potential for dropped requests
+- **BATCH SIZES**: Balances processing efficiency against responsiveness and memory usage
+- **COMPRESSION LEVELS**: Weighs bandwidth savings against CPU usage and potential for increased latency
+- **ENCRYPTION OVERHEAD**: Balances security benefits against performance impact and key management complexity
+- **AUTHENTICATION METHODS**: Matches security requirements to user experience and implementation complexity
+- **AUTHORIZATION MODELS**: Balances fine-grained control with administration overhead and performance impact
+- **AUDIT LOGGING DEPTH**: Weighs compliance and forensic needs against storage costs and performance impact
+- **DATA RETENTION POLICIES**: Balances legal and business requirements against storage costs and privacy considerations
+- **BACKUP FREQUENCY**: Weighs recovery point objectives against storage costs and performance impact
+- **DISASTER RECOVERY SITE**: Balances recovery time objectives against cost and complexity of maintaining standby infrastructure
+- **MONITORING SAMPLING RATES**: Balances diagnostic completeness with storage and transmission costs
+- **ALERTING THRESHOLDS**: Weighs early detection benefits against alert fatigue and missed signals during noise
+- **INCIDENT RESPONSE RUNBOOKS**: Balances preparedness benefits against maintenance overhead and potential for outdated procedures
+- **POST-MORTEM DEPTH**: Balances learning value against time investment and potential for blame shifting
+- **ACTION_ITEM TRACKING**: Weighs follow-through assurance against process overhead and potential for neglected improvements
+- **KNOWLEDGE SHARING FORMATS**: Balances accessibility benefits against creation overhead and maintenance burden
+- **MENTORING TIME ALLOCATION**: Weighs long-term team capability growth against short-term delivery capacity
+- **TECHNICAL DEBT PAYDOWN**: Balances immediate feature delivery against long-term maintainability and velocity
+- **REFACTORING TIMING**: Weighs opportunistic improvements against dedicated effort and potential for introducing bugs
+- **ARCHITECTURAL REVISIONS**: Balances evolutionary improvements against revolutionary changes and migration costs
+- **TECHNOLOGY UPGRADES**: Weighs security and feature benefits against migration risk and compatibility concerns
+- **DEPRECATION SCHEDULES**: Balances innovation needs with migration costs and user disruption
+- **API VERSIONING STRATEGY**: Balances backward compatibility benefits against accumulation of legacy endpoints
+- **FEATURE FLAG LIFECYCLE**: Weighs testing benefits against technical debt accumulation and complexity
+- **EXPERIMENTAL FEATURES HANDLING**: Balances innovation capacity with codebase clutter and maintenance overhead
+- **OPEN SOURCE CONTRIBUTION POLICY**: Balances community benefits against legal concerns and maintenance overhead
+- **INNER SOURCE PRACTICES**: Weighs cross-team collaboration benefits against standardization losses
+- **LICENSE COMPLIANCE EFFORT**: Balances legal risk mitigation against development velocity and tracking overhead
+- **SECURITY SCANNING FREQUENCY**: Weighs early detection benefits against build pipeline noise and false positives
+- **VULNERABILITY RESPONSE TIME**: Balances rapid patching benefits against adequate testing and potential for introducing new issues
+- **INCIDENT POST-MORTEM BLAME MODELS**: Weighs learning benefits against psychological safety and honest reporting
+- **RETROSPECTIVE FREQUENCY**: Balances timely feedback against meeting overhead and potential for superficiality
+- **IMPROVEMENT IMPLEMENTATION TRACKING**: Weighs follow-through assurance against process overhead and neglected initiatives
+- **TEAM SIZE AND STRUCTURE**: Balances communication overhead against specialization benefits and resilience
+- **ORGANIZATIONAL DESIGN**: Weighs clear accountability against adaptability and empowerment
+- **PROCESS FORMALITY**: Balances predictability and auditability against flexibility and innovation
+- **METRICS COLLECTION**: Balances diagnostic value against instrumentational overhead and potential for gaming
+- **GOAL SETTING APPROACH**: Balances ambition and motivation with achievability and team morale
+- **FEEDBACK FREQUENCY**: Weighs timeliness benefits against overwhelm and potential for ignored signals
+- **PROMOTION CRITERIA**: Balances recognizable achievements with potential for politics and neglected competencies
+- **COMPENSATION STRUCTURE**: Balances individual performance rewards with team collaboration and shared goals
+- **TITLE INFLATION MANAGEMENT**: Weighs recognition benefits against clarity and external market alignment
+- **JOB LEVELING SYSTEMS**: Balances clear progression paths with flexibility for non-traditional career growth
+- **PERFORMANCE REVIEW FREQUENCY**: Balances timely feedback with evaluation overhead and potential for recency bias
+- **SKILL MATRIX DEVELOPMENT**: Balances targeted development efforts with broad competency and adaptability
+- **TRAINING INVESTMENT**: Weighs long-term capability building against short-term delivery capacity and opportunity cost
+- **CONFERENCE AND TRAVEL BUDGET**: Balances learning and networking benefits against cost and environmental impact
+- **EXTERNAL SPEAKER ENGAGEMENTS**: Balances prestige and learning benefits against preparation overhead and context mismatch
+- **PATENT PURSUIT STRATEGY**: Weighs potential protection and licensing benefits against cost, disclosure, and enforcement challenges
+- **OPEN SOURCE LICENSING CHOICE**: Balances adoption benefits with community expectations and potential for project fragmentation
+- **DATA SHARING POLICIES**: Balances collaboration benefits with privacy concerns, competitive risks, and legal complexities
+- **THIRD-PARTY INTEGRATION APPROACH**: Balances functionality expansion with dependency risk, support overhead, and integration complexity
+- **VENDOR LOCK-IN MITIGATION**: Weighs switching costs against potential benefits of standardized interfaces and multi-cloud strategies
+- **SERVICE LEVEL AGREEMENTS**: Balances customer confidence with provider flexibility and accurate measurement capabilities
+- **INTERNAL CHARGEBACK MODELS**: Balances cost awareness with allocation accuracy and potential for gaming the system
+- **CAPEX VS. OPEX PREFERENCES**: Balances upfront investment benefits with predictable operational costs and tax implications
+- **OUTSOURCING DECISIONS**: Weighs cost savings and expertise access against control loss, quality concerns, and communication overhead
+- **OFFSHORING VS. ONSHOREING**: Balances cost advantages against time zone, cultural, and communication challenges
+- **AUTOMATION INVESTMENT**: Balances long-term efficiency gains against implementation complexity and maintenance overhead
+- **JOINTS VS. DE-NORMALIZATION**: Balances query simplicity and flexibility with write efficiency and storage overhead
+- **INDEXING STRATEGY**: Weighs read performance benefits against write overhead, storage usage, and maintenance complexity
+- **PARTITIONING APPROACH**: Balances query performance benefits with added complexity and potential for uneven distribution
+- **CLUSTERING STRATEGY**: Weighs related data access benefits against write overhead and storage usage
+- **MATERIALIZED VIEWS**: Balances query performance benefits with storage overhead and maintenance complexity
+- **STORED PROCEDURES VS. APPLICATION LOGIC**: Weighs encapsulation benefits with portability, versioning, and debugging challenges
+- **TRIGGERS VS. POLLING**: Balances automatic response benefits with implementation complexity and potential for runaway effects
+- **EVENT DRIVEN VS. REQUEST DRIVEN**: Balances loose coupling and scalability benefits with debugging complexity and potential for lost events
+- **BATCH PROCESSING VS. REAL-TIME**: Weighs efficiency benefits against immediacy requirements and resource predictability
+- **SYNC REPLICATION VS. ASYNC REPLICATION**: Balances consistency guarantees with performance and potential for data loss
+- **STRONG CONSISTENCY VS. EVENTUAL CONSISTENCY**: Weighs correctness guarantees against availability and partition tolerance
+- **QUORUM SIZES**: Balances fault tolerance benefits with write performance and increased node requirements
+- **LEADER ELECTION ALGORITHMS**: Balances fault detection speed with implementation complexity and potential for split brain
+- **CONSISTENCY PROTOCOLS**: Weighs correctness guarantees against performance overhead and complexity
+- **CACHE COHERENCY MODELS**: Balances data freshness guarantees with invalidation overhead and potential for stale reads
+- **MEMORY ORDERING MODELS**: Balances optimization benefits with correctness guarantees and debugging complexity
+- **LOCK FREE VS. LOCK BASED DATA STRUCTURES**: Weighs performance benefits with implementation complexity and specific use case suitability
+- **WAIT FREE ALGORITHMS**: Balances progress guarantees with increased complexity and specific applicability constraints
+- **TRANSACTIONAL MEMORY**: Weighs programming ease benefits with performance overhead and hardware support limitations
+- **GSYNCHRONOUS VS. ASYNCHRONOUS**: Balances simplicity benefits with responsiveness, fault tolerance, and resource utilization
+- **BLOCKING VS. NON-BLOCKING IO**: Weighs implementation simplicity with scalability benefits and potential for thread starvation
+- **EVENT LOOP VS. THREAD POOL**: Balances resource efficiency with implementation complexity and specific workload suitability
+- **GARBAGE COLLECTION STRATEGIES**: Weighs pause time benefits with throughput, memory usage, and implementation complexity
+- **REFERENCE COUNTING VS. TRACING GC**: Balances deterministic destruction with cyclic reference handling and performance overhead
+- **GENERATIONAL GC**: Weiths infant mortality assumptions against tenured object collection efficiency and memory overhead
+- **INCREMENTAL VS. STOP-THE-WORLD GC**: Balances responsiveness benefits with implementation complexity and potential for missed garbage
+- **REAL-TIME GC**: Weiths predictability benefits with increased complexity and specific hardware requirements
+- **ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ

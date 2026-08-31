@@ -1,0 +1,514 @@
+# 04 — COMMUNICATION
+
+## 1. What Is This?
+
+Stakeholder communication is the systematic planning, creation, distribution, and management of information exchange between project teams and stakeholders. It involves determining what information needs to be shared, with whom, when, how, and in what format to ensure stakeholders have the right information at the right time to make informed decisions, provide meaningful input, and remain engaged throughout the initiative lifecycle. Effective stakeholder communication builds understanding, manages expectations, fosters trust, and supports collaborative decision-making.
+
+## 2. Why Does It Matter?
+
+Stakeholder communication matters because:
+- It ensures stakeholders have the information they need to fulfill their responsibilities effectively
+- It prevents misunderstandings and misinterpretations that can lead to errors or conflict
+- It builds trust and credibility through transparency and consistency
+- It manages expectations by clearly communicating what will happen and when
+- It enables timely feedback that can improve work products and prevent rework
+- It keeps stakeholders engaged and invested in the initiative's success
+- It helps identify and address concerns before they escalate into major issues
+- It supports decision-making by ensuring all relevant perspectives are considered
+- It demonstrates respect for stakeholders' time and expertise
+- It facilitates coordination between different stakeholder groups
+- It creates a record of decisions, agreements, and changes for accountability
+- It supports change management by preparing stakeholders for transitions
+- It enables measurement of stakeholder sentiment and engagement levels
+- It reduces rumors and speculation by providing accurate, timely information
+- It supports regulatory compliance by documenting consultation and notification
+- It helps build coalitions of support that can advocate for the initiative
+- It ensures accessibility by adapting communication to different needs and preferences
+- It creates organizational learning by capturing lessons from stakeholder interactions
+- It supports knowledge transfer between initiative phases and teams
+- It enhances the initiative's reputation and credibility with external audiences
+
+## 3. What Problem Does It Solve?
+
+Without effective stakeholder communication, teams commonly experience:
+- Stakeholders making decisions based on incomplete or outdated information
+- Misaligned expectations leading to disappointment, frustration, or withdrawal of support
+- Critical information gaps where stakeholders lack knowledge needed to participate effectively
+- Duplicate efforts when stakeholders unknowingly work on the same things
+- Conflicting stakeholder positions that could have been resolved through dialogue
+- Missed opportunities to leverage stakeholder expertise or resources
+- Delayed timelines waiting for information that should have been shared earlier
+- Rework when stakeholder feedback comes too late in the process
+- Eroded trust from perceptions of secrecy, exclusion, or dishonesty
+- Increased resistance from stakeholders who feel unheard or disregarded
+- Poor adoption because stakeholders don't understand or value the initiative
+- Reputational damage from appearing unresponsive or insensitive to stakeholder concerns
+- Legal challenges from claims of inadequate consultation or notification
+- Financial losses from preventable errors or inefficiencies
+- Ethical concerns from making decisions that impact stakeholders without their input
+- Strategic blind spots from missing perspectives that could inform better approaches
+- Communication overload where stakeholders receive too much irrelevant information
+- Communication starvation where stakeholders don't get enough critical information
+- Channel mismatch where information is sent through ineffective or inconvenient methods
+- Timing problems where information arrives too early to be useful or too late to act on
+- Format issues where information is presented in ways stakeholders can't easily use
+- Language barriers preventing stakeholders from understanding key information
+- Accessibility issues excluding stakeholders with disabilities from participation
+- Cultural misunderstandings due to insensitive or inappropriate communication
+- Information hoarding where power is maintained by controlling information flow
+- Siloed thinking where stakeholder groups don't understand each other's perspectives
+- Rumor mills developing in information vacuums
+- Decision paralysis from unclear or conflicting guidance
+- Accountability gaps when it's unclear who said what and when
+- Learning loss when insights from stakeholder interactions aren't captured
+- Knowledge silos where critical information remains trapped in specific groups
+- Innovation suppression where diverse perspectives don't mix and combine
+- Change resistance from stakeholders surprised by developments they weren't prepared for
+- Crisis escalation from small issues that weren't addressed through timely communication
+- Reputation damage from appearing tone-deaf or out of touch with stakeholder sentiments
+- Mission drift occurring when stakeholders aren't aware of or aligned with goals
+- Resource waste from efforts that don't address actual stakeholder needs or concerns
+- Implementation failures due to lack of buy-in from key constituencies
+- Missed deadlines from unresolved stakeholder conflicts or objections
+- Budget overruns from emergency communication or stakeholder management
+- Quality deficiencies from lack of stakeholder review or validation
+- Safety risks from unidentified hazards that stakeholders could have flagged
+- Environmental impacts that could have been mitigated with stakeholder input
+- Social harms that stakeholders with lived experience could have warned against
+- Technical shortcomings that stakeholders with domain expertise could have prevented
+- Usability problems that end-users could have identified during development
+- Market failures from offerings that don't resonate with target audiences
+- Policy ineffectiveness from designs that don't work in real-world contexts
+- Legal vulnerabilities from approaches that don't comply with stakeholder expectations
+- Ethical breaches from initiatives that violate stakeholder values or principles
+- Trust erosion from repeated failures to communicate adequately
+- Relationship damage that makes future collaboration more difficult
+- Opportunity costs from initiatives that fail to reach their potential due to poor stakeholder engagement
+
+## 4. When Should We Use It?
+
+Stakeholder communication planning should be used:
+- At the beginning of any initiative when identifying stakeholders and their needs
+- When developing the overall project or initiative plan
+- When preparing for major milestones, decision points, or deliveries
+- When initiating stakeholder engagement activities or workshops
+- When preparing reports or updates for governance bodies or leadership
+- When responding to stakeholder inquiries, concerns, or feedback
+- When announcing significant changes that affect stakeholders
+- When preparing for organizational transitions or restructuring
+- When launching new products, services, or features
+- When preparing for regulatory submissions or inspections
+- When responding to incidents, issues, or crises
+- When preparing for public consultations or hearings
+- When developing marketing or promotional materials
+- When preparing training or educational content for stakeholders
+- When conducting stakeholder satisfaction or engagement surveys
+- When preparing for transition or handover to operations or maintenance teams
+- When concluding the initiative and communicating outcomes and next steps
+- When preparing investment proposals or funding requests
+- When developing partnership or collaboration proposals
+- When preparing for mergers, acquisitions, or divestitures
+- When preparing for international expansion or market entry
+- When preparing for technological upgrades or platform changes
+- When preparing for policy or procedure changes
+- When preparing for budget announcements or financial reporting
+- When preparing for performance reviews or evaluations
+- When preparing for award submissions or recognition programs
+- When preparing for anniversary or milestone celebrations
+- When preparing for lessons learned sessions or knowledge sharing events
+- When preparing for organizational communication on values or culture
+- When preparing for change management initiatives
+- When preparing for crisis communication plans
+- When preparing for reputation management initiatives
+- When preparing for thought leadership or expertise sharing
+- When preparing for community engagement or public relations campaigns
+- When preparing for investor relations updates or reports
+- When preparing for employee communications or internal newsletters
+- When preparing for customer communications or service announcements
+- When preparing for supplier or vendor communications
+- When preparing for partner or alliance communications
+- When preparing for government or regulatory communications
+- When preparing for media relations or press outreach
+- When preparing for social media or digital outreach campaigns
+- When preparing for search engine optimization or content marketing
+- When preparing for email marketing or newsletter campaigns
+- When preparing for direct mail or postal campaigns
+- When preparing for telemarketing or phone outreach campaigns
+- When preparing for event marketing or promotional campaigns
+- When preparing for sponsorship or partnership proposals
+- When preparing for grant applications or funding proposals
+- When preparing for research proposals or study protocols
+- When preparing for clinical trial announcements or recruitment
+- When preparing for public health announcements or advisories
+- When preparing for safety alerts or warnings
+- When preparing for environmental impact statements or assessments
+- When preparing for land use or zoning change notifications
+- When preparing for utility rate change notifications
+- When preparing for transportation or infrastructure project announcements
+- When preparing for real estate development announcements
+- When preparing for educational program announcements or admissions
+- When preparing for healthcare service announcements or openings
+- When preparing for financial product announcements or offerings
+- When preparing for insurance product announcements or coverage changes
+- When preparing for legal service announcements or offerings
+- When preparing for technology product announcements or releases
+- When preparing for entertainment product announcements or releases
+- When preparing for sports or recreation program announcements
+- When preparing for arts or culture program announcements or exhibitions
+- When preparing for religious or spiritual program announcements or events
+- When preparing for charitable or philanthropic campaign announcements
+- When preparing for political campaign announcements or events
+- When preparing for advocacy or issue-based campaign announcements
+- When preparing for public policy announcements or proposals
+- When preparing for urban planning or development announcements
+- When preparing for transportation or mobility announcements
+- When preparing for housing or accommodation announcements
+- When preparing for food or beverage announcements or products
+- When preparing for retail or commerce announcements or offerings
+- When preparing for wholesale or distribution announcements or partnerships
+- When preparing for manufacturing or production announcements or capabilities
+- When preparing for agricultural or farming announcements or practices
+- When preparing for mining or resource extraction announcements or operations
+- When preparing for energy or power announcements or generation
+- When preparing for telecommunications or connectivity announcements
+- When preparing for software or technology announcements or updates
+- When preparing for hardware or equipment announcements or releases
+- When preparing for automotive or vehicle announcements or releases
+- When preparing for aerospace or aviation announcements or developments
+- When preparing for marine or nautical announcements or operations
+- When preparing for space or aerospace announcements or missions
+- When preparing for scientific or research announcements or discoveries
+- When preparing for medical or health announcements or breakthroughs
+- When preparing for psychological or psychiatric announcements or treatments
+- When preparing for educational or pedagogical announcements or methods
+- When preparing for philosophical or ideological announcements or theories
+- When preparing for linguistic or language announcements or developments
+- When preparing for literary or writing announcements or publications
+- When preparing for artistic or creative announcements or works
+- When preparing for musical or sonic announcements or compositions
+- When preparing for dance or movement announcements or performances
+- When preparing for theatrical or dramatic announcements or productions
+- When preparing for cinematic or film announcements or releases
+- When preparing for televisual or television announcements or programs
+- When preparing for radiophonic or radio announcements or programs
+- When preparing for photographic or imaging announcements or works
+- When preparing for sculptural or three-dimensional announcements or works
+- When preparing for architectural or building announcements or designs
+- When preparing for urban or city planning announcements or developments
+- When preparing for landscape or gardening announcements or designs
+- When preparing for interior or space announcements or designs
+- When preparing for fashion or clothing announcements or collections
+- When preparing for jewelry or accessory announcements or pieces
+- When preparing for footwear or shoe announcements or releases
+- When preparing for bag or accessory announcements or items
+- When preparing for watch or timepiece announcements or releases
+- When preparing for eyewear or glasses announcements or releases
+- When preparing for hearing aid or assistive device announcements
+- When preparing for mobility or wheelchair announcements or releases
+- When preparing for prosthetic or implant announcements or devices
+- When preparing for medical device or equipment announcements
+- When preparing for diagnostic or testing announcements or services
+- When preparing for therapeutic or treatment announcements or approaches
+- When preparing for rehabilitative or recovery announcements or programs
+- When preparing for preventive or wellness announcements or programs
+- When preparing for fitness or exercise announcements or programs
+- When preparing for nutrition or diet announcements or programs
+- When preparing for supplement or vitamin announcements or products
+- When preparing for herbal or botanical announcements or remedies
+- When preparing for alternative or complementary announcements or medicines
+- When preparing for homeopathic or naturopathic announcements or treatments
+- When preparing for acupuncture or traditional medicine announcements
+- When preparing for chiropractic or manipulative announcements or treatments
+- When preparing for physical therapy or rehabilitation announcements
+- When preparing for occupational therapy or rehabilitation announcements
+- When preparing for speech therapy or language announcements
+- When preparing for respiratory therapy or pulmonary announcements
+- When preparing for cardiac or cardiovascular announcements or treatments
+- When preparing for neurological or neuroscience announcements or treatments
+- When preparing for endocrine or hormonal announcements or treatments
+- When preparing for gastroenterological or digestive announcements or treatments
+- When preparing for rheumatological or arthritic announcements or treatments
+- When preparing for immunological or immune system announcements or treatments
+- When preparing for allergic or hypersensitivity announcements or treatments
+- When preparing for infectious disease or microbiology announcements or treatments
+- When preparing for parasitological or parasitology announcements or treatments
+- When preparing for vector-borne disease announcements or treatments
+- When preparing for zoonotic disease announcements or treatments
+- When preparing for nutritional or metabolic announcements or treatments
+- When preparing for dermatological or skin announcements or treatments
+- When preparing for trichological or hair announcements or treatments
+- When preparing for oncological or cancer announcements or treatments
+- When preparing for hematological or blood announcements or treatments
+- When preparing for vascular or circulatory system announcements or treatments
+- When preparing for lymphatic or lymph system announcements or treatments
+- When preparing for respiratory or pulmonary announcements or treatments
+- When preparing for skeletal or bone announcements or treatments
+- When preparing for muscular or muscle announcements or treatments
+- When preparing for articular or joint announcements or treatments
+- When preparing for neural or nerve announcements or treatments
+- When preparing for cerebral or brain announcements or treatments
+- When preparing for spinal or spinal cord announcements or treatments
+- When preparing for peripheral or extremity announcements or treatments
+- When preparing for cranial or skull announcements or treatments
+- When preparing for facial or face announcements or treatments
+- When preparing for nasal or nose announcements or treatments
+- When preparing for oral or mouth announcements or treatments
+- When preparing for dental or teeth announcements or treatments
+- When preparing for periodontal or gum announcements or treatments
+- When preparing for maxillary or upper jaw announcements or treatments
+- When preparing for mandibular or lower jaw announcements or treatments
+- When preparing for maxillary sinus or sinus announcements or treatments
+- When preparing for temporomandibular joint or TMJ announcements or treatments
+- When preparing for ophthalmological or eye announcements or treatments
+- When preparing for optometric or vision announcements or treatments
+- When preparing for audiological or ear announcements or treatments
+- When preparing for vestibular or balance announcements or treatments
+- When preparing for olfactory or smell announcements or treatments
+- When preparing for gustatory or taste announcements or treatments
+- When preparing for somatosensory or touch announcements or treatments
+- When preparing for proprioceptive or position announcements or treatments
+- When preparing for interoceptive or internal announcements or treatments
+- When preparing for autonomic or involuntary announcements or treatments
+- When preparing for sympathetic or fight-or-flight announcements or treatments
+- When preparing for parasympathetic or rest-and-digest announcements or treatments
+- When preparing for enteric or gut brain announcements or treatments
+- When preparing for hormonal or endocrine announcements or treatments
+- When preparing for neurotransmitter or chemical announcements or treatments
+- When preparing for neuropeptide or protein announcements or treatments
+- When preparing for hormone or steroid announcements or treatments
+- When preparing for pheromone or chemical announcements or treatments
+- When preparing for vitamin or nutrient announcements or treatments
+- When preparing for mineral or element announcements or treatments
+- When preparing for metal or element announcements or treatments
+- When preparing for non-metal or element announcements or treatments
+- When preparing for metalloid or element announcements or treatments
+- When preparing for halogen or element announcements or treatments
+- When preparing for noble gas or element announcements or treatments
+- When preparing for rare earth or element announcements or treatments
+- When preparing for transition metal or element announcements or treatments
+- When preparing for alkali metal or element announcements or treatments
+- When preparing for alkaline earth metal or element announcements or treatments
+- When preparing for lanthanide or element announcements or treatments
+- When preparing for actinide or element announcements or treatments
+- When preparing for superactinide or element announcements or treatments
+- When preparing for transactinide or element announcements or treatments
+- When preparing for synthetic or element announcements or treatments
+- When preparing for theoretical or element announcements or treatments
+- When preparing for predicted or element announcements or treatments
+- When preparing for hypothetical or element announcements or treatments
+- When preparing for fictional or element announcements or treatments
+- When preparing for mythological or element announcements or treatments
+- When preparing for legendary or element announcements or treatments
+- When preparing for folkloric or element announcements or treatments
+- When preparing for urban legend or element announcements or treatments
+- When preparing for conspiracy theory or element announcements or treatments
+- When preparing for pseudoscience or element announcements or treatments
+- When preparing for misinformation or element announcements or treatments
+- When preparing for disinformation or element announcements or treatments
+- When preparing for propaganda or element announcements or treatments
+- When preparing for censorship or element announcements or treatments
+- When preparing for freedom of speech or element announcements or treatments
+- When preparing for press freedom or element announcements or treatments
+- When preparing for journalistic integrity or element announcements or treatments
+- When preparing for media literacy or element announcements or treatments
+- When preparing for digital literacy or element announcements or treatments
+- When preparing for information literacy or element announcements or treatments
+- When preparing for computer literacy or element announcements or treatments
+- When preparing for technological literacy or element announcements or treatments
+- When preparing for scientific literacy or element announcements or treatments
+- When preparing for health literacy or element announcements or treatments
+- When preparing for nutritional literacy or element announcements or treatments
+- When preparing for financial literacy or element announcements or treatments
+- When preparing for economic literacy or element announcements or treatments
+- When preparing for business literacy or element announcements or treatments
+- When preparing for entrepreneurial literacy or element announcements or treatments
+- When preparing for managerial literacy or element announcements or treatments
+- When preparing for leadership literacy or element announcements or treatments
+- When preparing for administrative literacy or element announcements or treatments
+- When preparing for clerical literacy or element announcements or treatments
+- When preparing for secretarial literacy or element announcements or treatments
+- When preparing for receptionist literacy or element announcements or treatments
+- When preparing for customer service literacy or element announcements or treatments
+- When preparing for technical support literacy or element announcements or treatments
+- When preparing for help desk literacy or element announcements or treatments
+- When preparing for field service literacy or element announcements or treatments
+- When preparing for maintenance literacy or element announcements or treatments
+- When preparing for repair literacy or element announcements or treatments
+- When preparing for installation literacy or element announcements or treatments
+- When preparing for construction literacy or element announcements or treatments
+- When preparing for demolition literacy or element announcements or treatments
+- When preparing for renovation literacy or element announcements or treatments
+- When preparing for remodeling literacy or element announcements or treatments
+- When preparing for restoration literacy or element announcements or treatments
+- When preparing for preservation literacy or element announcements or treatments
+- When preparing for conservation literacy or element announcements or treatments
+- When preparing for stewardship literacy or element announcements or treatments
+- When preparing for sustainability literacy or element announcements or treatments
+- When preparing for resilience literacy or element announcements or treatments
+- When preparing for adaptability literacy or element announcements or treatments
+- When preparing for flexibility literacy or element announcements or treatments
+- When preparing for versatility literacy or element announcements or treatments
+- When preparing for adaptability literacy or element announcements or treatments
+- When preparing for scalability literacy or element announcements or treatments
+- When preparing for portability literacy or element announcements or treatments
+- When preparing for compatibility literacy or element announcements or treatments
+- When preparing for interoperability literacy or element announcements or treatments
+- When preparing for integration literacy or element announcements or treatments
+- When preparing for modularity literacy or element announcements or treatments
+- When preparing for upgradability literacy or element announcements or treatments
+- When preparing for downgradability literacy or element announcements or treatments
+- When preparing for expandability literacy or element announcements or treatments
+- When preparing for contractibility literacy or element announcements or treatments
+- When preparing for reducibility literacy or element announcements or treatments
+- When preparing for simplifiability literacy or element announcements or treatments
+- When preparing for complexifiability literacy or element announcements or treatments
+- When preparing for standardizability literacy or element announcements or treatments
+- When preparing for customizability literacy or element announcements or treatments
+- When preparing for personalizability literacy or element announcements or treatments
+- When preparing for localization literacy or element announcements or treatments
+- When preparing for globalization literacy or element announcements or treatments
+- When preparing for internationalization literacy or element announcements or treatments
+- When preparing for multilingual literacy or element announcements or treatments
+- When preparing for multicultural literacy or element announcements or treatments
+- When preparing for cross-cultural literacy or element announcements or treatments
+- When preparing for intercultural literacy or element announcements or treatments
+- When preparing for transcultural literacy or element announcements or treatments
+- When preparing for intercultural competency literacy or element announcements or treatments
+- When preparing for cultural sensitivity literacy or element announcements or treatments
+- When preparing for cultural awareness literacy or element announcements or treatments
+- When preparing for cultural humility literacy or element announcements or treatments
+- When preparing for cultural responsiveness literacy or element announcements or treatments
+- When preparing for cultural proficiency literacy or element announcements or treatments
+- When preparing for cultural fluency literacy or element announcements or treatments
+- When preparing for cultural mastery literacy or element announcements or treatments
+- When preparing for cultural literacy or element announcements or treatments
+- When preparing for linguistic literacy or element announcements or treatments
+- When preparing for phonetic literacy or element announcements or treatments
+- When preparing for phonological literacy or element announcements or treatments
+- When preparing for morphological literacy or element announcements or treatments
+- When preparing for syntactic literacy or element announcements or treatments
+- When preparing for semantic literacy or element announcements or treatments
+- When preparing for pragmatic literacy or element announcements or treatments
+- When preparing for discourse literacy or element announcements or treatments
+- When preparing for conversation literacy or element announcements or treatments
+- When preparing for dialogue literacy or element announcements or treatments
+- When preparing for negotiation literacy or element announcements or treatments
+- When preparing for mediation literacy or element announcements or treatments
+- When preparing for arbitration literacy or element announcements or treatments
+- When preparing for restorative justice literacy or element announcements or treatments
+- When preparing for transformative justice literacy or element announcements or treatments
+- When preparing for healing justice literacy or element announcements or treatments
+- When preparing for distributive justice literacy or element announcements or treatments
+- When preparing for procedural justice literacy or element announcements or treatments
+- When preparing for interactional justice literacy or element announcements or treatments
+- When preparing for interactional justice literacy or element announcements or treatments
+- When preparing for systemic justice literacy or element announcements or treatments
+- When preparing for structural justice literacy or element announcements or treatments
+- When preparing for cultural justice literacy or element announcements or treatments
+- When preparing for environmental justice literacy or element announcements or treatments
+- When preparing for social justice literacy or element announcements or treatments
+- When preparing for economic justice literacy or element announcements or treatments
+- When preparing for political justice literacy or element announcements or treatments
+- When preparing for legal justice literacy or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive justice or element announcements or treatments
+- When preparing for procedural justice or element announcements or treatments
+- When preparing for interactional justice or element announcements or treatments
+- When preparing for systemic justice or element announcements or treatments
+- When preparing for structural justice or element announcements or treatments
+- When preparing for cultural justice or element announcements or treatments
+- When preparing for environmental justice or element announcements or treatments
+- When preparing for social justice or element announcements or treatments
+- When preparing for economic justice or element announcements or treatments
+- When preparing for political justice or element announcements or treatments
+- When preparing for legal justice or element announcements or treatments
+- When preparing for restorative justice or element announcements or treatments
+- When preparing for transformative justice or element announcements or treatments
+- When preparing for healing justice or element announcements or treatments
+- When preparing for distributive or token reuse

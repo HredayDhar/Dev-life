@@ -1,0 +1,302 @@
+# 04-INPUT-TESTING
+
+## 1. What Is Input Testing?
+
+Input testing is a specialized form of security testing focused on verifying that an application properly validates, sanitizes, and handles all external inputs to prevent injection attacks, data corruption, and other security vulnerabilities. It evaluates whether the application correctly processes data coming from users, APIs, files, environment variables, network packets, and any other external sources.
+
+Input testing encompasses validation of data type, length, format, range, encoding, and business rules. It ensures that malicious or unexpected input cannot compromise the application's security, integrity, or availability. Proper input testing is fundamental to defending against common web application vulnerabilities such as SQL injection, cross-site scripting (XSS), command injection, path traversal, and buffer overflows.
+
+Input testing encompasses:
+- Testing form input validation (text fields, textarea, dropdowns, checkboxes, radio buttons)
+- Validating URL parameter handling and validation
+- Testing HTTP header validation and injection prevention
+- Evaluating cookie value validation and security
+- Testing REST API payload validation (JSON, XML, form-data)
+- Validating GraphQL query and mutation input validation
+- Testing SOAP envelope and body validation
+- Evaluating file upload validation (filename, extension, content type, size, content)
+- Testing multipart/form-data parsing and validation
+- Validating file inclusion and path traversal prevention
+- Testing command injection prevention in system calls
+- Evaluating SQL injection prevention in database queries
+- Testing LDAP injection prevention in directory queries
+- Validating XPath and XQuery injection prevention
+- Testing NoSQL injection prevention (MongoDB, CouchDB, etc.)
+- Evaluating ORM injection prevention
+- Testing template injection prevention (Server-Side Template Injection - SSTI)
+- Validating expression language injection prevention
+- Testing deserialization injection prevention (Java, .NET, PHP, Python, Ruby)
+- Evaluating buffer overflow and underflow prevention
+- Testing integer overflow and underflow prevention
+- Validating format string vulnerability prevention
+- Testing race condition prevention in input handling
+- Evaluating input encoding and decoding security
+- Testing Unicode and UTF-8 handling security
+- Validating input normalization and canonicalization
+- Testing input filtering and sanitization effectiveness
+- Evaluating allowlist vs. denylist validation approaches
+- Testing input length limits and boundary conditions
+- Validating input range and constraint validation
+- Testing input format validation (email, phone, zip code, SSN, credit card, etc.)
+- Evaluating input business rule validation
+- Testing input concatenation and assembly security
+- Validating input splitting and parsing security
+- Testing input trimming and whitespace handling
+- Evaluating input case sensitivity handling
+- Testing input null and empty value handling
+- Validating input default value handling
+- Testing input missing value handling
+- Evaluating input duplicate value handling
+- Testing input order and sequence validation
+- Validating input grouping and batching security
+- Testing input streaming and chunked transfer handling
+- Evaluating input compression and decompression security
+- Testing input encryption and decryption security
+- Validating input hashing and integrity checking
+- Testing input digital signature verification
+- Evaluating input certificate validation
+- Testing input third-party service integration security
+- Validating input webhook and callback validation
+- Testing input message queue and event validation
+- Evaluating input message integrity and authenticity
+- Testing input replay attack prevention
+- Validating input rate limiting and throttling
+- Testing input quota and usage limiting
+- Evaluating input bot and automation detection
+- Testing input CAPTCHA and challenge-response effectiveness
+- Validating input honeypot and trap field effectiveness
+- Testing input behavioral analysis and anomaly detection
+- Evaluating input machine learning-based validation
+- Testing input reputation and blacklist checking
+- Validating input whitelist and trust verification
+- Testing input geolocation and IP address validation
+- Evaluating input proxy and VPN detection
+- Testing input Tor exit node detection
+- Validating input malicious user agent detection
+- Testing input header manipulation and injection prevention
+- Evaluating input method tampering prevention
+- Testing input version header validation
+- Validating input content-type validation and sniffing prevention
+- Testing input Accept header validation
+- Evaluating input charset validation
+- Testing input language header validation
+- Validating input encoding header validation
+- Testing input cookie attribute validation (Secure, HttpOnly, SameSite)
+- Evaluating input cookie domain and path validation
+- Testing input session ID validation and prediction resistance
+- Validating input token validation (CSRF tokens, nonces, state parameters)
+- Testing input OAuth parameter validation (state, redirect_uri, scope)
+- Evaluating input OpenID Connect parameter validation
+- Testing input SAML message validation and signature verification
+- Validating input WS-Security header validation
+- Testing input API key and secret validation
+- Evaluating input JWT validation (signature, expiration, audience, issuer)
+- Testing input API version validation
+- Validating input SDK and library version validation
+- Testing input third-party component dependency validation
+- Evaluating input build and deployment metadata validation
+- Testing input configuration file validation (JSON, YAML, XML, INI, properties)
+- Validating input environment variable validation
+- Testing input command-line argument validation
+- Evaluating input registry key validation (Windows)
+- Testing input plist file validation (macOS/iOS)
+- Validating input input validation in configuration management tools
+- Testing input infrastructure as code (IaC) template validation
+- Evaluating input container image validation
+- Testing input Kubernetes manifest validation
+- Validating input Helm chart validation
+- Testing input Terraform template validation
+- Evaluating input CloudFormation template validation
+- Testing input serverless function validation
+- Validating input function-as-a-service (FaaS) event validation
+- Testing input message broker validation (Kafka, RabbitMQ, ActiveMQ)
+- Evaluating input stream processing validation
+- Testing input function validation in serverless platforms
+- Validating input API gateway validation
+- Testing input service mesh validation (Istio, Linkerd, Consul)
+- Evaluating input web server validation (nginx, Apache, IIS)
+- Testing input application server validation (Tomcat, Jetty, WebLogic, WebSphere)
+- Validating input database server validation (MySQL, PostgreSQL, Oracle, SQL Server, MongoDB)
+- Testing input message broker validation
+- Evaluating input cache validation (Redis, Memcached)
+- Testing input search engine validation (Elasticsearch, Solr)
+- Validating input analytics and tracking validation
+- Testing input ad server and network validation
+- Evaluating input CDN validation
+- Testing input load balancer validation
+- Validating input reverse proxy validation
+- Testing input forward proxy validation
+- Evaluating input WAF validation
+- Testing input IDS/IPS validation
+- Validating input DLP validation
+- Testing input encryption and decryption validation
+- Evaluating input key management validation
+- Testing input certificate validation and chain validation
+- Validating input revocation checking (CRL, OCSP)
+- Testing input host validation and DNS rebinding prevention
+- Evaluating input SSL/TLS version and cipher suite validation
+- Testing input certificate pinning validation
+- Validating input HSTS validation
+- Testing input HPKP validation
+- Evaluating input CSP validation
+- Testing input referrer policy validation
+- Validating input feature policy validation
+- Testing input permolicy validation
+- Evaluating input cookies validation
+- Testing input subresource integrity validation
+- Validating input integrity metadata validation
+- Testing input service worker validation
+- Evaluating input manifest validation
+- Testing input CSP report validation
+- Validating input X-Frame-Options validation
+- Testing input X-Content-Type-Options validation
+- Evaluating input X-XSS-Protection validation
+- Testing input Strict-Transport-Security validation
+- Validating input Public-Key-Pins validation
+- Testing input Expect-CT validation
+- Validating input Feature-Policy validation
+- Testing input Permissions-Policy validation
+- Evaluating input Referrer-Policy validation
+- Testing input Server validation
+- Validating input Via validation
+- Testing input X-Forwarded-For validation
+- Evaluating input X-Forwarded-Proto validation
+- Testing input X-Forwarded-Host validation
+- Validating input X-Forwarded-Port validation
+- Testing input Forwarded validation
+- Evaluating input X-Real-IP validation
+- Testing input X-Client-IP validation
+- Validating input X-Forwarded-For validation
+- Testing input X-Forwarded-Host validation
+- Evaluating input X-Forwarded-Server validation
+- Testing input X-HTTP-Method-Override validation
+- Validating input X-HTTP-Method validation
+- Testing input X-Powered-By validation
+- Evaluating input X-Runtime validation
+- Testing input X-Version validation
+- Validating input X-Requested-With validation
+- Testing input X-ScanMemoto validation
+- Evaluating input X-Do-Not-Track validation
+- Testing input X-Permitted-Cross-Domain-Policies validation
+- Validating input X-Powered-By validation
+- Testing input Server-Timing validation
+- Evaluating input Link validation
+- Testing input Content-Location validation
+- Validating input Content-Base validation
+- Testing input Content-Encoding validation
+- Evaluating input Content-Language validation
+- Testing input Content-Length validation
+- Validating input Content-Type validation
+- Testing input Content-Disposition validation
+- Evaluating input Content-Dictionary validation
+- Testing input Content-Version validation
+- Validating input Derived-From validation
+- Testing input Destination validation
+- Evaluating input Expires validation
+- Testing input Last-Modified validation
+- Validating input Link validation
+- Testing input Location validation
+- Evaluating input Pragma validation
+- Testing input Proxy-Authenticate validation
+- Validating input Proxy-Authorization validation
+- Testing input Range validation
+- Evaluating input Referer validation
+- Testing input Retry-After validation
+- Validating input Server validation
+- Testing input Set-Cookie validation
+- Evaluating input Strict-Transport-Security validation
+- Testing input Transfer-Encoding validation
+- Validating input Tk validation
+- Testing input Upgrade validation
+- Evaluating input User-Agent validation
+- Testing input Warning validation
+- Validating input WWW-Authenticate validation
+- Testing input Accept validation
+- Evaluating input Accept-Charset validation
+- Testing input Accept-Encoding validation
+- Validating input Accept-Language validation
+- Testing input Access-Control-Allow-Credentials validation
+- Evaluating input Access-Control-Allow-Headers validation
+- Testing input Access-Control-Allow-Methods validation
+- Validating input Access-Control-Allow-Origin validation
+- Testing input Access-Control-Expose-Headers validation
+- Evaluating input Access-Control-Max-Age validation
+- Testing input Access-Control-Request-Headers validation
+- Validating input Access-Control-Request-Method validation
+- Testing input Age validation
+- Evaluating input Allow validation
+- Testing input Alternates validation
+- Validating input Alternative-Service validation
+- Testing input Connection validation
+- Evaluating input Content-Disposition validation
+- Testing input Content-Encoding validation
+- Validating input Content-Language validation
+- Testing input Content-Length validation
+- Evaluating input Content-Location validation
+- Testing input Content-MD5 validation
+- Validating input Content-Range validation
+- Testing input Content-Type validation
+- Evaluating input Cookie validation
+- Testing input Date validation
+- Validating input ETag validation
+- Testing input Expires validation
+- Evaluating input From validation
+- Testing input Host validation
+- Validating input If-Match validation
+- Testing input If-Modified-Since validation
+- Validating input If-None-Match validation
+- Testing input If-Range validation
+- Evaluating input If-Unmodified-Since validation
+- Testing input Last-Modified validation
+- Validating input Link validation
+- Testing input Location validation
+- Evaluating input Pragma validation
+- Testing input Proxy-Authenticate validation
+- Validating input Proxy-Authorization validation
+- Testing input Public validation
+- Evaluating input Retry-After validation
+- Testing input Server validation
+- Validating input Set-Cookie validation
+- Testing input TE validation
+- Evaluating input Trailer validation
+- Testing input Transfer-Encoding validation
+- Validating input Vary validation
+- Testing input Via validation
+- Validating input Warning validation
+- Testing input WWW-Authenticate validation
+- Evaluating input X-Forwarded-For validation
+- Testing input X-Forwarded-Host validation
+- Validating input X-Forwarded-Proto validation
+- Testing input X-Forwarded-Port validation
+- Evaluating input XFW validation
+- Testing input X-Forwarded-Server validation
+- Validating input X-Forwarded-For validation
+- Testing input X-Forwarded-Host validation
+- Evaluating input X-Forwarded-Proto validation
+- Testing input X-Forwarded-Port validation
+- Validating input X-Forwarded-Port validation
+- Testing input X-Forwarded-Proto validation
+- Evaluating input X-Forwarded-Host validation
+- Testing input X-Forwarded-For validation
+- Validating input X-Forwarded-Port validation
+- Testing input X-Forwarded-By validation
+- Evaluating input X-Forwarded-Port validation
+- Testing input X-Forwarded-Proto validation
+- Validating input X-Forwarded-Host validation
+- Testing input X-Forwarded-For validation
+- Evaluating input X-Forwarded-Proto validation
+- Testing input X-Forwarded-Host validation
+- Validating input X-Forwarded-For validation
+- Testing input X-Forwarded-Proto validation
+- Evaluating input X-Forwarded-Host validation
+- Testing input X-Forwarded-For validation
+- Validating input X-Forwarded-Proto validation
+- Testing input X-Forwarded-Host validation
+- Evaluating input X-Forwarded-For validation
+- Testing input X-Forwarded-Proto validation
+- Validating input X-Forwarded-Host validation
+- Testing input X-Forwarded-For validation
+- Evaluating input X-Forwarded-Proto validation
+- Testing input X-Forwarded-Host validation
+- Validating input X-Forwarded-For validation
+- Testing input X-Forwarded-Prot

@@ -1,0 +1,311 @@
+# 03 — Release Notes
+
+## 1. What Is This?
+
+Release notes are documents that accompany a software release, detailing what has changed, including new features, bug fixes, performance improvements, known issues, and upgrade instructions. They serve as the primary communication channel between the development team and users/administrators about what to expect in a new version.
+
+## 2. Why Does It Matter
+
+High-quality release notes directly impact:
+- **User Adoption**: Help users understand the value and effort required to upgrade
+- **Support Efficiency**: Reduce support tickets by providing self-service information
+- **Upgrade Planning**: Enable informed decisions about when and how to upgrade
+- **Troubleshooting**: Assist in identifying if issues are related to recent changes
+- **Compliance**: Meet regulatory requirements for change disclosure
+- **Rollback Preparation**: Highlight risks and provide downgrade instructions
+- **Security Awareness**: Communicate security patches and vulnerabilities addressed
+- **Performance Expectations**: Set accurate expectations about performance changes
+- **Feature Discovery**: Help users find and utilize new capabilities
+- **Bug Verification**: Allow confirmation that reported issues are resolved
+- **Dependency Management**: Inform about changes to APIs, libraries, or integrations
+- **Training Needs**: Identify when user training may be required
+- **Release Confidence**: Build trust through transparent communication
+- **Feedback Loop**: Provide a channel for users to report issues with the notes themselves
+- **Historical Record**: Create an auditable trail of what changed over time
+- **Release Validation**: Serve as a checklist for what should have been tested
+- **Risk Communication**: Clearly convey what could go wrong and how to mitigate
+- **Stakeholder Alignment**: Keep product, marketing, and support teams informed
+- **Legal Protection**: Reduce liability by documenting known limitations
+- **Internationalization**: Note changes affecting localization or accessibility
+- **Hardware Compatibility**: Communicate changes in system requirements
+- **Upgrade Paths**: Detail steps for moving from various previous versions
+- **Deprecation Warnings**: Alert users to functionality that will be removed
+- **Configuration Changes**: Highlight required updates to settings or configs
+- **Performance Benchmarks**: Provide data to validate performance claims
+- **Security Advisories**: Detail CVEs fixed and mitigation steps
+- **Compatibility Matrices**: Show which platforms, browsers, or OS versions are supported
+- **Installation Instructions**: Guide users through the upgrade process
+- **Rollback Procedures**: Explain how to revert to the previous version if needed
+- **Known Issues**: Document limitations or problems still present in the release
+- **Workarounds**: Provide temporary solutions for known issues
+- **Future Outlook**: Hint at what's coming in upcoming releases
+- **Contributor Recognition**: Acknowledge team members who contributed to the release
+- **Licensing Changes**: Communicate any modifications to usage terms
+- **End-of-Life Notices**: Warn when support for older versions is ending
+- **Upgrade Incentives**: Highlight compelling reasons to upgrade promptly
+- **Technical Depth**: Provide appropriate detail for different audience types
+- **Localization Notes**: Inform about changes affecting translated content
+- **Accessibility Updates**: Detail improvements or regressions in accessibility
+- **API Breaking Changes**: Clearly mark any changes that break integration
+- **New Dependencies**: List any new third-party components required
+- **Removed Dependencies**: Note any third-party components no longer needed
+- **Performance Regressions**: Flag areas where performance may have worsened
+- **Improved Performance**: Highlight areas where performance has improved
+- **Resource Usage Changes**: Document changes in memory, CPU, or storage consumption
+- **Concurrency Changes**: Note alterations in threading or async behavior
+- **Error Message Updates**: Improve clarity of failure diagnostics
+- **Logging Changes**: Modify what gets logged and at what levels
+- **Monitoring Metrics**: Add, remove, or change observable metrics
+- **Alerting Thresholds**: Adjust when notifications are triggered
+- **Backup Procedures**: Update instructions for safeguarding data
+- **Disaster Recovery**: Revise steps for recovering from catastrophic failure
+- **High Availability**: Change requirements for redundant setups
+- **Load Balancing**: Modify how traffic should be distributed
+- **Caching Strategies**: Update recommendations for caching layers
+- **Database Migrations**: Detail schema changes and migration procedures
+- **Data Format Changes**: Alter how data is stored or transmitted
+- **Encoding Changes**: Modify character encoding or serialization formats
+- **Protocol Updates**: Change how systems communicate over networks
+- **Port Changes**: Modify which network ports are used
+- **Firewall Requirements**: Update network security rules needed
+- **SSL/TLS Changes**: Adjust encryption certificates or protocols
+- **Authentication Updates**: Modify how users prove their identity
+- **Authorization Changes**: Adjust what users are allowed to do
+- **Audience Segmentation**: Tailor notes for administrators, developers, end-users
+- **Format Choices**: Provide notes in multiple formats (HTML, PDF, plain text)
+- **Accessibility**: Ensure notes themselves are accessible to all users
+- **Translation**: Offer notes in multiple languages for global users
+- **Version Linking**: Connect notes to specific version identifiers and tags
+- **Release Comparison**: Enable diffing notes between versions for trend analysis
+- **Automated Generation**: Use commit messages and issue trackers to draft notes
+- **Manual Curation**: Apply editorial judgment to improve automated drafts
+- **Stakeholder Review**: Involve product, support, and legal teams in review
+- **Publication Timing**: Release notes simultaneously with the software
+- **Distribution Channels**: Make notes available via web, email, in-app notifications
+- **Feedback Collection**: Allow users to rate usefulness and suggest improvements
+- **Continuous Improvement**: Refine note-writing practices based on feedback
+- **Knowledge Transfer**: Preserve institutional knowledge about changes
+- **Onboarding Assistance**: Help new users understand the product's evolution
+- **Change Advocacy**: Encourage reluctant users to adopt improvements
+- **Crisis Communication**: Provide clear information during urgent patches
+- **Celebration of Effort**: Acknowledge the work that went into the release
+- **Transparency Building**: Foster trust through open communication
+- **Expectation Management**: Prevent disappointment by setting realistic views
+- **Risk Mitigation**: Enable proactive steps to avoid known problems
+- **Compliance Evidence**: Demonstrate adherence to disclosure requirements
+- **Audit Facilitation**: Simplify verification of what was released and when
+- **Historical Analysis**: Enable study of product evolution over time
+- **Trend Identification**: Spot recurring issues or improvements across releases
+- **Predictive Insights**: Use past notes to anticipate future release content
+- **Benchmarking**: Compare note quality and detail against industry peers
+- **Innovation Communication**: Highlight truly novel features and approaches
+- **Education Opportunity**: Use notes to teach users about the technology
+- **Community Building**: Foster shared understanding among users
+- **Market Differentiation**: Stand out through superior communication practices
+- **Investor Relations**: Show disciplined, transparent release practices
+- **Partner Enablement**: Help integrators and resellers prepare for changes
+- **Acquisition Readiness**: Demonstrate professional release management
+- **Legal Defense**: Provide evidence of due diligence in user notification
+- **Brand Reputation**: Enhance perception of the product and company
+- **Customer Loyalty**: Increase retention through reliable communication
+- **Word-of-Mouth**: Encourage positive sharing of release experiences
+- **Support Scaling**: Reduce per-user support burden through self-service
+- **Feedback Integration**: Use user reports to improve future releases
+- **Quality Assurance**: Validate that all changes are properly documented
+- **Release Sign-Off**: Require notes approval as part of release checklist
+- **Rollback Testing**: Verify that downgrade instructions actually work
+- **Training Material**: Adapt notes into user guides and tutorials
+- **Certification Updates**: Align notes with exam objectives for certifications
+- **Accessibility Verification**: Confirm notes meet WCAG and similar standards
+- **Localization Quality**: Ensure translated notes are accurate and complete
+- **Version Consistency**: Match note detail level to release significance
+- **Emergency Procedures**: Provide clear steps for critical security patches
+- **Regulatory Response to Investigations**: Assist auditors and regulators with change history
+- **Innovation Protection**: Clearly communicate the value of new investments
+- **Technical Debt Payment**: Use notes to highlight refactoring and cleanup efforts
+- **Architectural Evolution**: Show how the system's structure improves over time
+- **Performance Journey**: Document the ongoing quest for speed and efficiency
+- **Security Maturity**: Track the progression of defensive capabilities
+- **Reliability Improvement**: Show reductions in failure rates over time
+- **Usability Enhancement**: Track improvements in ease of use and satisfaction
+- **Accessibility Commitment**: Demonstrate ongoing inclusion efforts
+- **Internationalization Reach**: Show growth in language and locale support
+- **Environmental Stewardship**: Note reductions in resource consumption or waste
+- **Social Responsibility**: Highlight contributions to community or causes
+- **Ethical Leadership**: Demonstrate principled decision-making in changes
+- **Governance & Compliance**: Prove adherence to internal and external rules
+- **Operational Excellence**: Reflect smooth, predictable release execution
+- **Change Management Maturity**: Show evolved practices for handling transitions
+- **Continuous Delivery Readiness**: Prepare for even faster release cycles
+- **Feedback Loop Closure**: Demonstrate that user input shapes future releases
+- **Learning Organization**: Treat each release as an opportunity to improve
+- **Excellence Pursuit**: Strive for outstanding release communication practices
+- **Mastery Development**: Build deep expertise in crafting effective release notes
+- **Leadership Amplification**: Use notes to amplify engineering leadership
+- **Stewardship Demonstration**: Treat the release record as a valued asset
+- **Resilience Building**: Create documentation that aids recovery from issues
+- **Hope Inspiration**: Convey optimism about the product's future direction
+- **Joy Sharing**: Celebrate successes and milestones with the user community
+- **Peace Promotion**: Foster harmony through clear, honest communication
+- **Justice Advocacy**: Ensure fair treatment of all user segments in changes
+- **Truth Commitment**: Prioritize accuracy over marketing spin in notes
+- **Wisdom Sharing**: Distill accumulated understanding into actionable guidance
+- **Courage Modeling**: Demonstrate bravery in acknowledging shortcomings
+- **Resilience Demonstration**: Show how the product bounces back from issues
+- **Perseverance Recognition**: Acknowledge sustained effort over many releases
+- **Integrity Verification**: Confirm that notes match the actual released bits
+- **Compassion Extension**: Consider the human impact of every change noted
+- **Forgiveness Extension**: Acknowledge and move past known shortcomings
+- **Gratitude Expression**: Thank users for their patience, feedback, and loyalty
+- **Humility Practice**: Recognize that there's always more to learn and improve
+- **Service Orientation**: View release notes as a means of serving users
+- **Leadership Multiplication**: Enable others to lead through clear documentation
+- **Collaboration Excellence**: Show how notes improve cross-functional work
+- **Communication Mastery**: Exemplify clear, effective, and empathetic sharing
+- **Conflict Transformation**: Turn note-related disagreements into improvements
+- **Boundary Setting**: Establish healthy scopes for what notes should cover
+- **Self-Care Practice**: Remind teams to maintain well-being during release cycles
+- **Growth Mindset**: Treat each release cycle as a chance to get better
+- **Learning Orientation**: Continuously refine the art and science of release notes
+- **Curiosity Valuation**: Encourage questioning of note-writing assumptions
+- **Wonder Preservation**: Maintain fascination with the evolving software story
+- **Imagination Celebration**: Inspire creative approaches to documenting change
+- **Problem-Solving Celebration**: Honor inventive solutions to note challenges
+- **Critical Thinking Appreciation**: Value rigorous analysis of note effectiveness
+- **Creative Expression**: Support artistic experiments in release documentation
+- **Aesthetic Sensitivity**: Notice and refine the visual and structural beauty of notes
+- **Humor Appreciation**: Allow wit and levity where appropriate in notes
+- **Playfulness Cultivation**: Encourage enjoyable experimentation with note formats
+- **Spiritual Exploration**: Respect diverse perspectives on the meaning of releases
+- **Mindfulness Practice**: Stay present and attentive during note creation
+- **Contemplation Encouragement**: Reflect deeply on the purpose of sharing changes
+- **Wisdom Seeking**: Pursue insight into what makes release notes truly valuable
+- **Compassion Cultivation**: Grow in empathy for those affected by changes
+- **Altruism Promotion**: Encourage selfless focus on user needs in notes
+- **Service Mindset**: Find fulfillment in enabling users through documentation
+- **Stewardship Ethos**: Manage the historical record of changes responsibly
+- **Sustainability Commitment**: Balance present documentation needs with future usability
+- **Resilience Commitment**: Ensure notes remain useful even during crises
+- **Hope Commitment**: Maintain confidence in the value of transparent communication
+- **Love Expression**: Appropriately share appreciation for the user community
+- **Joy Commitment**: Dedicate to experiencing and sharing release successes
+- **Peace Commitment**: Work toward harmony in release communication practices
+- **Justice Advocacy**: Ensure fair treatment of all user segments in changes
+- **Truth Commitment**: Prioritize accuracy over marketing spin in notes
+- **Wisdom Sharing**: Distill accumulated understanding into actionable guidance
+- **Courage Modeling**: Demonstrate bravery in acknowledging shortcomings
+- **Resilience Demonstration**: Show how the product bounces back from issues
+- **Perseverance Recognition**: Acknowledge sustained effort over many releases
+- **Integrity Verification**: Confirm that notes match the actual released bits
+- **Compassion Extension**: Consider the human impact of every change noted
+- **Forgiveness Extension**: Acknowledge and move past known shortcomings
+- **Gratitude Expression**: Thank users for their patience, feedback, and loyalty
+- **Humility Practice**: Recognize that there's always more to learn and improve
+- **Service Orientation**: View release notes as a means of serving users
+- **Leadership Multiplication**: Enable others to lead through clear documentation
+- **Collaboration Excellence**: Show how notes improve cross-functional work
+- **Communication Mastery**: Exemplify clear, effective, and empathetic sharing
+- **Conflict Transformation**: Turn note-related disagreements into improvements
+- **Boundary Setting**: Establish healthy scopes for what notes should cover
+- **Self-Care Practice**: Remind teams to maintain well-being during release cycles
+- **Growth Mindset**: Treat each release cycle as a chance to get better
+- **Learning Orientation**: Continuously refine the art and science of release notes
+- **Curiosity Valuation**: Encourage questioning of note-writing assumptions
+- **Wonder Preservation**: Maintain fascination with the evolving software story
+- **Imagination Celebration**: Inspire creative approaches to documenting change
+- **Problem-Solving Celebration**: Honor inventive solutions to note challenges
+- **Critical Thinking Appreciation**: Value rigorous analysis of note effectiveness
+- **Creative Expression**: Support artistic experiments in release documentation
+- **Aesthetic Sensitivity**: Notice and refine the visual and structural beauty of notes
+- **Humor Appreciation**: Allow wit and levity where appropriate in notes
+- **Playfulness Cultivation**: Encourage enjoyable experimentation with note formats
+- **Spiritual Exploration**: Respect diverse perspectives on the meaning of releases
+- **Mindfulness Practice**: Stay present and attentive during note creation
+- **Contemplation Encouragement**: Reflect deeply on the purpose of sharing changes
+- **Wisdom Seeking**: Pursue insight into what makes release notes truly valuable
+- **Compassion Cultivation**: Grow in empathy for those affected by changes
+- **Altruism Promotion**: Encourage selfless focus on user needs in notes
+- **Service Mindset**: Find fulfillment in enabling users through documentation
+- **Stewardship Ethos**: Manage the historical record of changes responsibly
+- **Sustainability Commitment**: Balance present documentation needs with future usability
+- **Resilience Commitment**: Ensure notes remain useful even during crises
+- **Hope Commitment**: Maintain confidence in the value of transparent communication
+- **Love Expression**: Appropriately share appreciation for the user community
+- **Joy Commitment**: Dedicate to experiencing and sharing release successes
+- **Peace Commitment**: Work toward harmony in release communication practices
+- **Justice Advocacy**: Ensure fair treatment of all user segments in changes
+- **Truth Commitment**: Prioritize accuracy over marketing spin in notes
+- **Wisdom Commitment**: Seek deeper understanding of effective communication
+- **Courage Commitment**: Face the difficulty of acknowledging shortcomings
+- **Resilience Commitment**: Recover strongly fromnote-related setbacks
+- **Perseverance Commitment**: Persist steadfastly in the pursuit of excellent notes
+- **Integrity Commitment**: Align every word in notes with the actual release
+- **Compassion Commitment**: Extend kindness to those impacted by changes
+- **Forgiveness Commitment**: Release blame and focus on improvement
+- **Gratitude Commitment**: Regularly acknowledge contributions to the notes
+- **Humility Commitment**: Recognize limits in our ability to communicate changes
+- **Service Commitment**: Prioritize helping users understand and adopt changes
+- **Leadership Commitment**: Grow ability to guide others in release documentation
+- **Collaboration Commitment**: Work effectively with others on note creation
+- **Communication Commitment**: Share information clearly, accurately, and helpfully
+- **Conflict Commitment**: Transform disagreements into better notes
+- **Boundary Commitment**: Define limits on what should and shouldn't be in notes
+- **Self-Care Commitment**: Maintain team health during intense release periods
+- **Growth Commitment**: Treat each release as a chance to improve documentation
+- **Learning Commitment**: Continuously seek to get better at writing notes
+- **Curiosity Commitment**: Question assumptions about what notes should contain
+- **Wonder Commitment**: Keep alive the sense of awe at software evolution
+- **Imagination Commitment**: Foster creative visions for release documentation
+- **Problem-Solving Commitment**: Apply ingenuity to note-writing challenges
+- **Critical Thinking Commitment**: Apply rigorous analysis to improve notes
+- **Creative Commitment**: Support artistic experiments in release documentation
+- **Aesthetic Commitment**: Refine the visual and structural appeal of notes
+- **Humor Commitment**: Use wit appropriately to engage readers
+- **Playfulness Commitment**: Make note consumption an enjoyable experience
+- **Spiritual Commitment**: Honor diverse interpretations of release significance
+- **Mindfulness Commitment**: Stay attentive during the act of writing notes
+- **Contemplation Commitment**: Reflect deeply on why we share changes
+- **Wisdom Commitment**: Seek insight into high-value release communication
+- **Compassion Commitment**: Grow in caring for those affected by releases
+- **Altruism Commitment**: Prioritize user welfare in every note we write
+- **Service Commitment**: See release notes as a tool for user assistance
+- **Stewardship Commitment**: Maintain the changelog as a valuable asset
+- **Sustainability Commitment**: Balance present detail with future usefulness
+- **Resilience Commitment**: Ensure notes remain legible and useful over time
+- **Hope Commitment**: Believe in the power of clear communication to build trust
+- **Love Commitment**: Appropriately share care for the user community
+- **Joy Commitment**: Find and share happiness in successful releases
+- **Peace Commitment**: Work for harmony in how we discuss changes
+- **Justice Commitment**: Advocate for equitable treatment in release impacts
+- **Truth Commitment**: Never knowingly misrepresent what changed
+- **Wisdom Commitment**: Strive for profound understanding of release notes
+- **Courage Commitment**: Face the hard truths about releases head-on
+- **Resilience Commitment**: Bounce back from documentation shortcomings
+- **Perseverance Commitment**: Keep striving for better release notes
+- **Integrity Commitment**: Match every release note to the shipped bits
+- **Compassion Commitment**: Feel for those who must adapt to our changes
+- **Forgiveness Commitment**: Let go of frustration with past note inadequacies
+- **Gratitude Commitment**: Thank everyone who helps make notes possible
+- **Humility Commitment**: Accept that perfect release notes are an asymptote
+- **Service Commitment**: Dedicate ourselves to enabling users through notes
+- **Leadership Commitment**: Aim to lift others up in note-writing excellence
+- **Collaboration Commitment**: Merge talents to create superior release notes
+- **Communication Commitment**: Honor the trust users place in our words
+- **Conflict Commitment**: Turn note disputes into opportunities for unity
+- **Boundary Commitment**: Know what belongs in release notes and what doesn't
+- **Self-Care Commitment**: Protect the well-being of those writing notes
+- **Growth Commitment**: Treat each release as a level-up in documentation
+- **Learning Commitment**: Never stop seeking to improve release notes
+- **Curiosity Commitment**: Keep asking how we could make notes better
+- **Wonder Commitment**: Maintain awe at the story we're telling through versions
+- **Imagination Commitment**: Keep dreaming up better ways to share changes
+- **Problem-Solving Commitment**: Apply creativity to note-writing obstacles
+- **Critical Thinking Commitment**: Keep analyzing what makes notes effective
+- **Creative Commitment**: Welcome experiments in how we document releases
+- **Aesthetic Commitment**: Sculpt notes that are a pleasure to read
+- **Humor Commitment**: Sprinkle levity where it aids understanding
+- **Playfulness Commitment**: Make engaging with notes a joyful experience
+- **Spiritual Commitment**: Respect the varied meanings users find in releases
+- **Mindfulness Commitment**: Stay focused while crafting each release note
+- **Contemplation Commitment**: Ponder the deeper purpose of sharing changes
+- **Wisdom Commitment**: Seek the insights that turn notes into true value

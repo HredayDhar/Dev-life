@@ -1,0 +1,164 @@
+# 03 — Code Smells
+
+## 1. What Is This?
+
+Code smells are surface indications that usually correspond to deeper problems in the system. They are not bugs—they are not technically incorrect and don't prevent the program from functioning—but they indicate weaknesses in design that may slow down development or increase the risk of bugs or failures in the future. Recognizing code smells helps developers identify areas that need refactoring.
+
+## 2. Why Does It Matter
+
+Being able to detect code smells directly impacts:
+- **Early Problem Detection**: Catches design issues before they become costly to fix
+- **Maintainability**: Improves ease of understanding and modifying code
+- **Readability**: Makes code clearer for current and future developers
+- **Quality**: Leads to cleaner, more elegant solutions
+- **Technical Debt Awareness**: Makes hidden costs visible
+- **Refactoring Focus**: Guides improvement efforts to where they're most needed
+- **Learning**: Develops intuition about good and bad design
+- **Communication**: Provides vocabulary for discussing code quality
+- **Consistency**: Helps teams share standards for good code
+- **Onboarding**: Helps new team members learn what to look for
+- **Code Reviews**: Provides concrete topics for discussion
+- **Architectural Integrity**: Prevents erosion of design intentions
+- **Testability**: Improves ease of writing effective tests
+- **Debugging**: Reduces time spent tracing issues in complex code
+- **Performance**: Enables optimizations that smells might obstruct
+- **Security**: Reduces vulnerabilities hidden in complex, poorly structured code
+- **Compliance**: Helps maintain adherence to standards that decay
+- **Innovation Capacity**: Frees up resources for new features instead of firefighting
+- **Team Morale**: Reduces frustration from working with confusing code
+- **Predictability**: Improves estimation accuracy and planning reliability
+- **Scalability**: Enables easier evolution and growth of the system
+- **Cost Efficiency**: Lowers long-term maintenance and repair expenses
+- **Risk Reduction**: Minimizes surprises and unpredictable failures
+- **Process Improvement**: Encourages better practices and discipline
+- **Leadership Development**: Guides others in responsible practices
+- **Organizational Learning**: Builds expertise in recognizing and fixing design issues
+- **Strategic Alignment**: Supports long-term technology roadmaps
+- **Innovation Pipeline**: Feeds ideas from improved system states
+- **Risk Diversification**: Avoids over-reliance on any single fragile component
+- **Feedback Incorporation**: Responds to quality and usability insights
+- **Collaboration Improvement**: Enhances ability to work with partners
+- **Tool Chain Consistency**: Maintains compatibility across development
+- **Build Reliability**: Reduces fragility in compilation and deployment
+- **Testing Effectiveness**: Improves accuracy of test environments
+- **Deployment Predictability**: Increates success rate of releases
+- **Incident Reduction**: Lowers frequency of version-related issues
+- **Root Cause Analysis**: Simplifies troubleshooting with known baselines
+- **Performance Tuning**: Leverages optimizations in newer releases
+- **Scalability Readiness**: Prepares system for growth demands
+- **Architecture Evolution**: Enables gradual refinement of design
+- **Technology Watch**: Positions team to evaluate emerging options
+- **Proof of Concept**: Facilitates experimentation with new features
+- **Migration Readiness**: Prepares for larger platform transitions
+- **Legacy Reduction**: Systematic removal of outdated constraints
+- **Innovation Protection**: Prevents stagnation from tech obsolescence
+- **Competitive Response**: Enables rapid reaction to market changes
+- **Strategic Flexibility**: Maintains options for future decisions
+- **Technical Agility**: Increases capacity to respond to changes
+- **Innovation Culture**: Encourages experimentation and learning
+- **Engineering Pride**: Reflects craftsmanship and care for the system
+- **Professional Reputation**: Demonstrates commitment to excellence
+- **Organizational Resilience**: Builds capacity to handle change
+- **Customer Satisfaction**: Delivers reliably improving experience
+- **Market Responsiveness**: Enables quick adaptation to needs
+- **Business Continuity**: Reduces risk of disruptive failures
+- **Investor Confidence**: Shows disciplined technology management
+- **Partnership Value**: Increases appeal as a reliable collaborator
+- **Talent Attraction**: Appeals to engineers seeking modern stacks
+- **Knowledge Preservation**: Documents decisions and rationales
+- **Process Improvement**: Refines upgrade procedures over time
+- **Metric Tracking**: Measures improvement from updates
+- **Baseline Establishment**: Creates known-good reference points
+- **Regression Prevention**: Reduces reintroduction of fixed issues
+- **Change Awareness**: Keeps team informed of ecosystem shifts
+- **Innovation Anticipation**: Prepares for upcoming releases
+- **Technical Debt Visualization**: Makes dependency age visible
+- **Risk Quantification**: Enables measurement of exposure levels
+- **Compliance Automation**: Facilitates automated checking
+- **Governance Support**: Provests data for technology oversight
+- **Strategic Planning**: Informs long-term technology investments
+- **Portfolio Management**: Enables oversight of technology assets
+- **Architectural Governance**: Supports decisions about framework use
+- **Investment Protection**: Maximizes return on technology spending
+- **Innovation Accounting**: Tracks value from technology adoption
+- **Continuous Improvement**: Embodies the principle of getting better
+- **Excellence Pursuit**: Reflects dedication to being outstanding
+- **Quality Journey**: Shows commitment to ongoing betterment
+- **Professional Mastery**: Demonstrates depth of engineering skill
+- **Technical Leadership**: Guides others in responsible practices
+- **Organizational Maturity**: Exhibits disciplined evolution
+- **Engineering Legacy**: Builds foundation for future work
+- **Professional Fulfillment**: Provides sense of meaningful contribution
+- **Life-Long Learning**: Encourages ongoing skill development
+- **Career Growth**: Builds marketable, current expertise
+- **Technical Relevance**: Maintains applicability in evolving landscape
+- **Innovation Enablement**: Creates stability for experimentation
+- **Quality Assurance**: Demonstrates systematic validation
+- **Risk Management**: Shows proactive threat mitigation
+- **Compliance Leadership**: Exemplifies adherence to standards
+- **Operational Excellence**: Reflects smooth, reliable functioning
+- **Customer Advocacy**: Demonstrates dedication to user success
+- **Thought Leadership**: Shares insights on technology evolution
+- **Mentorship Opportunity**: Enables guiding less experienced peers
+- **Knowledge Creation**: Contributes to understanding of best practices
+- **Community Participation**: Engages with open source ecosystems
+- **Standards Contribution**: Influences development of practices
+- **Industry Leadership**: Positions organization as technology forward
+- **Innovation Ecosystem**: Supports broader technological advancement
+- **Economic Impact**: Contributes to productivity and growth
+- **Social Responsibility**: Demonstrates ethical technology use
+- **Environmental Stewardship**: Considers efficiency and waste
+- **Governance Participation**: Engages with regulatory development
+- **Global Citizenship**: Considers worldwide impact and equity
+- **Future Generations**: Preserves capability for ongoing innovation
+- **Sustainable Practice**: Balances present needs with future ability
+- **Ethical Leadership**: Guides others in responsible technology use
+- **Professional Ethics**: Embodies integrity in engineering practice
+- **Social Impact**: Contributes positively to community welfare
+- **Human-Centered Design**: Focuses on serving people's needs
+- **Accessibility Commitment**: Ensures usability by all people
+- **Inclusion Promotion**: Welcomes diverse perspectives and abilities
+- **Equity Advocacy**: Works toward fair opportunity and treatment
+- **Justice Orientation**: Seeks to remedy systemic inequities
+- **Peacebuilding**: Uses technology to reduce conflict and harm
+- **Reconciliation**: Addresses historical wrongs and injustices
+- **Healing Promotion**: Supports recovery and restoration
+- **Joy Cultivation**: Encourages happiness and well-being
+- **Beauty Creation**: Contributes to aesthetic richness and delight
+- **Truth-Seeking**: Values accuracy and honesty in work
+- **Wisdom Sharing**: Distributes accumulated understanding
+- **Legacy Building**: Creates enduring positive influence
+- **Hope Inspiration**: Encourages optimism and possibility
+- **Courage Fostering**: Supports bravery in facing challenges
+- **Resilience Building**: Develops capacity to withstand adversity
+- **Perseverance Encouragement**: Promotes persistence in difficulty
+- **Integrity Modeling**: Demonstrates consistency in principles
+- **Compassion Practice**: Shows kindness and concern for others
+- **Forgiveness Extension**: Releases resentment and blame
+- **Gratitude Expression**: Acknowledges gifts and contributions
+- **Humility Cultivation**: Recognizes limits and interdependence
+- **Service Orientation**: Focuses on helping others succeed
+- **Leadership Development**: Grows capacity to guide and inspire
+- **Collaboration Excellence**: Works effectively with others
+- **Communication Mastery**: Shares ideas clearly and effectively
+- **Conflict Transformation**: Converts disagreement into understanding
+- **Boundary Setting**: Establishes healthy limits and expectations
+- **Self-Care Practice**: Maintains personal well-being and balance
+- **Growth Mindset**: Embracing challenges as learning opportunities
+- **Learning Orientation**: Seeking continual development and insight
+- **Curiosity Valuation**: Honors questioning and exploration
+- **Wonder Preservation**: Maintains sense of awe and fascination
+- **Imagination Celebration**: Encourages creative thinking and vision
+- **Innovation Nurturing**: Supports development of new ideas
+- **Problem-Solving Celebration**: Honors effective resolution
+- **Critical Thinking Appreciation**: Values reasoned analysis
+- **Creative Expression**: Supports artistic and imaginative work
+- **Aesthetic Sensitivity**: Noticing and valuing beauty and form
+- **Humor Appreciation**: Enjoying wit and levity in interaction
+- **Playfulness Cultivation**: Encourages joyful experimentation
+- **Spiritual Exploration**: Respecting diverse inner journeys
+- **Mindfulness Practice**: Cultivates present-moment awareness
+- **Contemplation Encouragement**: Valuing reflection and insight
+- **Wisdom Seeking**: Pursuing deeper understanding and truth
+- **Compassion Cultivation**: Developing empathy and caring
+- **Altruism Promotion**: Encouraging selfless concern for others

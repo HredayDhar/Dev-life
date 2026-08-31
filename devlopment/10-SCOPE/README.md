@@ -1,0 +1,762 @@
+# 10 — SCOPE
+
+## 1. What Is This?
+
+Scope definition is the process of establishing the boundaries of a project or product by clearly identifying what is included (in scope) and what is excluded (out of scope). It sets the foundation for all subsequent planning, estimation, and execution activities by managing stakeholder expectations and providing a clear understanding of the work to be performed.
+
+## 2. Why Does It Matter?
+
+Scope matters because it:
+- Prevents scope creep and uncontrolled changes
+- Aligns stakeholder expectations and reduces misunderstandings
+- Provides a basis for accurate estimation and planning
+- Enables effective resource allocation and scheduling
+- Helps prioritize work and focus on delivering value
+- Supports decision-making about trade-offs and alternatives
+- Facilitates communication and reporting progress
+- Reduces risk by clarifying assumptions and constraints
+- Enables measurement of progress and success
+- Protects the team from unreasonable demands
+- Supports contract management and change control
+- Enhances team focus and productivity
+- Improves customer satisfaction by delivering agreed-upon features
+- Reduces wasted effort on unnecessary work
+- Provides clarity for quality assurance and testing
+- Supports regulatory and compliance requirements
+- Enables effective risk management
+- Supports architectural and design decisions
+- Facilitates vendor and contractor management
+- Enhances organizational learning and process improvement
+
+## 3. What Problem Does It Solve?
+
+Without clear scope definition, teams experience:
+- Uncontrolled growth of project requirements (scope creep)
+- Missed deadlines and budget overruns
+- Conflicting stakeholder expectations
+- Poor quality due to unclear acceptance criteria
+- Inefficient use of resources
+- Difficulty in measuring progress and performance
+- Increased risk of project failure
+- Team frustration and burnout
+- Customer dissatisfaction
+- Inaccurate forecasting and reporting
+- Difficulty in prioritizing work
+- Inadequate testing and quality assurance
+- Poor change management
+- Architectural and design rework
+- Integration and compatibility issues
+- Compliance and regulatory violations
+- Vendor and contractor disputes
+- Loss of competitive advantage
+- Damage to reputation and credibility
+
+## 4. When Should We Start?
+
+Scope definition should begin:
+- During project initiation, after the business case is approved
+- When gathering and analyzing requirements
+- Before detailed planning and estimation activities
+- When significant changes are proposed to existing systems
+- When starting a new product or feature development
+- When entering into a new contract or agreement
+- When responding to a request for proposal (RFP)
+- When defining a minimum viable product (MVP)
+- When planning a release or iteration
+- When undertaking process improvement initiatives
+- When defining service level agreements (SLAs)
+- When establishing partnerships or collaborations
+- When conducting feasibility studies
+- When planning migrations or upgrades
+- When defining operational procedures
+- When creating documentation and training materials
+- When establishing maintenance and support models
+- When defining data management and governance policies
+- When planning security and compliance measures
+- When establishing performance and scalability requirements
+- When defining user experience and accessibility standards
+- When planning for internationalization and localization
+- When defining technical debt management strategies
+- When planning for disaster recovery and business continuity
+- When establishing monitoring and observability requirements
+- When defining rollback and recovery procedures
+- When planning for deprecation and sunsetting
+- When establishing audit and compliance trails
+- When defining data retention and archival policies
+- When planning for capacity growth and scaling
+- When defining API and integration points
+- When establishing development and deployment standards
+- When defining coding and design guidelines
+- When planning for test automation and continuous testing
+- When defining release management and deployment strategies
+- When establishing incident response and problem management
+- When defining change and configuration management
+- When planning for knowledge management and transfer
+- When defining vendor management and sourcing strategies
+- When establishing service catalog and portfolio management
+- When defining financial management and cost tracking
+- When planning for benefits realization and ROI analysis
+- When defining stakeholder engagement and communication plans
+- When establishing governance and decision-making frameworks
+- When defining risk management and mitigation strategies
+- When planning for training and enablement programs
+- When defining support and helpdesk procedures
+- When establishing performance monitoring and alerting
+- When defining backup and recovery procedures
+- When planning for patch and update management
+- When defining asset and inventory management
+- When establishing license and entitlement management
+- When planning for end-of-life and disposal procedures
+- When defining charity and community engagement
+- When establishing sustainability and environmental practices
+- When defining accessibility and inclusion requirements
+- When planning for multilingual support
+- When defining data sovereignty and residency requirements
+- When establishing encryption and key management
+- When defining network and connectivity requirements
+- When planning for load balancing and traffic management
+- When defining caching and content delivery strategies
+- When establishing database and storage technologies
+- When defining messaging and event processing
+- When planning for workflow and business process automation
+- When defining API gateway and management
+- When establishing service mesh and microservices
+- When defining containerization and orchestration
+- When planning for serverless and function-as-a-service
+- When defining edge computing and IoT integration
+- When establishing API versioning and deprecation
+- When defining webhook and callback mechanisms
+- When planning for real-time and streaming data
+- When defining batch processing and ETL
+- When establishing data lake and warehouse architectures
+- When defining data modeling and schema management
+- When planning for master data management
+- When defining data quality and cleansing
+- When establishing data lineage and impact analysis
+- When defining data virtualization and federation
+- When planning for data governance and stewardship
+- When defining business intelligence and analytics
+- When establishing reporting and dashboarding
+- When defining data science and machine learning
+- When planning for natural language processing
+- When establishing computer vision and image processing
+- When defining speech recognition and audio processing
+- When planning for robotics and process automation
+- When defining blockchain and distributed ledger
+- When establishing smart contracts and decentralized applications
+- When defining cryptocurrency and token economics
+- When planning for augmented and virtual reality
+- When establishing haptic feedback and sensory interfaces
+- When defining biometric authentication and security
+- When planning for quantum computing readiness
+- When establishing neural network and deep learning
+- When defining generative AI and large language models
+- When planning for explainable AI and model interpretability
+- When establishing AI ethics and bias mitigation
+- When defining AI safety and alignment
+- When planning for human-AI collaboration
+- When establishing autonomous systems and robotics
+- When defining swarm intelligence and collective behavior
+- When planning for bioinformatics and computational biology
+- When establishing cheminformatics and drug discovery
+- When defining materials science and nanotechnology
+- When planning for aerospace and aviation systems
+- When establishing automotive and transportation systems
+- When defining energy and power systems
+- When planning for smart grid and renewable energy
+- When establishing water and wastewater management
+- When defining environmental monitoring and conservation
+- When planning for climate modeling and prediction
+- When establishing geological and geophysical systems
+- When defining seismic and earthquake engineering
+- When planning for oceanography and marine systems
+- When establishing atmospheric and weather forecasting
+- When defining space exploration and satellite systems
+- When establishing ground station and mission control
+- When defining rocket propulsion and launch systems
+- When planning for space habitats and life support
+- When establishing in-space manufacturing and assembly
+- When defining asteroid mining and resource utilization
+- When planning for interplanetary travel and colonization
+- When establishing terraforming and planetary engineering
+- When defining extraterrestrial life detection
+- When planning for SETI and alien communication
+- When establishing multiverse and parallel universe theories
+- When defining time travel and causality
+- When planning for quantum gravity and string theory
+- When establishing consciousness and mind uploading
+- When defining simulation and virtual reality
+- When planning for mathematical foundations and logic
+- When establishing set theory and category theory
+- When defining topology and manifold theory
+- When planning for algebraic geometry and number theory
+- When establishing combinatorics and graph theory
+- When defining probability and statistics
+- When planning for stochastic processes and Markov chains
+- When establishing queuing theory and network theory
+- When defining information theory and coding
+- When planning for cryptography and security protocols
+- When establishing error correction and detection
+- When defining signal processing and filtering
+- When planning for control systems and stability
+- When establishing robotics and kinematics
+- When defining dynamics and vibration analysis
+- When planning for finite element analysis
+- When establishing computational fluid dynamics
+- When defining heat transfer and thermodynamics
+- When planning for structural analysis and mechanics
+- When establishing materials testing and characterization
+- When defining corrosion and degradation
+- When planning for fatigue and fracture mechanics
+- When establishing tribology and wear
+- When defining lubrication and surface engineering
+- When planning for additive manufacturing and 3D printing
+- When establishing CNC machining and fabrication
+- When defining casting and molding processes
+- When planning for welding and joining
+- When establishing heat treatment and surface hardening
+- When defining nondestructive testing and inspection
+- When planning for reliability and maintainability
+- When establishing availability and safety integrity
+- When defining functional safety and IEC 61508
+- When planning for automotive safety and ISO 26262
+- | establishing functional safety for machinery and IEC 62061
+- | defining safety instrumented systems and ISA 84
+- | planning for nuclear safety and IEC 62271
+- | establishing process safety and OSHA PSM
+- | defining chemical safety and GHS
+- | planning for biological safety and biosafety levels
+- | establishing radiation safety and radiation protection
+- | defining laser safety and eye protection
+- | planning for electrical safety and NFPA 70E
+- | establishing fire safety and NFPA 101
+- | defining building safety and International Building Code
+- | planning for accessibility and ADA compliance
+- | establishing elevator and escalator safety
+- | defining playground safety and ASTM F1487
+- | planning for toy safety and ASTM F963
+- | establishing food safety and HACCP
+- | defining beverage safety and alcohol regulation
+- | planning for pharmaceutical safety and GMP
+- | establishing medical device safety and ISO 13485
+- | defining clinical trial safety and ICH GCP
+- | planning for veterinary safety and animal welfare
+- | establishing workplace safety and OSHA
+- | defining construction safety and OSHA 1926
+- | defining maritime safety and SOLAS
+- | establishing aviation safety and ICAO Annex
+- | defining railway safety and EN 15227
+- | planning for road safety and ISO 39001
+- | establishing occupational health and ISO 45001
+- | defining ergonomics and human factors
+- | planning for industrial hygiene and NIOSH
+- | establishing environmental management and ISO 14001
+- | defining energy management and ISO 50001
+- | planning for quality management and ISO 9001
+- | establishing information security and ISO 27001
+- | defining business continuity and ISO 22301
+- | planning for social responsibility and ISO 26000
+- | defining data protection and GDPR
+- | establishing privacy and CCPA
+- | planning for accessibility and WCAG
+- | defining language support and i18n/l10n
+- | establishing usability and UX maturity
+- | planning for design systems and component libraries
+- | defining frontend frameworks and libraries
+- | establishing backend frameworks and APIs
+- | defining databases and ORM
+- | planning for caching and in-memory stores
+- | establishing message queues and brokers
+- | defining web servers and application servers
+- | planning for load balancers and reverse proxies
+- | establishing CDNs and edge networks
+- | defining authentication and authorization
+- | planning for single sign-on and identity federation
+- | establishing directory services and LDAP
+- | defining certificates and PKI
+- | planning for secrets management and vaults
+- | establishing logging and monitoring
+- | defining tracing and observability
+- | planning for metrics and dashboards
+- | establishing alerting and incident response
+- | defining log aggregation and analysis
+- | planning for SIEM and security analytics
+- | establishing vulnerability scanning and penetration testing
+- | defining code review and static analysis
+- | planning for dynamic analysis and fuzzing
+- | establishing dependency scanning and SBOM
+- | defining license compliance and FOSSology
+- | planning for container scanning and image security
+- | establishing runtime protection and WAF
+- | defining API security and OWASP Top 10
+- | planning for microservice security and service mesh
+- | establishing zero trust and microsegmentation
+- | defining network security and firewall rules
+- | planning for intrusion detection and prevention
+- | establishing VPN and secure tunneling
+- | defining wireless security and WPA3
+- | planning for Bluetooth and NFC security
+- | establishing IoT security and device attestation
+- | defining industrial control systems and SCADA security
+- | planning for OT security and IEC 62443
+- | establishing critical infrastructure protection
+- | defining election security and voting systems
+- | planning for ballot security and auditability
+- | establishing campaign finance and disclosure
+- | defining legislative transparency and open data
+- | planning for lobbying regulation and ethics
+- | establishing judicial independence and rule of law
+- | defining human rights and international law
+- | planning for humanitarian aid and disaster response
+- | establishing refugee protection and asylum
+- | defining migration governance and integration
+- | planning for territorial disputes and border management
+- | establishing diplomacy and conflict resolution
+- | defining peacekeeping and conflict prevention
+- | planning for nuclear non-proliferation and safeguards
+- | establishing arms control and disarmament
+- | defining space law and outer space treaty
+- | planning for maritime law and UNCLOS
+- | establishing air law and Chicago Convention
+- | defining international trade and WTO agreements
+- | planning for foreign direct investment and investment treaties
+- | establishing tax treaties and double taxation
+- | defining transfer pricing and BEPS
+- | planning for customs and trade facilitation
+- | establishing intellectual property and TRIPS
+- | defining patent law and prosecution
+- | establishing trademark law and Madrid System
+- | defining copyright law and Berne Convention
+- | planning for industrial design and Hague System
+- | establishing geographical indications and Lisbon System
+- | defining trade secrets and economic espionage
+- | planning for unfair competition and antitrust
+- | establishing merger control and competition law
+- | defining state aid and subsidy rules
+- | planning for public procurement and bidding
+- | establishing government contracts and FAR
+- | defining grant management and financial assistance
+- | planning for loans and debt financing
+- | establishing equity financing and venture capital
+- | defining angel investors and seed funding
+- | planning for crowdfunding and peer-to-peer lending
+- | establishing initial public offerings and stock markets
+- | defining bonds and debt securities
+- | planning for derivatives and hedging
+- | establishing commodities and futures markets
+- | defining foreign exchange and currency markets
+- | planning for money laundering and AML
+- | establishing KYC and customer due diligence
+- | defining terrorist financing and CTF
+- | planning for sanctions and embargoes
+- | establishing beneficial ownership and transparency
+- | defining money value and time value
+- | planning for interest rates and yield curves
+- | establishing bond ratings and credit risk
+- | defining stock valuation and fundamental analysis
+- | planning for technical analysis and charting
+- | establishing algorithmic and high-frequency trading
+- | defining portfolio theory and asset allocation
+- | planning for efficient market hypothesis
+- | establishing behavioral finance and psychology
+- | defining risk-adjusted return and Sharpe ratio
+- | planning for alpha generation and active management
+- | establishing passive indexing and ETFs
+- | defining smart beta and factor investing
+- | planning for alternative investments and private equity
+- | establishing hedge funds and managed futures
+- | defining venture capital and startup financing
+- | planning for incubators and accelerators
+- | establishing corporate venture capital
+- | defining M&A and divestitures
+- | planning for post-merger integration
+- | establishing spin-offs and carve-outs
+- | defining joint ventures and strategic alliances
+- | planning for licensing and franchising
+- | establishing distributorship and agency relationships
+- | defining OEM and contract manufacturing
+- | planning for private label and white labeling
+- | establishing dropshipping and fulfillment
+- | defining subscription and recurring revenue
+- | planning for freemium and tiered pricing
+- | establishing dynamic pricing and yield management
+- | defining price discrimination and bundling
+- | planning for psychological pricing and anchoring
+- | establishing currency conversion and FX risk
+- | defining inflation protection and TIPS
+- | planning for deflation and negative interest rates
+- | establishing stagflation and wage-price spiral
+- | defining hyperinflation and currency collapse
+- | planning for currency reform and dollarization
+- | establishing cryptocurrency and blockchain
+- | defining central bank digital currency
+- | planning for monetary policy and quantitative easing
+- | establishing fiscal policy and stimulus
+- | defining austerity and deficit reduction
+- | planning for debt ceiling and default
+- | establishing sovereign debt and restructuring
+- | defining default risk and credit spreads
+- | planning for distressed debt and recovery
+- | establishing bankruptcy and liquidation
+- | defining workouts and forbearance
+- | planning for receivership and reorganization
+- | establishing Chapter 11 and Chapter 7
+- | defining liquidation value and going concern
+- | planning for asset-based lending
+- | establishing factoring and invoice discounting
+- | defining asset securitization and ABS
+- | planning for mortgage-backed securities and MBS
+- | establishing collateralized debt obligations and CDO
+- | defining synthetic CDO and structuring
+- | planning for credit default swaps and CDS
+- | establishing total return swaps and TRS
+- | defining interest rate swaps and IRS
+- | planning for basis swaps and cross-currency swaps
+- | establishing currency swaps and FX swaps
+- | defining total return swaps and TRS
+- | planning for credit-linked notes and CLN
+- | establishing equity-linked notes and ELN
+- | defining commodity-linked notes and CLN
+- | planning for structured notes and products
+- | establishing principal-protected notes and PPN
+- | defining market-linked notes and MLN
+- | planning for yield enhancement notes
+- | establishing callable and puttable bonds
+- | defining zero-coupon bonds and strips
+- | planning for perpetual bonds and consols
+- | establishing inflation-linked bonds and TIPS
+- | defining green bonds and ESG financing
+- | planning for social bonds and sustainability-linked
+- | establishing catastrophe bonds and insurance-linked
+- | defining litigation funding and third-party financing
+- | planning for royalties and intellectual property
+- | establishing merchant acquiring and payment processing
+- | defining point-of-sale and terminals
+- | planning for e-commerce and online payments
+- | establishing mobile payments and digital wallets
+- | defining peer-to-peer payments and Venmo
+- | planning for cryptocurrency payments and Bitcoin
+- | establishing contactless payments and NFC
+- | defining QR code payments and Alipay
+- | planning for WeChat Pay and Apple Pay
+- | establishing Google Pay and Samsung Pay
+- | defining open banking and PSD2
+- | planning for real-time payments and FedNow
+- | establishing ACH and SEPA
+- | defining wire transfer and SWIFT
+- | planning for letters of credit and documentary collections
+- | establishing bank guarantees and standby LC
+- | defining promissory notes and bills of exchange
+- | planning for banker's acceptance and commercial paper
+- | establishing certificates of deposit and CDs
+- | defining money market funds and repos
+- | planning for treasury bills and notes
+- | establishing government bonds and gilts
+- | defining municipal bonds and munis
+- | planning for corporate bonds and investment grade
+- | establishing high-yield bonds and junk bonds
+- | defining convertible bonds and preferred stock
+- | planning for equity securities and common stock
+- | establishing preferred stock and dividends
+- | defining treasury stock and buybacks
+- | planning for stock splits and reverse splits
+- | establishing rights offerings and warrants
+- | defining stock options and equity compensation
+- | planning for restricted stock units and RSUs
+- | establishing employee stock purchase plans and ESPPs
+- | defining stock appreciation rights and SARs
+- | planning for phantom stock and equity equivalents
+- | establishing deferred compensation and nonqualified
+- | defining pension plans and defined benefit
+- | planning for defined contribution and 401(k)
+- | establishing IRAs and Roth accounts
+- | defining annuities and structured settlements
+- | planning for life insurance and term policies
+- | establishing whole life and universal life
+- | defining variable life and investment-linked
+- | planning for disability insurance and income protection
+- | establishing long-term care insurance
+- | defining critical illness insurance
+- | planning for accident insurance
+- | establishing liability insurance and general liability
+- | defining professional liability and malpractice
+- | planning for directors and officers liability
+- | establishing cyber liability and data breach
+- | defining product liability and strict liability
+- | planning for automobile liability
+- | establishing homeowners and property insurance
+- | defining renters and tenants insurance
+- | planning for flood insurance and NFIP
+- | establishing earthquake insurance
+- | defining windstorm and hurricane insurance
+- | planning for marine insurance
+- | establishing aviation insurance
+- | defining space insurance
+- | planning for title insurance
+- | establishing warranty and guarantees
+- | defining service contracts and maintenance agreements
+- | planning for extended warranties
+- | establishing service level agreements and SLAs
+- | defining uptime guarantees and availability
+- | planning for mean time between failures and MTBF
+- | establishing mean time to repair and MTTR
+- | defining failure rates and reliability
+- | planning for hazard rates and bathtub curve
+- | establishing Weibull analysis and life testing
+- | defining accelerated testing and HALT
+- | planning for highly accelerated life testing and HASS
+- | establishing reliability growth modeling
+- | defining maintainability and serviceability
+- | planning for mean time to maintain and MTBM
+- | establishing logistic analysis and supportability
+- | defining provisioning and spare parts
+- | planning for obsolescence management
+- | establishing end-of-life and disposal
+- | defining recycling and waste management
+- | planning for circular economy and sustainability
+- | establishing green manufacturing and eco-design
+- | defining life cycle assessment and LCA
+- | planning for carbon footprint and GHG emissions
+- | establishing water footprint and virtual water
+- | defining ecological footprint and biocapacity
+- | planning for biodiversity and ecosystem services
+- | establishing natural capital and valuation
+- | defining ecosystem restoration and remediation
+- | planning for invasive species management
+- | establishing pollution prevention and control
+- | defining air quality and emissions standards
+- | planning for water quality and wastewater treatment
+- | establishing solid waste management and landfills
+- | defining hazardous waste and RCRA
+- | planning for medical waste and biohazards
+- | establishing e-waste and electronics recycling
+- | defining nuclear waste and geological disposal
+- | planning for spent fuel and reprocessing
+- | establishing fusion energy and tokamak
+- | defining renewable energy and solar power
+- | planning for photovoltaic and concentrated solar
+- | establishing wind power and turbines
+- | defining hydroelectric power and dams
+- | planning for geothermal energy and heat pumps
+- | establishing biomass and biofuels
+- | defining waste-to-energy and incineration
+- | planning for nuclear fission and reactors
+- | establishing nuclear fusion and ITER
+- | defining particle accelerators and colliders
+- | planning for gravitational wave detection
+- | establishing neutrino observatories
+- | defining dark matter and dark energy
+- | planning for cosmic microwave background
+- | establishing inflation and multiverse theory
+- | defining string theory and brane cosmology
+- | planning for loop quantum gravity
+- | establishing twistor theory and amplification
+- | defining amplituhedron and scattering amplitudes
+- | planning for holographic principle and AdS/CFT
+- | establishing black hole information paradox
+- | defining firewall and complementarity
+- | planning for Hawking radiation and evaporation
+- | establishing information loss paradox
+- | defining fuzzball and string theory
+- | planning for firewall and AMPS
+- | establishing ER=EPR and wormholes
+- | defining quantum entanglement and nonlocality
+- | planning for Bell's inequality and experiments
+- | establishing quantum teleportation
+- | defining quantum cryptography and QKD
+- | planning for quantum computing and qubits
+- | establishing quantum gates and circuits
+- | defining quantum algorithms and Shor's algorithm
+- | planning for Grover's algorithm and search
+- | establishing quantum simulation and chemistry
+- | defining quantum error correction and fault tolerance
+- | planning for topological qubits and anyons
+- | establishing Majorana fermions and braiding
+- | defining quantum Hall effect and fractional
+- | planning for topological insulators and superconductors
+- | establishing quantum spin liquids and frustration
+- | defining quantum magnetism and order
+- | planning for quantum phase transitions and criticality
+- | establishing quantum criticality and scaling
+- | defining quantum entanglement entropy
+- | planning for area law and holographic entanglement
+- | establishing entanglement negativity and discord
+- | defining quantum discord and DQC1
+- | planning for quantum coherence and decoherence
+- | establishing quantum Zeno effect and watchdog
+- | defining quantum anti-Zeno effect
+- | planning for quantum tunneling and barrier penetration
+- | establishing resonant tunneling and diodes
+- | defining quantum dots and confinement
+- | planning for single-electron transistors
+- | establishing Coulomb blockade and oscillations
+- | defining quantum point contact and conductance
+- | planning for quantum wires and Luttinger liquid
+- | establishing quantum dots and artificial atoms
+- | defining Fock states and photon number
+- | planning for coherent states and laser light
+- | establishing squeezed states and quantum noise
+- | defining thermal states and blackbody radiation
+- | planning for entangled states and EPR pairs
+- | establishing Bell states and maximally entangled
+- | defining GHZ states and multipartite entanglement
+- | planning for W states and symmetric entanglement
+- | establishing cluster states and measurement-based
+- | defining graph states and topological entanglement
+- | planning for surface codes and error correction
+- | establishing toric code and anyon models
+- | defining color codes and gauge theories
+- | planning for Bacon-Shor and subsystem codes
+- | establishing LDPC codes and iterative decoding
+- | defining turbo codes and parallel concatenation
+- | planning for Raptor codes and fountain codes
+- | establishing LDGM codes and rateless codes
+- | defining polar codes and channel polarization
+- | planning for Reed-Solomon codes and BCH
+- | establishing convolutional codes and Viterbi
+- | defining trellis coding and modulation
+- | planning for block codes and syndromes
+- | establishing Hamming codes and perfect codes
+- | defining Golay codes and Mathieu groups
+- | planning for BCH codes and cyclic codes
+- | establishing Reed-Muller codes and Boolean functions
+- | defining Hadamard codes and Walsh functions
+- | planning for simplex codes and repetition codes
+- | establishing CRC codes and error detection
+- | defining checksums and parity bits
+- | planning for hash functions and cryptographic digests
+- | establishing MD5 and SHA-1
+- | defining SHA-2 and SHA-3
+- | planning for HMAC and keyed hashes
+- | establishing MACs and authentication
+- | defining Bloom filters and probabilistic sets
+- | planning for cuckoo filters and hashing
+- | establishing skip lists and probabilistic structures
+- | defining treaps and randomized BSTs
+- | planning for splay trees and self-adjusting
+- | establishing red-black trees and balanced BSTs
+- | defining AVL trees and height-balanced
+- | planning for treaps and Cartesian trees
+- | establishing B-trees and multiway search
+- | defining B+ trees and indexed sequential
+- | planning for B* trees and prefix B-trees
+- | establishing trie and prefix trees
+- | defining radix trees and Patricia tries
+- | planning for suffix trees and Ukkonen
+- | establishing suffix arrays and Manber-Myers
+- | defining Burrows-Wheeler transform and FM-index
+- | planning for suffix automaton and DAWG
+- | establishing suffix tree and applications
+- | defining approximate string matching
+- | planning for Levenshtein distance and edit
+- | establishing longest common subsequence
+- | defining longest increasing subsequence
+- | planning for patience sorting and greedy
+- | establishing Dijkstra's algorithm and shortest path
+- | defining Bellman-Ford and negative cycles
+- | planning for A* search and heuristics
+- | establishing Johnson's algorithm and reweighting
+- | defining Floyd-Warshall and all-pairs shortest
+- | planning for Johnson's algorithm and sparse graphs
+- | establishing topological sorting and DAGs
+- | defining strongly connected components
+- | planning for Kosaraju's algorithm and Tarjan
+- | establishing articulation points and bridges
+- | defining biconnected components
+- | planning for Eulerian trail and circuit
+- | establishing Hierholzer's algorithm
+- | defining Hamiltonian path and cycle
+- | planning for backtracking and branch and bound
+- | establishing Knight's tour and Hamiltonian
+- | defining traveling salesman problem and TSP
+- | planning for Held-Karp and dynamic programming
+- | establishing vehicle routing problem and VRP
+- | defining capacitated VRP and CVRP
+- | planning for VRP with time windows and VRPTW
+- | establishing VRP with pickup and delivery
+- | defining VRP with stochastic demands
+- | planning for VRP with heterogeneous fleet
+- | establishing VRP with backhauls
+- | defining VRP with satellite routes
+- | planning for VRP with multiple depots
+- | establishing VRP with stochastic travel times
+- | defining VRP with fuzzy demands
+- | planning for VRP with environmental impact
+- | establishing VRP with green objectives
+- | defining VRP with social constraints
+- | planning for VRP with equity considerations
+- | establishing VRP with accessibility requirements
+- | defining VRP with safety considerations
+- | planning for VRP with environmental regulations
+- | establishing VRP with hazardous materials
+- | defining VRP with perishable goods
+- | planning for VRP with temperature control
+- | establishing VRP with humidity control
+- | defining VRP with special handling
+- | planning for VRP with security considerations
+- | establishing VRP with customs and duties
+- | defining VRP with documentation
+- | planning for VRP with tracking and tracing
+- | establishing VRP with real-time monitoring
+- | defining VRP with geofencing
+- | planning for VRP with curfew restrictions
+- | establishing VRP with night driving restrictions
+- | defining VRP with toll roads and congestion pricing
+- | planning for VRP with low emission zones
+- | establishing VRP with pedestrian zones
+- | defining VRP with bicycle lanes
+- | planning for VRP with public transportation
+- | establishing VRP with ride-sharing and carpooling
+- | defining VRP with micro mobility
+- | planning for VRP with electric vehicles
+- | establishing VRP with hybrid vehicles
+- | defining VRP with fuel cell vehicles
+- | planning for VRP with hydrogen vehicles
+- | establishing VRP with alternative fuels
+- | defining VRP with biofuels
+- | planning for VRP with biodiesel
+- | establishing VRP with ethanol
+- | defining VRP with methanol
+- | planning for VRP with butanol
+- | establishing VRP with propanol
+- | defining VRP with propane
+- | planning for VRP with natural gas
+- | establishing VRP with liquefied petroleum gas
+- | defining VRP with liquefied natural gas
+- | planning for VRP with compressed natural gas
+- | establishing VRP with electric aircraft
+- | defining VRP with hybrid aircraft
+- | planning for VRP with electric ships
+- | establishing VRP with hybrid ships
+- | defining VRP with alternative marine fuels
+- | planning for VRP with liquefied natural gas ships
+- | establishing VRP with methanol ships
+- | defining VRP with ammonia ships
+- | planning for VRP with hydrogen ships
+- | establishing VRP with nuclear ships
+- | defining VRP with sailboats
+- | planning for VRP with wind-assisted ships
+- | establishing VRP with kite ships
+- | defining VRP with solar ships
+- | planning for VRP with wave-powered ships
+- | establishing VRP with tidal-powered ships
+- | defining VRP with current-powered ships
+- | planning for VRP with offshore wind
+- | establishing VRP with floating wind
+- | defining VRP with fixed-bottom wind
+- | planning for VRP with monopile foundations
+- | establishing VRP with jacket foundations
+- | defining VRP with gravity-based foundations
+- | planning for VRP with suction caissons
+- | establishing VRP with monopiles
+- | defining VRP with tripods
+- | planning for VRP with tetrapods
+- | establishing VRP with pier foundations
+- | defining VRP with spread footings
+- | planning for VRP with piles and piers
+- | establishing VRP with drilled shafts
+- | defining VRP with driven piles
+- | planning for VRP with bored piles
+- | establishing VRP with screw piles
+- | defining VRP with micropiles
+- | planning for VRP with helico

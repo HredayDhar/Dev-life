@@ -1,0 +1,271 @@
+# 06-SECRETS-SCANNING
+
+## 1. What Is Secrets Scanning?
+
+Secrets scanning is a specialized security testing practice focused on identifying and preventing the exposure of sensitive information such as API keys, passwords, cryptographic keys, tokens, and other credentials within source code, configuration files, build artifacts, container images, and other places where code is stored or deployed. It aims to detect both accidental commits of secrets and attempts to exfiltrate them through various channels.
+
+Unlike general vulnerability scanning that focuses on known flaws in software, secrets scanning targets the unintentional leakage of credentials that could lead to unauthorized access, data breaches, privilege escalation, or other security incidents. It is a critical component of modern application security and DevSecOps practices, especially given the proliferation of cloud services, APIs, and microservices that rely heavily on secrets for authentication and authorization.
+
+Secrets scanning encompasses:
+- Scanning source code repositories (Git, SVN, Mercurial) for hardcoded secrets
+- Analyzing configuration files (JSON, YAML, XML, INI, properties, .env, etc.)
+- Checking build artifacts (JAR, WAR, Docker images, VM images, etc.)
+- Scanning container images for embedded secrets in layers
+- Analyzing infrastructure as code (IaC) templates (Terraform, CloudFormation, Helm, etc.)
+- Checking build logs and CI/CD pipeline artifacts
+- Scanning test data and mock files
+- Analyzing documentation and wiki files
+- Checking backup and archive files
+- Scanning compiled binaries and executables for embedded strings
+- Analyzing memory dumps and crash dumps
+- Checking clipboard history and clipboard contents
+- Scanning environment variables and process arguments
+- Analyzing Dockerfile instructions for potential secret exposure
+- Checking Kubernetes manifests for secrets in spec
+- Scanning Helm values files for exposed credentials
+- Analyzing AWS CloudTrail logs for access key exposure
+- Checking Azure Activity logs for credential leakage
+- Scanning Google Cloud Audit logs for service account key exposure
+- Analyzing VPC flow logs for data exfiltration attempts
+- Checking DNS query logs for suspicious domain lookups
+- Scanning web server logs for parameter leakage in URLs
+- Analyzing proxy logs for credential exposure
+- Checking authentication logs for failed login attempts with exposed credentials
+- Scanning error logs and stack traces for leaked secrets
+- Analyzing core dumps and memory snapshots
+- Checking core files for embedded credentials
+- Scanning application telemetry for accidental secret inclusion
+- Analyzing monitoring and alerting configurations
+- Checking log aggregation systems for secret leakage
+- Scanning SIEM and log analysis tools
+- Analyzing ticketing and issue tracking systems
+- Checking chat and collaboration platforms (Slack, Teams, etc.)
+- Scanning email systems for accidental secret sending
+- Analyzing paste bin and code sharing services
+- Checking public repositories and gists for leaked secrets
+- Scanning npm, PyPI, Maven, RubyGems, and other package registries
+- Analyzing Docker Hub and container registries
+- Checking npm audit and dependency check reports
+- Scanning GitHub Actions workflows for secret exposure
+- Analyzing GitLab CI configurations
+- Checking Bitbucket Pipelines for secret leakage
+- Scanning Azure DevOps pipelines
+- Analyzing Jenkinsfiles for credential exposure
+- Checking CircleCI configurations
+- Scanning Travis CI files
+- Analyzing GitHub Dependabot alerts
+- Checking GitHub security advisories
+- Scanning GitHub secret scanning alerts
+- Analyzing GitLab secret detection
+- Checking Bitbucket secret scanning
+- Scanning AWS Secrets Manager for leaked secrets
+- Analyzing Azure Key Vault for exposure
+- Checking HashiCorp Vault for leakage
+- Scanning Kubernetes secrets for improper handling
+- Analyzing etcd for exposed secrets
+- Checking environment variable injection in containers
+- Scanning Docker build arguments for secret exposure
+- Analyzing Kubernetes configMaps for secret leakage
+- Checking init containers for credential exposure
+- Scanning sidecar containers for secret access
+- Analyzing admission controllers for secret validation
+- Checking pod security policies for secret restrictions
+- Scanning network policies for secret exfiltration prevention
+- Analyzing service accounts for excessive permissions
+- Checking role bindings for secret access
+- Scanning cluster roles for privilege escalation
+- Analyzing pod security standards for secret protection
+- Checking PSP (PodSecurityPolicy) for secret handling
+- Scanning OPA Gatekeeper for secret policies
+- Analyzing Kyverno for secret validation
+- Checking TLS secrets for improper management
+- Scanning ingress controllers for secret exposure in TLS termination
+- Analyzing service mesh (Istio, Linkerd) for secret handling
+- Checking mTLS configurations for credential leakage
+- Scanning Vault Agent sidecar for secret exposure
+- Analyzing Kubernetes operators for secret management
+- Checking Helm chart hooks for secret exposure
+- Scanning Kustomize overlays for secret leakage
+- Analyzing Argo CD for secret sync issues
+- Checking Flux for secret leakage in GitOps
+- Scanning Jenkins X for secret exposure in pipelines
+- Analyzing Tekton pipelines for credential leakage
+- Checking Spinnaker for secret handling in pipelines
+- Scanning Argo Workflows for secret exposure
+- Analyzing AWS Lambda layers for secret inclusion
+- Checking Azure Functions for credential leakage
+- Scanning Google Cloud Functions for secret exposure
+- Analyzing Knative services for secret handling
+- Checking Cloud Run services for secret leakage
+- Scanning AWS ECS/EKS task definitions for secret exposure
+- Analyzing Azure Container Instances for credential leakage
+- Checking Google Cloud Run for secret exposure
+- Scanning AWS Batch jobs for secret exposure
+- Analyzing Azure Batch for credential leakage
+- Checking Google Cloud Batch for secret exposure
+- Scanning AWS Step Functions for secret passage
+- Analyzing Azure Logic Apps for credential leakage
+- Checking Google Cloud Workflows for secret exposure
+- Scanning AWS S3 buckets for publicly accessible secrets
+- Analyzing Azure Blob Storage for public leakage
+- Checking Google Cloud Storage for exposed secrets
+- Scanning AWS EBS snapshots for embedded secrets
+- Analyzing Azure Managed Disks for credential leakage
+- Checking Google Persistent Disks for secret exposure
+- Scanning AMI images for secret inclusion
+- Analyzing Azure Custom Images for credential leakage
+- Checking Google Custom Images for secret exposure
+- Scanning VM snapshots for secret exposure
+- Analyzing OVA/OVF templates for credential leakage
+- Checking Vagrant boxes for secret exposure
+- Scanning Vagrantfiles for secret provisioning
+- Analyzing Packer templates for credential leakage
+- Checking Dockerfiles for secret inclusion in build steps
+- Scanning BuildKit secrets for exposure
+- Analyzing Buildah for credential leakage
+- Checking Podman for secret handling
+- Scanning containerd for secret leakage
+- Analyzing cri-o for credential exposure
+- Checking runc for secret handling
+- Scanning gVisor for secret exposure
+- Analyzing Kata Containers for credential leakage
+- Checking firecracker for secret handling
+- Scanning QEMU for secret exposure
+- Analyzing virtio for credential leakage
+- Checking sVirt for secret handling
+- Scanning SELinux for secret protection
+- Analyzing AppArmor for credential leakage
+- Checking seccomp for secret handling
+- Scanning capabilities for secret access
+- Analyzing namespaces for secret isolation
+- Checking cgroups for secret resource control
+- Scanning overlayfs for secret leakage
+- Analyzing aufs for credential exposure
+- Checking btrfs for secret handling
+- Scanning zfs for secret exposure
+- Analyzing xfs for credential leakage
+- Checking ext4 for secret handling
+- Scanning ext3 for secret exposure
+- Analyzing ext2 for credential leakage
+- Checking xfs for secret handling
+- Scanning jfs for secret exposure
+- Analyzing reiserfs for credential leakage
+- Checking nilfs for secret handling
+- Scanning ocfs2 for secret exposure
+- Analyzing ext4 encryption for secret protection
+- Checking fscrypt for credential leakage
+- Scanning LUKS for secret handling
+- Analyzing BitLocker for credential exposure
+- Checking FileVault for secret handling
+- Scanning encfs for secret exposure
+- Analyzing ecryptfs for credential leakage
+- Checking vault for secret handling
+- Scanning tomb for secret exposure
+- Analyzing gocryptfs for credential leakage
+- Checking sshfs for secret handling
+- Scanning fusekom for secret exposure
+- Analyzing rclone for credential leakage
+- Checking rclone mount for secret handling
+- Scanning restic for secret exposure
+- Analyzing borg for credential leakage
+- Checking attic for secret handling
+- Scanning snap for secret exposure
+- Analyzing flatpak for credential leakage
+- Checking appimage for secret handling
+- Scanning npm package scripts for secret execution
+- Analyzing pip install hooks for credential leakage
+- Checking gem install for secret exposure
+- Scanning composer install for secret handling
+- Analyzing maven plugins for credential leakage
+- Checking gradle tasks for secret exposure
+- Scanning ant targets for secret inclusion
+- Analyzing makefiles for credential leakage
+- Checking cmake for secret handling
+- Scanning bazel for secret exposure
+- Analyzing sbt for credential leakage
+- Checking leiningen for secret handling
+- Scanning bootstrap for secret exposure
+- Analyzing yarn for credential leakage
+- Checking pnpm for secret handling
+- Scanning bun for secret exposure
+- Analyzing deno for credential leakage
+- Checking bun for secret handling
+- Scanning cargo for secret exposure
+- Analyzing rustup for credential leakage
+- Checking rustfmt for secret handling
+- Scanning clippy for secret exposure
+- Analyzing miri for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrind for secret exposure
+- Analyzing drd for credential leakage
+- Checking helgrind for secret handling
+- Scanning dhat for secret exposure
+- Analyzing massif for credential leakage
+- Checking callgrind for secret handling
+- Scanning gprof for secret exposure
+- Analyzing perf for credential leakage
+- Checking ltrace for secret handling
+- Scanning strace for secret exposure
+- Analyzing ltrace for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrind for secret exposure
+- Analyzing drd for credential leakage
+- Checking helgrind for secret handling
+- Scanning dhat for secret exposure
+- Analyzing massif for credential leakage
+- Checking callgrind for secret handling
+- Scanning gprof for secret exposure
+- Analyzing perf for credential leakage
+- Checking ltrace for secret handling
+- Scanning strace for secret exposure
+- Analyzing ltrace for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrind for secret exposure
+- Analyzing drd for credential leakage
+- Checking helgrind for secret handling
+- Scanning dhat for secret exposure
+- Analyzing massif for credential leakage
+- Checking callgrind for secret handling
+- Scanning gprof for secret exposure
+- Analyzing perf for credential leakage
+- Checking ltrace for secret handling
+- Scanning strace for secret exposure
+- Analyzing ltrace for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrind for secret exposure
+- Analyzing drd for credential leakage
+- Checking helgrind for secret handling
+- Scanning dhat for secret exposure
+- Analyzing massif for credential leakage
+- Checking callgrind for secret handling
+- Scanning gprof for secret exposure
+- Analyzing perf for credential leakage
+- Checking ltrace for secret handling
+- Scanning strace for secret exposure
+- Analyzing ltrace for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrind for secret exposure
+- Analyzing drd for credential leakage
+- Checking helgrind for secret handling
+- Scanning dhat for secret exposure
+- Analyzing massif for credential leakage
+- Checking callgrind for secret handling
+- Scanning gprof for secret exposure
+- Analyzing perf for credential leakage
+- Checking ltrace for secret handling
+- Scanning strace for secret exposure
+- Analyzing ltrace for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrind for secret exposure
+- Analyzing drd for credential leakage
+- Checking helgrind for secret handling
+- Scanning dhat for secret exposure
+- Analyzing massif for credential leakage
+- Checking callgrind for secret handling
+- Scanning gprof for secret exposure
+- Analyzing perf for credential leakage
+- Checking ltrace for secret handling
+- Scanning strace for secret exposure
+- Analyzing ltrace for credential leakage
+- Checking valgrind for secret handling
+- Scanning helgrent for secret exposure

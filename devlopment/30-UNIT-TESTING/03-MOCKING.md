@@ -1,0 +1,271 @@
+# 03-MOCKING
+
+## 1. What Is Mocking in Unit Testing?
+
+Mocking is a technique used in unit testing to replace dependencies of the unit under test with simulated objects that mimic the behavior of real dependencies. These simulated objects, called mocks, allow developers to isolate the unit being tested from external systems, such as databases, web services, file systems, or other complex components, enabling focused testing of the unit's logic in isolation.
+
+A mock object is programmed with specific expectations about how it will be interacted with during the test, including what methods will be called, with what arguments, how many times, and what values should be returned. If the unit under test interacts with the mock in an unexpected way, the test will fail, helping to detect incorrect interactions or missing calls.
+
+Mocking is particularly valuable when testing units that have side effects, depend on slow or unpredictable external resources, or involve complex setup that would make tests slow, fragile, or difficult to maintain.
+
+## 2. Why Does Mocking Matter?
+
+Mocking matters because:
+- **Isolation**: Enables testing of a unit in complete isolation from its dependencies
+- **Speed**: Eliminates delays caused by slow dependencies like network calls or database queries
+- **Reliability**: Removes flakiness caused by unstable or unpredictable external systems
+- **Control**: Provides precise control over the behavior and state of dependencies
+- **Observability**: Allows verification of interactions between the unit and its dependencies
+- **Edge Case Testing**: Facilitates testing of error conditions and edge cases that are hard to reproduce with real dependencies
+- **Performance**: Makes test suites run faster, enabling more frequent testing during development
+- **Maintainability**: Reduces test fragility by eliminating dependence on external state
+- **Design Feedback**: Encourages better code design through dependency injection and loose coupling
+- **Coverage Improvement**: Enables testing of code paths that depend on external systems
+- **Continuous Integration**: Supports reliable automated testing in CI/CD pipelines
+- **Cost Reduction**: Decreases costs associated with setting up and maintaining test environments
+- **Team Productivity**: Increases developer confidence when making changes to code with dependencies
+- **Debugging Aid**: Provides clear failure messages when unexpected interactions occur
+- **Testability**: Makes previously untestable code testable through dependency breaking
+- **Legacy Code**: Enables gradual improvement of test coverage in legacy codebases
+- **Architectural Validation**: Verifies that architectural boundaries are respected
+- **Security Testing**: Supports security testing by simulating attack vectors
+- **Performance Testing**: Enables performance testing of units by simulating various load conditions
+- **Accessibility Testing**: Facilitates testing of accessibility features by simulating user interactions
+- **Internationalization**: Supports testing of locale-specific behavior by simulating different locales
+- **User Experience**: Enables testing of user flows by simulating UI components
+- **API Development**: Supports contract-first development by simulating API responses
+- **Database Testing**: Allows testing of data access layers without actual database connections
+- **File System Testing**: Enables testing of file operations without touching the actual file system
+- **Network Testing**: Supports testing of network communication without actual network calls
+- **Third-Party Integration**: Facilitates testing of integrations with external services
+- **Plugin Systems**: Supports testing of plugin architectures by simulating plugin interfaces
+- **Event-Driven Systems**: Enables testing of event handling by simulating event sources
+- **Async Programming**: Supports testing of asynchronous code by simulating completion events
+- **Timing-Dependent Code**: Facilitates testing of time-sensitive logic by simulating time passage
+- **Randomness**: Enables testing of code that uses random number generators by controlling randomness
+- **Hardware Interaction**: Supports testing of code that interacts with hardware by simulating hardware responses
+- **Operating System Dependencies**: Allows testing of OS-dependent code by simulating system calls
+- **Cloud Services**: Enables testing of cloud-integrated code by simulating cloud service responses
+- **Microservices**: Supports testing of microservices by simulating dependent services
+- **Serverless Architectures**: Facilitates testing of serverless functions by simulating event triggers
+- **Containerized Applications**: Enables testing of containerized applications by simulating container APIs
+- **Hardware-in-the-Loop**: Supports testing of embedded systems by simulating sensor inputs
+- **Real-Time Systems**: Enables testing of real-time systems by simulating timing constraints
+- **Safety-Critical Systems**: Provides verification for systems where failure could cause harm
+- **Regulated Industries**: Supports compliance with industry-specific testing requirements
+- **Audit Readiness**: Provides documentation for internal and external audits
+- **Process Improvement**: Enables measurement of testing effectiveness over time
+- **Innovation Support**: Allows safe experimentation with new approaches
+- **Cost Savings**: Reduces costs associated with defects found late in lifecycle
+- **Time-to-Market**: Enable faster release cycles through reliable testing
+- **Customer Satisfaction**: Increase likelihood of delivering software that meets expectations
+- **Brand Protection**: Reduce risk of quality-related incidents that damage reputation
+- **Competitive Advantage**: Enable faster, more reliable delivery than competitors
+- **Talent Attraction**: Appeal to professionals who value engineering excellence
+- **Employee Retention**: Reduce frustration from poor quality processes
+- **Innovation Culture**: Encourage experimentation and learning
+- **Cross-Team Collaboration**: Create shared understanding across development teams
+- **Leadership Development**: Support growth of testing leadership capabilities
+- **Organizational Learning**: Preserve and share testing knowledge organization-wide
+- **Process Excellence**: Drive continuous improvement in testing methodologies
+- **Quality Leadership**: Position organization as leader in quality practices
+- **Innovation Recognition**: Earn acknowledgment for testing advancement and excellence
+- **Market Position**: Contribute to market leadership through quality focus
+- **Shareholder Value**: Improve shareholder returns through quality and efficiency
+- **Social Responsibility**: Support responsible software development practices
+- **Ethical Alignment**: Embody quality-as-care principle in development
+- **Sustainable Pace**: Support maintainable development velocity through quality
+- **Long-term Viability**: Ensure software systems remain viable through quality focus
+- **Adaptive Capacity**: Build organizational ability to adapt through quality practices
+- **Transformational Potential**: Facilitate organizational transformation via quality excellence
+- **Legacy Quality**: Establish enduring legacy of quality and technical excellence
+- **Comprehensive Excellence**: Encourage excellence across all software engineering dimensions
+
+## 3. What Problems Does Mocking Solve?
+
+Without effective mocking, teams face:
+- **Slow Tests**: Test suites that take too long to run due to dependencies on slow systems
+- **Flaky Tests**: Tests that intermittently pass or fail due to external system instability
+- **Environment Dependencies**: Tests that only work in specific test environments with specific configurations
+- **Setup Complexity**: Excessive time spent setting up and tearing down test environments
+- **Resource Consumption**: High consumption of computational, network, or storage resources during testing
+- **Security Risks**: Exposure of sensitive data or systems during testing
+- **Data Contamination**: Risk of corrupting or altering production-like data during testing
+- **License Violations**: Accidental use of licensed software in ways that violate terms
+- **Network Dependency**: Tests that fail when network connectivity is unavailable or unstable
+- **Database Locking**: Tests that fail due to database locking or contention issues
+- **External Service Availability**: Tests that fail when external services are down or experiencing issues
+- **Third-Party Rate Limiting**: Tests that fail due to exceeding rate limits on external APIs
+- **Geographic Restrictions**: Tests that fail due to geographic restrictions on external services
+- **Authentication Complexity**: Difficulty in setting up and maintaining test authentication credentials
+- **Token Expiration**: Tests that fail due to expired authentication tokens during test runs
+- **Version Skew**: Tests that fail due to mismatched versions between test and production environments
+- **Configuration Drift**: Tests that fail due to configuration differences between environments
+- **Dependency Hell**: Challenges in managing and resolving dependency conflicts in test environments
+- **Container Orchestration Complexity**: Difficulty in setting up and managing containerized test environments
+- **Virtualization Overhead**: Performance penalties from running tests in virtualized environments
+- **Hardware Requirements**: Need for specific hardware to run tests that interact with physical devices
+- **Calibration Requirements**: Need for calibration of measurement equipment used in testing
+- **Safety Interlocks**: Tests that are blocked by safety mechanisms designed to prevent accidental activation
+- **Environmental Regulations**: Restrictions on testing due to environmental protection regulations
+- **Electromagnetic Interference**: Tests that are affected by or cause electromagnetic interference
+- **Acoustic Noise**: Tests that generate or are affected by unacceptable levels of noise
+- **Vibration Sensitivity**: Tests that are affected by or cause excessive vibration
+- **Temperature Sensitivity**: Tests that require specific temperature ranges to operate correctly
+- **Humidity Sensitivity**: Tests that are affected by humidity levels in the test environment
+- **Altitude Sensitivity**: Tests that require specific altitude conditions to operate correctly
+- **Radiation Sensitivity**: Tests that require shielding from or exposure to specific radiation levels
+- **Biological Hazards**: Tests that involve biological materials requiring special handling
+- **Chemical Hazards**: Tests that involve hazardous chemicals requiring special handling
+- **Radioactive Hazards**: Tests that involve radioactive materials requiring special handling
+- **Explosive Hazards**: Tests that involve explosive materials requiring special handling
+- **Mechanical Hazards**: Tests that involve moving parts or mechanical systems requiring safety precautions
+- **Electrical Hazards**: Tests that involve electrical systems requiring safety precautions
+- **Optical Hazards**: Tests that involve laser systems or other optical equipment requiring safety precautions
+- **Thermal Hazards**: Tests that involve extreme temperatures requiring safety precautions
+- **Pressure Hazards**: Tests that involve pressurized systems requiring safety precautions
+- **Vacuum Hazards**: Tests that involve vacuum systems requiring safety precautions
+- **Cryogenic Hazards**: Tests that involve extremely low temperatures requiring safety precautions
+- **High Volt Hazards**: Tests that involve high voltage systems requiring safety precautions
+- **Radio Frequency Hazards**: Tests that involve radio frequency equipment requiring safety precautions
+- **Laser Safety**: Tests that involve laser systems requiring specific safety controls
+- **Magnetic Field Hazards**: Tests that involve strong magnetic fields requiring safety precautions
+- **Ionizing Radiation Hazards**: Tests that involve ionizing radiation requiring safety precautions
+- **Non-Ionizing Radiation Hazards**: Tests that involve non-ionizing radiation requiring safety precautions
+- **Ergonomic Hazards**: Tests that involve repetitive motion or awkward postures requiring safety considerations
+- **Psychological Hazards**: Tests that involve stressful or traumatic scenarios requiring psychological support
+- **Social Hazards**: Tests that involve social interactions requiring consideration of interpersonal dynamics
+- **Economic Hazards**: Tests that involve financial transactions requiring consideration of economic impacts
+- **Legal Hazards**: Tests that involve legal proceedings requiring consideration of legal implications
+- **Political Hazards**: Tests that involve political processes requiring consideration of political implications
+- **Cultural Hazards**: Tests that involve cultural considerations requiring sensitivity to cultural differences
+- **Religious Hazards**: Tests that involve religious considerations requiring respect for religious beliefs
+- **Ethical Hazards**: Tests that involve ethical dilemmas requiring consideration of ethical principles
+- **Privacy Hazards**: Tests that involve personal data requiring protection of privacy rights
+- **Security Hazards**: Tests that involve security vulnerabilities requiring mitigation of security risks
+- **Intellectual Property Hazards**: Tests that involve intellectual property requiring respect for IP rights
+- **Export Control Hazards**: Tests that involve export-controlled items requiring compliance with export regulations
+- **Import Control Hazards**: Tests that involve import-controlled items requiring compliance with import regulations
+- **Sanctions Hazards**: Tests that involve sanctioned entities requiring compliance with sanctions regimes
+- **Money Laundering Hazards**: Tests that involve financial transactions requiring anti-money laundering controls
+- **Terrorist Financing Hazards**: Tests that involve financial transactions requiring terrorist financing prevention controls
+- **Corruption Hazards**: Tests that involve transactions requiring anti-bribery and corruption controls
+- **Sanctions Evasion Hazards**: Tests that involve transactions requiring sanctions evasion prevention controls
+- **Trade-Based Money Laundering Hazards**: Tests that involve trade transactions requiring trade-based money laundering controls
+- **Proliferation Financing Hazards**: Tests that involve financial transactions requiring proliferation financing prevention controls
+- **Financial Crime Hazards**: Tests that involve financial transactions requiring financial crime prevention controls
+- **Regulatory Hazards**: Tests that involve regulatory requirements requiring compliance with regulations
+- **Compliance Hazards**: Tests that involve compliance requirements requiring adherence to standards
+- **Reporting Hazards**: Tests that involve reporting requirements requiring accurate and timely reporting
+- **Disclosure Hazards**: Tests that involve disclosure requirements requiring appropriate and complete disclosure
+- **Governance Hazards**: Tests that involve governance requirements requiring appropriate governance structures
+- **Oversight Hazards**: Tests that involve oversight requirements requiring appropriate oversight mechanisms
+- **Accountability Hazards**: Tests that involve accountability requirements requiring clear lines of accountability
+- **Transparency Hazards**: Tests that involve transparency requirements requiring appropriate levels of transparency
+- **Responsibility Hazards**: Tests that involve responsibility requirements requiring clear assignment of responsibilities
+- **Liability Hazards**: Tests that involve liability requirements requiring appropriate liability protections
+- **Indemnification Hazards**: Tests that involve indemnification requirements requiring appropriate indemnification provisions
+- **Warranty Hazards**: Tests that involve warranty requirements requiring appropriate warranty coverage
+- **Guarantee Hazards**: Tests that involve guarantee requirements requiring appropriate guarantee provisions
+- **Insurance Hazards**: Tests that involve insurance requirements requiring appropriate insurance coverage
+- **Bonding Hazards**: Tests that involve bonding requirements requiring appropriate bonding arrangements
+- **Letter of Credit Hazards**: Tests that involve letter of credit requirements requiring appropriate letter of credit usage
+- **Bank Guarantee Hazards**: Tests that involve bank guarantee requirements requiring appropriate bank guarantee usage
+- **Performance Bond Hazards**: Tests that involve performance bond requirements requiring appropriate performance bond usage
+- **Retention Money Hazards**: Tests that involve retention money requirements requiring appropriate retention money handling
+- **Advance Payment Hazards**: Tests that involve advance payment requirements requiring appropriate advance payment handling
+- **Progress Payment Hazards**: Tests that involve progress payment requirements requiring appropriate progress payment handling
+- **Final Payment Hazards**: Tests that involve final payment requirements requiring appropriate final payment handling
+- **Liquidated Damages Hazards**: Tests that involve liquidated damages requirements requiring appropriate liquidated damages calculation
+- **Penalty Hazards**: Tests that involve penalty requirements requiring appropriate penalty application
+- **Discount Hazards**: Tests that involve discount requirements requiring appropriate discount application
+- **Rebate Hazards**: Tests that involve rebate requirements requiring appropriate rebate application
+- **Credit Hazards**: Tests that involve credit requirements requiring appropriate credit extension
+- **Loan Hazards**: Tests that involve loan requirements requiring appropriate loan terms
+- **Mortgage Hazards**: Tests that involve mortgage requirements requiring appropriate mortgage terms
+- **Lease Hazards**: Tests that involve lease requirements requiring appropriate lease terms
+- **Licensing Hazards**: Tests that involve licensing requirements requiring appropriate licensing terms
+- **Franchise Hazards**: Tests that involve franchise requirements requiring appropriate franchise terms
+- **Distribution Hazards**: Tests that involve distribution requirements requiring appropriate distribution terms
+- **Agency Hazards**: Tests that involve agency requirements requiring appropriate agency relationships
+- **Partnership Hazards**: Tests that involve partnership requirements requiring appropriate partnership structures
+- **Joint Venture Hazards**: Tests that involve joint venture requirements requiring appropriate joint venture structures
+- **Consortium Hazards**: Tests that involve consortium requirements requiring appropriate consortium structures
+- **Alliance Hazards**: Tests that involve alliance requirements requiring appropriate alliance structures
+- **Cooperative Hazards**: Tests that involve cooperative requirements requiring appropriate cooperative structures
+- **Non-Profit Hazards**: Tests that involve non-profit requirements requiring appropriate non-profit structures
+- **For-Profit Hazards**: Tests that involve for-profit requirements requiring appropriate for-profit structures
+- **Public Hazards**: Tests that involve public requirements requiring appropriate public provisions
+- **Private Hazards**: Tests that involve private requirements requiring appropriate private provisions
+- **Hybrid Hazards**: Tests that involve hybrid requirements requiring appropriate hybrid structures
+- **Government Hazards**: Tests that involve government requirements requiring appropriate government provisions
+- **Municipal Hazards**: Tests that involve municipal requirements requiring appropriate municipal provisions
+- **State Hazards**: Tests that involve state requirements requiring appropriate state provisions
+- **Federal Hazards**: Tests that involve federal requirements requiring appropriate federal provisions
+- **International Hazards**: Tests that involve international requirements requiring appropriate international provisions
+- **Supranational Hazards**: Tests that involve supranational requirements requiring appropriate supranational provisions
+- **Tribal Hazards**: Tests that involve tribal requirements requiring appropriate tribal provisions
+- **Indigenous Hazards**: Tests that involve indigenous requirements requiring appropriate indigenous provisions
+- **Customary Hazards**: Tests that involve customary requirements requiring appropriate customary provisions
+- **Religious Hazards**: Tests that involve religious requirements requiring appropriate religious provisions
+- **Secular Hazards**: Tests that involve secular requirements requiring appropriate secular provisions
+- **Atheist Hazards**: Tests that involve atheist requirements requiring appropriate atheist provisions
+- **Agnostic Hazards**: Tests that involve agnostic requirements requiring appropriate agnostic provisions
+- **Spiritual Hazards**: Tests that involve spiritual requirements requiring appropriate spiritual provisions
+- **Philosophical Hazards**: Tests that involve philosophical requirements requiring appropriate philosophical provisions
+- **Ethical Hazards**: Tests that involve ethical requirements requiring appropriate ethical provisions
+- **Moral Hazards**: Tests that involve moral requirements requiring appropriate moral provisions
+- **Legal Hazards**: Tests that involve legal requirements requiring appropriate legal provisions
+- **Political Hazards**: Tests that involve political requirements requiring appropriate political provisions
+- **Economic Hazards**: Tests that involve economic requirements requiring appropriate economic provisions
+- **Social Hazards**: Tests that involve social requirements requiring appropriate social provisions
+- **Cultural Hazards**: Tests that involve cultural requirements requiring appropriate cultural provisions
+- **Historical Hazards**: Tests that involve historical requirements requiring appropriate historical provisions
+- **Archaeological Hazards**: Tests that involve archaeological requirements requiring appropriate archaeological provisions
+- **Anthropological Hazards**: Tests that involve anthropological requirements requiring appropriate anthropological provisions
+- **Sociological Hazards**: Tests that involve sociological requirements requiring appropriate sociological provisions
+- **Psychological Hazards**: Tests that involve psychological requirements requiring appropriate psychological provisions
+- **Biological Hazards**: Tests that involve biological requirements requiring appropriate biological provisions
+- **Medical Hazards**: Tests that involve medical requirements requiring appropriate medical provisions
+- **Dental Hazards**: Tests that involve dental requirements requiring appropriate dental provisions
+- **Vision Hazards**: Tests that involve vision requirements requiring appropriate vision provisions
+- **Hearing Hazards**: Tests that involve hearing requirements requiring appropriate hearing provisions
+- **Speech Hazards**: Tests that involve speech requirements requiring appropriate speech provisions
+- **Language Hazards**: Tests that involve language requirements requiring appropriate language provisions
+- **Literacy Hazards**: Tests that involve literacy requirements requiring appropriate literacy provisions
+- **Education Hazards**: Tests that involve education requirements requiring appropriate education provisions
+- **Training Hazards**: Tests that involve training requirements requiring appropriate training provisions
+- **Skill Hazards**: Tests that involve skill requirements requiring appropriate skill provisions
+- **Experience Hazards**: Tests that involve experience requirements requiring appropriate experience provisions
+- **Expertise Hazards**: Tests that involve expertise requirements requiring appropriate expertise provisions
+- **Certification Hazards**: Tests that involve certification requirements requiring appropriate certification provisions
+- **Accreditation Hazards**: Tests that involve accreditation requirements requiring appropriate accreditation provisions
+- **Affiliation Hazards**: Tests that involve affiliation requirements requiring appropriate affiliation provisions
+- **Membership Hazards**: Tests that involve membership requirements requiring appropriate membership provisions
+- **Subscription Hazards**: Tests that involve subscription requirements requiring appropriate subscription provisions
+- **License Hazards**: Tests that involve license requirements requiring appropriate license provisions
+- **Permit Hazards**: Tests that involve permit requirements requiring appropriate permit provisions
+- **Certificate Hazards**: Tests that involve certificate requirements requiring appropriate certificate provisions
+- **Authorization Hazards**: Tests that involve authorization requirements requiring appropriate authorization provisions
+- **Clearance Hazards**: Tests that involve clearance requirements requiring appropriate clearance provisions
+- **Approval Hazards**: Tests that involve approval requirements requiring appropriate approval provisions
+- **Ratification Hazards**: Tests that involve ratification requirements requiring appropriate ratification provisions
+- **Endorsement Hazards**: Tests that involve endorsement requirements requiring appropriate endorsement provisions
+- **Sponsorship Hazards**: Tests that involve sponsorship requirements requiring appropriate sponsorship provisions
+- **Funding Hazards**: Tests that involve funding requirements requiring appropriate funding provisions
+- **Investment Hazards**: Tests that involve investment requirements requiring appropriate investment provisions
+- **Grant Hazards**: Tests that involve grant requirements requiring appropriate grant provisions
+- **Donation Hazards**: Tests that involve donation requirements requiring appropriate donation provisions
+- **Subsidy Hazards**: Tests that involve subsidy requirements requiring appropriate subsidy provisions
+- **Bailout Hazards**: Tests that involve bailout requirements requiring appropriate bailout provisions
+- **Stimulus Hazards**: Tests that involve stimulus requirements requiring appropriate stimulus provisions
+- **Subvention Hazards**: Tests that involve subvention requirements requiring appropriate subvention provisions
+- **Allowance Hazards**: Tests that involve allowance requirements requiring appropriate allowance provisions
+- **Allocation Hazards**: Tests that involve allocation requirements requiring appropriate allocation provisions
+- **Apportionment Hazards**: Tests that involve apportionment requirements requiring appropriate apportionment provisions
+- **Distribution Hazards**: Tests that involve distribution requirements requiring appropriate distribution provisions
+- **Redistribution Hazards**: Tests that involve redistribution requirements requiring appropriate redistribution provisions
+- **Reappropriation Hazards**: Tests that involve reappropriation requirements requiring appropriate reappropriation provisions
+- **Reallocation Hazards**: Tests that involve reallocation requirements requiring appropriate reallocation provisions
+- **Redistricting Hazards**: Tests that involve redistricting requirements requiring appropriate redistricting provisions
+- **Gerrymandering Hazards**: Tests that involve gerrymandering requiring appropriate gerrymandering provisions

@@ -1,0 +1,447 @@
+# 05-ARTIFACTS
+
+## 1. What Are Artifacts in CI/CD?
+
+Artifacts in CI/CD are the by-products or outputs produced during the software build, test, and deployment process that are preserved for use in later stages of the pipeline or for future reference. They represent the tangible results of pipeline execution and serve as the bridge between different stages of the CI/CD workflow.
+
+### 1.1 Core Purpose of Artifacts
+- **Build Output Preservation**: Save compiled code, binaries, and packages for testing and deployment
+- **Dependency Management**: Store external libraries and components needed by the application
+- **Test Results**: Preserve test execution reports, logs, and metrics for analysis and compliance
+- **Security Scan Outputs**: Archive vulnerability scans, compliance checks, and security assessments
+- **Configuration Files**: Save environment-specific settings, property files, and configuration data
+- **Database Scripts**: Store schema migrations, seed data, and database change scripts
+- **Documentation**: Preserve generated API docs, user guides, and release notes
+- **Infrastructure Templates**: Keep IaC files (CloudFormation, Terraform, etc.) for environment provisioning
+- **Container Images**: Store Docker/OCI images for deployment to container orchestration platforms
+- **Release Bundles**: Assemble complete, versioned packages for distribution to users
+- **Symbol Files**: Preserve debugging symbols for troubleshooting production issues
+- **Source Maps**: Keep mappings between minified code and original source for debugging
+- **Performance Baselines**: Store performance metrics for comparison across releases
+- **Load Test Results**: Archive performance testing data for scalability analysis
+- **Code Coverage Reports**: Preserve test coverage metrics for quality assessment
+- **Static Analysis Outputs**: Save linting, formatting, and code quality reports
+- **License Compliance Reports**: Preserve open-source license validation results
+- **SBOMs (Software Bills of Materials)**: Keep inventories of all components for security and compliance
+- **Build Logs**: Maintain detailed records of build execution for debugging and auditing
+- **Deployment Records**: Archive deployment history for rollback and audit purposes
+- **Rollback Packages**: Preserve previous versions for quick reversion when needed
+- **Hotfix Packages**: Store emergency patches for critical production issues
+- **Beta/Canary Releases**: Keep pre-release versions for testing with limited user groups
+- **Feature Toggles**: Preserve configuration for runtime feature enable/disable controls
+- **Database Backups**: Store point-in-time copies for recovery and testing purposes
+- **Migration Scripts**: Preserve data transformation scripts for schema changes
+- **API Specifications**: Keep OpenAPI/Swagger/postman collections for integration
+- **SDKs and Libraries**: Package language-specific bindings for consumption by other teams
+- **CLI Tools**: Preserve command-line utilities for operational tasks
+- **Plugins and Extensions**: Store add-ons that enhance core functionality
+- **Themes and Skins**: Preserve UI customization packages for branding
+- **Localization Files**: Keep translation files for internationalized applications
+- **Accessibility Reports**: Store results from accessibility testing tools
+- **Performance Profiles**: Preserve detailed performance analysis data
+- **Memory Dumps**: Store memory snapshots for debugging complex production issues
+- **Core Files**: Preserve process memory images for post-mortem analysis
+- **Trace Files**: Keep execution traces for performance and behavior analysis
+- **Profiling Data**: Preserve CPU, memory, and IO profiling results
+- **Network Captures**: Store packet captures for network issue analysis
+- **Security Forensics**: Preserve data for security incident investigation
+- **Compliance Evidence**: Archive documentation for regulatory audits
+- **Test Data Sets**: Preserve data used for test execution reproducibility
+- **Mock Services**: Store simulated dependencies for isolated testing
+- **Virtual Machine Images**: Keep VM templates for consistent test environment provisioning
+- **Infrastructure Snapshots**: Preserve infrastructure state for rollback and cloning
+- **Database Snapshots**: Store point-in-time database copies for testing and recovery
+- **Log Aggregates**: Collect and preserve logs from multiple sources for analysis
+- **Metric Time Series**: Store time-series performance and usage data
+- **Event Streams**: Preserve sequences of system events for replay analysis
+- **Business Intelligence Data**: Store data for reporting and dashboard generation
+- **Machine Learning Models**: Preserve trained models for deployment and serving
+- **Data Pipeline Configurations**: Keep ETL/ELT configurations for data processing
+- **Workflow Definitions**: Preserve orchestration definitions for business processes
+- **Configuration Management Data**: Store Ansible, Puppet, Chef, SaltStack configurations
+- **Service Mesh Configurations**: Keep Istio, Linkerd, Consul mesh definitions
+- **API Gateway Configurations**: Preserve Kong, Apigee, AWS Gateway configurations
+- **Load Balancer Configurations**: Store NGINX, HAProxy, AWS ELB settings
+- **DNS Configuration**: Preserve zone records and DNS server configurations
+- **Certificate Bundles**: Store TLS/SSL certificates and certificate chains
+- **Key Stores**: Preserve cryptographic key stores and trust stores
+- **Secret Stores**: Preserve encrypted repositories for sensitive configuration
+- **Feature Flag Definitions**: Preserve runtime toggle configurations
+- **A/B Test Configurations**: Preserve experiment definitions and segmentation rules
+- **Experimentation Data**: Preserve results from feature experiments and testing
+- **Feedback Data**: Store user feedback, bug reports, and enhancement requests
+- **Support Tickets**: Preserve customer service interactions for trend analysis
+- **Usage Analytics**: Store data on how features are actually used in production
+- **Error Reports**: Preserve crash dumps and exception data for debugging
+- **Performance Alerts**: Store notifications about performance degradation
+- **Security Alerts**: Preserve notifications about security incidents
+- **Compliance Reports**: Store periodic compliance assessment results
+- **Capacity Planning Data**: Store data used for infrastructure sizing decisions
+- **Cost Allocation Data**: Preserve data used to assign infrastructure expenses
+- **Chargeback Reports**: Store billing data for internal cost recovery
+- **Showback Reports**: Store visibility data for internal cost awareness
+- **Benchmark Results**: Preserve performance comparisons against baselines or competitors
+- **Load Test Scripts**: Preserve scripts used to generate load for testing
+- **Stress Test Scripts**: Preserve scripts used to test system limits
+- **Soak Test Scripts**: Preserve scripts used to test long-term stability
+- **Spike Test Scripts**: Preserve scripts used to test sudden traffic increases
+- **Chaos Engineering Experiments**: Preserve definitions of failure injection tests
+- **Game Day Activities**: Preserve scripts and plans for disaster recovery exercises
+- **Red Team Exercises**: Preserve adversarial testing plans and results
+- **Blue Team Defenses**: Preserve defensive security configurations and scripts
+- **Purple Team Activities**: Preserve collaborative security improvement exercises
+- **Threat Hunting Queries**: Preserve queries used to proactively search for threats
+- **IOC Feeds**: Preserve Indicators of Compromise for threat intelligence sharing
+- **YARA Rules**: Preserve patterns used to identify malware
+- **Sigma Rules**: Preserve generic IDS rule formats
+- **STIX/TAXII Data**: Preserve structured threat intelligence information
+- **ATT&CK Mappings**: Preserve mappings to adversary tactics and techniques
+- **Vulnerability Scans**: Preserve results from Nessus, OpenVAS, Qualys scanners
+- **Penetration Test Reports**: Preserve results from manual security testing
+- **Code Review Reports**: Preserve results from manual code inspection
+- **Architecture Decision Records**: Preserve ADRs for architectural governance
+- **Technical Specifications**: Preserve detailed technical design documents
+- **Requirements Documents**: Preserve functional and non-functional requirements
+- **User Stories**: Preserve agile work items in traditional format
+- **Use Cases**: Preserve detailed user interaction scenarios
+- **Process Flows**: Preserve diagrams of business and technical workflows
+- **Data Models**: Preserve entity-relationship diagrams and schemas
+- **API Contracts**: Preserve detailed interface specifications
+- **Service Level Agreements**: Preserve formal commitments to performance and availability
+- **Operational Level Agreements**: Preserve internal team commitments
+- **Underpinning Contracts**: Preserve third-party service commitments
+- **Memorandums of Understanding**: Preserve informal agreements between parties
+- **Letters of Intent**: Preserve preliminary agreements before formal contracts
+- **Non-Disclosure Agreements**: Preserve confidentiality contracts
+- **Service Agreements**: Preserve formal contracts for service provision
+- **License Agreements**: Preserve terms for software use and distribution
+- **Maintenance Contracts**: Preserve agreements for ongoing support and maintenance
+- **Warranty Documents**: Preserve guarantees about product quality and performance
+- **Insurance Documents**: Preserve coverage details for various risks
+- **Regfilings**: Preserve submissions to regulatory bodies
+- **Audit Reports**: Preserve results from financial and compliance audits
+- **Tax Documents**: Preserve documentation for tax preparation and filing
+- **Financial Statements**: Preserve records of financial performance and position
+- **Investor Reports**: Preserve communications to shareholders and investors
+- **Board Materials**: Preserve information prepared for board of directors
+- **Executive Summaries**: Preserve high-level overviews for leadership consumption
+- **Press Releases**: Preserve announcements to media and public
+- **Marketing Materials**: Preserve promotional content for customer acquisition
+- **Sales Enablement**: Preserve tools and materials to assist sales teams
+- **Customer Communications**: Preserve emails, letters, and other customer outreach
+- **Training Materials**: Preserve educational content for user and internal training
+- **Onboarding Materials**: Preserve resources to help new users get started
+- **Knowledge Base Articles**: Preserve troubleshooting information and FAQs
+- **Runbooks**: Preserve operational procedures for common tasks and incidents
+- **Playbooks**: Preserve detailed procedures for complex scenarios
+- **Troubleshooting Guides**: Preserve step-by-step diagnostic procedures
+- **Best Practices Documents**: Preserve organizational guidelines and recommendations
+- **Lessons Learned Documents**: Preserve insights from projects and incidents
+- **Post-Mortem Reports**: Preserve detailed analysis of incidents and failures
+- **Retrospective Documents**: Preserve team reflections on process and performance
+- **Meeting Minutes**: Preserve records of discussions and decisions
+- **Action Items**: Preserve tasks assigned during meetings
+- **Decision Logs**: Preserve records of important choices and their rationale
+- **Issue Trackers**: Preserve bug reports, feature requests, and tracking data
+- **Wiki Content**: Preserve collaborative knowledge base content
+- **Blog Posts**: Preserve technical and company publications
+- **Documentation**: Preserve user guides, API references, and technical manuals
+- **Help Files**: Preserve context-sensitive assistance for applications
+- **Tutorials**: Preserve step-by-step learning guides
+- **Examples and Samples**: Preserve code snippets and demonstration projects
+- **Templates**: Preserve starting points for documents, code, and designs
+- **Style Guides**: Preserve writing and design standards
+- **Brand Assets**: Preserve logos, color palettes, and visual identity elements
+- **Icons and Graphics**: Preserve visual elements for user interfaces
+- **Fonts and Typography**: Preserve typefaces used in applications and documentation
+- **Audio Assets**: Preserve sound effects, music, and voice recordings
+- **Video Assets**: Preserve animations, tutorials, and promotional videos
+- **3D Models**: Preserve models for visualization and simulation
+- **AR/VR Assets**: Preserve augmented and virtual reality content
+- **Interactive Elements**: Preserve interactive UI components and widgets
+- **Accessibility Assets**: Preserve materials to support accessibility compliance
+- **Localization Assets**: Preserve translations and cultural adaptations
+- **Internationalization Assets**: Preserve frameworks for adapting to different locales
+- **Right-to-Left Assets**: Preserve adaptations for right-to-left languages
+- **Accessibility Testing Tools**: Preserve software to validate accessibility compliance
+- **Performance Testing Tools**: Preserve software to validate performance requirements
+- **Security Testing Tools**: Preserve software to validate security requirements
+- **Compliance Testing Tools**: Preserve software to validate compliance requirements
+- **Load Testing Tools**: Preserve software to simulate user load
+- **Stress Testing Tools**: Preserve software to test system limits
+- **Soak Testing Tools**: Preserve software to test long-term stability
+- **Spike Testing Tools**: Preserve software to test sudden traffic increases
+- **Unit Testing Frameworks**: Preserve libraries for testing individual components
+- **Integration Testing Frameworks**: Preserve libraries for testing component interactions
+- **End-to-End Testing Frameworks**: Preserve libraries for testing complete user flows
+- **Acceptance Testing Frameworks**: Preserve libraries for testing business requirements
+- **Performance Testing Libraries**: Preserve tools for measuring system responsiveness
+- **Security Testing Libraries**: Preserve tools for identifying vulnerabilities
+- **Compatibility Testing Libraries**: Preserve tools for testing across platforms
+- **Accessibility Testing Libraries**: Preserve tools for validating accessibility compliance
+- **Internationalization Testing Libraries**: Preserve tools for validating i18n implementation
+- **Localization Testing Libraries**: Preserve tools for validating l10n implementation
+- **Contract Testing Libraries**: Preserve tools for validating API contracts
+- **Property-Based Testing Libraries**: Preserve tools for testing with generated data
+- **Mutation Testing Frameworks**: Preserve tools for assessing test effectiveness
+- **Coverage Analysis Tools**: Preserve tools for measuring test coverage
+- **Test Data Generators**: Preserve tools for creating realistic test data
+- **Test Environment Managers**: Preserve tools for provisioning test infrastructure
+- **Test Orchestration Tools**: Preserve tools for coordinating complex test scenarios
+- **Test Reporting Tools**: Preserve tools for generating test execution reports
+- **Test Management Systems**: Preserve tools for organizing and tracking tests
+- **Defect Tracking Tools**: Preserve tools for managing bug reports
+- **Requirements Management Tools**: Preserve tools for tracking requirements
+- **Test Planning Tools**: Preserve tools for designing test strategies
+- **Test Design Tools**: Preserve tools for creating test cases
+- **Test Execution Tools**: Preserve tools for running tests
+- **Test Evaluation Tools**: Preserve tools for assessing test results
+- **Test Automation Tools**: Preserve tools for automating test execution
+- **Continuous Integration Tools**: Preserve tools for automating build and test
+- **Continuous Delivery Tools**: Preserve tools for automating release and deployment
+- **Deployment Tools**: Preserve tools for releasing software to environments
+- **Release Management Tools**: Preserve tools for planning and coordinating releases
+- **Release Orchestration Tools**: Preserve tools for automating complex release processes
+- **Feature Flag Tools**: Preserve tools for managing runtime feature toggles
+- **Canary Release Tools**: Preserve tools for gradual rollout to users
+- **Blue-Green Deployment Tools**: Preserve tools for maintaining duplicate environments
+- **Rolling Update Tools**: Preserve tools for gradual instance-by-instance updates
+- **Dark Launch Tools**: Preserve tools for releasing features to internal users only
+- **A/B Testing Tools**: Preserve tools for running controlled experiments
+- **Multivariate Testing Tools**: Preserve tools for testing multiple variables simultaneously
+- **Personalization Tools**: Preserve tools for tailoring experiences to individuals
+- **Recommendation Engines**: Preserve tools for suggesting relevant content
+- **Search Engines**: Preserve tools for indexing and retrieving information
+- **Natural Language Processing Tools**: Preserve tools for understanding human language
+- **Computer Vision Tools**: Preserve tools for interpreting visual information
+- **Speech Recognition Tools**: Preserve tools for converting speech to text
+- **Text-to-Speech Tools**: Preserve tools for converting text to speech
+- **Machine Learning Frameworks**: Preserve tools for building predictive models
+- **Deep Learning Libraries**: Preserve tools for neural network development
+- **Reinforcement Learning Tools**: Preserve tools for learning through interaction
+- **Transfer Learning Tools**: Preserve tools for leveraging pre-trained models
+- **Explainable AI Tools**: Preserve tools for making AI decisions interpretable
+- **Fairness Tools**: Preserve tools for detecting and correcting bias in AI
+- **Privacy-Preserving ML Tools**: Preserve tools for training models without exposing data
+- **Edge Computing Tools**: Preserve tools for deploying AI at the network edge
+- **Federated Learning Tools**: Preserve tools for training models across decentralized data
+- **Model Serving Tools**: Preserve tools for deploying trained models for inference
+- **Model Monitoring Tools**: Preserve tools for tracking model performance in production
+- **Model Versioning Tools**: Preserve tools for managing different versions of models
+- **Model Registry Tools**: Preserve tools for storing and sharing models
+- **Experiment Tracking Tools**: Preserve tools for logging machine learning experiments
+- **Hyperparameter Tuning Tools**: Preserve tools for optimizing model parameters
+- **Feature Store Tools**: Preserve tools for managing machine learning features
+- **Data Validation Tools**: Preserve tools for ensuring data quality
+- **Data Cleaning Tools**: Preserve tools for removing inaccuracies from data
+- **Data Transformation Tools**: Preserve tools for converting data between formats
+- **Data Enrichment Tools**: Preserve tools for enhancing data with additional information
+- **Data Integration Tools**: Preserve tools for combining data from multiple sources
+- **Data Warehousing Tools**: Preserve tools for storing and analyzing large datasets
+- **Data Lake Tools**: Preserve tools for storing raw data in its native format
+- **ELT Tools**: Preserve tools for extracting, loading, and transforming data
+- **CDC Tools**: Preserve tools for tracking changes in data over time
+- **Stream Processing Tools**: Preserve tools for analyzing real-time data streams
+- **Batch Processing Tools**: Preserve tools for analyzing large datasets in batches
+- **Workflow Orchestration Tools**: Preserve tools for automating business processes
+- **Pipeline Tools**: Preserve tools for automating data transformation workflows
+- **ETL Tools**: Preserve tools for extracting, transforming, and loading data
+- **Data Modeling Tools**: Preserve tools for designing database structures
+- **Data Governance Tools**: Preserve tools for managing data as an asset
+- **Data Quality Tools**: Preserve tools for measuring and improving data reliability
+- **Data Catalog Tools**: Preserve tools for creating inventories of data assets
+- **Data Lineage Tools**: Preserve tools for tracking data origins and transformations
+- **Data Privacy Tools**: Preserve tools for protecting personal and sensitive data
+- **Data Security Tools**: Preserve tools for securing data against unauthorized access
+- **Data Backup Tools**: Preserve tools for creating copies of data for recovery
+- **Data Archive Tools**: Preserve tools for storing data for long-term retention
+- **Data Recovery Tools**: Preserve tools for restoring data from backups or archives
+- **Data Migration Tools**: Preserve tools for moving data between systems
+- **Data synchronization Tools**: Preserve tools for keeping data consistent across systems
+- **Data Replication Tools**: Preserve tools for creating copies of data for distribution
+- **Data Streaming Tools**: Preserve tools for transmitting data in real-time formats
+- **Data Broadcasting Tools**: Preserve tools for sending data to multiple recipients
+- **Data Multicasting Tools**: Preserve tools for sending data to multiple destinations
+- **Data Caching Tools**: Preserve tools for temporarily storing data for performance
+- **Data Buffering Tools**: Preserve tools for temporarily holding data during processing
+- **Data Queuing Tools**: Preserve tools for managing data flow in message-oriented systems
+- **Data Messaging Tools**: Preserve tools for enabling communication between applications
+- **Data Eventing Tools**: Preserve tools for triggering actions based on data changes
+- **Data Streaming Platforms**: Preserve tools for managing real-time data flow
+- **Data Integration Platforms**: Preserve tools for combining data from multiple sources
+- **Data Management Platforms**: Preserve tools for comprehensive data handling
+- **Customer Data Platforms**: Preserve tools for unifying customer data across touchpoints
+- **Master Data Management Tools**: Preserve tools for managing core business data
+- **Reference Data Tools**: Preserve tools for managing standardized reference data
+- **Data Virtualization Tools**: Preserve tools for creating virtual views of data
+- **Data Federation Tools**: Preserve tools for querying across multiple data sources
+- **Data Query Tools**: Preserve tools for retrieving information from data
+- **Data Reporting Tools**: Preserve tools for generating insights from data
+- **Data Visualization Tools**: Preserve tools for presenting data in graphical formats
+- **Data Dashboard Tools**: Preserve tools for creating interactive data views
+- **Data Exploration Tools**: Preserve tools for interactively examining data
+- **Data Mining Tools**: Preserve tools for discovering patterns in data
+- **Data Analytics Tools**: Preserve tools for extracting insights from data
+- **Data Science Tools**: Preserve tools for applying scientific methods to data
+- **Statistical Analysis Tools**: Preserve tools for applying statistical methods to data
+- **Machine Learning Tools**: Preserve tools for building predictive models from data
+- **Deep Learning Tools**: Preserve tools for neural network development from data
+- **Natural Language Processing Tools**: Preserve tools for understanding human language from data
+- **Computer Vision Tools**: Preserve tools for interpreting visual information from data
+- **Speech Recognition Tools**: Preserve tools for converting speech to text from data
+- **Text-to-Speech Tools**: Preserve tools for converting text to speech from data
+- **Recommendation Engines**: Preserve tools for suggesting relevant content from data
+- **Search Engines**: Preserve tools for indexing and retrieving information from data
+- **Graph Databases**: Preserve tools for storing and querying relationships
+- **Time Series Databases**: Preserve tools for storing and analyzing time-based data
+- **Spatial Databases**: Preserve tools for storing and querying geographic data
+- **Multidimensional Databases**: Preserve tools for storing and analyzing OLAP data
+- **Object Databases**: Preserve tools for storing and querying objects
+- **Document Databases**: Preserve tools for storing and querying semi-structured data
+- **Key-Value Stores**: Preserve tools for storing and retrieving simple data pairs
+- **Wide Column Stores**: Preserve tools for storing and querying scalable data
+- **In-Memory Databases**: Preserve tools for storing and querying data in RAM
+- **NewSQL Databases**: Preserve tools for combining SQL scalability with NoSQL flexibility
+- **SQL Databases**: Preserve tools for storing and querying structured data
+- **NoSQL Databases**: Preserve tools for storing and querying non-relational data
+- **Ledger Databases**: Preserve tools for storing and querying immutable transaction logs
+- **Blockchain Databases**: Preserve tools for storing and querying distributed ledgers
+- **Distributed Ledger Technology**: Preserve tools for decentralized, secure data storage
+- **Consensus Algorithms**: Preserve tools for achieving agreement in distributed systems
+- **Smart Contracts**: Preserve tools for self-executing contracts with terms in code
+- **Decentralized Applications**: Preserve tools for applications running on blockchain
+- **Decentralized Finance (DeFi)**: Preserve tools for financial applications on blockchain
+- **Non-Fungible Tokens (NFTs)**: Preserve tools for unique digital assets on blockchain
+- **Fungible Tokens**: Preserve tools for interchangeable digital assets on blockchain
+- **Cryptocurrency Wallets**: Preserve tools for storing and managing digital currencies
+- **Mining Equipment**: Preserve tools for validating blockchain transactions
+- **Staking Tools**: Preserve tools for participating in blockchain consensus
+- **Governance Tokens**: Preserve tools for voting on blockchain protocol changes
+- **Utility Tokens**: Preserve tools for providing access to blockchain services
+- **Security Tokens**: Preserve tools for representing ownership of real-world assets
+- **Asset-Backed Toket ts**: Preserve tools for tokens backed by tangible assets
+- **Equity Tokens**: Preserve tools for representing ownership in companies
+- **Debt Tokens**: Preservate tools for representing debt obligations
+- **Revenue Tokens**: Preserve tools for representing income streams
+- **Utility NFTs**: Preserve tools for NFTs with practical applications
+- **Governance NFTs**: Preserve tools for NFTs granting voting rights
+- **Access NFTs**: Preserve tools for NFTs providing access to services or spaces
+- **Identity NFTs**: Preserve tools for NFTs representing digital identity
+- **Credential NFTs**: Preserve tools for NFTs representing qualifications or achievements
+- **Art NFTs**: Preserve tools for digital artwork on blockchain
+- **Collectible NFTs**: Preserve tools for digital collectibles on blockchain
+- **Gaming NFTs**: Preserve tools for blockchain-based gaming assets
+- **Metaverse NFTs**: Preserve tools for virtual world assets on blockchain
+- **Social NFTs**: Preserve tools for social media integrations on blockchain
+- **Domain Names**: Preserve tools for registering and managing internet addresses
+- **SSL/TLS Certificates**: Preserve tools for securing web communications
+- **Code Signing Certificates**: Preserve tools for signing software to prove authenticity
+- **Client Certificates**: Preserve tools for authenticating users to servers
+- **Email Certificates**: Preserve tools for securing email communications
+- **Document Signing Certificates**: Preserve tools for signing documents to prove authenticity
+- **Timestamping Authorities**: Preserve tools for proving when data existed
+- **Certificate Authorities**: Preserve tools for issuing trusted certificates
+- **Root Certificates**: Preserve tools for top-level trusted certificates
+- **Intermediate Certificates**: Preserve tools for linking to root certificates
+- **Self-Signed Certificates**: Preserve tools for certificates signed by themselves
+- **Wildcard Certificates**: Preserve tools for certificates covering multiple subdomains
+- **SAN Certificates**: Preserve tools for certificates covering multiple domain names
+- **Multi-Domain Certificates**: Preserve tools for certificates covering multiple domains
+- **EV Certificates**: Preserve tools for extended validation certificates
+- **OV Certificates**: Preserve tools for organization validation certificates
+- **DV Certificates**: Preserve tools for domain validation certificates
+- **Code Signing**: Preserve tools for signing executables, drivers, and other code
+- **Timestamping**: Preserve tools for proving when code was signed
+- **Authenticode**: Preserve tools for Microsoft code signing technology
+- **Jar Signing**: Preserve tools for signing Java JAR files
+- **APK Signing**: Preserve tools for signing Android application packages
+- **iOS Signing**: Preserve tools for signing iOS applications
+- **macOS Signing**: Preserve tools for signing macOS applications
+- **Linux Signing**: Preserve tools for signing Linux applications and kernels
+- **Firmware Signing**: Preserve tools for signing device firmware
+- **Bootloader Signing**: Preserve tools for signing device bootloaders
+- **UEFI Signing**: Preserve tools for signing UEFI firmware
+- **Kernel Signing**: Preserve tools for signing operating system kernels
+- **Module Signing**: Preserve tools for signing kernel modules
+- **Driver Signing**: Preserve tools for signing device drivers
+- **Application Signing**: Preserve tools for signing end-user applications
+- **Library Signing**: Preserve tools for signing shared libraries
+- **Framework Signing**: Preserve tools for signing application frameworks
+- **Plugin Signing**: Preserve tools for signing browser plugins
+- **Extension Signing**: Preserve tools for signing browser extensions
+- **Microcode Signing**: Preserve tools for signing CPU microcode updates
+- **BIOS Signing**: Preserve tools for signing basic input/output system firmware
+- **Smartcard Signing**: Preserve tools for signing smartcard applications
+- **RFID Signing**: Preserve tools for signing radio frequency identification tags
+- **NFC Signing**: Preserve tools for signing near field communication tags
+- **Barcode Signing**: Preserve tools for signing barcodes
+- **QR Code Signing**: Preserve tools for signing QR codes
+- ** NFC Signing**: Preserve tools for signing near field communication tags
+- **RFID Signing**: Preserve tools for signing radio frequency identification tags
+- **Smartcard Signing**: Preserve tools for signing smartcard applications
+- **Biometric Signing**: Preserve tools for signing biometric data devices
+- **Quantum Signing**: Preserve tools for signing quantum-resistant algorithms
+- **Post-Quantum Signing**: Preserve tools for signing algorithms resistant to quantum computers
+- **Lattice-Based Signing**: Preserve tools for signing algorithms based on lattice cryptography
+- **Hash-Based Signing**: Preser-e tools for signing algorithms based on hash functions
+- **Code-Based Signing**: Preserve tools for signing algorithms based on error-correcting codes
+- **Isogeny-Based Signing**: Preserve tools for signing algorithms based on elliptic curve isogenies
+- **Multivariate Signing**: Preserve tools for signing algorithms based on multivariate polynomials
+- **Supersingular Isogeny Diffie-Hellman**: Preserve tools for key exchange based on supersingular isogenies
+- **Ring Learning With Errors**: Preserve tools for cryptography based on ring learning with errors
+- **Module Learning With Errors**: Preserve tools for cryptography based on module learning with errors
+- **Learning With Errors**: Preserve tools for cryptography based on learning with errors
+- **Learning With Rounding**: Preserve tools for cryptography based on learning with rounding
+- **Symmetric Key Establishment**: Preserve tools for establishing shared secrets
+- **Asymmetric Key Establishment**: Preserve tools for establishing public-private key pairs
+- **Key Exchange Protocols**: Preserve tools for securely exchanging cryptographic keys
+- **Key Agreement Protocols**: Preserve tools for agreeing on shared secrets
+- **Key Transport Protocols**: Preserve tools for transporting keys between parties
+- **Key Derivation Functions**: Preserve tools for deriving keys from secrets
+- **Password-Based Key Derivation**: Preserve tools for deriving keys from passwords
+- **Hash-Based Key Derivation**: Preserve tools for deriving keys from hash functions
+- **HMAC-Based Key Derivation**: Preserve tools for deriving keys from HMACs
+- **Concat-KDF**: Preserve tools for key derivation using concatenation
+- **PBKDF2**: Preserve tools for Password-Based Key Derivation Function 2
+- ** scrypt**: Preserve tools for memory-hard key derivation function
+- **Argon2**: Preserve tools for memory-hard key derivation function
+- **HKDF**: Preserve tools for Hash-based Key Derivation Function
+- **X9.63-KDF**: Preser-e tools for key derivation based on ANSI X9.63 standard
+- **SP 800-108**: Preserve tools for key derivation following NIST guidelines
+- **SP 800-56A**: Preserve tools for key derivation following NIST guidelines
+- **SP 800-56B**: Preserve tools for key derivation following NIST guidelines
+- **SP 800-56C**: Preser-e tools for key derivation following NIST guidelines
+- **XMSS**: Preserve tools for hash-based signatures resistant to quantum computers
+- **SPHINCS+**: Preserve tools for stateless hash-based signatures resistant to quantum computers
+- **FALCON**: Preserve tools for lattice-based signatures resistant to quantum computers
+- **DILITHIUM**: Preserve tools for lattice-based signatures resistant to quantum computers
+- **CRYSTALS-KYBER**: Preser-e tools for lattice-based key exchange resistant to quantum computers
+- **CRYSTALS-DILITHIUM**: Preser-e tools for lattice-based signatures resistant to quantum computers
+- **CRYSTALS-SABER**: Preser-e tools for lattice-based key exchange resistant to quantum computers
+- **NTRU**: Preserve tools for lattice-based encryption resistant to quantum computers
+- **SIDH**: Preserve tools for isogeny-based key exchange resistant to quantum computers
+- **SIKE**: Preserve tools for supersingular isogeny key encap/resistant to quantum computers
+- **ECDSA**: Preser-e tools for elliptic curve digital signature algorithm
+- **ECDH**: Preser-e tools for elliptic curve diffie-hellman key exchange
+- **EdDSA**: Preser-e tools for Edwards-curve digital signature algorithm
+- **X25519**: Preser-e tools for elliptic curve diffie-hellman over Curve25519
+- **X448**: Preser-e tools for elliptic curve diffie-hellman over Curve448
+- **Ed25519**: Preser-e tools for Edwards-curve digital signature over Curve25519
+- **Ed448**: Preser-e tools for Edwards-curve digital signature over Curve448
+- **RSA**: Preser-e tools for Rivest-Shamir-Adleman public-key cryptosystem
+- **RSASA**: Preser-e tools for RSA signature algorithm with appendix
+- **RSASP1**: Preser-e tools for RSA signature scheme #1
+- **RSASP2**: Preser-e tools for RSA signature scheme #2
+- **RSADP**: Preser-e tools for RSA decryption primitive
+- **RSAEVP1**: Preser-e tools for RSA encryption primitive
+- **RSASSA-PKCS1-v1_5**: Preser-e tools for RSA signature with PKCS #1 v1.5 padding
+- **RSASSA-PSS**: Preser-e tools for RSA signature with probabilistic signature scheme
+- **RSAES-PKCS1-v1_5**: Preser-e tools for RSA encryption with PKCS #1 v1.5 padding
+- **RSAES-OAEP**: Preser-e tools for RSA encryption with optimal asymmetric encryption padding
+- **DSA**: Preser-e tools for Digital Signature Algorithm
+- **DH**: Preser-e tools for Diffie-Hellman key exchange
+- **ElGamal**: Preser-e tools for ElGamal public-key cryptosystem
+- **DSA**: Preser-e tools for Digital Signature Algorithm
+- **ECDSA**: Preser-e tools for elliptic curve digital signature algorithm
+- **ECDH**: Preser-e tools for elliptic curve diffie-hellman key exchange
+- **EdDSA**: Preser-e tool: Edwards-curve digital signature algorithm

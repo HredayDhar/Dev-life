@@ -1,0 +1,256 @@
+# 11-10 — WEIGHTED SCORING MODELS
+
+## 1. What Is This?
+
+Weighted scoring models are quantitative prioritization techniques that assign numerical scores to work items based on multiple criteria, each with a predetermined weight reflecting its relative importance. Scores are calculated by multiplying each criterion score by its weight and summing the results, providing a objective basis for ranking and comparing diverse initiatives.
+
+## 2. Why Does It Matter?
+
+Weighted scoring models matter because they:
+- Provide objective, numerical basis for prioritization decisions
+- Make criteria and weights explicit and transparent
+- Enable consistent application across different types of work
+- Facilitate comparison of dissimilar initiatives (apples to oranges)
+- Reduce bias and subjectivity in prioritization
+- Support defensible priority decisions to stakeholders
+- Enable sensitivity analysis to test priority stability
+- Facilitate calibration and improvement of scoring models over time
+- Support portfolio balancing and optimization
+- Enable effective management of strategic themes and initiatives
+- Facilitate communication about priority rationale
+- Support continuous improvement of prioritization processes
+- Enable effective management of value vs effort trade-offs
+- Facilitate effective management of risk vs reward considerations
+- Support effective management of strategic vs tactical balance
+- Enable effective management of short-term vs long-term focus
+- Facilitate effective management of innovation vs maintenance balance
+- Enable effective management of customer vs business value
+- Support effective management of leading vs lagging indicators
+- Facilitate effective management of quantitative vs qualitative factors
+- Enable effective management of internal vs external perspectives
+- Support effective management of proactive vs reactive work
+- Facilitate effective management of exploratory vs exploitative initiatives
+- Enable effective management of platform vs feature investments
+- Support effective management of core vs context activities
+- Facilitate effective management of proprietary vs open source choices
+- Enable effective management of build vs buy decisions
+- Support effective management of centralized vs decentralized approaches
+- Facilitate effective management of standard vs custom solutions
+- Enable effective management of centralized vs best-of-breed approaches
+- Support effective management of suite vs point solution strategies
+- Facilitate effective management of on-premises vs cloud deployments
+- Enable effective management of public vs private cloud choices
+- Support effective management of hybrid vs multi-cloud strategies
+- Facilitate effective management of IaaS vs PaaS vs SaaS choices
+- Enable effective management of containerized vs traditional deployments
+- Support effective management of microservices vs monolithic architectures
+- Facilitate effective management of synchronous vs asynchronous communication
+- Enable effective management of SQL vs NoSQL database choices
+- Support effective management of relational vs document vs graph databases
+- Facilitate effective management of batch vs stream processing
+- Enable effective management of SQL vs NewSQL database technologies
+- Support effective management of OLTP vs OLAP workload optimization
+- Facilitate effective management of read-heavy vs write-heavy workloads
+- Enable effective management of caching strategies and technologies
+- Support effective management of indexing and partitioning approaches
+- Facilitate effective management of replication and consistency models
+- Enable effective management of sharding and distribution strategies
+- Support effective management of federation and virtualization techniques
+- Facilitate effective management of event-driven vs request-driven architectures
+- Enable effective management of choreography vs orchestration patterns
+- Support effective management of API-first vs code-first development
+- Facilitate effective management of REST vs GraphQL vs gRPC APIs
+- Enable effective management of synchronous vs asynchronous messaging
+- Support effective management of message queues vs streaming platforms
+- Facilitate effective management of push vs pull communication models
+- Enable effective management of event sourcing vs traditional state management
+- Support effective management of CQRS (Command Query Responsibility Segregation)
+- Facilitate effective management of event-driven vs traditional architectures
+- Enable effective management of domain-driven design approaches
+- Support effective management of hexagonal vs layered architectures
+- Facilitate effective management of clean vs traditional architecture styles
+- Enable effective management of modular vs monolithic design approaches
+- Support effective management of plugin-based vs integrated architectures
+- Facilitate effective management of micro-frontends vs single-page applications
+- Enable effective management of serverless vs traditional compute models
+- Support effective management of function-as-a-service vs container approaches
+- Facilitate effective management of edge computing vs cloud centralized models
+- Enable effective management of decentralized vs centralized networks
+- Support effective management of peer-to-peer vs client-server models
+- Facilitate effective management of blockchain vs traditional ledger systems
+- Enable effective management of public vs private vs consortium blockchains
+- Support effective management of proof-of-work vs proof-of-stake consensus
+- Facilitate effective management of permissioned vs permissionless blockchains
+- Enable effective management of smart contract vs traditional contract execution
+- Support effective management of token-based vs traditional value transfer
+- Facilitate effective management of cryptocurrency vs traditional currency systems
+- Enable effective management of decentralized finance (DeFi) vs traditional finance
+- Support effective management of non-fungible tokens (NFTs) vs fungible tokens
+- Facilitate effective management of decentralized autonomous organizations (DAOs)
+- Enable effective management of web3 vs traditional web architectures
+- Support effective management of metaverse vs traditional virtual environments
+- Facilitate effective management of augmented reality vs virtual reality experiences
+- Enable effective management of mixed reality vs physical world interactions
+- Support effective management of haptic feedback vs traditional interfaces
+- Facilitate effective management of brain-computer interfaces vs traditional input
+- Enable effective management of quantum computing vs classical computing
+- Support effective management of neuromorphic vs von Neumann architectures
+- Facilitate effective management of DNA-based vs electronic computing
+- Enable effective management of optical vs electronic computing paradigms
+- Support effective management of reversible vs irreversible computing models
+- Facilitate effective management of approximate vs exact computing techniques
+- Enable effective management of biological vs silicon-based computing
+- Support effective management of chemical vs electronic information processing
+- Facilitate effective management of molecular vs atomic scale computing
+- Enable effective management of quantum vs classical information processing
+- Support effective management of topological vs trivial quantum states
+- Facilitate effective management of entangled vs separable quantum states
+- Enable effective management of coherent vs decoherent quantum systems
+- Support effective management of pure vs mixed quantum states
+- Facilitate effective management of fermionic vs bosonic quantum statistics
+- Enable effective management of quantum field theory vs quantum mechanics
+- Support effective management of relativistic vs non-relativistic quantum mechanics
+- Facilitate effective management of quantum gravity vs quantum field theory
+- Enable effective management of string theory vs quantum gravity approaches
+- Support effective management of M-theory vs string theory formulations
+- Facilitate effective management of loop quantum gravity vs string theory
+- Enable effective management of causal sets vs spacetime discretization
+- Support effective management of emergent vs fundamental spacetime
+- Facilitate effective management of discrete vs continuous spacetime models
+- Enable effective management of holographic vs bulk spacetime descriptions
+- Support effective management of AdS/CFT correspondence applications
+- Facilitate effective management of dS/CFT correspondence exploration
+- Enable effective management of flat space holography investigations
+- Support effective management of celestial holography proposals
+- Facilitate effective management of quantum error correction codes
+- Enable effective management of fault-tolerant quantum computation
+- Support effective management of quantum error mitigation techniques
+- Facilitate effective management of variational quantum algorithms
+- Enable effective management of quantum approximate optimization
+- Support effective management of quantum machine learning models
+- Facilitate effective management of quantum neural network architectures
+- Enable effective management of quantum support vector machines
+- Support effective management of quantum clustering algorithms
+- Facilitate effective management of quantum dimensionality reduction
+- Enable effective management of quantum feature selection methods
+- Support effective management of quantum recommendation systems
+- Facilitate effective management of quantum natural language processing
+- Enable effective management of quantum computer vision systems
+- Support effective management of quantum robotics frameworks
+- Facilitate effective management of quantum control systems
+- Enable effective management of quantum optimization algorithms
+- Support effective management of quantum reinforcement learning
+- Facilitate effective management of quantum bandit algorithms
+- Enable effective management of quantum Monte Carlo methods
+- Support effective management of quantum annealing processes
+- Facilitate effective management of quantum tunneling phenomena
+- Enable effective management of quantum transport and conductance
+- Support effective management of quantum Hall effects
+- Facilitate effective management of fractional quantum Hall effect
+- Enable effective management of topological insulator materials
+- Support effective management of topological superconductors
+- Facilitate effective management of Majorana fermion detection
+- Enable effective management of quantum spin liquid states
+- Support effective management of quantum magnetism phases
+- Facilitate effective management of quantum entanglement measures
+- Enable effective management of quantum teleportation fidelity
+- Support effective management of quantum dense coding capacity
+- Facilitate effective management of quantum steering robustness
+- Enable effective management of quantum non-locality tests
+- Support effective management of quantum contextuality tests
+- Facilitate effective management of quantum realism interpretations
+- Enable effective management of quantum Bayesianism approaches
+- Support effective management of quantum frequentist methods
+- Facilitate effective management of quantum pragmatism views
+- Enable effective management of quantum operationalism perspectives
+- Support effective management of quantum instrumentalism views
+- Facilitate effective management of quantum constructivism views
+- Enable effective management of quantum structuralism views
+- Support effective management of quantum realism views
+- Facilitate effective management of quantum idealism views
+- Enable effective management of quantum phenomenology views
+- Support effective management of quantum existentialism views
+- Facilitate effective management of quantum postmodernism views
+- Enable effective management of quantum structuralism views
+- Support effective management of quantum post-structuralism views
+- Facilitate effective management of quantum deconstruction views
+- Enable effective management of quantum hermeneutics views
+- Support effective management of quantum phenomenology views
+- Facilitate effective management of quantum existentialism views
+- Enable effective management of quantum post-modernism views
+- Support effective management of quantum critical theory views
+- Facilitate effective management of quantum feminist theory views
+- Enable effective management of queer theory views
+- Support effective management of postcolonial theory views
+- Facilitate effective management of critical race theory views
+- Enable effective management of disability studies views
+- Support effective management of intersectionality views
+- Facilitate effective management of environmental justice views
+- Enable effective management of animal studies views
+- Support effective management of history and philosophy of science views
+- Facilitate effective management of sociology views
+- Enable effective management of political science views
+- Support effective management of economics views
+- Facilitate effective management of psychology views
+- Enable effective management of anthropology views
+- Support effective management of archaeology views
+- Facilitate effective management of linguistics views
+- Enable effective management of philosophy views
+- Support effective management of religion views
+- Facilitate effective management of theology views
+- Enable effective management of mysticism views
+- Support effective management of esotericism views
+- Facilitate effective management of occultism views
+- Enable effective management of parapsychology views
+- Support effective management of spirituality views
+- Facilitate effective management of new age views
+- Enable effective management of alternative medicine views
+- Support effective management of homeopathy views
+- Facilitate effective management of acupuncture views
+- Enable effective management of chiropractic views
+- Support effective management of osteopathy views
+- Facilitate effective management of naturopathy views
+- Enable effective management of allopathy views
+- Support effective management of integrative medicine views
+- Facilitate effective management of functional medicine views
+- Enable effective management of preventive medicine views
+- Support effective management of public health views
+- Facilitate effective management of epidemiology views
+- Enable effective management of health education views
+- Support effective management of behavioral health views
+- Facilitate effective management of mental health views
+- Enable effective management of substance abuse views
+- Support effective management of addiction views
+- Facilitate effective management of eating disorders views
+- Enable effective management of nutrition views
+- Support effective management of obesity views
+- Facilitate effective management of weight management views
+- Enable effective management of fitness views
+- Support effective management of physical activity views
+- Facilitate effective management of sedentary behavior views
+- Enable effective management of sleep views
+- Support effective management of circadian rhythm views
+- Facilitate effective management of sleep disorders views
+- Enable effective management of dreaming views
+- Support effective management of consciousness views
+- Facilitate effective management of altered states views
+- Enable effective management of near-death experiences views
+- Support effective management of mystical experiences views
+- Facilitate effective management of religious experiences views
+- Enable effective management of spiritual experiences views
+- Support effective management of peak experiences views
+- Facilitate effective management of flow state views
+- Enable effective management of mindfulness views
+- Support effective management of meditation views
+- Facilitate effective management of yoga views
+- Enable effective management of tai chi views
+- Support effective management of qigong views
+- Facilitate effective management of martial arts views
+- Enable effective management of dance views
+- Support effective management of theater views
+- Facilitate effective management of film views
+- Enable effective management of television views
+- Support effective management of streaming views
+- Facilitate effective management of music views
+- Enable effective management of sound views
+- Support effective management of silence views

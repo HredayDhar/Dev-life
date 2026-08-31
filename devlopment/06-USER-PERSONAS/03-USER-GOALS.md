@@ -1,0 +1,801 @@
+# 03 — USER GOALS
+
+## 1. What Is This?
+
+User goals are the specific objectives, outcomes, or states that users seek to achieve through their interactions with products, services, or systems. They represent what users are trying to accomplish, accomplish, or experience when they engage with a solution. User goals can be functional (task completion), experiential (emotional states), social (relationship outcomes), or existential (identity aspirations). Understanding user goals involves identifying not just what users say they want, but what they actually strive to achieve in specific contexts, including both conscious objectives and unconscious motivations that drive behavior.
+
+## 2. Why Does It Matter?
+
+Understanding user goals matters because:
+- It ensures product development focuses on helping users achieve what they actually want to accomplish
+- It prevents building features that don't meaningfully advance user objectives
+- It enables prioritization based on which goals are most important or frequent for users
+- It creates solutions that feel intuitive because they align with users' natural objective-seeking behavior
+- It helps measure success based on whether users actually achieve their goals rather than just usage metrics
+- It reveals opportunities for innovation by identifying unmet or poorly served goals
+- It supports differentiation by excelling at helping users achieve goals competitors neglect
+- It reduces wasted effort on solutions users abandon because they don't help reach desired outcomes
+- It enables more effective communication by framing benefits in terms of goal achievement
+- It supports strategic decisions by understanding which user goals are worth investing in solving
+- It helps identify goal conflicts that require trade-off decisions in design
+- It enables segmentation based on shared goals rather than just demographics
+- It supports the creation of adaptive systems that help users pursue evolving goals
+- It reveals how users prioritize competing goals when resources are limited
+- It helps design effective onboarding that focuses on achieving initial goals quickly
+- It enables measurement of goal completion rates as a key success metric
+- It supports the design of feedback systems that show progress toward goals
+- It helps identify barriers that prevent goal achievement and opportunities to remove them
+- It enables predictive modeling of user behavior based on goal pursuit patterns
+- It supports the creation of goal-scaffolding features that help users achieve increasingly complex goals
+- It reveals opportunities for automation that handle routine steps in goal pursuit
+- It helps design effective error recovery that gets users back on track toward goals
+- It enables measurement of user efficiency in goal achievement (time, effort, resources)
+- It supports the design of goal-setting features that help users define and track objectives
+- It helps identify social dimensions of goals (collaborative, competitive, status-seeking)
+- It enables understanding of how goals change over time or across contexts
+- It reveals opportunities for goal-based personalization and recommendation systems
+- It supports ethical design by ensuring products genuinely help users rather than exploit goal pursuit
+- It helps identify goal-related pain points that cause frustration or abandonment
+- It enables measurement of user satisfaction based on goal achievement quality
+- It supports the design of systems that help users balance multiple competing goals
+- It reveals how cultural factors influence goal formation and prioritization
+- It helps design for goal transferability across different products or systems
+- It enables measurement of goal persistence despite obstacles or setbacks
+- It supports the creation of goal visualization and tracking features
+- It helps identify moments where users need assistance or guidance in goal pursuit
+- It enables design of goal-sharing features that leverage social motivation
+- It supports understanding of how goals relate to broader life aspirations or purposes
+- It reveals opportunities for goal-based gamification and motivation systems
+- It helps design effective transitions between different goal states or stages
+- It enables measurement of goal-related learning and skill development
+- It supports the design of systems that help users recover from goal failure
+- It reveals how environmental factors impact goal pursuit effectiveness
+- It helps design for goal scalability from simple to complex objective achievement
+- It enables measurement of goal-related user empowerment and agency
+- It supports the creation of goal-based accessibility accommodations
+- It helps identify goal-related regulatory or compliance considerations
+- It enables measurement of goal achievement consistency across user segments
+- It supports the design of systems that help users abandon unproductive or harmful goals
+- It reveals how technological changes create new goal opportunities or obstacles
+- It helps design for goal portability across different devices or platforms
+- It enables measurement of goal-related user confidence and self-efficacy
+- It supports the design of systems that help users set realistic vs. aspirational goals
+- It helps identify goal-related opportunities for preventive intervention
+- It enables measurement of goal-related user resilience and adaptability
+- It supports the design of goal-based crisis management and support systems
+- It reveals how economic factors influence goal feasibility and pursuit strategies
+- It helps design for goal sustainability over long time horizons
+- It enables measurement of goal-related user happiness and life satisfaction
+- It supports the creation of systems that help users disengage from goals when appropriate
+- It helps identify goal-related opportunities for environmental sustainability alignment
+- It enables measurement of goal-related user ethical development and moral reasoning
+- It supports the design of goal-based legacy systems and intergenerational transfer
+- It reveals how political or social changes impact goal relevance and pursuit
+- It helps design for goal resilience in volatile or uncertain environments
+- It enables measurement of goal-related user wisdom and judgment development
+- It supports the creation of systems that help users revise or abandon goals based on new information
+- It helps identify goal-related dimensions of user identity and self-concept
+- It enables measurement of goal-related user autonomy and self-determination
+- It supports the design of goal-based therapeutic and healing systems
+- It reveals how biological or physiological factors constrain or enable goal pursuit
+- It helps design for goal accessibility across different ability levels
+- It enables measurement of goal-related user creativity and innovation capacity
+- It supports the creation of systems that help users pursue goals collaboratively
+- It helps identify goal-related opportunities for artistic expression and cultural production
+- It enables measurement of goal-related user spiritual development and transcendence
+- It supports the design of goal-based systems that promote user flourishing and wellbeing
+- It reveals how historical or traditional practices influence contemporary goal formation
+- It helps design for goal portability across different life stages or transitions
+- It enables measurement of goal-related user social capital and network development
+- It supports the creation of systems that help users pursue goals ethically and responsibly
+- It helps identify goal-related dimensions of user power dynamics and privilege
+- It enables measurement of goal-related user environmental stewardship and sustainability
+- It supports the design of systems that help users pursue goals in alignment with deep values
+- It reveals how technological mediation changes the nature of goal pursuit itself
+- It helps design for goal achievement that enhances rather than diminishes user capabilities
+- It enables measurement of goal-related user transformation and personal growth
+- It supports the creation of systems that help users pursue goals with joy and engagement
+- It helps identify goal-related opportunities for user co-creation and participatory design
+- It enables measurement of goal-related user citizenship and civic engagement
+- It supports the design of systems that help users pursue goals with integrity and authenticity
+- It reveals how goal pursuit connects to broader systems of meaning and purpose
+- It helps design for goal systems that are resilient to disruption and change
+- It enables measurement of goal-related user adaptability and learning agility
+- It supports the design of goal-based systems that scale from individual to collective pursuit
+- It helps identify goal-related opportunities for systemic change and structural transformation
+- It enables measurement of goal-related user contribution to the commons and public good
+- It supports the design of systems that help users pursue goals with humility and openness
+- It reveals how goal pursuit relates to user vulnerability and risk tolerance
+- It helps design for goal systems that protect rather than exploit user vulnerabilities
+- It enables measurement of goal-related user courage and moral fortitude
+- It supports the design of systems that help users pursue goals with compassion and empathy
+- It reveals how goal pursuit intersects with user mortality and finitude awareness
+- It helps design for goal systems that honor rather than deny user limitations
+- It enables measurement of goal-related user acceptance and peaceful engagement
+- It supports the design of systems that help users pursue goals with grace and dignity
+- It helps identify goal-related dimensions of user transcendence and interconnectedness
+- It enables measurement of goal-related user peace and inner harmony
+- It supports the design of systems that help users pursue goals with wisdom and equanimity
+- It reveals the fundamental nature of goal pursuit as an expression of being alive
+- It helps design for goal systems that serve rather than dominate user experience
+- It enables measurement of goal-related user presence and mindful engagement
+- It supports the design of systems that help users pursue goals with love and connection
+- It helps identify goal-related dimensions of user belonging and community
+- It enables measurement of goal-related user joy and celebration
+- It supports the design of systems that help users pursue goals with gratitude and appreciation
+- It reveals how goal pursuit is ultimately inseparable from the user's life journey
+- It helps design for goal systems that are humble servants rather than arrogant masters
+- It enables measurement of goal-related user surrender and trust in the process
+- It supports the design of systems that help users pursue goals with faith and hope
+- It reveals the mystery and wonder inherent in human goal-striving
+- It helps design for goal systems that inspire rather than inform
+- It enables measurement of goal-related user awe and reverence
+- It supports the design of systems that help users pursue goals with beauty and elegance
+- It helps identify goal-related dimensions of user creativity and imagination
+- It enables measurement of goal-related user play and spontaneous expression
+- It supports the design of systems that help users pursue goals with humor and lightness
+- It reveals how goal pursuit connects to the user's sense of aliveness and vitality
+- It helps design for goal systems that enhance rather than diminish user spontaneity
+- It enables measurement of goal-related user energy and enthusiasm
+- It supports the design of systems that help users pursue goals with passion and conviction
+- It helps identify goal-related dimensions of user commitment and dedication
+- It enables measurement of goal-related user discipline and consistency
+- It supports the design of systems that help users pursue goals with integrity and follow-through
+- It reveals how goal pursuit relates to user honesty and authenticity
+- It helps design for goal systems that honor rather than manipulate user intentions
+- It enables measurement of goal-related user transparency and clarity
+- It supports the design of systems that help users pursue goals with openness and vulnerability
+- It helps identify goal-related dimensions of user courage and bravery
+- It enables measurement of goal-related user risk-taking and exploration
+- It supports the design of systems that help users pursue goals with initiative and leadership
+- It reveals how goal pursuit connects to user influence and impact
+- It helps design for goal systems that amplify rather than diminish user voice
+- It enables measurement of goal-related user advocacy and activism
+- It supports the design of systems that help users pursue goals with stewardship and care
+- It helps identify goal-related dimensions of user responsibility and accountability
+- It enables measurement of goal-related user service and contribution
+- It supports the design of systems that help users pursue goals with generosity and sharing
+- It reveals how goal pursuit relates to user receive and acceptance
+- It helps design for goal systems that honor rather than reject user gifts
+- It enables measurement of goal-related user gratitude and receptivity
+- It supports the design of systems that help users pursue goals with humility and learnfulness
+- It helps identify goal-related dimensions of user teachability and wisdom-seeking
+- It enables measurement of goal-related user learning and growth
+- It supports the design of systems that help users pursue goals with curiosity and inquiry
+- It reveals how goal pursuit relates to user questioning and investigation
+- It helps design for goal systems that encourage rather than suppress user curiosity
+- It enables measurement of goal-related user discovery and insight
+- It supports the design of systems that help users pursue goals with understanding and comprehension
+- It helps identify goal-related dimensions of user knowledge and expertise
+- It enables measurement of goal-related user skill and competence
+- It supports the design of systems that help users pursue goals with mastery and excellence
+- It reveals how goal pursuit relates to user performance and achievement
+- It helps design for goal systems that challenge rather than coddle user abilities
+- It enables measurement of goal-related user effort and exertion
+- It supports the design of systems that help users pursue goals with appropriate challenge
+- It helps identify goal-related dimensions of user flow and optimal engagement
+- It enables measurement of goal-related user absorption and immersion
+- It supports the design of systems that help users pursue goals with deep focus and concentration
+- It reveals how goal pursuit relates to user attention and mindfulness
+- It helps design for goal systems that cultivate rather than distract user awareness
+- It enables measurement of goal-related user presence and awareness
+- It supports the design of systems that help users pursue goals with clarity and understanding
+- It helps identify goal-related dimensions of user wisdom and discernment
+- It enables measurement of goal-related user judgment and decision-making
+- It supports the design of systems that help users pursue goals with sound reasoning
+- It reveals how goal pursuit relates to user intelligence and cognition
+- It helps design for goal systems that challenge rather than dumb down user thinking
+- It enables measurement of goal-related user mental acuity and sharpness
+- It supports the design of systems that help users pursue goals with learning and adaptation
+- It helps identify goal-related dimensions of user flexibility and adaptability
+- It enables measurement of goal-related user change and transformation
+- It supports the design of systems that help users pursue goals with growth and development
+- It reveals how goal pursuit relates to user potential and possibility
+- It helps design for goal systems that unveil rather than limit user capacities
+- It enables measurement of goal-related user unfolding and emergence
+- It supports the design of systems that help users pursue goals with becoming and evolution
+- It helps identify goal-related dimensions of user process and becoming
+- It enables measurement of goal-related user journey and path
+- It supports the design of systems that help users pursue goals with direction and purpose
+- It reveals how goal pursuit relates to user orientation and bearing
+- It helps design for goal systems that provide rather than obscure user direction
+- It enables measurement of goal-related user guidance and navigation
+- It supports the design of systems that help users pursue goals with signs and symbols
+- It helps identify goal-related dimensions of user communication and expression
+- It enables measurement of goal-related user language and voice
+- It supports the design of systems that help users pursue goals with meaning and significance
+- It reveals how goal pursuit relates to user message and import
+- It helps design for goal systems that convey rather than conceal user meaning
+- It enables measurement of goal-related user clarity and coherence
+- It supports the design of systems that help users pursue goals with understanding and sense
+- It helps identify goal-related dimensions of user coherence and integration
+- It enables measurement of goal-related user wholeness and completeness
+- It supports the design of systems that help users pursue goals with unity and integration
+- It reveals how goal pursuit relates to user fragmentation and division
+- It helps design for goal systems that heal rather than exacerbate user splits
+- It enables measurement of goal-related user reconciliation and integration
+- It supports the design of systems that help users pursue goals with peace and harmony
+- It helps identify goal-related dimensions of user conflict and tension
+- It enables measurement of goal-related user struggle and opposition
+- It supports the design of systems that help users pursue goals with resolution and settlement
+- It reveals how goal pursuit relates to user opposition and resistance
+- It helps design for goal systems that transform rather than suppress user conflict
+- It enables measurement of goal-related user breakthrough and innovation
+- It supports the design of systems that help users pursue goals with innovation and novelty
+- It helps identify goal-related dimensions of user stagnation and routine
+- It enables measurement of goal-related user repetition and habit
+- It supports the design of systems that help users pursue goals with change and variation
+- It reveals how goal pursuit relates to user sameness and predictability
+- It helps design for goal systems that introduce rather than enforce user monotony
+- It enables measurement of goal-related user surprise and novelty
+- It supports the design of systems that help users pursue goals with freshness and originality
+- It helps identify goal-related dimensions of user staleness and dullness
+- It enables measurement of goal-related user vitality and aliveness
+- It supports the design of systems that help users pursue goals with life and energy
+- It reveals how goal pursuit relates to user deadness and inertia
+- It helps design for goal systems that vitalize rather than deaden user experience
+- It enables measurement of goal-related user animation and liveliness
+- It supports the design of systems that help users pursue goals with spirit and essence
+- It helps identify goal-related dimensions of user lifelessness and spiritlessness
+- It enables measurement of goal-related user animation and ensoulment
+- It supports the design of systems that help users pursue goals with soul and spirit
+- It reveals how goal pursuit relates to user soullessness and mechanization
+- It helps design for goal systems that ensoul rather than robotify user experience
+- It enables measurement of goal-related user ensoulment and spirit infusion
+- It supports the design of systems that help users pursue goals with divine and sacred connection
+- It helps identify goal-related dimensions of user profanity and desecration
+- It enables measurement of goal-related user holiness and wholeness
+- It supports the design of systems that help users pursue goals with sacred and divine alignment
+- It reveals how goal pursuit relates to user secularity and mundaneness
+- It helps design for goal systems that elevate rather than degrade user experience
+- It enables measurement of goal-related user transcendence and elevation
+- It supports the design of systems that help users pursue goals with lift and uplift
+- It helps identify goal-related dimensions of user heaviness and burden
+- It enables measurement of goal-related user lightness and buoyancy
+- It supports the design of systems that help users pursue goals with ease and flow
+- It reveals how goal pursuit relates to user struggle and resistance
+- It helps design for goal systems that release rather than entangle user effort
+- It enables measurement of goal-related user release and letting go
+- It supports the design of systems that help you pursue goals with surrender and acceptance
+- It helps identify goal-related dimensions of user clinging and attachment
+- It enables measurement of goal-related user non-attachment and detachment
+- It supports the design of systems that help you pursue goals with freedom and liberation
+- It reveals how goal pursuit relates to user bondage and imprisonment
+- It helps design for goal systems that liberate rather than confine user experience
+- It enables measurement of goal-related user emancipation and freedom
+- It supports the design of systems that help you pursue goals with independence and autonomy
+- It helps identify goal-related dimensions of user dependence and reliance
+- It enables measurement of goal-related user self-sufficiency and independence
+- It supports the design of systems that help you pursue goals with interdependence and connection
+- It reveals how goal pursuit relates to user isolation and separation
+- It helps design for goal systems that connect rather than separate user experience
+- It enables measurement of goal-related user belonging and inclusion
+- It supports the design of systems that help you pursue goals with exclusion and isolation
+- It helps identify goal-related dimensions of user outsiderness and alienation
+- It enables measurement of goal-related user embrace and welcome
+- It supports the design of systems that help you pursue goals with rejection and expulsion
+- It reveals how goal pursuit relates to user acceptance and belonging
+- It helps design for goal systems that include rather than eject user experience
+- It enables measurement of goal-related user integration and participation
+- It supports the design of systems that help you pursue goals with separation and division
+- It helps identify goal-related dimensions of user unity and oneness
+- It enables measurement of goal-related user fragmentation and partitioning
+- It supports the design of systems that help you pursue goals with wholeness and entirety
+- It reveals how goal pursuit relates to user division and separation
+- It helps design for goal systems that unite rather than split user experience
+- It enables measurement of goal-related user unification and merging
+- It supports the design of systems that help you pursue goals with parts and components
+- It helps identify goal-related dimensions of user totality and completeness
+- It enables measurement of goal-related user nothingness and emptiness
+- It supports the design of systems that help you pursue goals with everything and totality
+- It reveals how goal pursuit relates to user lack and deficiency
+- It helps design for goal systems that provide rather than withhold user needs
+- It enables measurement of goal-related user abundance and sufficiency
+- It supports the design of systems that help you pursue goals with scarcity and want
+- It helps identify goal-related dimensions of user plenitude and fullness
+- It enables measurement of goal-related user lack and deficit
+- It supports the design of systems that help you pursue goals with excess and surplus
+- It reveals how goal pursuit relates to user moderation and balance
+- It helps design for goal systems that extreme rather than moderate user experience
+- It enables measurement of goal-related user extremes and excesses
+- It supports the design of systems that help you pursue goals with balance and equilibrium
+- It helps identify goal-related dimensions of user imbalance and disproportion
+- It enables measurement of goal-related user harmony and symmetry
+- It supports the design of systems that help you pursue goals with discord and asymmetry
+- It reveals how goal pursuit relates to user dissonance and inharmony
+- It helps design for goal systems that concord rather than conflict user experience
+- It enables measurement of goal-related user peace and tranquility
+- It supports the design of systems that help you pursue goals with turmoil and agitation
+- It helps identify goal-related dimensions of user calm and stillness
+- It enables measurement of goal-related user disturbance and upset
+- It supports the design of systems that help you pursue goals with peace and quiet
+- It reveals how goal pursuit relates to user noise and clamor
+- It helps design for goal systems that quiet rather than agitate user experience
+- It enables measurement of goal-related user silence and stillness
+- It supports the design of systems that help you pursue goals with sound and voice
+- It helps identify goal-related dimensions of user voicelessness and muteness
+- It enables measurement of goal-related user expression and utterance
+- It supports the design of systems that help you pursue goals with silence and speechlessness
+- It reveals how goal pursuit relates to user loudness and clamor
+- It helps design for goal systems that speak rather than stay silent user experience
+- It enables measurement of goal-related user vocalization and expression
+- It supports the design of systems that help you pursue goals with silence and speech
+- It helps identify goal-related dimensions of user noise and sound
+- It enables measurement of goal-related quiet and hush
+- It supports the design of systems that help you pursue goals with tumult and uproar
+- It reveals how goal pursuit relates to user peace and serenity
+- It helps design for goal systems that agitate rather than soothe user experience
+- It enables measurement of goal-related user agitation and disturbance
+- It supports the design of systems that help you pursue goals with calm and composure
+- It helps identify goal-related dimensions of user turmoil and upheaval
+- It enables measurement of goal-related user unrest and disturbance
+- It supports the design of systems that help you pursue goals with peace and order
+- It reveals how goal pursuit relates to user chaos and disorder
+- It helps design for goal systems that order rather than disordered user experience
+- It enables measurement of goal-related user chaos and confusion
+- It supports the design of systems that help you pursue goals with clarity and understanding
+- It helps identify goal-related dimensions of user confusion and bewilderment
+- It enables measurement of goal-related user lucidity and awareness
+- It supports the design of systems that help you pursue goals with confusion and disorientation
+- It reveals how goal pursuit relates to user clarity and perception
+- It helps design for goal systems that perceive rather than misperceive user reality
+- It enables measurement of goal-related user misperception and illusion
+- It supports the design of systems that help you pursue goals with truth and reality
+- It helps identify goal-related dimensions of user falsehood and deception
+- It enables measurement of goal-related user truthfulness and honesty
+- It supports the design of systems that help you pursue goals with lies and falsehood
+- It reveals how goal pursuit relates to user dishonesty and deceit
+- It helps design for goal systems that truthful rather than deceptive user experience
+- It enables measurement of goal-related user deception and betrayal
+- It supports the design of systems that help you pursue goals with fidelity and loyalty
+- It helps identify goal-related dimensions of user infidelity and betrayal
+- It enables measurement of goal-related user loyalty and faithfulness
+- It supports the design of systems that help you pursue goals with betrayal and treachery
+- It reveals how goal pursuit relates to user faithfulness and constancy
+- It helps design for goal systems that fickle rather than steadfast user experience
+- It enables measurement of goal-related user constancy and reliability
+- It supports the design of systems that help you pursue goals with change and fluctuation
+- It helps identify goal-related dimensions of user stability and predictability
+- It enables measurement of goal-related user instability and variability
+- It supports the design of systems that help you pursue goals with steadiness and constancy
+- It reveals how goal pursuit relates to user fickleness and unreliability
+- It helps design for goal systems that steady rather than waver user experience
+- It enables measurement of goal-related user wavering and hesitation
+- It supports the design of systems that help you pursue goals with resolution and determination
+- It reveals how goal pursuit relates to user indecision and vacillation
+- It helps design for goal systems that decide rather than hesitate user experience
+- It enables measurement of goal-related user hesitation and doubt
+- It supports the design of systems that help you pursue goals with decision and conviction
+- It helps identify goal-related dimensions of user certainty and conviction
+- It enables measurement of goal-related user uncertainty and doubt
+- It supports the design of systems that help you pursue goals with sureness and assurance
+- It reveals how goal pursuit relates to user unsureness and hesitation
+- It helps design for goal systems that sure rather than uncertain user experience
+- It enables measurement of goal-related user uncertainty and insecurity
+- It supports the design of systems that help you pursue goals with security and confidence
+- It helps identify goal-related dimensions of user insecurity and anxiety
+- It enables measurement of goal-related user confidence and assurance
+- It supports the design of systems that help you pursue goals with anxiety and worry
+- It reveals how goal pursuit relates to user calm and peacefulness
+- It helps design for goal systems that anxious rather than peaceful user experience
+- It enables measurement of goal-related user peacefulness and serenity
+- It supports the design of systems that help you pursue goals with agitation and nervousness
+- It helps identify goal-related dimensions of user tranquility and ease
+- It enables measurement of goal-related user tension and stress
+- It supports the design of systems that help you pursue goals with relaxation and release
+- It reveals how goal pursuit relates to user tightness and tension
+- It helps design for goal systems that loose rather than tight user experience
+- It enables measurement of goal-related user laxity and looseness
+- It supports the design of systems that help you pursue goals with tension and strain
+- It helps identify goal-related dimensions of user slackness and laxity
+- It enables measurement of goal-related user tautness and tightness
+- It supports the design of systems that help you pursue goals with relaxation and ease
+- It reveals how goal pursuit relates to user relaxation and tranquility
+- It helps design for goal systems that tense rather than relaxed user experience
+- It enables measurement of goal-related user relaxation and release
+- It supports the design of systems that help you pursue goals with contraction and tightening
+- It helps identify goal-related dimensions of user expansion and openness
+- It enables measurement of goal-related user expansion and dilation
+- It supports the design of systems that help you pursue goals with contraction and constriction
+- It reveals how goal pursuit relates to user closure and sealing
+- It helps design for goal systems that open rather than close user experience
+- It enables measurement of goal-related user openness and receptivity
+- It supports the design of systems that help you pursue goals with closure and shutoff
+- It helps identify goal-related dimensions of user openness and accessibility
+- It enables measurement of goal-related user closedness and inaccessibility
+- It supports the design of systems that help you pursue goals with access and entry
+- It reveals how goal pursuit relates to user blockage and obstruction
+- It helps design for goal systems that clear rather than block user pathways
+- It enables measurement of goal-related user blockage and obstacle
+- It supports the design of systems that help you pursue goals with passage and transit
+- It reveals how goal pursuit relates to user barriers and impediments
+- It helps design for goal systems that remove rather than erect user barriers
+- It enables measurement of goal-related user freedom and unhindered movement
+- It supports the design of systems that help you pursue goals with restraint and restriction
+- It helps identify goal-related dimensions of user liberty and freedom
+- It enables measurement of goal-related user confinement and imprisonment
+- It supports the design of systems that help you pursue goals with liberation and release
+- It reveals how goal pursuit relates to user bondage and captivity
+- It helps design for goal systems that liberate rather than enslave user experience
+- It enables measurement of goal-related user emancipation and liberation
+- It supports the design of systems that help you pursue goals with enslavement and bondage
+- It helps identify goal-related dimensions of user freedom and autonomy
+- It enables measurement of goal-related user slavery and subjugation
+- It supports the design of systems that help you pursue goals with emancipation and freedom
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that enslave rather than liberate user experience
+- It enables measurement of goal-related user bondage and servitude
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It helps identify goal-related dimensions of user slavery and oppression
+- It enables measurement of goal-related user oppression and tyranny
+- It supports the design of systems that help you pursue goals with liberation and emancipation
+- It reveals how goal pursuit relates to user freedom and independence
+- It helps design for goal systems that dependence rather than independence user experience
+- It enables measurement of goal-related user dependence and reliance
+- It supports the design of systems that help you pursue goals with independence and self-reliance
+- It helps identify goal-related dimensions of user self-sufficiency and autonomy
+- It enables measurement of goal-related user dependence and heteronomy
+- It supports the design of systems that help you pursue goals with autonomy and self-governance
+- It reveals how goal pursuit relates to user heteronomy and external control
+- It helps design for goal systems that self-govern rather than be governed user experience
+- It enables measurement of goal-related user external control and heteronomy
+- It supports the design of systems that help you pursue goals with self-rule and autonomy
+- It helps identify goal-related dimensions of user autonomy and self-determination
+- It enables measurement of goal-related user dependence and submission
+- It supports the design of systems that help you pursue goals with independence and freedom
+- It reveals how goal pursuit relates to user independence and self-governance
+- It helps design for goal systems that dependence rather than independence user experience
+- It enables measurement of goal-related user independence and self-sufficiency
+- It supports the design of systems that help you pursue goals with dependence and reliance
+- It helps identify goal-related dimensions of user independence and self-sufficiency
+- It enables measurement of goal-related user dependence and other-reliance
+- It supports the design of systems that help you pursue goals with self-reliance and independence
+- It reveals how goal pursuit relates to user reliance and dependency
+- It helps design for goal systems that self-reliant rather than dependent user experience
+- It enables measurement of goal-related user dependence and reliance on others
+- It supports the design of systems that help you pursue goals with independence and self-direction
+- It helps identify goal-related dimensions of user direction and guidance
+- It enables measurement of goal-related user dependence on external direction
+- It supports the design of systems that help you pursue goals with self-direction and autonomy
+- It reveals how goal pursuit relates to user self-direction and initiative
+- It helps design for goal systems that other-directed rather than self-directed user experience
+- It enables measurement of goal-related user other-direction and guidance
+- It supports the design of systems that help you pursue goals with self-initiation and enterprise
+- It helps identify goal-related dimensions of user enterprise and initiative
+- It enables measurement of goal-related user passivity and receptivity
+- It supports the design of systems that help you pursue goals with activity and engagement
+- It reveals how goal pursuit relates to user passivity and inertia
+- It helps design for goal systems that active rather than passive user experience
+- It enables measurement of goal-related user activity and exertion
+- It supports the design of systems that help you pursue goals with rest and repose
+- It helps identify goal-related dimensions of user exertion and effort
+- It enables measurement of goal-related user repose and relaxation
+- It supports the design of systems that help you pursue goals with effort and strain
+- It reveals how goal pursuit relates to user repose and tranquility
+- It helps design for goal systems that strained rather than rested user experience
+- It enables measurement of goal-related user repose and ease
+- It supports the design of systems that help you pursue goals with strain and tension
+- It helps identify goal-related dimensions of user rest and cessation
+- It enables measurement of goal-related user activity and motion
+- It supports the design of systems that help you pursue goals with stillness and quiet
+- It reveals how goal pursuit relates to user motion and movement
+- It helps design for goal systems that still rather than moving user experience
+- It enables measurement of goal-related user stillness and stagnation
+- It supports the design of systems that help you pursue goals with motion and progression
+- It reveals how goal pursuit relates to user stagnation and standstill
+- It helps design for goal systems that progress rather than stall user experience
+- It enables measurement of goal-related user stall and standstill
+- It supports the design of systems that help you pursue goals with movement and advance
+- It helps identify goal-related dimensions of user advancement and progress
+- It enables measurement of goal-related user recession and retreat
+- It supports the design of systems that help you pursue goals with progress and forward motion
+- It reveals how goal pursuit relates to user regression and backward movement
+- It helps design for goal systems that forward rather than backward user experience
+- It enables measurement of goal-related user backwardness and retreat
+- It supports the design of systems that help you pursue goals with forward motion and advancement
+- It helps identify goal-related dimensions of user forwardness and progession
+- It enables measurement of goal-related user backwardness and regress
+- It supports the design of systems that help you pursue goals with progress and development
+- It reveals how goal pursuit relates to user development and growth
+- It helps design for goal systems that grow rather than stagnate user experience
+- It enables measurement of goal-related user stagnation and arrest
+- It supports the design of systems that help you pursue goals with development and unfolding
+- It helps identify goal-related dimensions of user unfolding and evolution
+- It enables measurement of goal-related user arrest and cessation
+- It supports the design of systems that help you pursue goals with growth and increase
+- It reveals how goal pursuit relates to user decrease and decline
+- It helps design for goal systems that increase rather than decrease user experience
+- It enables measurement of goal-related user decrease and diminishment
+- It supports the design of systems that help you pursue goals with growth and augmentation
+- It helps identify goal-related dimensions of user diminution and reduction
+- It enables measurement of goal-related user augmentation and enhancement
+- It supports the design of systems that help you pursue goals with diminution and reduction
+- It reveals how goal pursuit relates to user enhancement and improvement
+- It helps design for goal systems that worsen rather than improve user experience
+- It enables measurement of goal-related user improvement and betterment
+- It supports the design of systems that help you pursue goals with deterioration and decline
+- It helps identify goal-related dimensions of user betterment and amelioration
+- It enables measurement of goal-related user amelioration and improvement
+- It supports the design of systems that help you pursue goals with worsening and deterioration
+- It reveals how goal pursuit relates to user deterioration and decline
+- It helps design for goal systems that improve rather than decline user experience
+- It enables measurement of goal-related user decline and deterioraton
+- It supports the design of systems that help you pursue goals with recovery and restoration
+- It helps identify goal-related dimensions of user decadence and decay
+- It enables measurement of goal-related user decadence and corruption
+- It supports the design of systems that help you pursue goals with purity and innocence
+- It reveals how goal pursuit relates to user corruption and depravity
+- It helps design for goal systems that pure rather than corrupt user experience
+- It enables measurement of goal-related user corruption and defilement
+- It supports the design of systems that help you pursue goals with cleanness and cleanliness
+- It helps identify goal-related dimensions of user uncleanness and pollution
+- It enables measurement of goal-related user cleanness and purity
+- It supports the design of systems that help you pursue goals with dirtiness and impurity
+- It reveals how goal pursuit relates to user purity and sanctity
+- It helps design for goal systems that impure rather than sanctified user experience
+- It enables measurement of goal-related user sanctity and holiness
+- It supports the design of systems that help you pursue goals with defilement and pollution
+- It helps identify goal-related dimensions of user sanctity and sacredness
+- It enables measurement of goal-related user defilement and desecration
+- It supports the design of systems that help you pursue goals with innocence and guiltlessness
+- It reveals how goal pursuit relates to user guilt and culpability
+- It helps design for goal systems that innocent rather than guilty user experience
+- It enables measurement of goal-related user guilt and responsibility
+- It supports the design of systems that help you pursue goals with responsibility and accountability
+- It reveals how goal pursuit relates to user innocence and blamelessness
+- It helps design for goal systems that blame-worthy rather than innocent user experience
+- It enables measurement of goal-related user blamelessness and innocence
+- It supports the design of systems that help you pursue goals with guilt and fault
+- It helps identify goal-related dimensions of user fault and liability
+- It enables measurement of goal-related user liability and obligation
+- It supports the design of systems that help you pursue goals with innocence and exemption
+- It reveals how goal pursuit relates to user obligation and duty
+- It helps design for goal systems that exempt rather than obligated user experience
+- It enables measurement of goal-related user obligation and indebtedness
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It helps identify goal-related dimensions of user indebtedness and obligation
+- It enables measurement of goal-related user freedom and independence
+- It supports the design of systems that help you pursue goals with bondage and servitude
+- It reveals how goal pursuit relates to user freedom and emancipation
+- It helps design for goal systems that bondage rather than freedom user experience
+- It enables measurement of goal-related user emancipation and liberation
+- It supports the design of systems that help you pursue goals with slavery and bondage
+- It helps identify goal-related dimensions of user slavery and enslavement
+- It enables measurement of goal-related user enslavement and captivity
+- It supports the design of systems that help you pursue goals with liberation and freedom
+- It reveals how goal pursuit relates to user freedom and deliverance
+- It helps design for goal systems that deliverance rather than captivity user experience
+- It enables measurement of goal-related user captivity and imprisonment
+- It supports the design of systems that help you pursue goals with liberation and release
+- It helps identify goal-related dimensions of user release and freedom
+- It enables measurement of goal-related user captivity and confinement
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It reveals how goal pursuit relates to user freedom and liberation
+- It helps design for goal systems that imprison rather than free user experience
+- It enables measurement of goal-related user imprisonment and detention
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It helps identify goal-related dimensions of user liberty and freedom
+- It enables measurement of goal-related user liberty and freedom
+- It supports the design of systems that help you pursue goals with confinement and restraint
+- It reveals how goal pursuit relates to user restraint and limitation
+- It helps design for goal systems that limitation rather than liberty user experience
+- It enables measurement of goal-related user restriction and limitation
+- It supports the design of systems that help you pursue goals with liberty and freedom
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It reveals how goal pursuit relates to user freedom and emancipation
+- It helps design for goal systems that emancipation rather than confinement user experience
+- It enables measurement of goal-related user confinement and restriction
+- It supports the design of systems that help you pursue goals with liberty and freedom
+- It helps identify goal-related dimensions of user liberty and freedom
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and liberty
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with freedom and liberty
+- It reveals how goal pursuit relates to user freedom and liberty
+- It helps design for goal systems that freedom rather than confinement user experience
+- It enables measurement of goal-related user freedom and liberty
+- It supports the design of systems that help you pursue goals with confinement and imprisonment
+- It helps identify goal-related dimensions of user freedom and lecture"

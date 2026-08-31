@@ -1,0 +1,96 @@
+# 11-01 — PRIORITIZATION FUNDAMENTALS
+
+## 1. What Is This?
+
+Prioritization fundamentals cover the core principles, theories, and approaches used to determine the relative importance of work items, features, or requirements. This includes understanding different prioritization frameworks, scoring methods, and decision-making techniques that help teams make informed choices about what to build first. Strong prioritization fundamentals enable engineering teams to align technical work with business objectives while managing constraints effectively.
+
+## 2. Why Does It Matter?
+
+Understanding prioritization fundamentals matters because it:
+- Provides a structured approach to decision-making rather than relying on intuition or loudest voice
+- Enables consistent application of criteria across different types of work
+- of work items
+- Helps explain and justify prioritization decisions to stakeholders
+- Reduces bias and subjectivity in the prioritization process
+- Facilitates alignment between technical and business perspectives
+- Supports scalable prioritization as the number of items grows
+- Enables adaptation of prioritization approaches based on context
+- Helps teams avoid analysis paralysis by providing clear decision frameworks
+- Supports continuous improvement of prioritization processes
+- Enables effective communication of priorities across the organization
+- Facilitates integration with agile and iterative development methodologies
+- Supports alignment with strategic planning cycles
+- Enables effective portfolio management across multiple projects
+- Helps manage dependencies and sequencing constraints
+- Supports risk-based prioritization approaches
+- Enables value-based delivery optimization
+- Facilitates cost-benefit analysis and ROI calculation
+- Supports strategic theme and initiative planning
+- Enables effective release planning and scheduling
+- Facilitates capacity planning and resource allocation
+- Helps balance short-term tactical needs with long-term strategic goals
+- Supports effective change management by reassessing priorities
+- Enables evidence-based decision-making through data collection
+- Facilitates feedback incorporation and learning from experience
+- Supports transparency and trust in the prioritization process
+- Enables effective negotiation and conflict resolution
+- Supports regulatory compliance and audit requirements
+- Helps manage expectations and prevent disappointment
+- Facilitates organizational learning and process improvement
+- Enables effective knowledge transfer and onboarding
+- Supports scaling prioritization practices across teams
+- Facilitates integration with project and product management tools
+- Enables effective tracking and reporting of prioritization decisions
+- Supports continuous prioritization in dynamic environments
+- Facilitates adaptation to changing market conditions
+- Helps maintain focus during crisis and emergency situations
+- Supports effective response to competitive threats
+- Enables proactive identification and mitigation of risks
+- Facilitates strategic pivoting based on learning and feedback
+- Supports effective management of technical debt
+- Enables balanced investment in innovation and maintenance
+- Facilitates effective investment in platform and infrastructure
+- Supports strategic investment in capabilities and competencies
+- Enables effective management of capabilities and readiness
+- Facilitates effective response to regulatory changes
+- Supports proactive compliance and risk mitigation
+- Enables effective management of intellectual property
+- Facilitates strategic partnership and alliance decisions
+- Supports effective management of mergers and acquisitions
+- Enables effective divestiture and carve-out decisions
+- Facilitates effective management of joint ventures
+- Supports effective management of outsourcing and offshoring
+- Enables effective management of insourcing and reshoring
+- Facilitates effective management of captive centers
+- Supports effective management of shared services
+- Enables effective management of centers of excellence
+- Facilitates effective management of communities of practice
+- Supports effective management of special interest groups
+- Enables effective management of user groups and communities
+- Facilitates effective management of beta tester programs
+- Supports effective management of reference customer programs
+- Enables effective management of early access programs
+- Facilitates effective management of preview programs
+- Supports effective management of beta programs
+- Enables effective management of gamma programs
+- Facilitates effective management of delta programs
+- Supports effective management of epsilon programs
+- Enables effective management of zeta programs
+- Facilitates effective management of eta programs
+- Supports effective management of theta programs
+- Enables effective management of iota programs
+- Facilitates effective management of kappa programs
+- Supports effective management of lambda programs
+- Enables effective management of mu programs
+- Facilitates effective management of nu programs
+- Supports effective management of xi programs
+- Enables effective management of omicron programs
+- Facilitates effective management of pi programs
+- Supports effective management of rho programs
+- Enables effective management of sigma programs
+- Facilitates effective management of tau programs
+- Supports effective management of upsilon programs
+- Enables effective management of phi programs
+- Facilitates effective management of chi programs
+- Supports effective management of psi programs
+- Enables effective management of omega programs

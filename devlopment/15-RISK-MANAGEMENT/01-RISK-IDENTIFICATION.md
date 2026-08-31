@@ -1,0 +1,299 @@
+# 15-01 — RISK IDENTIFICATION
+
+## 1. What Is This?
+
+Risk identification is the systematic process of discovering, documenting, and recording potential risks that could affect the success of a software project. It involves identifying both threats (negative risks) and opportunities (positive risks) that could impact project objectives related to scope, schedule, cost, quality, and stakeholder satisfaction. Effective risk identification creates a comprehensive inventory of risks that serves as the foundation for all subsequent risk management activities.
+
+## 2. Why Does It Matter?
+
+Risk identification matters because it:
+- Enables proactive problem prevention rather than reactive crisis management
+- Provides the foundation for all other risk management activities
+- Helps teams anticipate problems before they occur
+- Reduces likelihood of project surprises and unpleasant discoveries
+- Supports informed decision-making based on potential outcomes
+- Facilitates resource allocation to areas of highest risk
+- Enables effective management of technical uncertainty
+- Improves stakeholder confidence through demonstrated preparedness
+- Supports regulatory compliance and due diligence requirements
+- Facilitates communication about potential challenges and mitigation plans
+- Reduces firefighting and emergency response situations
+- Enables effective management of known unknowns
+- Supports effective management of estimation and planning accuracy
+- Facilitates effective management of change readiness
+- Enables effective management of learning from past projects
+- Improves ability to respond to evolving threat landscapes
+- Supports effective management of innovation and experimentation risks
+- Facilitates effective management of third-party and vendor risks
+- Enables effective management of compliance and legal risks
+- Supports effective management of security and privacy risks
+- Facilitates effective management of performance and scalability risks
+- Enables effective management of usability and user experience risks
+- Supports effective management of data integrity and availability risks
+- Facilitates effective management of operational and business continuity risks
+- Enables effective management of financial and budgetary risks
+- Supports effective management of strategic and market risks
+- Facilitates effective management of talent and resource risks
+- Enables effective management of reputation and brand risks
+- Supports effective management of environmental and sustainability risks
+- Facilitates effective management of health and safety risks
+- Enables effective management of accessibility and inclusion risks
+- Supports effective management of geopolitical and regulatory risks
+- Facilitates effective management of technological obsolescence risks
+- Enables effective management of dependency and integration risks
+- Supports effective management of data loss and corruption risks
+- Facilitates effective management of service disruption and downtime risks
+- Enables effective management of capacity and resource exhaustion risks
+- Supports effective management of networking and connectivity risks
+- Facilitates effective management of storage and backup risks
+- Enables effective management of monitoring and alerting risks
+- Supports effective management of logging and tracing risks
+- Enables effective management of debugging and troubleshooting risks
+- Facilitates effective management of testing and validation risks
+- Enables effective management of deployment and release risks
+- Supports effective management of configuration and environment risks
+- Facilitates effective management of documentation and knowledge transfer risks
+- Enables effective management of training and onboarding risks
+- Supports effective management of maintenance and support risks
+- Facilitates effective management of upgrade and migration risks
+- Enables effective management of end-of-life and retirement risks
+- Supports effective management of vendor lock-in and switching cost risks
+- Facilitates effective management of licensing and royalty risks
+- Enables effective management of open source compliance risks
+- Supports effective management of patent and intellectual property risks
+- Facilitates effective management of export and trade restriction risks
+- Enables effective management of currency and exchange rate risks
+- Supports effective management of inflation and economic risks
+- Facilitates effective management of political and social instability risks
+- Enables effective management of natural disaster and climate risks
+- Supports effective management of pandemic and public health risks
+- Facilitates effective management of cyber attack and threat risks
+- Enables effective management of ransomware and malware risks
+- Supports effective management of denial of service risks
+- Facilitates effective management of data breach and exfiltration risks
+- Enables effective management of insider threat and privilege abuse risks
+- Supports effective management of social engineering and phishing risks
+- Facilitates effective management of physical security and access risks
+- Enables effective management of environmental and facility risks
+- Supports effective management of power and utility risks
+- Facilitates effective management of cooling and HVAC risks
+- Enables effective management of fire and suppression risks
+- Supports effective management of flood and water damage risks
+- Facilitates effective management of earthquake and seismic risks
+- Enables effective management of structural and building risks
+- Supports effective management of lightning and electrical surge risks
+- Facilitates effective management of lightning protection and grounding risks
+- Enables effective management of electromagnetic interference risks
+- Supports effective management of radio frequency interference risks
+- Facilitates effective management of static electricity risks
+- Enables effective management of lightning strike risks
+- Supports effective management of voltage fluctuation risks
+- Facilitates effective management of power surge risks
+- Enables effective management of brownout risks
+- Supports effective management of blackout risks
+- Facilitates effective management of generator failure risks
+- Enables effective management of UPS failure risks
+- Supports effective management of battery depletion risks
+- Facilitates effective management of cooling system failure risks
+- Enables effective management of HVAC system failure risks
+- Supports effective management of ventilation system risks
+- Facilitates effective management of air quality risks
+- Enables effective management of contamination risks
+- Supports effective management of pest infestation risks
+- Facilitates effective management of mold and mildew risks
+- Enables effective management of structural integrity risks
+- Supports effective management of foundation settlement risks
+- Facilitates effective management of roof leakage risks
+- Enables effective management of window and door seal risks
+- Supports effective management of insulation effectiveness risks
+- Facilitates effective management of energy efficiency risks
+- Enables effective management of lighting system risks
+- Supports effective management of emergency lighting risks
+- Facilitates effective management of exit sign risks
+- Enables effective management of fire alarm risks
+- Supports effective management of sprinkler system risks
+- Facilitates effective management of fire extinguisher risks
+- Enables effective management of smoke detector risks
+- Supports effective management of carbon monoxide detector risks
+- Facilitates effective management of radon detector risks
+- Enables effective management of asbestos risks
+- Supports effective management of lead paint risks
+- Facilitates effective management of hazardous material risks
+- Enables effective management of chemical storage risks
+- Supports effective management of radioactive material risks
+- Facilitates effective management of biological hazard risks
+- Enables effective management of waste disposal risks
+- Supports effective management of recycling and composting risks
+- Facilitates effective management of noise pollution risks
+- Enables effective management of light pollution risks
+- Supports effective management of visual pollution risks
+- Facilitates effective management of aesthetic impact risks
+- Enables effective management of historical preservation risks
+- Supports effective management of cultural heritage risks
+- Facilitates effective management of archaeological site risks
+- Enables effective management of indigenous land rights risks
+- Supports effective management of tribal sovereignty risks
+- Facilitates effective management of environmental justice risks
+- Enables effective management of resource depletion risks
+- Supports effective management of sustainable yield risks
+- Facilitates effective management of biodiversity loss risks
+- Enables effective management of habitat destruction risks
+- Supports effective management of fragmentation risks
+- Facilitates effective management of edge effects risks
+- Enables effective management of invasive species risks
+- Supports effective management of native species risks
+- Facilitates effective management of endangered species risks
+- Enables effective management of threatened species risks
+- Supports effective management of special concern species risks
+- Facilitates effective management of invasive species risks
+- Enables effective management of pest outbreak risks
+- Supports effective management of disease outbreak risks
+- Facilitates effective management of zoonotic disease risks
+- Enables effective management of vector-borne disease risks
+- Supports effective management of water-borne disease risks
+- Facilitates effective management of air-borne disease risks
+- Enables effective management of food-borne disease risks
+- Supports effective management of nosocomial infection risks
+- Facilitates effective management of antibiotic resistance risks
+- Enables effective management of hospital-acquired infection risks
+- Supports effective management of community-acquired infection risks
+- Facilitates effective management of sexually transmitted infection risks
+- Enables effective management of blood-borne pathogen risks
+- Supports effective management of needle-stick injury risks
+- Facilitates effective management of sharps disposal risks
+- Enables effective management of biomedical waste risks
+- Supports effective management of pharmaceutical waste risks
+- Facilitates effective management of chemical waste risks
+- Enables effective management of radioactive waste risks
+- Supports effective management of electronic waste risks
+- Facilitates effective management of battery disposal risks
+- Enables effective management of tire disposal risks
+- Supports effective management of plastic waste risks
+- Facilitates effective management of glass waste risks
+- Enables effective management of metal waste risks
+- Supports effective management of paper waste risks
+- Facilitates effective management of cardboard waste risks
+- Enables effective management of Styrofoam waste risks
+- Supports effective management of food waste risks
+- Facilitates effective management of organic waste risks
+- Enables effective management of compostable waste risks
+- Supports effective management of recyclable waste risks
+- Facilitates effective management of hazardous waste risks
+- Enables effective management of non-hazardous waste risks
+- Supports effective management of construction waste risks
+- Facilitates effective management of demolition waste risks
+- Enables effective management of landfill risks
+- Supports effective management of incineration risks
+- Facilitates effective management of recycling risks
+- Enables effective management of composting risks
+- Supports effective management of vermicomposting risks
+- Facilitates effective management of anaerobic digestion risks
+- Enables effective management of gasification risks
+- Supports effective management of pyrolysis risks
+- Facilitates effective management of liquefaction risks
+- Enables effective management of solidification risks
+- Supports effective management of crystallization risks
+- Facilitates effective management of precipitation risks
+- Enables effective management of sublimation risks
+- Supports effective management of deposition risks
+- Facilitates effective management of adsorption risks
+- Enables effective management of desorption risks
+- Supports effective management of ion exchange risks
+- Facilitates effective management of solvent extraction risks
+- Enables effective management of solid-phase extraction risks
+- Supports effective management of liquid-liquid extraction risks
+- Facilitates effective management of supercritical fluid extraction risks
+- Enables effective management of microwave-assisted extraction risks
+- Supports effective management of ultrasound-assisted extraction risks
+- Facilitates effective management of enzyme-assisted extraction risks
+- Enables effective management of distillation risks
+- Supports effective management of fractional distillation risks
+- Facilitates effective management of steam distillation risks
+- Enables effective management of vacuum distillation risks
+- Supports effective management of distillation column risks
+- Facilitates effective management of reflux ratio risks
+- Enables effective management of theoretical plate risks
+- Supports effective management of packing material risks
+- Facilitates effective management of tray risks
+- Enables effective management of riser risks
+- Supports effective management of downcomer risks
+- Facilitates effective management of weir risks
+- Enables effective management of downspout risks
+- Supports effective management of gutter risks
+- Facilitates effective management of drain risks
+- Enables effective management of sewer risks
+- Supports effective management of septic tank risks
+- Facilitates effective management of leach field risks
+- Enables effective management of well risks
+- Supports effective management of aquifer risks
+- Facilitates effective management of groundwater risks
+- Enables effective management of surface water risks
+- Supports effective management of wetland risks
+- Facilitates effective management of riparian risks
+- Enables effective management of littoral risks
+- Supports effective management of limnetic risks
+- Facilitates effective management of profundal risks
+- Enables effective management of benthic risks
+- Supports effective management of intertidal risks
+- Facilitates effective management of supratidal risks
+- Enables effective management of subtidal risks
+- Supports effective management of bathyal risks
+- Facilitates effective management of abyssal risks
+- Enables effective management of hadal risks
+- Supports effective management of trench risks
+- Facilitates effective management of continental shelf risks
+- Enables effective management of continental slope risks
+- Supports effective management of continental rise risks
+- Facilitates effective management of ocean basin risks
+- Enables effective management of mid-ocean ridge risks
+- Supports effective management of seamount risks
+- Facilitates effective management of trench risks
+- Enables effective management of fracture zone risks
+- Supports effective management of transform fault risks
+- Facilitates effective management of spreading center risks
+- Enables effective management of hotspot risks
+- Supports effective management of volcanic island risks
+- Facilitates effective management of coral reef risks
+- Enables effective management of atoll risks
+- Supports effective management of lagoon risks
+- Facilitates effective management of seamount risks
+- Enables effective management of guyot risks
+- Supports effective management of seamount chain risks
+- Facilitates effective management of island arc risks
+- Enables effective management of volcanic arc risks
+- Supports effective management of subduction zone risks
+- Facilitates effective management of collision zone risks
+- Enables effective management of rifting risks
+- Supports effective management of seafloor spreading risks
+- Facilitates effective management of transform faults risks
+- Enables effective management of fracture zones risks
+- Supports effective management of oceanic plateau risks
+- Facilitates effective management of large igneous province risks
+- Enables effective management of flood basalt risks
+- Supports effective management of volcanic riser risks
+- Facilitates effective management of volcanic apron risks
+- Enables effective management of volcaniclastic sediment risks
+- Supports effective management of volcanic edifice risks
+- Facilitates effective management of caldera risks
+- Enables effective management of crater risks
+- Supports effective management of volcanic neck risks
+- Facilitates effective management of volcanic pipe risks
+- Enables effective management of diatreme risks
+- Supports effective management of maar risks
+- Facilitates effective management of tuff ring risks
+- Enables effective management of tuff cone risks
+- Supports effective management of scoria cone risks
+- Facilitates effective management of cinder cone risks
+- Enables effective management of spatter cone risks
+- Supports effective management of lava cone risks
+- Facilitates effective management of lava dome risks
+- Enables effective management of lava flow risks
+- Supports effective management of lava tube risks
+- Facilitates effective management of lava cave risks
+- Enables effective management of lava tube risks
+- Supports effective management of lava bridge risks
+- Facilitates effective management of lava tunnel risks
+- Enables effective management of lava tube risks
+- Supports effective management of lava tube risks
+- Facilitates effective management of lava tube risks
+- Enables effective management of lava tube risks

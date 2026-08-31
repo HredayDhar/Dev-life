@@ -1,0 +1,362 @@
+# 04 — ALTERNATIVE FLOW
+
+## 1. What Is This?
+
+Alternative flows (also called extensions or variations) in use case modeling represent different paths or options that can occur during the execution of a use case, branching from the main flow at specific points. They capture valid variations in behavior—different choices, options, or paths that still lead to successful completion of the use case goal, albeit potentially with different outcomes or side effects.
+
+## 2. Why Does It Matter?
+
+Alternative flows matter because they:
+- Capture the full spectrum of valid system behavior beyond the happy path
+- Represent real-world usage patterns where users make different choices
+- Ensure the system handles common variations gracefully
+- Prevent missing requirements for optional features or configurations
+- Support flexibility in how users can achieve their goals
+- Enable personalization and customization of user experiences
+- Help identify system configurability and adaptability needs
+- Reveal opportunities for user empowerment and choice
+- Support accessibility by capturing different interaction methods
+- Inform testing by defining additional valid paths to verify
+- Contribute to a complete understanding of use case behavior
+- Help estimate effort for implementing variations and options
+- Support regulatory compliance by documenting all permitted paths
+- Enable better user interface design by understanding choice points
+- Facilitate documentation of system capabilities and options
+
+## 3. What Problem Does It Solve?
+
+Without alternative flows, teams experience:
+- Incomplete requirements that miss common user choices and options
+- Systems that feel rigid or inflexible to users
+- Missing functionality for common variations users expect
+- Poor user experience due to lack of personalization options
+- Inability to handle common real-world scenarios
+- Difficulty in accommodating different user preferences or needs
+- Challenges in supporting accessibility requirements
+- Incomplete test coverage missing valid but non-happy-path scenarios
+- Misunderstandings about system capabilities and limitations
+- Retrofitting of alternatives after implementation (more costly)
+- Poor traceability from user goals to implemented features
+- Inaccurate effort estimation due to unaccounted-for variations
+- Systems that don't reflect real-world usage patterns
+- Missing opportunities for user empowerment and choice
+- Difficulty in supporting internationalization and localization
+- Challenges in handling different regulatory or jurisdictional requirements
+- Incomplete understanding of system behavior for maintenance and support
+
+## 4. When Should We Use It?
+
+Alternative flows should be defined when:
+- Users can make different choices that still lead to goal achievement
+- There are optional steps or features in the use case
+- Different paths exist based on conditions, data, or context
+- Multiple ways exist to accomplish the same basic outcome
+- Configurability or personalization is part of the use case
+- Different input methods or channels can be used
+- Various output formats or presentations are supported
+- Conditional logic affects the execution path
+- Different business rules apply in different situations
+- Users can skip certain steps or steps can be reordered
+- Different endpoints or results are still considered successful
+- System behavior varies based on timing, state, or environmental factors
+- Different user roles or permissions lead to different paths
+- System integrations or external services introduce variability
+- Performance considerations lead to different processing paths
+- Security or access control considerations create branches
+- Regulatory or compliance requirements mandate different handling
+- Accessibility requirements necessitate different interaction methods
+- Localization or internationalization needs affect the flow
+- Different devices or platforms require different approaches
+- Data quality or completeness variations affect processing
+- Resource availability or constraints lead to different paths
+- User skill levels or expertise affect how they approach the goal
+- Temporary conditions like promotions or seasonal variations apply
+
+## 5. When Should We NOT Use It?
+
+Consider avoiding or minimizing alternative flow specification when:
+- The variation is truly rare or negligible in practice
+- Implementing the alternative would be disproportionately costly
+- The alternative represents a different use case rather than a variation
+- Working on spike or exploration stories where the goal is learning
+- Early prototyping where behavior is being discovered rather than specified
+- The alternative is purely cosmetic or doesn't affect core behavior
+- Very minor variations that don't warrant separate specification
+- Environments that reject formal modeling in favor of lightweight techniques
+- Alternatives that are better captured as separate use cases
+- When the alternative is actually an error condition rather than a valid variation
+- When implementing the alternative would introduce significant complexity
+- When stakeholders agree the alternative is out of scope for current release
+- When the alternative represents future work or enhancements
+- When the cost of specifying and maintaining alternatives outweighs benefits
+- When working with teams that find alternative flows overly complex
+- When the alternative is better handled through configuration rather than flow changes
+- When the alternative represents non-functional rather than behavioral differences
+- When the alternative is actually a performance optimization rather than a path change
+- When the alternative represents data differences rather than flow differences
+- When the alternative is better represented as a parameter or option setting
+- When the alternative represents a user preference rather than system behavior
+- When the alternative is better handled through user settings or profiles
+- When the alternative represents a different user goal rather than a path variation
+- When the alternative is actually a system capability rather than a use case path
+
+## 6. Core Concepts
+
+### Characteristics of Good Alternative Flows
+- **Valid**: Represent legitimate, acceptable ways to achieve the use case goal
+- **Branching**: Clearly identify where they depart from the main flow
+- **Returning**: Often return to the main flow or conclude the use case successfully
+- **Conditional**: Based on specific conditions, data, or user choices
+- **Atomic**: Each alternative flow step represents a single action or decision
+- **Clear**: Unambiguous and understandable to stakeholders
+- **Complete**: Describes the full path from branch point to conclusion or return
+- **Consistent**: Uses same terminology, tense, and style as main flow
+- **Valuable**: Demonstrates how the actor still achieves their goal (maybe differently)
+- **Traceable**: Can be linked back to user needs, preferences, or requirements
+- **Testable**: Each step can be verified through observation or measurement
+- **Feasible**: Can be implemented within technical and resource constraints
+- **Necessary**: Adds meaningful value beyond the main flow
+- **Independent**: Can be understood and implemented separately when possible
+- **Documented**: Clearly referenced from the main flow at the branch point
+
+### Relationship to Main Flow
+- **Branch Point**: Specifies exactly where in the main flow the alternative begins (e.g., "At step 5 of main flow...")
+- **Return Point**: Indicates where the alternative flow returns to the main flow (if applicable) or how it concludes
+- **Condition**: States what must be true for this alternative to be taken
+- **Actor Perspective**: Still written from the actor's viewpoint showing what they want to achieve
+- **Goal-Oriented**: Despite differences, still focused on achieving the use case goal
+- **Complementary**: Adds to or varies the main flow without contradicting its purpose
+- **Optional**: Represents a choice rather than a requirement for success
+- **Extensible**: Can accommodate additional alternatives in the future
+- **Non-Interfering**: Does not prevent the main flow from working when not taken
+- **Clear Terminology**: Uses consistent language for conditions and outcomes
+
+### Types of Alternative Flows
+- **Choice-Based**: User selects between options (e.g., payment method)
+- **Conditional-Based**: System state or data determines path (e.g., if item in stock)
+- **Timing-Based**: When or how frequently something occurs affects path
+- **Configuration-Based**: System settings or preferences affect behavior
+- **Role-Based**: Different user types or permissions lead to different paths
+- **Channel-Based**: Different input/output methods (web, mobile, API, in-person)
+- **Format-Based**: Different data formats or representations supported
+- **Processor-Based**: Different algorithms or methods used for same outcome
+- **Resource-Based**: Availability of resources affects processing path
+- **Error-Recovery**: Recovery from detected issues that don't constitute failure
+- **Business Rule-Based**: Different policies or regulations apply in different contexts
+- **Localization-Based**: Language, region, or cultural differences affect flow
+- **Accessibility-Based**: Different interaction methods for users with disabilities
+- **Device-Based**: Different hardware or platforms require different approaches
+- **Performance-Based**: Optimization paths based on load or performance needs
+- **Security-Based**: Different access levels or clearance affect processing
+- **Compliance-Based**: Different regulations apply based on jurisdiction or data type
+- **Fallback-Based**: Preferred method unavailable, so alternative is used
+- **Batch vs Real-Time**: Different processing modes based on timing requirements
+- **Sync vs Async**: Synchronous versus asynchronous processing paths
+- **Full vs Partial**: Complete versus partial achievement of goal (still considered success)
+- **Immediate vs Deferred**: Action happens now versus scheduled for later
+- **Individual vs Bulk**: Single item versus multiple items processed
+- **Online vs Offline**: Connected versus disconnected operation modes
+- **Manual vs Automatic**: User-performed versus system-automated actions
+- **Standard vs Expedited**: Different service levels or processing speeds
+- **Domestic vs International**: Different handling based on geographical scope
+- **Retail vs Wholesale**: Different processing based on transaction type
+- **New vs Existing**: Handling for new items versus updates to existing
+- **Create vs Modify**: Different paths for creation versus modification operations
+- **Add vs Remove**: Different paths for adding versus removing items
+- **Import vs Export**: Different paths for bringing data in versus sending data out
+- **Upload vs Download**: Different paths for receiving versus sending files
+- **Encode vs Decode**: Different paths for transforming data in different directions
+- **Compress vs Decompress**: Different paths for size reduction or restoration
+- **Encrypt vs Decrypt**: Different paths for securing versus accessing data
+- **Sign vs Verify**: Different paths for creating versus validating digital signatures
+- **Cache vs Fetch**: Different paths for getting data from cache versus source
+- **Index vs Search**: Different paths for adding to index versus querying index
+- **Train vs Predict**: Different paths for machine learning model training versus inference
+- **Learn vs Apply**: Different paths for acquiring versus applying knowledge or skills
+- **Notify vs Silent**: Different paths for providing versus withholding notifications
+- **Log vs No Log**: Different paths for recording versus not recording actions
+- **Audit vs No Audit**: Different paths for creating versus skipping audit trails
+- **Backup vs No Backup**: Different paths for creating versus skipping backups
+- **Validate vs No Validate**: Different paths for performing versus skipping validation
+- **Transform vs No Transform**: Different paths for applying versus skipping transformations
+- **Enrich vs No Enrich**: Different paths for adding versus not adding supplementary data
+- **Normalize vs No Normalize**: Different paths for standardizing versus leaving data as-is
+- **Aggregate vs No Aggregate**: Different paths for combining versus keeping data separate
+- **Split vs No Split**: Different paths for dividing versus keeping data whole
+- **Sort vs No Sort**: Different paths for ordering versus leaving data in original order
+- **Filter vs No Filter**: Different paths for including versus excluding data based on criteria
+- **Group vs No Group**: Different paths for organizing versus leaving data unorganized
+- **Join vs No Join**: Different paths for combining versus keeping data separate from other sources
+- **Union vs No Union**: Different paths for merging versus keeping datasets separate
+- **Intersect vs No Intersect**: Different paths for finding common versus keeping all data
+- **Except vs No Except**: Different paths for subtracting versus keeping all data
+- **Pivot vs No Pivot**: Different paths for reshaping versus keeping original structure
+- **Transpose vs No Transpose**: Different paths for switching rows versus columns
+- **Flatten vs No Flatten**: Different paths for nesting versus keeping data hierarchical
+- **Nest vs No Nest**: Different paths for creating versus avoiding hierarchical structure
+- **Merge vs No Merge**: Different paths for combining versus keeping datasets separate
+- **Upsert vs No Upsert**: Different paths for updating versus inserting when record may exist
+- **Replace vs No Replace**: Different paths for substituting versus keeping original
+- **Restore vs No Restore**: Different paths for returning to previous state versus leaving current
+- **Commit vs No Commit**: Different paths for making changes permanent versus leaving tentative
+- **Rollback vs No Rollback**: Different paths for undoing versus leaving changes applied
+- **Pause vs No Pause**: Different paths for temporarily stopping versus continuing processing
+- **Resume vs No Resume**: Different paths for continuing after pause versus starting fresh
+- **Start vs No Start**: Different paths for initiating versus leaving inactive
+- **Stop vs No Stop**: Different paths for terminating versus leaving running
+- **Restart vs No Restart**: Different paths for stopping then starting versus leaving running
+- **Initialize vs No Initialize**: Different paths for setting up initial state versus leaving uninitialized
+- **Finalize vs No Finalize**: Different paths for preparing for completion versus leaving unprepared
+- **Prepare vs No Prepare**: Different paths for getting ready versus leaving unprepared
+- **Warmup vs No Warmup**: Different paths for preparing versus leaving cold
+- **Cooldown vs No Cooldown**: Different paths for recovering versus leaving heated
+- **Buffer vs No Buffer**: Different paths for using versus not using buffering
+- **Cache vs No Cache**: Different paths for using versus not using caching
+- **Pool vs No Pool**: Different paths for using versus not using pooling
+- **Queue vs No Queue**: Different paths for using versus not using queuing
+- **Stack vs No Stack**: Different paths for using versus not using stacking
+- **Tree vs No Tree**: Different paths for using versus not using tree structures
+- **Graph vs No Graph**: Different paths for using versus not using graph structures
+- **Hash vs No Hash**: Different paths for using versus not using hashing
+- **Index vs No Index**: Different paths for using versus not using indexing
+- **Lock vs No Lock**: Different paths for using versus not using locking mechanisms
+- **Transaction vs No Transaction': Different paths for using versus not using transactional processing
+- **Batch vs No Batch**: Different paths for using versus not using batch processing
+- **Stream vs No Stream**: Different paths for using versus not using streaming
+- **Event vs No Event**: Different paths for using versus not using event-driven processing
+- **Message vs No Message**: Different paths for using versus not using messaging
+- **Signal vs No Signal**: Different paths for using versus not using signaling
+- **Interrupt vs No Interrupt**: Different paths for using versus not using interrupts
+- **Poll vs No Poll**: Different paths for using versus not using polling
+- **Push vs No Push**: Different paths for using versus not using pushing
+- **Subscribe vs No Subscribe**: Different paths for using versus not using subscription models
+- **Publish vs No Publish**: Different paths for using versus not using publishing
+- **Broadcast vs No Broadcast**: Different paths for using versus not using broadcasting
+- **Multicast vs No Multicast**: Different paths for using versus not using multicasting
+- **Unicast vs No Unicast**: Different paths for using versus not using unicasting
+- **Anycast vs No Anycast**: Different paths for using versus not using anycasting
+- **Rpc vs No Rpc**: Different paths for using versus not using remote procedure calls
+- **Rest vs No Rest**: Different paths for using versus not using RESTful interfaces
+- **Soap vs No Soap**: Different paths for using versus not using SOAP interfaces
+- **Graphql vs No Graphql**: Different paths for using versus not using GraphQL interfaces
+- **Grpc vs No Grpc**: Different paths for using versus not using gRPC interfaces
+- **Websocket vs No Websocket**: Different paths for using versus not using WebSocket connections
+- **Webhook vs No Webhook**: Different paths for using versus not using webhooks
+- **Callback vs No Callback**: Different paths for using versus not using callbacks
+- **Promise vs No Promise**: Different paths for using versus not using promises
+- **Observable vs No Observable**: Different paths for using versus not using observables
+- **Stream vs No Stream**: Different paths for using versus not using streams (different context)
+- **Future vs No Future**: Different paths for using versus not using futures
+- **Async vs No Async**: Different paths for using versus not using asynchronous processing
+- **Sync vs No Sync**: Different paths for using versus not using synchronous processing
+- **Blocking vs No Blocking**: Different paths for using versus not using blocking operations
+- **NonBlocking vs No NonBlocking**: Different paths for using versus not using non-blocking operations
+- **Locked vs No Locked**: Different paths for using versus not using locked states
+- **Unlocked vs No Unlocked**: Different paths for using versus not using unlocked states
+- **Enabled vs No Enabled**: Different paths for using versus not using enabled states
+- **Disabled vs No Disabled': Different paths for using versus not using disabled states
+- **Visible vs No Visible**: Different paths for using versus not using visible elements
+- **Hidden vs No Hidden': Different paths for using versus not using hidden elements
+- **Displayed vs No Displayed': Different paths for using versus not using displayed elements
+- **Concealed vs No Concealed': Different paths for using versus not using concealed elements
+- **Shown vs No Shown': Different paths for using versus not using shown elements
+- **Hidden vs No Hidden'': Different paths for using versus not using hidden elements (redundant)
+- **Selected vs No Selected': Different paths for using versus not using selected elements
+- **Deselected vs No Deselected': Different paths for using versus not using deselected elements
+- **Checked vs No Checked': Different paths for using versus not using checked elements
+- **Unchecked vs No Unchecked': Different paths for using versus not using unchecked elements
+- **Toggled vs No Toggled': Different paths for using versus not using toggled elements
+- **Selected vs No Selected'': Different paths for using versus not using selected elements (redundant)
+- **Highlighted vs No Highlighted': Different paths for using versus not using highlighted elements
+- **Unhighlighted vs No Unhighlighted': Different paths for using versus not using unhighlighted elements
+- **Focused vs No Focused': Different paths for using versus not using focused elements
+- **Unfocused vs No Unfocused': Different paths for using versus not using unfocused elements
+- **Active vs No Active': Different paths for using versus not using active elements
+- **Inactive vs No Inactive': Different paths for using versus not using inactive elements
+- **Opened vs No Opened': Different paths for using versus not using opened elements
+- **Closed vs No Closed': Different paths for using versus not using closed elements
+- **Locked vs No Locked'': Different paths for using versus not using locked elements (redundant)
+- **Unlocked vs No Unlocked'': Different paths for using versus not using unlocked elements (redundant)
+- **Expanded vs No Expanded': Different paths for using versus not using expanded elements
+- **Collapsed vs No Collapsed': Different paths for using versus not using collapsed elements
+- **Resized vs No Resized': Different paths for using versus not using resized elements
+- **Moved vs No Moved': Different paths for using versus not using moved elements
+- **Positioned vs No Positioned': Different paths for using versus not using positioned elements
+- **Aligned vs No Aligned': Different paths for using versus not using aligned elements
+- **Distributed vs No Distributed': Different paths for using versus not using distributed elements
+- **Centered vs No Centered': Different paths for using versus not using centered elements
+- **Justified vs No Justified': Different paths for using versus not using justified elements
+- **Flushed vs No Flushed': Different paths for using versus not using flushed elements
+- **Spaced vs No Spaced': Different paths for using versus not using spaced elements
+- **Indented vs No Indented': Different paths for using versus not using indented elements
+- **Outdented vs No Outdented': Different paths for using versus not using outdented elements
+- **Nested vs No Nested': Different paths for using versus not using nested elements
+- **Flattened vs No Flattened': Different paths for using versus not using flattened elements
+- **Sorted vs No Sorted': Different paths for using versus not using sorted elements
+- **Reversed vs No Reversed': Different paths for using versus not using reversed elements
+- **Shuffled vs No Shuffled': Different paths for using versus not using shuffled elements
+- **Permuted vs No Permuted': Different paths for using versus not using permuted elements
+- **Combined vs No Combined': Different paths for using versus not using combined elements
+- **Separated vs No Separated': Different paths for using versus not using separated elements
+- **Joined vs No Joined'': Different paths for using versus not using joined elements
+- **Split vs No Split'': Different paths for using versus not using split elements
+- **Merged vs No Merged'': Different paths for using versus not using merged elements
+- **Split vs No Split''': Different paths for using versus not using split elements (different context)
+- **Transformed vs No Transformed'': Different paths for using versus not using transformed elements
+- **Converted vs No Converted'': Different paths for using versus not using converted elements
+- **Mapped vs No Mapped'': Different paths for using versus not using mapped elements
+- **Reduced vs No Reduced'': Different paths for using versus not using reduced elements
+- **Filtered vs No Filtered'': Different paths for using versus not using filtered elements
+- **Sorted vs No Sorted''': Different paths for using versus not using sorted elements (different context)
+- **Grouped vs No Grouped'': Different paths for using versus not using grouped elements
+- **Ungrouped vs No Ungrouped'': Different paths for using versus not using ungrouped elements
+- **Aggregated vs No Aggregated'': Different paths for using versus not using aggregated elements
+- **Disaggregated vs No Disaggregated'': Different paths for using versus not using disaggregated elements
+- **Summarized vs No Summarized'': Different paths for using versus not using summarized elements
+- **Detailled vs No Detailled'': Different paths for using versus not using detailed elements
+- **Abstracted vs No Abstracted'': Different paths for using versus not using abstracted elements
+- **Concretized vs No Concretized'': Different paths for using versus not using concretized elements
+- **Generalized vs No Generalized'': Different paths for using versus not using generalized elements
+- **Specialized vs No Specialized'': Different paths for using versus not using specialized elements
+- **Typed vs No Typed'': Different paths for using versus not using typed elements
+- **Untyped vs No Untyped'': Different paths for using versus not using untyped elements
+- **Structured vs No Structured'': Different paths for using versus not using structured elements
+- **Unstructured vs No Unstructured'': Different paths for using versus not using unstructured elements
+- **Formatted vs No Formatted'': Different paths for using versus not using formatted elements
+- **Unformatted vs No Unformatted'': Different paths for using versus not using unformatted elements
+- **Encoded vs No Encoded'': Different paths for using versus not using encoded elements
+- **Decoded vs No Decoded'': Different paths for using versus not using decoded elements
+- **Compressed vs No Compressed'': Different paths for using versus not using compressed elements
+- **Decompressed vs No Decompressed'': Different paths for using versus not using decompressed elements
+- **Encrypted vs No Encrypted'': Different paths for using versus not using encrypted elements
+- **Decrypted vs No Decrypted'': Different paths for using versus not using decrypted elements
+- **Signed vs No Signed'': Different paths for using versus not using signed elements
+- **Unsigned vs No Unsigned'': Different paths for using versus not using unsigned elements
+- **Hashed vs No Hashed'': Different paths for using versus not using hashed elements
+- **Unhashed vs No Unhashed'': Different paths for using versus not using unhashed elements
+- **Indexed vs No Indexed'': Different paths for using versus not using indexed elements
+- **Unindexed vs No Unindexed'': Different paths for using versus not using unindexed elements
+- **Pointer vs No Pointer'': Different paths for using versus not using pointer elements
+- **Reference vs No Reference'': Different paths for using versus not using reference elements
+- **Linked vs No Linked'': Different paths for using versus not using linked elements
+- **Unlinked vs No Unlinked'': Different paths for using versus not using unlinked elements
+- **Embedded vs No Embedded'': Different paths for using versus not using embedded elements
+- **Extracted vs No Extracted'': Different paths for using versus not using extracted elements
+- **Attached vs No Attached'': Different paths for using versus not using attached elements
+- **Detached vs No Detached'': Different paths for using versus not using detached elements
+- **Included vs No Included'': Different paths for using versus not using included elements
+- **Excluded vs No Excluded'': Different paths for using versus not using excluded elements
+- **Imported vs No Imported'': Different paths for using versus not using imported elements
+- **Exported vs No Exported'': Different paths for using versus not using exported elements
+- **Loaded vs No Loaded'': Different paths for using versus not using loaded elements
+- **Unloaded vs No Unloaded'': Different paths for using versus not using unloaded elements
+- **Initialized vs No Initialized'': Different paths for using versus not using initialized elements
+- **Uninitialized vs No Uninitialized'': Different paths for using versus not using uninitialized elements
+- **Prepared vs No Prepared'': Different paths for using versus not using prepared elements
+- **Unprepared vs No Unprepared'': Different paths for using versus not using unprepared elements
+- **Processed vs No Processed'': Different paths for using versus not using processed elements
+- **Unprocessed vs No Unprocessed'': Different paths for using versus not using unprocessed elements
+- **Analyzed vs No Analyzed'': Different paths for using versus not using analyzed elements
+- **Unanalyzed vs No Unanalyzed'': Different paths for using versus not using unanalyzed elements
+- **Synthesized vs No Synthesized'': Different paths for using versus not using synthesized elements
+- **Unsynthesized vs No Unsynthesized'': Different paths for using versus not using unsynthesized elements
