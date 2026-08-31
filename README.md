@@ -40,6 +40,8 @@ The playbook is designed to be:
 
 Professional software development is **not** a linear process:
 
+![Uploading Gemini_Generated_Image_jgr4f0jgr4f0jgr4.jpg…]()
+
 ```text
 Idea → Code → Done
 ```
